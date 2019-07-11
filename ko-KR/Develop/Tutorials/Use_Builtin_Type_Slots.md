@@ -25,15 +25,9 @@ Slot에 담을 추가 정보의 유형에 따라 slot의 타입을 정해야 합
 
 Clova는 모든 extension이 범용적으로 사용할 수 있도록 일반적으로 쓰이는 정보 유형을 미리 정의해두었고, 이를 [built-in slot 타입](/Design/Design_Guideline_For_Custom_Extension.md#BuiltinSlotType)이라고 합니다. 숫자 타입은 `CLOVA.NUMBER`라는 built-in slot 타입으로 정의되어 있으므로, 주사위의 개수를 처리하기 위한 별도의 유형을 만들지 않아도 됩니다.
 
-<<<<<<< HEAD
-<div class="note">
-  <p><strong>Note!</strong></p>
-  <p>Built-in slot 타입으로 정의되지 않은 extension 고유의 정보 유형은 <a href="/Design/Design_Guideline_For_Custom_Extension.md#CustomSlotType">custom slot 타입</a>을 정의하여 처리할 수 있습니다.</p>
-=======
 <div class="tip">
   <p><strong>Tip!</strong></p>
   <p>Built-in slot 타입으로 정의되지 않은 extension 고유의 정보 유형은 <a href="/Design/Design_Guideline_For_Custom_Extension.md#CustomSlotType">custom slot 타입</a>을 정의하여 처리할 수 있습니다.</p>
->>>>>>> document-for-public
 </div>
 
 <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a>에 접속하여 다음과 같이 샘플 주사위 extension에서 사용할 slot 타입을 선언합니다.

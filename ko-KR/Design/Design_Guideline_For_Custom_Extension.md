@@ -1,3 +1,5 @@
+<!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
+
 # Custom extension 디자인 가이드라인
 
 새로운 custom extension을 만들 때 보유하고 있는 기술이나 서비스가 Clova를 통해 사용자에게 어떻게 편리함과 이익을 가져다줄 수 있는지 생각하는 설계 활동을 해야 합니다. 이 문서는 사용자에게 건전하고 유익한 서비스를 제공하기 위해 custom extension을 설계할 때 어떤 사항을 지키거나 따라야 하는지 가이드라인을 제공합니다. 참고로 Clova를 이용하는 사용자에게는 skill이라는 용어로 기능을 제공하게 되며, 사용자에게 skill을 제공하기 위해 개발자는 custom extension을 구현해야 합니다.
@@ -572,6 +574,7 @@ Skill 콘텐츠 제공과 관련하여 다음과 같은 유의 사항이 있습�
 
 Custom extension을 통해 오디오 콘텐츠를 제공한다면 반드시 Clova가 지원하는 오디오 압축 포맷으로 음원을 제공해야 합니다.
 
+<!-- Start of shared content: SupportedAudioCompressionFormat -->
 Clova가 지원하는 오디오 압축 포맷은 다음과 같습니다.
 
 | 오디오 압축 포맷                     | 파일 확장자 | 라이선스 비용 |
@@ -582,6 +585,8 @@ Clova가 지원하는 오디오 압축 포맷은 다음과 같습니다.
   <p><strong>Tip!</strong></p>
   <p>Clova가 지원하는 오디오 압축 포맷은 더 늘어날 수 있습니다.</p>
 </div>
+
+<!-- End of shared content -->
 
 <div class="danger">
   <p><strong>Caution!</strong></p>
