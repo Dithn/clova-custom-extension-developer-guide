@@ -1,3 +1,7 @@
+<!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
+
+<!-- Start of shared content: RemovingExtension -->
+
 # Custom extension 중지 및 삭제하기
 
 심사 요청하기 이전 단계의 extension이라면 [기본 정보를 입력하는 메뉴](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#InputExtensionInfo)에서 해당 extension을 삭제할 수 있습니다.
@@ -19,3 +23,5 @@
   <p><strong>Note!</strong></p>
   <p>서비스를 중지할 때 Clova 운영팀의 확인이 필요합니다. 따라서, extension을 중지하려면 <a href="mailto:{{ book.ServiceEnv.ExtensionAdminEmail }}">{{ book.ServiceEnv.ExtensionAdminEmail }}</a>로 연락합니다.</p>
 </div>
+
+<!-- End of shared content -->

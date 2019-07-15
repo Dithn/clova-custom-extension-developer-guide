@@ -1,3 +1,5 @@
+<!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
+
 # Custom extension 등록하기
 [Custom extension](/Develop/Guides/Build_Custom_Extension.md)을 개발 중이거나 개발하고 있다면 이를 [Clova developer console](/DevConsole/ClovaDevConsole_Overview.md)에 등록해야 합니다. CEK 메뉴 페이지에서 페이지 하단에 있는 **{{ book.DevConsole.cek_new_skill }}** 버튼을 누르면 신규 custom extension을 등록할 수 있습니다.
 
@@ -15,11 +17,15 @@ Custom extension을 등록할 때 일반적으로 다음 항목을 순차적으�
   </li>
 </ol>
 
+<!-- Start of shared content: AgreeTermsOfUse -->
+
 ## 이용 약관 및 개인 정보 수집 동의 {#AgreeTermsOfUse}
 
 Custom extension을 등록하기 전에 우선 CEK API 서비스 이용 약관과 개인 정보 수집에 동의해야 합니다. 이용 약관 및 개인 정보 수집에 대한 내용은 **최초 한 번만 표시**되며 동의한 이후에는 나타나지 않습니다.
 
 ![](/DevConsole/Assets/Images/DevConsole-Agree_Terms_of_Use_and_Collecting_Personal_Info.png)
+
+<!-- End of shared content -->
 
 ## Custom extension 기본 정보 입력 {#InputExtensionInfo}
 

@@ -1,4 +1,8 @@
+<!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
+
 ### 요청 메시지 검증 {#RequestMessageValidation}
+
+<!-- Start of shared content: CEKRequestMessageValidation -->
 
 Extension이 CEK로부터 HTTP 요청을 받을 때, 해당 요청이 제 3자가 아닌 Clova로부터 전송된 신뢰할 수 있는 요청인지 검증할 필요가 있습니다. [HTTP 헤더](/Develop/References/CEK_API.md#HTTPHeader)에 있는 `SignatureCEK`와 RSA 공개 키를 사용하여 다음과 같이 요청 메시지를 검증할 수 있습니다.
 
@@ -34,3 +38,5 @@ boolean valid = sig.verify(signature);
   <p><strong>Note!</strong></p>
   <p>메시지 검증에 실패하면 해당 요청을 폐기해야 합니다.</p>
 </div>
+
+<!-- End of shared content -->

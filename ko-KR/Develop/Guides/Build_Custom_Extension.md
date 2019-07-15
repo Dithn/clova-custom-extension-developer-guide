@@ -18,7 +18,7 @@ Custom extension이란 Clova가 기본으로 제공하고 있는 기능이나 �
 
 {% include "/Develop/Guides/BuildCustomExtension/Handle_Custom_Extension_Request.md" %}
 
-{% include "/Develop/Guides/SharedContent/Validating_Request_Message.md" %}
+{% include "/Develop/Guides/BuildCustomExtension/Validating_Request_Message.md" %}
 
 {% include "/Develop/Guides/BuildCustomExtension/Return_Custom_Extension_Response.md" %}
 

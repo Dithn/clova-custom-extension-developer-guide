@@ -1,3 +1,7 @@
+<!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
+
+<!-- Start of shared content: UpdatingExtension -->
+
 # Custom extension 업데이트하기
 
 Extension이 심사를 통과하여 extension 배포가 승인되면 extension은 **{{ book.DevConsole.cek_status_prd }}**인 상태가 됩니다. 이때, Clova developer console은 extension을 다음과 같이 두 가지 버전으로 만듭니다.
@@ -21,3 +25,5 @@ Extension이 심사를 통과하여 extension 배포가 승인되면 extension�
 다음 그림은 Clova developer console에서 extension이 업데이트되는 구조를 보여줍니다.
 
 ![](/DevConsole/Assets/Images/DevConsole-Branch_Chart_For_Extension_Update.png)
+
+<!-- End of shared content -->

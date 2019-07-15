@@ -1,3 +1,5 @@
+<!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
+
 # Custom extension 배포하기
 [Custom extension](/Develop/Guides/Build_Custom_Extension.md)을 [Clova developer console에 등록](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md)했다면 등록한 custom extension을 Clova 서비스에 배포할 수 있습니다. 배포하면 일반 사용자들이 **{{ book.DevConsole.ManageCustomExtensions }}**에서 배포된 custom extension을 사용할 수 있게 됩니다.
 
@@ -60,6 +62,8 @@ Custom extension 배포에 필요한 정보를 입력하는 마지막 단계로�
 
 ![](/DevConsole/Assets/Images/DevConsole-Store_UI_Example-Extension_Policy.png)
 
+<!-- Start of shared content: RequestExtensionSubmission -->
+
 ## 심사 신청하기 {#RequestExtensionSubmission}
 
 Custom extension의 [배포 정보](#InputDeploymentInfo)와 [개인 정보 보호 및 규정 준수 정보](#InputComplianceInfo)까지 입력이 완료되었다면 마지막 단계로 등록한 extension에 대해 extension 심사를 신청할 수 있습니다. Clova의 운영자는 등록한 extension의 정보와 실제 실행 여부 및 적합성 등을 심사하게 됩니다.
@@ -114,3 +118,5 @@ Skill 심사는 **{{ book.DevConsole.ManageCustomExtensions }}**에 반영하기
 이때, **{{ book.DevConsole.cek_message }}**의 **{{ book.DevConsole.cek_view }}** 메뉴를 누르면 심사에 대한 피드백을 확인할 수 있습니다.
 
 ![](/DevConsole/Assets/Images/DevConsole-Show_Submission_Feedback.png)
+
+<!-- End of shared content -->
