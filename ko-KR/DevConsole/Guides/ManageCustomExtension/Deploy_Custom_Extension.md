@@ -62,7 +62,7 @@ Custom extension 배포에 필요한 정보를 입력하는 마지막 단계로�
 
 ![](/DevConsole/Assets/Images/DevConsole-Store_UI_Example-Extension_Policy.png)
 
-<!-- Start of shared content: RequestExtensionSubmission -->
+<!-- Start of the shared content: RequestExtensionSubmission -->
 
 ## 심사 신청하기 {#RequestExtensionSubmission}
 
@@ -119,4 +119,4 @@ Skill 심사는 **{{ book.DevConsole.ManageCustomExtensions }}**에 반영하기
 
 ![](/DevConsole/Assets/Images/DevConsole-Show_Submission_Feedback.png)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->

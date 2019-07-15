@@ -844,7 +844,7 @@ SpeechInfoObject 객체는 응답 메시지의 `response.outputSpeech`에서 재
 
 ## 오디오 콘텐츠 재생 관련 CIC API {#CICAPIforAudioPlayback}
 
-<!-- Start of shared content: CICAPIforAudioPlayback -->
+<!-- Start of the shared content: CICAPIforAudioPlayback -->
 
 CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 받는 메시지 규격입니다. 여기서 설명하는 CIC API는 custom extension의 [오디오 콘텐츠 제공](/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent)과 관련하여 CEK에서 지원하는 CIC API입니다. CEK는 클라이언트가 Clova에게 전달한 이벤트 메시지를 [`EventRequest`](#CustomExtEventRequest) 타입 메시지의 `event` 필드에 채워 보냅니다. 또한, Custom extension은 사용자에게 오디오 콘텐츠를 제공하기 위해 오디오 콘텐츠 재생 제어와 관련된 지시 메시지를 [`응답 메시지`](#CustomExtResponseMessage)의 `response.directives[]` 필드에 채워 보내야 합니다.
 
@@ -872,9 +872,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 | TemplateRuntime | [`RenderPlayerInfo`](#RenderPlayerInfo)        | Directive | CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 앨범 이미지, 가사와 같은 재생 메타 정보를 전달하고 이를 표시하도록 지시합니다. |
 | TemplateRuntime | [`RequestPlayerInfo`](#RequestPlayerInfo)      | Event     | 클라이언트가 미디어 플레이어에 표시할 재생 목록, 앨범 이미지, 가사와 같은 재생 메타 정보를 CIC에게 요청합니다. |
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.Play -->
+<!-- Start of the shared content: AudioPlayer.Play -->
 
 ### Play directive {#Play}
 클라이언트에게 특정 오디오 스트림을 재생하거나 재생 대기열에 추가하도록 지시합니다.
@@ -996,9 +996,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`AudioPlayer.ProgressReportPositionPassed`](#ProgressReportPositionPassed)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.PlayFinished -->
+<!-- Start of the shared content: AudioPlayer.PlayFinished -->
 
 ### AudioPlayer.PlayFinished event {#PlayFinished}
 클라이언트가 오디오 스트림 재생을 완료할 때 재생 완료된 오디오 스트림 정보를 CIC로 보고하기 위해 사용됩니다.
@@ -1039,9 +1039,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
 * [`AudioPlayer.PlayStopped`](#PlayStopped)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.PlayPaused -->
+<!-- Start of the shared content: AudioPlayer.PlayPaused -->
 
 ### AudioPlayer.PlayPaused event {#PlayPaused}
 클라이언트가 오디오 스트림 재생을 일시 정지할 때 일시 정지된 오디오 스트림 정보를 CIC로 보고하기 위해 사용됩니다.
@@ -1081,9 +1081,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.PlayResumed -->
+<!-- Start of the shared content: AudioPlayer.PlayResumed -->
 
 ### AudioPlayer.PlayResumed event {#PlayResumed}
 
@@ -1124,9 +1124,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.PlayStarted -->
+<!-- Start of the shared content: AudioPlayer.PlayStarted -->
 
 ### AudioPlayer.PlayStarted event {#PlayStarted}
 클라이언트가 오디오 스트림 재생을 시작할 때 재생이 시작된 오디오 스트림 정보를 CIC로 보고하기 위해 사용됩니다.
@@ -1166,9 +1166,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStopped`](#PlayStopped)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.PlayStopped -->
+<!-- Start of the shared content: AudioPlayer.PlayStopped -->
 
 ### AudioPlayer.PlayStopped event {#PlayStopped}
 클라이언트가 오디오 스트림 재생을 중지할 때 재생이 중지된 오디오 스트림 정보를 CIC로 보고하기 위해 사용됩니다.
@@ -1208,9 +1208,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.ProgressReportDelayPassed -->
+<!-- Start of the shared content: AudioPlayer.ProgressReportDelayPassed -->
 
 ### AudioPlayer.ProgressReportDelayPassed event {#ProgressReportDelayPassed}
 오디오 스트림 재생이 시작된 후 지정된 지연 시간만큼 시간이 지났을 때 현재 재생 상태를 CIC로 보고하기 위해 사용됩니다.
@@ -1251,9 +1251,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`AudioPlayer.ProgressReportIntervalPassed`](#ProgressReportIntervalPassed)
 * [`AudioPlayer.ProgressReportPositionPassed`](#ProgressReportPositionPassed)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.ProgressReportIntervalPassed -->
+<!-- Start of the shared content: AudioPlayer.ProgressReportIntervalPassed -->
 
 ### AudioPlayer.ProgressReportIntervalPassed event {#ProgressReportIntervalPassed}
 오디오 스트림 재생이 시작된 후 지정된 간격마다 현재 재생 상태를 CIC로 보고하기 위해 사용됩니다.
@@ -1294,9 +1294,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`AudioPlayer.ProgressReportDelayPassed`](#ProgressReportDelayPassed)
 * [`AudioPlayer.ProgressReportPositionPassed`](#ProgressReportPositionPassed)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.ProgressReportPositionPassed -->
+<!-- Start of the shared content: AudioPlayer.ProgressReportPositionPassed -->
 
 ### AudioPlayer.ProgressReportPositionPassed event {#ProgressReportPositionPassed}
 오디오 스트림 재생이 시작된 후 지정된 보고 시점에 현재 재생 상태를 CIC로 보고하기 위해 사용됩니다.
@@ -1337,9 +1337,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`AudioPlayer.ProgressReportDelayPassed`](#ProgressReportDelayPassed)
 * [`AudioPlayer.ProgressReportIntervalPassed`](#ProgressReportIntervalPassed)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.StreamDeliver -->
+<!-- Start of the shared content: AudioPlayer.StreamDeliver -->
 
 ### AudioPlayer.StreamDeliver directive {#StreamDeliver}
 [`AudioPlayer.StreamRequested`](#StreamRequested) 이벤트 메시지의 응답이며, 실제 음악 재생이 가능한 오디오 스트림 정보를 수신해야 할 때 사용합니다. 클라이언트가 음악을 재생할 수 있도록 오디오 스트림 정보에 스트리밍할 수 있는 URI 정보가 필수로 포함되어 있습니다.
@@ -1382,9 +1382,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.StreamRequested -->
+<!-- Start of the shared content: AudioPlayer.StreamRequested -->
 
 ### AudioPlayer.StreamRequested event {#StreamRequested}
 오디오 스트림 재생을 위해 CIC로 스트리밍 URI와 같은 추가 정보를 요청하는 이벤트 메시지입니다.
@@ -1435,9 +1435,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 #### See also
 * [`AudioPlayer.Play`](#Play)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: PlaybackController.Pause -->
+<!-- Start of the shared content: PlaybackController.Pause -->
 
 ### PlaybackController.Pause directive {#Pause}
 클라이언트에게 재생 중인 오디오 스트림을 일시 정지하도록 지시합니다. 클라이언트는 이 지시 메시지를 받은 후 오디오 스트림 재생을 일시 정지해야 합니다.
@@ -1465,9 +1465,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 #### See also
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: PlaybackController.Resume -->
+<!-- Start of the shared content: PlaybackController.Resume -->
 
 ### PlaybackController.Resume directive {#Resume}
 클라이언트에게 오디오 스트림 재생을 재개하도록 지시합니다. 클라이언트는 이 지시 메시지를 받은 후 오디오 스트림 재생을 재개해야 합니다.
@@ -1495,9 +1495,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 ### See also
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: PlaybackController.Stop -->
+<!-- Start of the shared content: PlaybackController.Stop -->
 
 ### PlaybackController.Stop directive {#Stop}
 클라이언트에게 오디오 스트림 재생을 중지하도록 지시합니다. 클라이언트는 이 지시 메시지를 받은 후 오디오 스트림 재생을 중지해야 합니다.
@@ -1525,9 +1525,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 ##### See also
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: SpeechSynthesizer.SpeechFinished -->
+<!-- Start of the shared content: SpeechSynthesizer.SpeechFinished -->
 
 ### SpeechSynthesizer.SpeechFinished event {#SpeechFinished}
 클라이언트가 TTS 재생을 완료했음을 보고하기 위해 사용됩니다.
@@ -1565,9 +1565,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`SpeechSynthesizer.SpeechStarted`](#SpeechStarted)
 * [`SpeechSynthesizer.SpeechStopped`](#SpeechStopped)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: SpeechSynthesizer.SpeechStarted -->
+<!-- Start of the shared content: SpeechSynthesizer.SpeechStarted -->
 
 ### SpeechSynthesizer.SpeechStarted event {#SpeechStarted}
 클라이언트가 TTS 재생을 시작했음을 보고하기 위해 사용됩니다.
@@ -1605,9 +1605,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`SpeechSynthesizer.SpeechFinished`](#SpeechFinished)
 * [`SpeechSynthesizer.SpeechStopped`](#SpeechStopped)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: SpeechSynthesizer.SpeechStopped -->
+<!-- Start of the shared content: SpeechSynthesizer.SpeechStopped -->
 
 ### SpeechSynthesizer.SpeechStopped event {#SpeechStopped}
 클라이언트가 TTS 재생을 중지했음을 보고하기 위해 사용됩니다.
@@ -1645,9 +1645,9 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 * [`SpeechSynthesizer.SpeechFinished`](#SpeechFinished)
 * [`SpeechSynthesizer.SpeechStarted`](#SpeechStarted)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: TemplateRuntime.RenderPlayerInfo -->
+<!-- Start of the shared content: TemplateRuntime.RenderPlayerInfo -->
 
 ### TemplateRuntime.RenderPlayerInfo directive {#RenderPlayerInfo}
 
@@ -1788,9 +1788,9 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 * [`AudioPlayer.Play`](#Play)
 * [`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: TemplateRuntime.RequestPlayerInfo -->
+<!-- Start of the shared content: TemplateRuntime.RequestPlayerInfo -->
 
 ### TemplateRuntime.RequestPlayerInfo event {#RequestPlayerInfo}
 클라이언트가 미디어 플레이어에 표시할 재생 목록, 앨범 이미지, 가사와 같은 재생 메타 정보를 CIC에게 요청합니다.
@@ -1892,9 +1892,9 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 * [`AudioPlayer.PlayFinished`](#PlayFinished)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
-<!-- Start of shared content: AudioPlayer.PlaybackState -->
+<!-- Start of the shared content: AudioPlayer.PlaybackState -->
 
 ## 오디오 콘텐츠 재생 관련 맥락 정보 {#ContextObjectforAudioPlayback}
 클라이언트가 Clova에게 [CIC API](#CICAPIforAudioPlayback) 이벤트 메시지를 전송할 때 다음과 같은 다양한 맥락 정보(context)를 보냅니다. 이 중 오디오 콘텐츠 재생과 관련된 맥락 정보는 [`AudioPlayer.PlaybackState`](#PlaybackState) 입니다.
@@ -1982,6 +1982,6 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 * [`AudioPlayer.StreamDeliver`](#StreamDeliver)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
 {% endif %}

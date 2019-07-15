@@ -17,7 +17,7 @@ Custom extension을 등록할 때 일반적으로 다음 항목을 순차적으�
   </li>
 </ol>
 
-<!-- Start of shared content: AgreeTermsOfUse -->
+<!-- Start of the shared content: AgreeTermsOfUse -->
 
 ## 이용 약관 및 개인 정보 수집 동의 {#AgreeTermsOfUse}
 
@@ -25,7 +25,7 @@ Custom extension을 등록하기 전에 우선 CEK API 서비스 이용 약관�
 
 ![](/DevConsole/Assets/Images/DevConsole-Agree_Terms_of_Use_and_Collecting_Personal_Info.png)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
 
 ## Custom extension 기본 정보 입력 {#InputExtensionInfo}
 

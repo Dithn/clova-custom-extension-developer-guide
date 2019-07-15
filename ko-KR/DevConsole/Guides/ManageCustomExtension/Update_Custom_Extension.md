@@ -1,6 +1,6 @@
 <!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
 
-<!-- Start of shared content: UpdatingExtension -->
+<!-- Start of the shared content: UpdatingExtension -->
 
 # Custom extension 업데이트하기
 
@@ -26,4 +26,4 @@ Extension이 심사를 통과하여 extension 배포가 승인되면 extension�
 
 ![](/DevConsole/Assets/Images/DevConsole-Branch_Chart_For_Extension_Update.png)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->

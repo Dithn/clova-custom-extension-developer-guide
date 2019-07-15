@@ -1,6 +1,6 @@
 <!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
 
-<!-- Start of shared content: RemovingExtension -->
+<!-- Start of the shared content: RemovingExtension -->
 
 # Custom extension 중지 및 삭제하기
 
@@ -24,4 +24,4 @@
   <p>서비스를 중지할 때 Clova 운영팀의 확인이 필요합니다. 따라서, extension을 중지하려면 <a href="mailto:{{ book.ServiceEnv.ExtensionAdminEmail }}">{{ book.ServiceEnv.ExtensionAdminEmail }}</a>로 연락합니다.</p>
 </div>
 
-<!-- End of shared content -->
+<!-- End of the shared content -->

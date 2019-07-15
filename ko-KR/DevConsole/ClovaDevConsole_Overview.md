@@ -1,6 +1,6 @@
 <!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
 
-<!-- Start of shared content: DeveloperConsoleOverview -->
+<!-- Start of the shared content: DeveloperConsoleOverview -->
 
 # Clova developer console 개요
 
@@ -14,4 +14,4 @@ Clova developer console은 Clova 플랫폼과 연동하는 기기나 서비스�
 
 ![](/DevConsole/Assets/Images/DevConsole-Extension_LifeCycle.png)
 
-<!-- End of shared content -->
+<!-- End of the shared content -->
