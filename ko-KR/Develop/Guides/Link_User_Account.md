@@ -103,7 +103,7 @@ Extension에 계정 연결을 적용하려면 우선 사용자가 계정 인증�
 
 <div class="Note">
 <p><strong>Note!</strong></p>
-<p><code>redirect_uri</code>는 Clova developer console의 계정 연결을 설정하는 화면(<a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#RedirectURI">Custom extension용</a>, <a href="/DevConsole/Guides/ManageClovaHomeExtension/Register_Clova_Home_Extension.md#RedirectURI">Clova Home extension용</a>)에서 확인할 수 있습니다. 클라이언트로부터 전달되는 <code>redirect_uri</code>의 값이 Clova가 제공하는 redirection URI가 맞는지 <a href="https://tools.ietf.org/html/rfc6749#section-10.6" target="_blank">검증</a>해야 합니다.</p>
+<p><code>redirect_uri</code>는 Clova developer console의 계정 연결을 설정하는 화면(<a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#RedirectURI">Custom extension용</a>, <a href="{{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/DevConsole/Guides/ManageClovaHomeExtension/Register_Clova_Home_Extension.md#RedirectURI">Clova Home extension용</a>)에서 확인할 수 있습니다. 클라이언트로부터 전달되는 <code>redirect_uri</code>의 값이 Clova가 제공하는 redirection URI가 맞는지 <a href="https://tools.ietf.org/html/rfc6749#section-10.6" target="_blank">검증</a>해야 합니다.</p>
 </div>
 
 계정 인증 후 이동할 URI(`redirect_uri`)에는 다음과 같은 파라미터를 전달해야 합니다.

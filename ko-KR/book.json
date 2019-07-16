@@ -15,6 +15,7 @@
       "TargetReaderType": "Internal"
     },
     "ServiceEnv": {
+      "CEKTermsOfUseURI": "https://developers.naver.com/console/clova/cek/#/terms",
       "DeveloperCenterForumURI": "https://developers.naver.com/forum/list",
       "DeveloperCenterName": "NAVER 개발자 센터",
       "DeveloperConsoleURI": "https://developers.naver.com/console/clova",

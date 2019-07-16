@@ -127,7 +127,7 @@
       <td>2018-09-21</td>
       <td>
         <ul>
-          <li>Clova에서 전달하는 메시지의 검증을 위해 <a href="/CEK/References/CEK_API.md#HTTPHeader">HTTP 헤더</a>에 SignatureCEK 필드 설명을 추가하고 <a href="/CEK/Guides/Build_Custom_Extension.md">custom extension 만들기</a> 문서에 요청 메시지 검증 절을 추가</li>
+          <li>Clova에서 전달하는 메시지의 검증을 위해 <a href="/Develop/References/CEK_API.md#HTTPHeader">HTTP 헤더</a>에 SignatureCEK 필드 설명을 추가하고 <a href="/Develop/Guides/Build_Custom_Extension.md">custom extension 만들기</a> 문서에 요청 메시지 검증 절을 추가</li>
           <li>일부 잘못된 코드 예제를 수정</li>
           <li>일부 잘못된 링크를 수정</li>
           <li>일부 사용자 접점에 있는 Extension 표기를 Skill로 변경(UI 캡처 이미지 함께 업데이트)</li>

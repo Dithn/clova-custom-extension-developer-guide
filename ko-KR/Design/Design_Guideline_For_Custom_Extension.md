@@ -152,7 +152,7 @@ Custom extension을 설계할 때 가장 먼저 할 일은 custom extension의 �
     </tr>
     <tr>
       <td>이용 약관을 위반하지 않는 이름이어야 함</td>
-      <td><a href="https://developers.naver.com/console/clova/cek/#/terms" target="_blank">Clova Extensions Kit 이용약관</a>을 준수해야 합니다. 제 3자의 권리 침해나 외설적인 표현을 사용한 이름을 허용하지 않습니다.</td>
+      <td><a href="{{ book.ServiceEnv.CEKTermsOfUseURI }}" target="_blank">Clova Extensions Kit 이용약관</a>을 준수해야 합니다. 제 3자의 권리 침해나 외설적인 표현을 사용한 이름을 허용하지 않습니다.</td>
     </tr>
     <tr>
       <td>기타 유의 사항</td>
@@ -563,7 +563,7 @@ Skill은 개인 정보 보호의 의무를 지켜야 합니다.
 Skill 콘텐츠 제공과 관련하여 다음과 같은 유의 사항이 있습니다.
 
 * Skill이 본인(당사) 또는 제3자의 기기(예: IoT기기)와 연동된다면 심사를 위해 관련 기기 제출을 요청할 수도 있습니다.
-* 위에서 언급한 내용 뿐만 아니라 Skill은 [Clova Extensions Kit 이용약관](https://developers.naver.com/console/clova/cek/#/terms)을 위반하지 않아야 합니다.
+* 위에서 언급한 내용 뿐만 아니라 Skill은 [Clova Extensions Kit 이용약관]({{ book.ServiceEnv.CEKTermsOfUseURI }})을 위반하지 않아야 합니다.
 
 <div class="note">
 <p><strong>Note!</strong></p>
