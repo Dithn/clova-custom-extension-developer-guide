@@ -1,5 +1,5 @@
 # 기초적인 extension 만들기
-이 튜토리얼에서는 주사위를 굴려달라는 사용자의 요청에 1개의 주사위만 굴려주는 기초적인 extension을 만듭니다.
+이 튜토리얼에서는 주사위를 굴려달라는 사용자의 요청에 1 개의 주사위만 굴려주는 기초적인 extension을 만듭니다.
 
 Custom extension을 서비스하려면 아래 두 가지 요소가 꼭 필요합니다.
 
@@ -10,17 +10,17 @@ Custom extension을 서비스하려면 아래 두 가지 요소가 꼭 필요합
 다음과 같은 과정을 통해 위 두 요소를 만들고 등록하는 방법을 알아봅니다.
 
 Extension을 만드는 전체적인 과정은 다음과 같습니다.
-* 1단계. Extension 서버 준비(개별적으로 작업)
-* 2단계. Extension 기본 정보 등록(Clova developer console에서 작업)
-* 3단계. Interaction 모델 등록(Clova developer console에서 작업)
-* 4단계. Extension 동작 테스트(Clova developer console과 실제 기기에서 작업)
+* 1 단계. Extension 서버 준비(개별적으로 작업)
+* 2 단계. Extension 기본 정보 등록(Clova developer console에서 작업)
+* 3 단계. Interaction 모델 등록(Clova developer console에서 작업)
+* 4 단계. Extension 동작 테스트(Clova developer console과 실제 기기에서 작업)
 
 <div class="tip">
   <p><strong>Tip!</strong></p>
   <p>이렇게 만든 extension을 실제 서비스하려면 <a href="/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md">Extension 배포하기</a>를 참조하십시오.</p>
 </div>
 
-## 1단계. Extension 서버 준비 {#Step1}
+## 1 단계. Extension 서버 준비 {#Step1}
 
 샘플 주사위 extension이 등록한 slot을 잘 처리하는지 테스트해야 합니다.
 
@@ -43,7 +43,7 @@ Extension을 만드는 전체적인 과정은 다음과 같습니다.
     	<p>외부에서 접근할 수 있는 extension 서버 URI를 등록하지 않았다면, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>은 "{{ book.DevConsole.cek_builder_test_no_response }}"라고 나타납니다.</p>
   	</div>
   </li>
-  <li><p>"주사위 열 개 굴려", "네 개 주사위 던져" 등의 문장으로 4-6을 반복합니다.</p></li>
+  <li><p>"주사위 열 개 굴려", "네 개 주사위 던져" 등의 문장으로 4-6 단계를 반복합니다.</p></li>
 </ol>
 
 인식이 잘 되지 않으면 좀 더 다양한 발화 예시를 추가하여 인식 확률을 높일 수 있습니다.
@@ -60,7 +60,7 @@ Clova는 사용자의 음성 입력을 분석한 결과를 extension 서버에 �
 
 	Clova는 그에 따라 도움말 안내, 긍정, 부정, 실행 취소 등의 요청 메시지를 전송하며, 서버는 이에 따른 일반적인 응답을 하면 됩니다.
 
-## 2단계. Extension 기본 정보 등록 {#Step2}
+## 2 단계. Extension 기본 정보 등록 {#Step2}
 
 <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a>에 접속하여 extension의 기본 정보를 등록합니다.
 주요 항목은 아래와 같습니다.
@@ -75,10 +75,10 @@ Clova는 사용자의 음성 입력을 분석한 결과를 extension 서버에 �
   <li>서버 연동 설정
     <ul>
       <li>
-        <p><strong>{{ book.DevConsole.cek_service_endpoint_url }}</strong>: Clova와 통신할 extension의 REST API 서버로, 외부에서 접근할 수 있는 URI여야 합니다. 1단계에서 샘플 주사위 소스 코드를 실행한 서버의 주소를 입력합니다.</p>
+        <p><strong>{{ book.DevConsole.cek_service_endpoint_url }}</strong>: Clova와 통신할 extension의 REST API 서버로, 외부에서 접근할 수 있는 URI여야 합니다. 1 단계에서 샘플 주사위 소스 코드를 실행한 서버의 주소를 입력합니다.</p>
     		<div class="note">
     			<p><strong>Note!</strong></p>
-    			<p>테스트 단계에서는 HTTP도 가능하나 정식 서비스를 위해서는 HTTPS여야 합니다. Extension 서버는 HTTP일 때 80번 포트를 HTTPS일 때 443번 포트를 사용해야 합니다.</p>
+    			<p>테스트 단계에서는 HTTP도 가능하나 정식 서비스를 위해서는 HTTPS여야 합니다. Extension 서버는 HTTP일 때 80 번 포트를 HTTPS일 때 443 번 포트를 사용해야 합니다.</p>
     		</div>
       </li>
       <li><p><strong>{{ book.DevConsole.cek_account_linking }}</strong>: 인증 서버(OAuth 2.0기반)를 사용해 3rd party의 회원정보와 연동할 때만 사용합니다. 샘플 주사위 extension은 <strong>{{ book.DevConsole.cek_no }}</strong>로 설정합니다.</p></li>
@@ -88,14 +88,14 @@ Clova는 사용자의 음성 입력을 분석한 결과를 extension 서버에 �
   </li>
 </ul>
 
-## 3단계. Interaction 모델 등록 {#Step3}
+## 3 단계. Interaction 모델 등록 {#Step3}
 
 <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a>에서 interaction 모델을 등록합니다.
 
-이 튜토리얼에서 샘플 주사위는 사용자가 개수를 지정하지 않고 주사위를 던져달라는 요청을 하면 기본적으로 주사위 1개를 던집니다. 여기서는 이렇게 주사위 1개를 던지는 명령을 처리하는 단순한 interaction 모델을 사용하기로 합시다. 주사위 개수를 수집하지 않으므로 slot이 없는 intent 하나를 등록하면 됩니다.
+이 튜토리얼에서 샘플 주사위는 사용자가 개수를 지정하지 않고 주사위를 던져달라는 요청을 하면 기본적으로 주사위 1 개를 던집니다. 여기서는 이렇게 주사위 1 개를 던지는 명령을 처리하는 단순한 interaction 모델을 사용하기로 합시다. 주사위 개수를 수집하지 않으므로 slot이 없는 intent 하나를 등록하면 됩니다.
 
 ### 새로운 custom intent 만들기
-여기서는 주사위를 던져달라는 요청에 주사위 1개를 던지도록 간단한 intent를 생성합니다.
+여기서는 주사위를 던져달라는 요청에 주사위 1 개를 던지도록 간단한 intent를 생성합니다.
 
 <ol>
   <li><p>샘플 주사위의 <strong>{{ book.DevConsole.cek_interaction_model }}</strong> 항목 내 <strong>{{ book.DevConsole.cek_edit }}</strong> 버튼을 누릅니다.</p></li>
@@ -131,7 +131,7 @@ Interaction 모델이 입력한대로 동작하는지 확인하기 위해 intera
     <p><strong>Custom Extension</strong> 화면 좌측 상단의 <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> 버튼을 누릅니다.</p>
   	<div class="note">
   	  <p><strong>Note!</strong></p>
-  		<p>빌드는 3~5분 정도 소요됩니다. 빌드가 시작되면 버튼이 <strong>{{ book.DevConsole.cek_builder_menu_build_in_progress }}</strong>으로 바뀌며, 빌드가 완료된 후 다시 <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong>로 돌아옵니다.</p>
+  		<p>빌드는 3~5 분 정도 소요됩니다. 빌드가 시작되면 버튼이 <strong>{{ book.DevConsole.cek_builder_menu_build_in_progress }}</strong>으로 바뀌며, 빌드가 완료된 후 다시 <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong>로 돌아옵니다.</p>
   	</div>
   </li>
   <li><p>빌드가 완료되면 <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> 버튼 아래의 <strong>{{ book.DevConsole.cek_test }}</strong> 메뉴를 누릅니다.</p></li>
@@ -142,12 +142,12 @@ Interaction 모델이 입력한대로 동작하는지 확인하기 위해 intera
   	<img src="/Develop/Assets/Images/CEK_Tutorial_Test.png" />
   	<div class="note">
     	<p><strong>Note!</strong></p>
-    	<p>2단계에서 외부에서 접근할 수 있는 extension 서버 URI를 등록하지 않았다면, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>은 "{{ book.DevConsole.cek_builder_test_no_response }}"라고 나타납니다.</p>
+    	<p>2 단계에서 외부에서 접근할 수 있는 extension 서버 URI를 등록하지 않았다면, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>은 "{{ book.DevConsole.cek_builder_test_no_response }}"라고 나타납니다.</p>
   	</div>
   </li>
 </ol>
 
-## 4단계. Extension 실제 동작 테스트 {#Step4}
+## 4 단계. Extension 실제 동작 테스트 {#Step4}
 
 Interaction 모델이 잘 동작하는 것을 확인했다면, 심사 요청 전에 실제 기기에서 테스트하여 음성 인식과 응답이 기대한대로 동작하는지 확인해야 합니다.
 
@@ -162,7 +162,7 @@ Interaction 모델이 잘 동작하는 것을 확인했다면, 심사 요청 전
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>테스터 ID를 등록한 후 조금 기다리면 extension을 테스트해 볼 수 있습니다. 만약, 1시간 정도가 지나도 extension을 테스트할 수 없으면 포럼이나 제휴 담당자를 통해 문의하시기 바랍니다.</p>
+  <p>테스터 ID를 등록한 후 조금 기다리면 extension을 테스트해 볼 수 있습니다. 만약, 1 시간 정도가 지나도 extension을 테스트할 수 없으면 포럼이나 제휴 담당자를 통해 문의하시기 바랍니다.</p>
 </div>
 
 <div class="note">
@@ -177,6 +177,6 @@ Clova 앱을 통해 샘플 주사위 extension을 실행합니다.
 1. 테스트할 기기에 Clova 앱을 설치합니다.
 2. 테스터 ID로 입력한 {{ book.ServiceEnv.OrientedService }} 계정으로 로그인합니다.
 3. 테스트용 extension 호출 이름으로 음성 명령을 내립니다. 예를 들어, "클로바, 샘플 주사위에 주사위 던지라고 해"라고 명령해봅니다.
-4. Clova 앱이 "주사위를 1개 던집니다"라고 응답하는지 확인합니다.
+4. Clova 앱이 "주사위를 1 개 던집니다"라고 응답하는지 확인합니다.
 
 Extension이 실제 기기에서도 잘 동작하면 서비스할 준비가 된 것입니다. 이제 Clova developer console에서 심사를 요청하여 extension을 배포할 수 있습니다.

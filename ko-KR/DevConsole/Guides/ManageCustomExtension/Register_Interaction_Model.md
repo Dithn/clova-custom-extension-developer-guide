@@ -111,7 +111,7 @@ Custom extension에서 사용할 [built-in slot 타입](#AddBuiltinSlotType)과 
   <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_4.png" />
   <li>추가한 발화 예시에서 slot으로 처리할 부분을 드래그하여 slot을 지정해줍니다.</li>
   <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_5.png" />
-  <li>5번과 6번 단계를 반복하여 intent에 발화 예시를 필요한 만큼 추가합니다.</li>
+  <li>5 번과 6 번 단계를 반복하여 intent에 발화 예시를 필요한 만큼 추가합니다.</li>
   <li>마지막으로 우측 상단에 있는 <strong>{{ book.DevConsole.cek_save }}</strong> 버튼을 누릅니다.</li>
 </ol>
 
@@ -122,7 +122,7 @@ Custom extension에서 사용할 [built-in slot 타입](#AddBuiltinSlotType)과 
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>Custom intent 하나당 등록할 수 있는 발화 예시의 최대 수는 2000건입니다. 참고로 발화 예시의 등록 건수가 많을수록 인식률이 높아지는 것은 아닙니다. 자세한 설명은 <a href="/Design/Design_Guideline_For_Custom_Extension.md#UtteranceExample"></a>을 참고합니다.</p>
+  <p>Custom intent 하나당 등록할 수 있는 발화 예시의 최대 수는 2000 건입니다. 참고로 발화 예시의 등록 건수가 많을수록 인식률이 높아지는 것은 아닙니다. 자세한 설명은 <a href="/Design/Design_Guideline_For_Custom_Extension.md#UtteranceExample"></a>을 참고합니다.</p>
 </div>
 
 Custom slot 타입을 추가할 때와 마찬가지로 정의하려는 TSV(Tab-separated values, .tsv) 형식의 파일을 업로드할 수도 있습니다. TSV 파일은 두 부분으로 나뉘며 각각 intent의 slot을 정의하는 부분과 발화 예시를 나열하는 부분으로 나뉩니다. Intent의 slot을 정의하는 부분이 파일의 앞 부분에 오며 `[INTENT SLOT]`이 입력된 줄 바로 다음에 slot이 나열됩니다. 탭 문자로 구분된 첫 번째 열은 intent에서 사용되는 slot의 이름이며, 두 번째 열은 slot type입니다.
@@ -135,9 +135,9 @@ pizzaType	PIZZA_TYPE
 pizzaAmount	CLOVA.NUMBER
 
 [INTENT EXPRESSION]
-<pizzaType>페퍼로니</pizzaType> <pizzaAmount>2판</pizzaAmount> 주문해줘.
-<pizzaType>BBQ 피자</pizzaType> <pizzaAmount>2판</pizzaAmount> 배달시켜줄래?
-<pizzaType>콤비네이션 피자</pizzaType> <pizzaAmount>2개</pizzaAmount> 시켜줘.
+<pizzaType>페퍼로니</pizzaType> <pizzaAmount>2 판</pizzaAmount> 주문해줘.
+<pizzaType>BBQ 피자</pizzaType> <pizzaAmount>2 판</pizzaAmount> 배달시켜줄래?
+<pizzaType>콤비네이션 피자</pizzaType> <pizzaAmount>2 개</pizzaAmount> 시켜줘.
 <pizzaType>쉬림프 골크</pizzaType> <pizzaAmount>하나</pizzaAmount> 부탁해.
 ...
 ```

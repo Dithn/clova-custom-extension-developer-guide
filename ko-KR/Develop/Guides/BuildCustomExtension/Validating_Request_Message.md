@@ -4,13 +4,13 @@
 
 <!-- Start of the shared content: CEKRequestMessageValidation -->
 
-Extension이 CEK로부터 HTTP 요청을 받을 때, 해당 요청이 제 3자가 아닌 Clova로부터 전송된 신뢰할 수 있는 요청인지 검증할 필요가 있습니다. [HTTP 헤더](/Develop/References/CEK_API.md#HTTPHeader)에 있는 `SignatureCEK`와 RSA 공개 키를 사용하여 다음과 같이 요청 메시지를 검증할 수 있습니다.
+Extension이 CEK로부터 HTTP 요청을 받을 때, 해당 요청이 제 3 자가 아닌 Clova로부터 전송된 신뢰할 수 있는 요청인지 검증할 필요가 있습니다. [HTTP 헤더](/Develop/References/CEK_API.md#HTTPHeader)에 있는 `SignatureCEK`와 RSA 공개 키를 사용하여 다음과 같이 요청 메시지를 검증할 수 있습니다.
 
 <ol>
   <li><p>Clova의 서명용 RSA 공개 키를 아래 URI에서 다운로드 합니다.</p>
 <p>{{ book.ServiceEnv.PublicKeyURIforCEKMessageValidation }}</p></li>
   <li><p><a href="/Develop/References/CEK_API.md#HTTPHeader">HTTP 헤더</a>에서 `SignatureCEK` 필드의 값을 확보합니다.</p><p>`SignatureCEK` 필드의 값은 HTTP 요청 메시지의 본문을 Base64로 인코딩한 <a href="https://tools.ietf.org/html/rfc3447" target="_blank">RSA PKCS#1 v1.5</a> 서명 값(signature)입니다.</p></li>
-  <li>1번 항목에서 다운로드한 RSA 공개 키와 2번 항목에서 획득한 `SignatureCEK` 헤더 값을 이용하여 <a href="https://tools.ietf.org/html/rfc3447#section-5.2" target="_blank">검증(verify)</a>합니다.</li>
+  <li>1 번 항목에서 다운로드한 RSA 공개 키와 2 번 항목에서 획득한 `SignatureCEK` 헤더 값을 이용하여 <a href="https://tools.ietf.org/html/rfc3447#section-5.2" target="_blank">검증(verify)</a>합니다.</li>
 </ol>
 
 다음은 요청 메시지를 검증하는 예제 코드입니다.

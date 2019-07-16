@@ -1,20 +1,20 @@
 # 사용자가 입력한 정보 활용하기
-이 튜토리얼에서는 [기초적인 extension 만들기](/Develop/Tutorials/Build_Simple_Extension.md)에서 만든 샘플 주사위 extension이 사용자의 요청에 따라 주사위를 1개 이상 던지도록 하는 법을 알아봅니다.
+이 튜토리얼에서는 [기초적인 extension 만들기](/Develop/Tutorials/Build_Simple_Extension.md)에서 만든 샘플 주사위 extension이 사용자의 요청에 따라 주사위를 1 개 이상 던지도록 하는 법을 알아봅니다.
 
 사용자의 음성 명령에는 extension이 수행할 동작 외에 그 동작에 필요한 추가적인 정보가 들어있을 수 있습니다. [튜토리얼 개요](/Develop/Tutorials/Introduction.md)에서 기술한 샘플 주사위 extension을 사용법을 다시 봅시다.
 
 {% include "/Develop/Tutorials/BasicInformation/DICE_Sample_Dialog.md" %}
 
-두 번째 대화에서 사용자는 "주사위 **2개** 던져줘"라고 요청했고, 여기서 "2개"가 바로 "주사위 던지기"라는 동작에 필요한 추가적인 정보입니다.
+두 번째 대화에서 사용자는 "주사위 **2 개** 던져줘"라고 요청했고, 여기서 "2 개"가 바로 "주사위 던지기"라는 동작에 필요한 추가적인 정보입니다.
 
 Interaction 모델에서는 이런 추가 정보를 [slot](/Design/Design_Guideline_For_Custom_Extension.md#Slot)이라고 부릅니다. Extension에서 추가 정보를 사용하려면, interaction 모델을 정의할 때 어떤 추가 정보가 들어올지 미리 파악한 뒤 알맞은 slot을 등록해야 합니다. Clova는 이렇게 등록된 slot을 기반으로 사용자 요청에 포함된 추가 정보를 알아낼 수 있습니다.
 
 추가 정보를 처리하는 방법은 다음과 같습니다.
-* 1단계. Interaction 모델에 slot 등록(Clova developer console에서 작업)
-* 2단계. Slot 처리 구현(Extension 서버에서 작업)
-* 3단계. Slot 동작 테스트(Clova developer console에서 작업)
+* 1 단계. Interaction 모델에 slot 등록(Clova developer console에서 작업)
+* 2 단계. Slot 처리 구현(Extension 서버에서 작업)
+* 3 단계. Slot 동작 테스트(Clova developer console에서 작업)
 
-## 1단계. Interaction 모델에 slot 등록 {#Step1}
+## 1 단계. Interaction 모델에 slot 등록 {#Step1}
 
 사용자가 던질 주사위의 개수를 지정할 수 있도록 interaction 모델을 수정해야 합니다.
 
@@ -74,10 +74,10 @@ Clova는 모든 extension이 범용적으로 사용할 수 있도록 일반적�
     <p><strong>{{ book.DevConsole.cek_builder_slot_layer_select_slot }}</strong> 밑에 있는 "diceCount"를 선택합니다.</p>
     <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Set_Slot.png" />
   </li>
-  <li><p>"하나 던져봐", "다섯 개의 주사위 굴려"라는 문장으로 1-4를 반복합니다.</p></li>
+  <li><p>"하나 던져봐", "다섯 개의 주사위 굴려"라는 문장으로 1-4 단계를 반복합니다.</p></li>
 </ol>
 
-## 2단계. Slot 처리 구현 {#Step2}
+## 2 단계. Slot 처리 구현 {#Step2}
 
 샘플 주사위 extension이 slot을 처리할 수 있도록 코드를 변경해야 합니다.
 여기서는 사전에 구현된 소스 코드를 참고하여 어떤 부분이 변경되었는지 살펴보기 위해 [첫 번째 튜토리얼](/Develop/Tutorials/Build_Simple_Extension.md)의 저장소를 재사용합니다.
@@ -119,7 +119,7 @@ intentRequest(cekResponse) {
 
 변경된 코드를 extension 서버에서 실행합니다.
 
-## 3단계. Slot 동작 테스트 {#Step3}
+## 3 단계. Slot 동작 테스트 {#Step3}
 
 샘플 주사위 extension이 등록한 slot을 잘 처리하는지 테스트해야 합니다.
 
@@ -142,10 +142,10 @@ intentRequest(cekResponse) {
     	<p>외부에서 접근할 수 있는 extension 서버 URI를 등록하지 않았다면, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>은 "{{ book.DevConsole.cek_builder_test_no_response }}"라고 나타납니다.</p>
   	</div>
   </li>
-  <li><p>"주사위 열 개 굴려", "네 개 주사위 던져" 등의 문장으로 4-6을 반복합니다.</p></li>
+  <li><p>"주사위 열 개 굴려", "네 개 주사위 던져" 등의 문장으로 4-6 단계를 반복합니다.</p></li>
 </ol>
 
 인식이 잘 되지 않으면 좀 더 다양한 발화 예시를 추가하여 인식 확률을 높일 수 있습니다.
 
-이제 샘플 주사위 extension은 주사위를 1개 이상 던질 수 있게 되었습니다.
-같은 방법으로 주사위를 1번 이상 던지게 하거나 숫자가 아닌 다른 값을 가진 주사위를 던지게 할 수 있습니다.
+이제 샘플 주사위 extension은 주사위를 1 개 이상 던질 수 있게 되었습니다.
+같은 방법으로 주사위를 1 번 이상 던지게 하거나 숫자가 아닌 다른 값을 가진 주사위를 던지게 할 수 있습니다.

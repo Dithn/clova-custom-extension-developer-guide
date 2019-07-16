@@ -14,7 +14,7 @@ Custom extension을 배포하려면 [interaction 모델이 등록](/DevConsole/G
 <ol>
   <li>등록한 custom extension 목록에서 interaction 모델을 빌드하려는 custom extension 항목의 <strong>{{ book.DevConsole.cek_edit }}</strong> 메뉴를 누릅니다.</li>
   <img src="/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png" />
-  <li><strong>{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}</strong> 화면에서 왼쪽 상단에 있는 <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> 버튼을 누르면 interaction 모델을 빌드합니다. Interaction 모델의 크기 등에 따라 3~5분 정도 소요될 수 있습니다.</li>
+  <li><strong>{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}</strong> 화면에서 왼쪽 상단에 있는 <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> 버튼을 누르면 interaction 모델을 빌드합니다. Interaction 모델의 크기 등에 따라 3~5 분 정도 소요될 수 있습니다.</li>
   <img src="/DevConsole/Assets/Images/DevConsole-Build_Interaction_Model.png" />
 </ol>
 
@@ -53,7 +53,7 @@ Custom extension을 실제 클라이언트인 Clova 앱에서 테스트해볼 �
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>테스터 ID를 등록한 후 조금 기다리면 custom extension을 테스트해 볼 수 있습니다. 만약, 1시간 정도가 지나도 custom extension을 테스트할 수 없으면 포럼이나 제휴 담당자를 통해 문의하시기 바랍니다.</p>
+  <p>테스터 ID를 등록한 후 조금 기다리면 custom extension을 테스트해 볼 수 있습니다. 만약, 1 시간 정도가 지나도 custom extension을 테스트할 수 없으면 포럼이나 제휴 담당자를 통해 문의하시기 바랍니다.</p>
 </div>
 
 <!-- End of the shared content -->

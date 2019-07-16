@@ -4,5 +4,5 @@
 
 	<div class="note">
 		<p><strong>Note!</strong></p>
-		<p>테스트 단계에서는 HTTP도 가능하나 정식 서비스를 위해서는 HTTPS여야 합니다. Extension 서버는 HTTP일 때 80번 포트를 HTTPS일 때 443번 포트를 사용해야 합니다.</p>
+		<p>테스트 단계에서는 HTTP도 가능하나 정식 서비스를 위해서는 HTTPS여야 합니다. Extension 서버는 HTTP일 때 80 번 포트를 HTTPS일 때 443 번 포트를 사용해야 합니다.</p>
 	</div>

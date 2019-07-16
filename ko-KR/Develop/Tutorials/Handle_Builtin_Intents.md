@@ -13,10 +13,10 @@ Clova는 빈번하게 발생하는 사용자의 기본적인 의사 표현을 �
 사용자가 도움말을 요청하거나 실행 취소를 요청할 때 이를 처리하기 위해 첫 번째 튜토리얼에서 했던 것처럼 intent와 예시 문장을 등록할 필요 없이 위 표에 있는 built-in intent를 사용하면 됩니다.
 
 Built-in intent를 처리하는 과정은 다음과 같습니다.
-* 1단계. Built-in intent 처리 구현(Extension 서버에서 작업)
-* 2단계. Built-in intent 동작 테스트(Clova developer console에서 작업)
+* 1 단계. Built-in intent 처리 구현(Extension 서버에서 작업)
+* 2 단계. Built-in intent 동작 테스트(Clova developer console에서 작업)
 
-## 1단계. Built-in intent 처리 구현 {#Step1}
+## 1 단계. Built-in intent 처리 구현 {#Step1}
 
 샘플 주사위 extension이 built-in intent를 처리할 수 있도록 코드를 변경해야 합니다.
 
@@ -52,7 +52,7 @@ intentRequest(cekResponse) {
 
 변경된 코드를 extension 서버에서 실행합니다.
 
-## 2단계. Built-in intent 동작 테스트 {#Step2}
+## 2 단계. Built-in intent 동작 테스트 {#Step2}
 샘플 주사위 extension이 도움말 요청을 하는 built-in intent를 잘 처리하는지 테스트해야 합니다.
 
 [첫 번째 튜토리얼](/Develop/Tutorials/Build_Simple_Extension.md)에서처럼 두 가지 테스트 방법이 있습니다. 하나는 Clova developer console에서 interaction 모델 동작을 확인하는 것이고, 다른 하나는 테스터 ID를 등록하여 Clova 앱에서 실제 동작을 확인하는 것입니다.

@@ -77,7 +77,7 @@ $ curl "https://example.com/pizzabot" -X POST
   <li>Custom extension 서버 URI(endpoint) 정보를 <strong>{{ book.DevConsole.cek_service_endpoint_url }}</strong> 항목에 입력합니다.
     <div class="note">
       <p><strong>Note!</strong></p>
-      <p>테스트 단계에서는 HTTP도 가능하나 정식 서비스를 위해서는 HTTPS여야 합니다. Custom extension 서버는 HTTP일 때 80번 포트를 HTTPS일 때 443번 포트를 사용해야 합니다.</p>
+      <p>테스트 단계에서는 HTTP도 가능하나 정식 서비스를 위해서는 HTTPS여야 합니다. Custom extension 서버는 HTTP일 때 80 번 포트를 HTTPS일 때 443 번 포트를 사용해야 합니다.</p>
     </div>
   </li>
   <li>(Custom extension이 제공하는 서비스의 사용자 계정과 Clova의 사용자 계정 간에 연결이 필요하다면) <strong>{{ book.DevConsole.cek_account_linking }}</strong> 항목을 <strong>{{ book.DevConsole.cek_yes }}</strong>로 선택합니다. 계정 연결에 대한 자세한 설명은 <a href="#SetAccountLinking">계정 연결 설정</a>을 참조합니다.</li>
