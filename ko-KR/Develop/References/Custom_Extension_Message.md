@@ -609,7 +609,7 @@ SpeechInfoObject 객체는 응답 메시지의 `response.outputSpeech`에서 재
 |----------------|--------------|--------------------------------------------------------------------|:-----:|
 | `contentType`    | string       | HLS 방식의 음원을 제공할 때 `"application/vnd.apple.mpegurl"`을 입력합니다.  | 선택   |
 | `lang`           | string       | 음성 합성을 할 때 사용할 언어의 코드. 현재 다음과 같은 값을 가집니다.<ul><li><code>"en"</code>: 영어</li><li><code>"ja"</code>: 일본어</li><li><code>"ko"</code>: 한국어</li><li><code>""</code>: <code>type</code> 필드의 값이 <code>"URL"</code>이면 이 필드는 빈 문자열(empty string)을 가집니다.</li></ul>         | 필수 |
-| `token`          | string       | 제공할 음성의 token. 이 필드에 값을 입력하면 클라이언트에서 해당 음성이 재생된 결과나 재생 상태를 보고 받을 수 있습니다. 음성 재생 상태에 대한 경과 보고는 [`EventRequest` 요청 타입](/Develop/References/CEK_API.md#CustomExtEventRequest)의 메시지를 통해 전달받게 됩니다. UUID 포맷(버전 4)으로 생성해야 합니다.<div class="note"><p><strong>Warning!</strong></p><p>이 필드의 최대 길이는 2048 바이트입니다.</p></div> | 선택  |
+| `token`          | string       | 제공할 음성의 token. 이 필드에 값을 입력하면 클라이언트에서 해당 음성이 재생된 결과나 재생 상태를 보고 받을 수 있습니다. 음성 재생 상태에 대한 경과 보고는 [`EventRequest` 요청 타입](/Develop/References/CEK_API.md#CustomExtEventRequest)의 메시지를 통해 전달받게 됩니다. UUID 포맷(버전 4)으로 생성해야 합니다.<div class="note"><p><strong>Note!</strong></p><p>이 필드의 최대 길이는 2048 바이트입니다.</p></div> | 선택  |
 | `type`           | string       | 재공할 음성의 타입. 이 필드의 값에 따라 `value` 필드 값의 형태가 달라집니다. 현재 다음과 같은 값을 가집니다.<ul><li><code>"PlainText"</code>: 일반 텍스트</li><li><code>"URL"</code>: 음성 및 음악을 재생할 수 있는 파일의 URI</li></ul>            | 필수 |
 | `value`          | string       | 음성 합성할 내용 또는 음성 파일의 URI.<div class="tip"><p><strong>Tip!</strong></p><p>Clova가 지원하는 음성 파일 형식에 대한 내용은 <a href="/Design/Design_Guideline_For_Custom_Extension.md#SupportedAudioCompressionFormat">플랫폼 지원 오디오 압축 포맷</a>을 참조합니다.</p></div><div class="note"><p><strong>Note!</strong></p><p><code>type</code> 필드가 <code>URL</code>일 때 이 필드의 최대 길이는 2048 바이트입니다.</p></div>     | 필수 |
 
@@ -1845,8 +1845,8 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 | `progressReport.progressReportDelayInMilliseconds`    | number | 재생 시작 후 지정된 시간이 지났을 때 재생 상태 정보를 보고받기 위해 지정되는 값입니다. 단위는 밀리 초이며, 이 필드는 null 값을 가질 수 있습니다.  | 선택/조건부 |
 | `progressReport.progressReportIntervalInMilliseconds` | number | 재생 중 지정된 시간 간격으로 재생 상태 정보를 보고받기 위해 지정되는 값입니다. 단위는 밀리 초이며, 이 필드는 null 값을 가질 수 있습니다.        | 선택/조건부 |
 | `progressReport.progressReportPositionInMilliseconds` | number | 재생 중 지정된 시점을 지날 때마다 재생 상태 정보를 보고받기 위해 지정되는 값입니다. 단위는 밀리 초이며, 이 필드는 null 값을 가질 수 있습니다.    | 선택/조건부 |
-| `token`                  | string  | 오디오 스트림 token.<div class="note"><p><strong>Warning!</strong></p><p>이 필드의 최대 길이는 2048 바이트입니다.</p></div>                          | 필수/항상 |
-| `url`                    | string  | 오디오 스트림 URL.<div class="note"><p><strong>Warning!</strong></p><p>이 필드의 최대 길이는 2048 바이트입니다.</p></div>                              | 필수/항상 |
+| `token`                  | string  | 오디오 스트림 token.<div class="note"><p><strong>Note!</strong></p><p>이 필드의 최대 길이는 2048 바이트입니다.</p></div>                          | 필수/항상 |
+| `url`                    | string  | 오디오 스트림 URL.<div class="note"><p><strong>Note!</strong></p><p>이 필드의 최대 길이는 2048 바이트입니다.</p></div>                              | 필수/항상 |
 | `urlPlayable`            | boolean | `url` 필드의 오디오 스트림 URI가 바로 재생 가능한 형태인지 구분하는 값. <ul><li><code>true</code>: 바로 재생이 가능한 형태의 URI</li><li><code>false</code>: 바로 재생이 불가능한 형태의 URI. <a href="#StreamRequested"><code>AudioPlayer.StreamRequested</code></a> 이벤트 메시지를 사용하여 오디오 스트림 정보를 추가로 요청해야 합니다.</li></ul>        | 필수/항상 |
 
 #### Remarks
