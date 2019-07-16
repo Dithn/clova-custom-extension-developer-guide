@@ -588,8 +588,8 @@ Clova가 지원하는 오디오 압축 포맷은 다음과 같습니다.
 
 <!-- End of the shared content -->
 
-<div class="danger">
-  <p><strong>Caution!</strong></p>
+<div class="warning">
+  <p><strong>Warning!</strong></p>
   <p>Clova가 지원하지 않는 오디오 압축 포맷으로 음원을 제공하면 클라이언트가 정상적으로 음원을 재생하지 못할 수 있습니다.</p>
 </div>
 
