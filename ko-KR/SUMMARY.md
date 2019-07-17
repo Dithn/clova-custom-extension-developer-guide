@@ -1,10 +1,10 @@
-# About This Document
+## About This Document
 
 * [시작하기 전에](/README.md)
 * [문서 정보](/Document_Info.md)
 * [용어 및 약어](/Glossary.md)
 
-# Design
+## Design
 
 * [Custom extension 디자인 가이드라인](/Design/Design_Guideline_For_Custom_Extension.md)
   * [목표 수립](/Design/Design_Guideline_For_Custom_Extension.md#SettingGoal)
@@ -31,9 +31,9 @@
   * [플랫폼 지원 오디오 압축 포맷](/Design/Design_Guideline_For_Custom_Extension.md#SupportedAudioCompressionFormat)
   * [지속적인 업데이트](/Design/Design_Guideline_For_Custom_Extension.md#ContinuousUpdate)
 
-# Develop
+## Develop
 
-## Guides
+### Guides
 
 * [CEK 개요](/Develop/CEK_Overview.md)
   * [CEK란?](/Develop/CEK_Overview.md#WhatisCEK)
@@ -83,7 +83,7 @@
   * [주사위 놀이(Dice drawer)](/Develop/Examples/Extension_Examples.md#DiceDrawer)
   * [코인 헬퍼(Coin helper)](/Develop/Examples/Extension_Examples.md#CoinHelper)
 
-## References
+### References
 
 * [CEK API 레퍼런스](/Develop/References/CEK_API.md)
   * [HTTP 메시지](/Develop/References/CEK_API.md#HTTPMessage)
@@ -98,7 +98,7 @@
       * [`SessionEndedRequest`](/Develop/References/CEK_API.md#CustomExtSessionEndedRequest)
     * [응답 메시지](/Develop/References/CEK_API.md#CustomExtResponseMessage)
 
-# Developer console guides
+## Developer console guides
 
 * [Clova developer console 개요](/DevConsole/ClovaDevConsole_Overview.md)
 * [Custom extension 관리하기](/DevConsole/Guides/Manage_Custom_Extension.md)
