@@ -505,7 +505,6 @@ Extension 개발자는 skill의 활성/비활성화, 오디오 또는 음성 재
   <p><a href="#CustomExtResponseMessage">응답 메시지</a>의 <code>shouldEndSession</code> 필드를 사용하여 extension 쪽에서 먼저 종료를 선언했다면 이 메시지를 수신하지 않습니다.</p>
 </div>
 
-
 `SessionEndedRequest` 타입 메시지의 `request` 객체 필드 구성은 다음과 같습니다.
 
 {% raw %}
@@ -876,7 +875,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.Play -->
 
-### Play directive {#Play}
+### AudioPlayer.Play directive {#Play}
 클라이언트에게 특정 오디오 스트림을 재생하거나 재생 대기열에 추가하도록 지시합니다.
 
 #### Payload fields
@@ -1443,11 +1442,16 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 클라이언트에게 재생 중인 오디오 스트림을 일시 정지하도록 지시합니다. 클라이언트는 이 지시 메시지를 받은 후 오디오 스트림 재생을 일시 정지해야 합니다.
 
 #### Payload fields
-없음
+
+| 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
+|---------------|---------|-----------------------------|:---------:|
+| target            | object  | 제어 대상 정보를 가지는 객체. 이 지시 메시지를 통해 제어해야 하는 대상을 알 수 있습니다. | 조건부  |
+| target.namespace  | string  | CIC API 네임스페이스. 제어 대상이 무엇인지 파악할 수 있는 정보입니다. 다음과 같은 값을 가질 수 있습니다.<ul><li><code>"AudioPlayer"</code>: 오디오 플레이어</li><li><code>"MediaPlayer"</code>: 미디어 플레이어</li></ul>  | 항상  |
 
 #### Message example
-{% raw %}
+
 ```json
+예제 1: 대상이 지정되지 않은 예제
 {
   "directive": {
     "header": {
@@ -1459,8 +1463,24 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
     "payload": {}
   }
 }
+
+예제 2: 대상이 "AudioPlayer"로 지정된 예제
+{
+  "directive": {
+    "header": {
+      "namespace": "PlaybackController",
+      "name": "Pause",
+      "dialogRequestId": "a85e78b4-44f7-4bea-8a40-66c181b9720f",
+      "messageId": "a76c8dfd-c1b6-44f6-a58d-fc8f33c242c1"
+    },
+    "payload": {
+      "target": {
+        "namespace": "AudioPlayer"
+      }
+    }
+  }
+}
 ```
-{% endraw %}
 
 #### See also
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
@@ -1473,11 +1493,16 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 클라이언트에게 오디오 스트림 재생을 재개하도록 지시합니다. 클라이언트는 이 지시 메시지를 받은 후 오디오 스트림 재생을 재개해야 합니다.
 
 #### Payload fields
-없음
+
+| 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
+|---------------|---------|-----------------------------|:---------:|
+| target            | object  | 제어 대상 정보를 가지는 객체. 이 지시 메시지를 통해 제어해야 하는 대상을 알 수 있습니다. | 조건부  |
+| target.namespace  | string  | CIC API 네임스페이스. 제어 대상이 무엇인지 파악할 수 있는 정보입니다. 다음과 같은 값을 가질 수 있습니다.<ul><li><code>"AudioPlayer"</code>: 오디오 플레이어</li><li><code>"MediaPlayer"</code>: 미디어 플레이어</li></ul>  | 항상  |
 
 #### Message example
-{% raw %}
+
 ```json
+// 예제 1: 대상이 지정되지 않은 예제
 {
   "directive": {
     "header": {
@@ -1489,8 +1514,24 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
     "payload": {}
   }
 }
+
+// 예제 2: 대상이 "AudioPlayer"로 지정된 예제
+{
+  "directive": {
+    "header": {
+      "namespace": "PlaybackController",
+      "name": "Resume",
+      "dialogRequestId": "42390b12-ae91-4121-aa0a-37f74e8e422b",
+      "messageId": "b1f88d7d-bbb8-44fa-a0a2-c5a7553e6f8a"
+    },
+    "payload": {
+      "target": {
+        "namespace": "AudioPlayer"
+      }
+    }
+  }
+}
 ```
-{% endraw %}
 
 ### See also
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
@@ -1503,11 +1544,16 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 클라이언트에게 오디오 스트림 재생을 중지하도록 지시합니다. 클라이언트는 이 지시 메시지를 받은 후 오디오 스트림 재생을 중지해야 합니다.
 
 #### Payload fields
-없음
+
+| 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
+|---------------|---------|-----------------------------|:---------:|
+| target            | object  | 제어 대상 정보를 가지는 객체. 이 지시 메시지를 통해 제어해야 하는 대상을 알 수 있습니다. | 조건부  |
+| target.namespace  | string  | CIC API 네임스페이스. 제어 대상이 무엇인지 파악할 수 있는 정보입니다. 다음과 같은 값을 가질 수 있습니다.<ul><li><code>"AudioPlayer"</code>: 오디오 플레이어</li><li><code>"MediaPlayer"</code>: 미디어 플레이어</li></ul>  | 항상  |
 
 #### Message example
-{% raw %}
+
 ```json
+// 예제 1: 대상이 지정되지 않은 예제
 {
   "directive": {
     "header": {
@@ -1519,8 +1565,24 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
     "payload": {}
   }
 }
+
+// 예제 2: 대상이 "AudioPlayer"로 지정된 예제
+{
+  "directive": {
+    "header": {
+      "namespace": "PlaybackController",
+      "name": "Stop",
+      "dialogRequestId": "42390b12-ae91-4121-aa0a-37f74e8e422b",
+      "messageId": "b1f88d7d-bbb8-44fa-a0a2-c5a7553e6f8a"
+    },
+    "payload": {
+      "target": {
+        "namespace": "AudioPlayer"
+      }
+    }
+  }
+}
 ```
-{% endraw %}
 
 ##### See also
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
@@ -1903,6 +1965,7 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 `AudioPlayer.PlaybackState`는 현재 재생하고 있거나 마지막으로 재생한 미디어 정보를 CIC에게 보고할때 사용하는 메시지 포맷입니다.
 
 #### Object structure
+
 {% raw %}
 ```json
 {
@@ -1920,7 +1983,6 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 }
 ```
 {% endraw %}
-
 
 #### Payload fields
 
