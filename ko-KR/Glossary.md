@@ -1,3 +1,7 @@
+<!-- Note! This content includes shared parts. Therefore, when you update this file, you should beware of synchronization. -->
+
+<!-- Start of the shared content: Glossary -->
+
 # 용어 및 약어
 
 <div class="note">
@@ -97,3 +101,5 @@ Skill Store에 등록된 skill이 표시되는 페이지입니다. Clova 앱의 
 
 ### 세션 ID {#SessionID}
 세션 ID는 [extension](#ClovaExtension)이 사용자 요청의 맥락을 구분하기 위한 세션 식별자입니다. 일반적으로 일회성의 사용자 요청은 매번 달라지는 세션 ID를 가지지만, 특정 모드나 연속되는(multi-turn) 사용자의 요청이면 같은 세션 ID를 가집니다. 이 세션 ID는 [Clova Extensions Kit](#CEK)가 extension에 사용자 요청을 전달할 때 생성됩니다. 세션 ID가 유지되는 때는 [LaunchRequest](#LaunchRequest)와 같은 요청을 받거나 extension이 필요에 의해 `response.shouldEndSession` 필드를 `false`로 설정했을 때입니다. 자세한 내용은 [Custom extension 만들기](/Develop/Guides/Build_Custom_Extension.md) 문서를 참조합니다.
+
+<!-- End of the shared content -->
