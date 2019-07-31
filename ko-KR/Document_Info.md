@@ -20,6 +20,15 @@
     </tr>
   </thead>
   <tbody>
+  <tr>
+    <td>2019-07-31</td>
+    <td>
+      <ul>
+        <li>Clova developer guide에서 Clova custom extension guide 문서로 분리됨</li>
+        <li>일부 링크 오류 수정 및 오탈자 교정</li>
+      </ul>
+    </td>
+  </tr>
     <tr>
       <td>2019-07-02</td>
       <td>

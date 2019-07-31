@@ -48,13 +48,15 @@
 }
 ```
 
-클라이언트는 각 상황에 맞는 {{ "[CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md)" if book.L10N.TargetCountryCode == "KR" else "[`CIC API`](/Develop/References/CEK_API.md#CICAPIforAudioPlayback)" }}를 사용하여 Clova에 음성(TTS) 재생에 대한 경과 보고를 하게 됩니다.
-
 {% if book.L10N.TargetCountryCode == "KR" %}
+클라이언트는 각 상황에 맞는 [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md)를 사용하여 Clova에 음성(TTS) 재생에 대한 경과 보고를 하게 됩니다.
+
 * [`SpeechSynthesizer.SpeechFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CICInterface/SpeechSynthesizer.md#SpeechFinished) 지시 메시지: 클라이언트에게 재생 중인 오디오 스트림을 일시 정지하도록 지시
 * [`SpeechSynthesizer.SpeechStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CICInterface/SpeechSynthesizer.md#SpeechStarted) 지시 메시지: 클라이언트에게 오디오 스트림 재생을 재개하도록 지시
 * [`SpeechSynthesizer.SpeechStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CICInterface/SpeechSynthesizer.md#SpeechStopped) 지시 메시지: 클라이언트에게 오디오 스트림 재생을 중지하도록 지시
 {% elif book.L10N.TargetCountryCode == "JP" %}
+클라이언트는 각 상황에 맞는 [`CIC API`](/Develop/References/CEK_API.md#CICAPIforAudioPlayback)를 사용하여 Clova에 음성(TTS) 재생에 대한 경과 보고를 하게 됩니다.
+
 * [`SpeechSynthesizer.SpeechFinished`](/Develop/References/CEK_API.md#SpeechFinished) 지시 메시지: 클라이언트에게 재생 중인 오디오 스트림을 일시 정지하도록 지시
 * [`SpeechSynthesizer.SpeechStarted`](/Develop/References/CEK_API.md#SpeechStarted) 지시 메시지: 클라이언트에게 오디오 스트림 재생을 재개하도록 지시
 * [`SpeechSynthesizer.SpeechStopped`](/Develop/References/CEK_API.md#SpeechStopped) 지시 메시지: 클라이언트에게 오디오 스트림 재생을 중지하도록 지시
