@@ -1,7 +1,7 @@
 ---
 name: Clova Custom Extension Developer Guide deployment
 about: Template for announcing document deployment
-title: Deploy Clova_Client_Developer_Guide_v2000-00-00
+title: Deploy Clova Custom Extension Developer Guide 2000-00-00
 labels: Deployment
 assignees: jeongil-kang
 
