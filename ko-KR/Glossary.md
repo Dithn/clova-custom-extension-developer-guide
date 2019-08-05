@@ -59,14 +59,14 @@ CIC를 통해 전달되는 콘텐츠 정보를 일정 범주에 맞게 정형화
 Skill Store 홈 (**확장 서비스 관리** 메뉴)에서 특정 extension을 선택했을 때 표시되는 페이지로 extension에 대한 자세한 설명을 제공하는 페이지입니다.
 
 ### Intent {#Intent}
-Intent는 Clova extension이 처리할 사용자의 요청을 구별한 범주이며, custom intent와 built-in intent로 나뉩니다. [Custom extension](#CustomExtension)을 구현하기 전에 먼저 intent의 집합으로 구성된 [interaction 모델](#InteractionModel)을 정의해야 합니다. 자세한 내용은 [interaction 모델 정의](/Design/Design_Guideline_For_Custom_Extension.md#DefineInteractionModel)를 참조합니다.
+Intent는 Clova extension이 처리할 사용자의 요청을 구별한 범주이며, custom intent와 built-in intent로 나뉩니다. [Custom extension](#CustomExtension)을 구현하기 전에 먼저 intent의 집합으로 구성된 [interaction 모델](#InteractionModel)을 정의해야 합니다. 자세한 내용은 [interaction 모델 정의](/Design/Design_Custom_Extension.md#DefineInteractionModel)를 참조합니다.
 
 ### IntentRequest {#IntentRequest}
 
 사용자의 요청이 분석된 결과([Intent](#Intent))를 [custom extension](#CustomExtension)으로 전달할 때 사용되는 요청 메시지 타입입니다. 자세한 내용은 [Custom extension 요청 처리하기](/Develop/Guides/Build_Custom_Extension.md#HandleCustomExtensionRequest) 문서를 참조합니다.
 
 ### Interaction 모델 {#InteractionModel}
-[Custom extension](#CustomExtension)이 음성으로부터 인식된 사용자의 요청을 extension에 전달하기 위해 정형화된 포맷(JSON)으로 바꿔주는 규칙을 명세한 것입니다. 자세한 내용은 [interaction 모델 정의](/Design/Design_Guideline_For_Custom_Extension.md#DefineInteractionModel) 문서를 참조합니다.
+[Custom extension](#CustomExtension)이 음성으로부터 인식된 사용자의 요청을 extension에 전달하기 위해 정형화된 포맷(JSON)으로 바꿔주는 규칙을 명세한 것입니다. 자세한 내용은 [interaction 모델 정의](/Design/Design_Custom_Extension.md#DefineInteractionModel) 문서를 참조합니다.
 
 ### LaunchRequest {#LaunchRequest}
 사용자가 특정 모드나 특정 [custom extension](#CustomExtension)을 사용하기로 선언한 것을 알리기 위해 보내는 요청 메시지입니다. 자세한 내용은 [Custom extension 요청 처리하기](/Develop/Guides/Build_Custom_Extension.md#HandleCustomExtensionRequest) 문서를 참조합니다.
@@ -90,14 +90,14 @@ Skill이 사용자에게 제공될 수 있도록 만든 플랫폼입니다.
 Skill Store에 등록된 skill이 표시되는 페이지입니다. Clova 앱의 **확장 서비스 관리** 메뉴를 지칭하는 용어입니다.
 
 ### Slot {#Slot}
-[Intent](#Intent)에 선언된 요청을 처리할 때 필요한 정보이며, intent를 정의할 때 함께 정의해야 합니다. Clova는 사용자 요청을 분석한 후 slot에 해당하는 정보를 추출하게 됩니다. 자세한 내용은 [interaction 모델 정의](/Design/Design_Guideline_For_Custom_Extension.md#DefineInteractionModel)를 참조합니다.
+[Intent](#Intent)에 선언된 요청을 처리할 때 필요한 정보이며, intent를 정의할 때 함께 정의해야 합니다. Clova는 사용자 요청을 분석한 후 slot에 해당하는 정보를 추출하게 됩니다. 자세한 내용은 [interaction 모델 정의](/Design/Design_Custom_Extension.md#DefineInteractionModel)를 참조합니다.
 
 ### 사용자 계정 연결 (Account Linking) {#AccountLinking}
 사용자의 계정 인증(authentication)이 필요한 외부 서비스를 [extension](#ClovaExtension)이 제공해야 할 때 사용됩니다. 자세한 내용은 [사용자 계정 연결하기](/Develop/Guides/Link_User_Account.md) 문서를 참조합니다.
 
 ### 사용자 발화 예시 {#UserUtteranceExample}
 
-사용자의 요청 발화가 어떤 식으로 입력될 수 있는지 예문을 표현한 목록입니다. [Intent](#Intent)별로 복수의 사례를 정의할 수 있으며, 예문에는 [slot](#Slot)이 표시됩니다. 자세한 내용은 [interaction 모델 정의](/Design/Design_Guideline_For_Custom_Extension.md#DefineInteractionModel)를 참조합니다.
+사용자의 요청 발화가 어떤 식으로 입력될 수 있는지 예문을 표현한 목록입니다. [Intent](#Intent)별로 복수의 사례를 정의할 수 있으며, 예문에는 [slot](#Slot)이 표시됩니다. 자세한 내용은 [interaction 모델 정의](/Design/Design_Custom_Extension.md#DefineInteractionModel)를 참조합니다.
 
 ### 세션 ID {#SessionID}
 세션 ID는 [extension](#ClovaExtension)이 사용자 요청의 맥락을 구분하기 위한 세션 식별자입니다. 일반적으로 일회성의 사용자 요청은 매번 달라지는 세션 ID를 가지지만, 특정 모드나 연속되는(multi-turn) 사용자의 요청이면 같은 세션 ID를 가집니다. 이 세션 ID는 [Clova Extensions Kit](#CEK)가 extension에 사용자 요청을 전달할 때 생성됩니다. 세션 ID가 유지되는 때는 [LaunchRequest](#LaunchRequest)와 같은 요청을 받거나 extension이 필요에 의해 `response.shouldEndSession` 필드를 `false`로 설정했을 때입니다. 자세한 내용은 [Custom extension 만들기](/Develop/Guides/Build_Custom_Extension.md) 문서를 참조합니다.

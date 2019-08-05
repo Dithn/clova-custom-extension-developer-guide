@@ -94,15 +94,15 @@ Skill 심사는 **{{ book.DevConsole.ManageCustomExtensions }}**에 반영하기
 
 심사할 때 다음과 같은 항목을 평가합니다.
 
-* [사용 시나리오](/Design/Design_Guideline_For_Custom_Extension.md#MakeUseCaseScenarioScript) 및 콘텐츠 검증
+* [사용 시나리오](/Design/Design_Custom_Extension.md#MakeUseCaseScenarioScript) 및 콘텐츠 검증
   * 대화 문맥 상 어색한 부분이 있는지 확인합니다.
   * 시나리오 상 사용되는 발화 데이터에 금칙어, 민감어 등이 있는지 확인합니다.
-  * [콘텐츠 제공 시 준수 사항](/Design/Design_Guideline_For_Custom_Extension.md#ContentGuideline)을 지켰는지 확인합니다.
+  * [콘텐츠 제공 시 준수 사항](/Design/Rules_For_Content.md)을 지켰는지 확인합니다.
   * Custom extension이 [사용자 계정을 연결](/Develop/Guides/Link_User_Account.md)한다면 서비스에 특화된 부분을 더 검토할 수 있습니다.
 * 동작 검증
   * Custom extension이 서비스에 적합한 용어를 사용하고 있는지 확인합니다.
   * Intent, slot 등 interaction 모델을 검증합니다.
-  * Skill [세부 목표](/Design/Design_Guideline_For_Custom_Extension.md#SettingGoal)에 부합되는 서비스를 제공하고 있는지 확인합니다.
+  * Skill [세부 목표](/Design/Design_Custom_Extension.md#SettingGoal)에 부합되는 서비스를 제공하고 있는지 확인합니다.
 * 배포 정보 검증
   * Custom extension의 설명, 카테고리, 검색 키워드와 같이 입력된 배포 정보가 Custom extension에 맞게 입력되었는지 확인합니다.
   * Skill이 개인 정보 관리 규정 등 입력된 정책에 맞게 동작하는지 확인합니다.

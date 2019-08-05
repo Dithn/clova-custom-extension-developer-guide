@@ -437,7 +437,7 @@ Extension 개발자는 skill의 활성/비활성화, 오디오 또는 음성 재
 {% endif %}
 
 #### IntentRequest {#CustomExtIntentRequest}
-`IntentRequest` 타입은 분석한 사용자의 요청을 전달하여 그 내용을 수행하도록 하는 요청 타입입니다. Extension 개발자는 서비스를 만들 때 사용자의 요청을 어떻게 받을지 [interaction 모델을 정의](/Design/Design_Guideline_For_Custom_Extension.md#DefineInteractionModel)해야 하며, Interaction 모델은 [Clova developer console](/DevConsole/ClovaDevConsole_Overview.md)을 통해 등록할 수 있습니다. 이때, 구별되는 사용자의 요청을 Intent라는 정보 형태로 정의합니다. 분석된 사용자의 발화 정보는 Intent로 변환되며, `intent` 필드를 통해 extension에게 전달됩니다.
+`IntentRequest` 타입은 분석한 사용자의 요청을 전달하여 그 내용을 수행하도록 하는 요청 타입입니다. Extension 개발자는 서비스를 만들 때 사용자의 요청을 어떻게 받을지 [interaction 모델을 정의](/Design/Design_Custom_Extension.md#DefineInteractionModel)해야 하며, Interaction 모델은 [Clova developer console](/DevConsole/ClovaDevConsole_Overview.md)을 통해 등록할 수 있습니다. 이때, 구별되는 사용자의 요청을 Intent라는 정보 형태로 정의합니다. 분석된 사용자의 발화 정보는 Intent로 변환되며, `intent` 필드를 통해 extension에게 전달됩니다.
 
 `IntentRequest` 타입 메시지의 `request` 객체 필드 구성은 다음과 같습니다.
 
@@ -455,9 +455,9 @@ Extension 개발자는 skill의 활성/비활성화, 오디오 또는 음성 재
 
 | 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
 |---------------|---------|-----------------------------|:---------:|
-| `intent`        | object  | 사용자의 요청을 분석한 정보가 저장된 객체 [intent](/Design/Design_Guideline_For_Custom_Extension.md#Intent)                          | 항상 |
-| `intent.name`   | string  | Intent 이름. Interaction 모델에 정의한 [intent](/Design/Design_Guideline_For_Custom_Extension.md#Intent)를 이 필드로 식별할 수 있다.  | 항상 |
-| `intent.slots`  | object  | Extension이 intent를 처리할 때 요구되는 정보(slot)가 저장된 객체. 이 필드는 `intent.name` 필드에 입력된 [intent](/Design/Design_Guideline_For_Custom_Extension.md#Intent)에 따라 구성이 달라질 수 있다. | 항상 |
+| `intent`        | object  | 사용자의 요청을 분석한 정보가 저장된 객체 [intent](/Design/Design_Custom_Extension.md#Intent)                          | 항상 |
+| `intent.name`   | string  | Intent 이름. Interaction 모델에 정의한 [intent](/Design/Design_Custom_Extension.md#Intent)를 이 필드로 식별할 수 있다.  | 항상 |
+| `intent.slots`  | object  | Extension이 intent를 처리할 때 요구되는 정보(slot)가 저장된 객체. 이 필드는 `intent.name` 필드에 입력된 [intent](/Design/Design_Custom_Extension.md#Intent)에 따라 구성이 달라질 수 있다. | 항상 |
 | `type`          | string  | 요청 메시지의 타입. `"IntentRequest"` 값으로 고정됩니다.                                                                     | 항상 |
 
 다음은 `IntentRequest` 타입 메시지 `request` 객체 필드의 예제입니다.
@@ -610,7 +610,7 @@ SpeechInfoObject 객체는 응답 메시지의 `response.outputSpeech`에서 재
 | `lang`           | string       | 음성 합성을 할 때 사용할 언어의 코드. 현재 다음과 같은 값을 가집니다.<ul><li><code>"en"</code>: 영어</li><li><code>"ja"</code>: 일본어</li><li><code>"ko"</code>: 한국어</li><li><code>""</code>: <code>type</code> 필드의 값이 <code>"URL"</code>이면 이 필드는 빈 문자열(empty string)을 가집니다.</li></ul>         | 필수 |
 | `token`          | string       | 제공할 음성의 token. 이 필드에 값을 입력하면 클라이언트에서 해당 음성이 재생된 결과나 재생 상태를 보고 받을 수 있습니다. 음성 재생 상태에 대한 경과 보고는 [`EventRequest` 요청 타입](/Develop/References/CEK_API.md#CustomExtEventRequest)의 메시지를 통해 전달받게 됩니다. UUID 포맷(버전 4)으로 생성해야 합니다.<div class="note"><p><strong>Note!</strong></p><p>이 필드의 최대 길이는 2048 바이트입니다.</p></div> | 선택  |
 | `type`           | string       | 재공할 음성의 타입. 이 필드의 값에 따라 `value` 필드 값의 형태가 달라집니다. 현재 다음과 같은 값을 가집니다.<ul><li><code>"PlainText"</code>: 일반 텍스트</li><li><code>"URL"</code>: 음성 및 음악을 재생할 수 있는 파일의 URI</li></ul>            | 필수 |
-| `value`          | string       | 음성 합성할 내용 또는 음성 파일의 URI.<div class="tip"><p><strong>Tip!</strong></p><p>Clova가 지원하는 음성 파일 형식에 대한 내용은 <a href="/Design/Design_Guideline_For_Custom_Extension.md#SupportedAudioCompressionFormat">플랫폼 지원 오디오 압축 포맷</a>을 참조합니다.</p></div><div class="note"><p><strong>Note!</strong></p><p><code>type</code> 필드가 <code>URL</code>일 때 이 필드의 최대 길이는 2048 바이트입니다.</p></div>     | 필수 |
+| `value`          | string       | 음성 합성할 내용 또는 음성 파일의 URI.<div class="tip"><p><strong>Tip!</strong></p><p>Clova가 지원하는 음성 파일 형식에 대한 내용은 <a href="/Design/Supported_Audio_Format.md">플랫폼 지원 오디오 포맷</a>을 참조합니다.</p></div><div class="note"><p><strong>Note!</strong></p><p><code>type</code> 필드가 <code>URL</code>일 때 이 필드의 최대 길이는 2048 바이트입니다.</p></div>     | 필수 |
 
 #### Message example
 {% raw %}

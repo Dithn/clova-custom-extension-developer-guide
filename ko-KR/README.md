@@ -22,8 +22,9 @@
       <td>
         <ul>
           <li><a href="/Develop/CEK_Overview.md#WhatisCEK">CEK란?</a></li>
-          <li><a href="/Design/Design_Guideline_For_Custom_Extension.md">Custom extension 디자인 가이드라인</a></li>
-          <li><a href="/Design/Design_Guideline_For_Custom_Extension.md#DefineInteractionModel">Interaction 모델 이해하기</a></li>
+          <li><a href="/Design/Design_Custom_Extension.md">Custom extension 설계</a></li>
+          <li><a href="/Design/Supported_Audio_Format.md">플랫폼 지원 오디오 포맷</a></li>
+          <li><a href="/Design/Rules_For_Content.md">콘텐츠 제공 시 준수 사항</a></li>
         </ul>
       </td>
     </tr>

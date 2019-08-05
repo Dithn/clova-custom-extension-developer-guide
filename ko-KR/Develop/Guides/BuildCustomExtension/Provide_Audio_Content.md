@@ -48,7 +48,7 @@ Custom extension을 통해 사용자에게 음악이나 podcast와 같은 오디
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>제공하려는 오디오 콘텐츠는 <a href="/Design/Design_Guideline_For_Client_Hardware.md#SupportedAudioCompressionFormat">플랫폼이 지원하는 오디오 압축 포맷</a>이어야 합니다.</p>
+  <p>제공하려는 오디오 콘텐츠는 <a href="/Design/Design_Guideline_For_Client_Hardware.md#SupportedAudioFormat">플랫폼이 지원하는 오디오 압축 포맷</a>이어야 합니다.</p>
 </div>
 
 <div class="note">
@@ -62,7 +62,7 @@ Custom extension을 통해 사용자에게 음악이나 podcast와 같은 오디
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>제공하려는 오디오 콘텐츠는 <a href="/Design/Design_Guideline_For_Client_Hardware.md#SupportedAudioCompressionFormat">플랫폼이 지원하는 오디오 압축 포맷</a>이어야 합니다.</p>
+  <p>제공하려는 오디오 콘텐츠는 <a href="/Design/Design_Guideline_For_Client_Hardware.md#SupportedAudioFormat">플랫폼이 지원하는 오디오 압축 포맷</a>이어야 합니다.</p>
 </div>
 
 <div class="note">
@@ -134,7 +134,7 @@ Custom extension을 통해 사용자에게 음악이나 podcast와 같은 오디
 {% endif %}
 
 ### 오디오 콘텐츠 재생 제어 {#ControlAudioPlayback}
-사용자의 클라이언트가 오디오를 재생 중일 때 사용자가 "이전", "다음" 등과 같이 재생 제어와 관련된 발화를 하면 사용자의 요청이 `IntentRequest` 타입의 요청 메시지 형태로 custom extension에 전달될 수 있습니다. 현재 CEK는 custom extension으로 재생 제어와 관련된 사용자의 의도를 다음과 같은 [built-in intent](/Design/Design_Guideline_For_Custom_Extension.md#BuiltinIntent)로 전달하고 있습니다.
+사용자의 클라이언트가 오디오를 재생 중일 때 사용자가 "이전", "다음" 등과 같이 재생 제어와 관련된 발화를 하면 사용자의 요청이 `IntentRequest` 타입의 요청 메시지 형태로 custom extension에 전달될 수 있습니다. 현재 CEK는 custom extension으로 재생 제어와 관련된 사용자의 의도를 다음과 같은 [built-in intent](/Design/Design_Custom_Extension.md#BuiltinIntent)로 전달하고 있습니다.
 
 * `Clova.NextIntent`
 * `Clova.PauseIntent`
@@ -543,9 +543,9 @@ Custom extension은 이 시점에 재생 가능한 오디오 콘텐츠의 URI를
 ### 재생 제어의 동작 방식 변경 {#CustomizePlaybackControl}
 
 {% if book.L10N.TargetCountryCode == "KR" %}
-음원을 제공하는 서비스나 음원 콘텐츠의 특징에 따라서 재생 일시 정지, 재생 재개, 재생 중지와 같은 [재생 제어](#ControlAudioPlayback) 동작을 조금 다른 방식으로 구현해야 할 수도 있습니다. 예를 들면, 실시간 스트리밍 콘텐츠는 일시 정지 기능을 적용하는 것이 불가능할 수도 있습니다. 이때 사용자의 요청에 의해 `Clova.PauseIntent` [built-in intent](/Design/Design_Guideline_For_Custom_Extension.md#BuiltinIntent) 요청을 받았더라도 그에 대한 대응을 처리하지 못한다고 응답하거나 또는 `Clova.StopIntent`와 같은 대응을 처리해줄 수도 있습니다. `Clova.StopIntent`와 같은 대응을 처리한다면 [응답 메시지](/Develop/References/CEK_API.md#CustomExtResponseMessage)에 [`PlaybackController.Pause`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CICInterface/PlaybackController.md#Pause) 지시 메시지(클라이언트 제어용 메시지, [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md)) 대신에 [`PlaybackController.Stop`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CICInterface/PlaybackController.md#Stop) 지시 메시지를 응답으로 반환하도록 구현할 수 있습니다.
+음원을 제공하는 서비스나 음원 콘텐츠의 특징에 따라서 재생 일시 정지, 재생 재개, 재생 중지와 같은 [재생 제어](#ControlAudioPlayback) 동작을 조금 다른 방식으로 구현해야 할 수도 있습니다. 예를 들면, 실시간 스트리밍 콘텐츠는 일시 정지 기능을 적용하는 것이 불가능할 수도 있습니다. 이때 사용자의 요청에 의해 `Clova.PauseIntent` [built-in intent](/Design/Design_Custom_Extension.md#BuiltinIntent) 요청을 받았더라도 그에 대한 대응을 처리하지 못한다고 응답하거나 또는 `Clova.StopIntent`와 같은 대응을 처리해줄 수도 있습니다. `Clova.StopIntent`와 같은 대응을 처리한다면 [응답 메시지](/Develop/References/CEK_API.md#CustomExtResponseMessage)에 [`PlaybackController.Pause`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CICInterface/PlaybackController.md#Pause) 지시 메시지(클라이언트 제어용 메시지, [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md)) 대신에 [`PlaybackController.Stop`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CICInterface/PlaybackController.md#Stop) 지시 메시지를 응답으로 반환하도록 구현할 수 있습니다.
 {% elif book.L10N.TargetCountryCode == "JP" %}
-음원을 제공하는 서비스나 음원 콘텐츠의 특징에 따라서 재생 일시 정지, 재생 재개, 재생 중지와 같은 [재생 제어](#ControlAudioPlayback) 동작을 조금 다른 방식으로 구현해야 할 수도 있습니다. 예를 들면, 실시간 스트리밍 콘텐츠는 일시 정지 기능을 적용하는 것이 불가능할 수도 있습니다. 이때 사용자의 요청에 의해 `Clova.PauseIntent` [built-in intent](/Design/Design_Guideline_For_Custom_Extension.md#BuiltinIntent) 요청을 받았더라도 그에 대한 대응을 처리하지 못한다고 응답하거나 또는 `Clova.StopIntent`와 같은 대응을 처리해줄 수도 있습니다. `Clova.StopIntent`와 같은 대응을 처리한다면 [응답 메시지](/Develop/References/CEK_API.md#CustomExtResponseMessage)에 [`PlaybackController.Pause`](/Develop/References/CEK_API.md#Pause) 지시 메시지(클라이언트 제어용 메시지, [`CIC API`](/Develop/References/CEK_API.md#CICAPIforAudioPlayback)) 대신에 [`PlaybackController.Stop`](/Develop/References/CEK_API.md#Stop) 지시 메시지를 응답으로 반환하도록 구현할 수 있습니다.
+음원을 제공하는 서비스나 음원 콘텐츠의 특징에 따라서 재생 일시 정지, 재생 재개, 재생 중지와 같은 [재생 제어](#ControlAudioPlayback) 동작을 조금 다른 방식으로 구현해야 할 수도 있습니다. 예를 들면, 실시간 스트리밍 콘텐츠는 일시 정지 기능을 적용하는 것이 불가능할 수도 있습니다. 이때 사용자의 요청에 의해 `Clova.PauseIntent` [built-in intent](/Design/Design_Custom_Extension.md#BuiltinIntent) 요청을 받았더라도 그에 대한 대응을 처리하지 못한다고 응답하거나 또는 `Clova.StopIntent`와 같은 대응을 처리해줄 수도 있습니다. `Clova.StopIntent`와 같은 대응을 처리한다면 [응답 메시지](/Develop/References/CEK_API.md#CustomExtResponseMessage)에 [`PlaybackController.Pause`](/Develop/References/CEK_API.md#Pause) 지시 메시지(클라이언트 제어용 메시지, [`CIC API`](/Develop/References/CEK_API.md#CICAPIforAudioPlayback)) 대신에 [`PlaybackController.Stop`](/Develop/References/CEK_API.md#Stop) 지시 메시지를 응답으로 반환하도록 구현할 수 있습니다.
 {% endif %}
 
 <div class="tip">

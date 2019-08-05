@@ -1,6 +1,4 @@
-<!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
-
-# Custom extension 디자인 가이드라인
+# Custom extension 설계
 
 새로운 custom extension을 만들 때 보유하고 있는 기술이나 서비스가 Clova를 통해 사용자에게 어떻게 편리함과 이익을 가져다줄 수 있는지 생각하는 설계 활동을 해야 합니다. 이 문서는 사용자에게 건전하고 유익한 서비스를 제공하기 위해 custom extension을 설계할 때 어떤 사항을 지키거나 따라야 하는지 가이드라인을 제공합니다. 참고로 Clova를 이용하는 사용자에게는 skill이라는 용어로 기능을 제공하게 되며, 사용자에게 skill을 제공하기 위해 개발자는 custom extension을 구현해야 합니다.
 
@@ -11,8 +9,6 @@
 * [Skill 이름 정의](#DefineInvocationName)
 * [Interaction 모델 정의](#DefineInteractionModel)
 * [응답 유형 결정](#DecideSoundOutputType)
-* [플랫폼 지원 오디오 압축 포맷](#SupportedAudioCompressionFormat)
-* [콘텐츠 제공 시 준수 사항](#ContentGuideline)
 * [지속적인 업데이트](#ContinuousUpdate)
 
 ## 목표 수립 {#SettingGoal}
@@ -489,127 +485,6 @@ Custom extension은 사용자의 요청을 처리한 후 그 결과를 Clova를 
   <p><strong>Note!</strong></p>
   <p>오디오 콘텐츠 재생 유형으로 응답하는 방법은 <a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">오디오 콘텐츠 제공하기</a>를 참조합니다.</p>
 </div>
-
-## 콘텐츠 제공 시 준수 사항 {#ContentGuideline}
-
-Skill(extension)을 통해 콘텐츠를 사용자에게 제공할 때 지켜야하는 준수 사항이 있습니다. Clova 운영자는 Skill Store에 [skill을 배포](/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md)하기 전에 이 준수 사항을 위반했는지 심사합니다. Skill이 준수 사항을 위반하거나 명확히 따르지 않으면 배포를 거부하거나 이미 배포된 skill 제공을 중단할 수 있습니다. 따라서, [심사를 신청](/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md#RequestExtensionSubmission)하기 전에 반드시 이하의 준수 사항을 따랐는지 확인해야 합니다.
-
-* [Skill의 완전성](#SkillCompleteness)
-* [Skill의 안전성](#SkillSecurity)
-* [권리 보호 및 법 준수](#RightAndLegal)
-* [윤리 이행](#Morals)
-* [개인 정보 보호](#Privacy)
-* [기타 유의 사항](#OtherPrecautions)
-
-### Skill의 완전성 {#SkillCompleteness}
-
-편의 제공 및 불편 해소와 같이 보다 나은 사용자 경험을 위해 다음을 준수하여 완전성을 추구해야 합니다.
-
-* 서버 점검 등 특수한 상황을 제외하고 skill은 사용자의 요청에 언제든지 응답할 수 있어야 합니다.
-* Skill에 대한 정보인 [기본 정보](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#InputExtensionInfo), [서버 설정 정보](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#SetServerConnection), [배포 정보](/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md#InputDeploymentInfo) 등이 부족하거나 잘못된 정보 없이 항상 최신의 정보로 업데이트되어야 합니다.
-* [사용 시나리오](/Design/Design_Guideline_For_Custom_Extension.md#MakeUseCaseScenarioScript)에 불가능하거나 자연스럽지 않은 부분이 없어야 하며, 사용자의 요청이 잘 인식될 수 있도록 [interaction 모델](/Design/Design_Guideline_For_Custom_Extension.md#DefineInteractionModel) 잘 정의하여 구현해야 합니다.
-* 콘텐츠 제공을 위해 서버를 연동하거나 계정을 연결한다면 필요한 [보안 조건](/Develop/Guides/Link_User_Account.md#ApplyAccountLinking)을 갖춰야 합니다.
-
-### Skill의 안전성 {#SkillSecurity}
-
-사용자의 안전을 보장하기 위해 다음 사항을 준수해야 합니다.
-
-* 사람의 생명 또는 신체의 안전을 해칠 우려가 있는 행위를 유도하거나 조장하지 않아야 합니다.
-* 청소년의 가출이나 탈선을 유도하거나 조장하지 않아야 합니다.
-* {{ book.DocMeta.DocOwner }} 또는 제 3 자의 기기, 설비, 시스템 등의 이용을 방해하거나 운용에 지장을 주지 않아야 합니다.
-* {{ book.DocMeta.DocOwner }} 또는 제 3 자의 설비에 축적된 정보를 불법적으로 바꾸거나 제거하지 않아야 합니다.
-* 바이러스 등 유해 프로그램을 포함하거나 송신하지 않아야 합니다.
-
-### 권리 보호 및 법 준수 {#RightAndLegal}
-
-Skill은 다음과 같은 사항을 준수하여 권리 보호 및 법 준수의 의무를 지켜야 합니다.
-
-* {{ book.DocMeta.DocOwner }} 또는 제 3 자의 권리(저작권, 지적재산권, 초상권, 성명권, 인격권, 명예 등)을 침해하지 않아야 합니다.
-* 권리의 소재가 명확하지 않은 콘텐츠를 제공하지 않아야 합니다. (예: 2 차 창작 등)
-* 권리자로부터 허락받지 않았거나 허락받았음을 증명할 수 없는 콘텐츠를 제공하지 않아야 합니다.
-* 도박 등 기타 불법적인 행위를 유도하거나 조장하는 콘텐츠를 제공하지 않아야 합니다.
-* 성범죄, 노골적인 성행위 묘사, 아동 포르노, 아동 학대와 관련된 콘텐츠 뿐만 아니라 기타 잔혹하거나 외설적인 표현 또는 이를 연상시키는 콘텐츠를 제공하지 않아야 합니다.
-* 기타 범죄를 구상 또는 조장하거나 미풍양속 또는 법규를 위반하거나 위반할 우려가 있는 콘텐츠를 제공하지 않아야 합니다.
-
-<div class="note">
-  <p><strong>Note!</strong></p>
-  <p>심사 시 콘텐츠의 권리를 확인하기 위해 권리 확인이 가능한 서류를 요청할 수도 있습니다.</p>
-</div>
-
-### 윤리 이행 {#Morals}
-
-Skill은 다음과 같이 윤리적인 규범에 해당하는 사항도 준수해야 합니다.
-
-* 사용자가 특정 개인이나 집단, 법인, 국가 등을 비방, 욕설, 공격, 혐오하지 않도록 만들어야 합니다.
-* 사용자가 특정 종교, 문화, 민족성, 국민성을 공격하거나 그것에 대해 불쾌감을 느끼지 않도록 만들어야 합니다.
-* Skill이 반 사회적인 내용을 포함하거나 또는 불쾌감을 주지 않아야 합니다.
-* 사용자가 {{ book.DocMeta.DocOwner }}가 skill을 개발 및 제공한다고 오해하거나 혼동하지 않도록 만들어야 합니다.
-* {{ book.DocMeta.DocOwner }} 또는 제 3 자를 부당하게 차별, 비방하지 않아야 하며 이런 행위를 유도하거나 조장하지 않아야 합니다.
-
-### 개인 정보 보호 {#Privacy}
-
-Skill은 개인 정보 보호의 의무를 지켜야 합니다.
-
-* Clova 이용 데이터 등 기타 개인 정보를 수집하지 않아야 합니다.
-* 다음과 같은 민감한 정보를 수집하지 않아야 합니다.
-  * 인종, 종교, 사회적 신분, 병력, 전과, 범죄 피해 정보
-  * 장애, 지적 장애·정신 장애에 대한 정보
-  * 건강 진단 그 외의 다른 검사의 결과
-  * 의료 기록, 진료 및 투약 정보
-  * 피의자 또는 피고인으로서 구속, 수색 등의 민사 또는 형사 사건에 관련된 정보
-
-### 기타 유의 사항 {#OtherPrecautions}
-
-Skill 콘텐츠 제공과 관련하여 다음과 같은 유의 사항이 있습니다.
-
-* Skill이 본인(당사) 또는 제 3 자의 기기(예: IoT기기)와 연동된다면 심사를 위해 관련 기기 제출을 요청할 수도 있습니다.
-* 위에서 언급한 내용 뿐만 아니라 Skill은 [Clova Extensions Kit 이용약관]({{ book.ServiceEnv.CEKTermsOfUseURI }})을 위반하지 않아야 합니다.
-
-<div class="note">
-<p><strong>Note!</strong></p>
-<p>일부 예외가 있을 수 있기 때문에 판단이 어려울 수 있으며, 이에 대한 판단이 어렵다면 <a href="/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md#RequestExtensionSubmission">심사 시</a>에 의견을 입력해주십시오.</p>
-</div>
-
-## 플랫폼 지원 오디오 압축 포맷 {#SupportedAudioCompressionFormat}
-
-Custom extension을 통해 오디오 콘텐츠를 제공한다면 반드시 Clova가 지원하는 오디오 압축 포맷으로 음원을 제공해야 합니다.
-
-<!-- Start of the shared content: SupportedAudioFormat -->
-
-Clova가 지원하는 오디오 압축 포맷은 다음과 같습니다.
-
-| 오디오 압축 포맷                     | 라이선스 비용 |
-|----------------------------------|-----------|
-| MPEG-1 or MPEG-2 Audio Layer III | 무료       |
-
-Clova가 지원하는 오디오 컨테이너 포맷은 다음과 같습니다.
-
-| 컨테이너 포맷   | MIME 타입                      | 비고                           |
-|-------------|-------------------------------|-------------------------------|
-| mp3         | audio/mpeg                    | HTTP Progressive Download 사용 |
-| m3u8        | application/vnd.apple.mpegurl | HTTP Live Streaming 사용       |
-
-
-<div class="tip">
-  <p><strong>Tip!</strong></p>
-  <p>Clova가 지원하는 오디오 압축 포맷은 더 늘어날 수 있습니다.</p>
-</div>
-
-<!-- End of the shared content -->
-
-<div class="warning">
-  <p><strong>Warning!</strong></p>
-  <p>Clova가 지원하지 않는 오디오 압축 포맷으로 음원을 제공하면 클라이언트가 정상적으로 음원을 재생하지 못할 수 있습니다.</p>
-</div>
-
-제공하려는 오디오 콘텐츠 타입에 따라 다음과 같은 음질 관련 속성과 음량(loudness)을 따르도록 권고합니다.
-
-| 오디오 콘텐츠 타입        | 샘플링 주파수, 비트 심도, 채널 | 음량(loudness)  | 비고                                     |
-|-----------------------|-------------------------|--------------- |----------------------------------------|
-| 음악                   | 44100Hz, 16bit, stereo  | -10(±1) LUFS  | 비트 박스 형태의 음악은 -17(±1) LUFS로 맞춥니다. |
-| 음향효과       | 44100Hz, 16bit, stereo  | -18(±1) LUFS  |                                         |
-| 오디오 북               | 44100Hz, 16bit, stereo  | -12(±1) LUFS  |                                         |
-| 앰비언트 장르 음악이나 소리  | 44100Hz, 16bit, stereo  | -25(±1) LUFS  | 파도 소리, 빗소리와 같은 형태의 오디오 콘텐츠이며, 각 콘텐츠의 특성에 따라 적절히 음량을 조절해야 합니다. |
 
 ## 지속적인 업데이트 {#ContinuousUpdate}
 
