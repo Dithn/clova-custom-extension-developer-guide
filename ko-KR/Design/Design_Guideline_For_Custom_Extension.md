@@ -574,12 +574,21 @@ Skill 콘텐츠 제공과 관련하여 다음과 같은 유의 사항이 있습�
 
 Custom extension을 통해 오디오 콘텐츠를 제공한다면 반드시 Clova가 지원하는 오디오 압축 포맷으로 음원을 제공해야 합니다.
 
-<!-- Start of the shared content: SupportedAudioCompressionFormat -->
+<!-- Start of the shared content: SupportedAudioFormat -->
+
 Clova가 지원하는 오디오 압축 포맷은 다음과 같습니다.
 
-| 오디오 압축 포맷                     | 파일 확장자 | 라이선스 비용 |
-|----------------------------------|:--------:|-----------|
-| MPEG-1 or MPEG-2 Audio Layer III | .mp3     | 무료       |
+| 오디오 압축 포맷                     | 라이선스 비용 |
+|----------------------------------|-----------|
+| MPEG-1 or MPEG-2 Audio Layer III | 무료       |
+
+Clova가 지원하는 오디오 컨테이너 포맷은 다음과 같습니다.
+
+| 컨테이너 포맷   | MIME 타입                      | 비고                           |
+|-------------|-------------------------------|-------------------------------|
+| mp3         | audio/mpeg                    | HTTP Progressive Download 사용 |
+| m3u8        | application/vnd.apple.mpegurl | HTTP Live Streaming 사용       |
+
 
 <div class="tip">
   <p><strong>Tip!</strong></p>
