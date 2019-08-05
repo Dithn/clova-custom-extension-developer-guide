@@ -1,10 +1,10 @@
-## About This Document
+## About this document
 
 * [시작하기 전에](/README.md)
 * [문서 정보](/Document_Info.md)
 * [용어 및 약어](/Glossary.md)
 
-## Design
+## Design guidelines
 
 * [Custom extension 설계](/Design/Design_Custom_Extension.md)
   * [목표 수립](/Design/Design_Custom_Extension.md#SettingGoal)
