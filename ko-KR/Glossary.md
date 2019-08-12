@@ -49,7 +49,7 @@ CIC를 통해 전달되는 콘텐츠 정보를 일정 범주에 맞게 정형화
 임의의 확장된 기능을 제공하는 [extension](#ClovaExtension)입니다. Custom extension을 사용하면 음악, 쇼핑, 금융과 같은 외부 서비스의 기능을 제공할 수 있습니다. 자세한 내용은 [Custom extension 만들기](/Develop/Guides/Build_Custom_Extension.md) 문서를 참조합니다.
 
 ### Custom extension 메시지 {#CustomExtMessage}
-[Clova Extensions Kit](#CEK)와 [custom extension](#CustomExtension) 사이에서 정보를 주고 받을 때 사용하는 메시지입니다. 자세한 내용은 [Custom extension 메시지](/Develop/References/CEK_API.md#CustomExtMessage) 문서를 참조합니다.
+[Clova Extensions Kit](#CEK)와 [custom extension](#CustomExtension) 사이에서 정보를 주고 받을 때 사용하는 메시지입니다. 자세한 내용은 [Custom extension 메시지](/Develop/References/Custom_Extension_Message.md) 문서를 참조합니다.
 
 ### Extension {#Extension}
 [Clova extension](#ClovaExtension)의 다른 표현

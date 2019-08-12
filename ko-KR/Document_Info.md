@@ -21,6 +21,14 @@
   </thead>
   <tbody>
     <tr>
+      <td>2019-08-19</td>
+      <td>
+        <ul>
+          <li>API 레퍼런스와 developer console 가이드의 목차 수준을 한 단계씩 올림</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
       <td>2019-08-05</td>
       <td>
         <ul>
@@ -145,7 +153,7 @@
       <td>2018-09-21</td>
       <td>
         <ul>
-          <li>Clova에서 전달하는 메시지의 검증을 위해 <a href="/Develop/References/CEK_API.md#HTTPHeader">HTTP 헤더</a>에 SignatureCEK 필드 설명을 추가하고 <a href="/Develop/Guides/Build_Custom_Extension.md">custom extension 만들기</a> 문서에 요청 메시지 검증 절을 추가</li>
+          <li>Clova에서 전달하는 메시지의 검증을 위해 <a href="/Develop/References/HTTP_Message.md#HTTPHeader">HTTP 헤더</a>에 SignatureCEK 필드 설명을 추가하고 <a href="/Develop/Guides/Build_Custom_Extension.md">custom extension 만들기</a> 문서에 요청 메시지 검증 절을 추가</li>
           <li>일부 잘못된 코드 예제를 수정</li>
           <li>일부 잘못된 링크를 수정</li>
           <li>일부 사용자 접점에 있는 Extension 표기를 Skill로 변경(UI 캡처 이미지 함께 업데이트)</li>
@@ -165,7 +173,7 @@
       <td>2018-08-24</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md#CustomExtMessage">Custom extension 메시지</a> <a href="/Develop/References/CEK_API.md#CustomExtEventRequest">EventRequest</a> 요청 타입의 예제에서 오류 수정</li>
+          <li><a href="/Develop/References/Custom_Extension_Message.md">Custom extension 메시지</a> <a href="/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest">EventRequest</a> 요청 타입의 예제에서 오류 수정</li>
         </ul>
       </td>
     </tr>
@@ -192,7 +200,7 @@
         <ul>
           <li>Custom extension의 <a href="/Design/Design_Custom_Extension.md#DecideSoundOutputType">응답 유형</a>에 대한 가이드라인 추가</li>
           <li>Custom extension 만들기 문서에 <a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">오디오 콘텐츠 제공하기</a> 절 추가</li>
-          <li>Custom extension 메시지의 <a href="/Develop/References/CEK_API.md#CustomExtRequestType">요청 타입</a>에 <a href="/Develop/References/CEK_API.md#CustomExtEventRequest">EventRequest 타입</a> 추가</li>
+          <li>Custom extension 메시지의 <a href="/Develop/References/Custom_Extension_Message.md#CustomExtRequestType">요청 타입</a>에 <a href="/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest">EventRequest 타입</a> 추가</li>
         </ul>
       </td>
     </tr>
@@ -294,7 +302,7 @@
       <td>2017-12-04</td>
       <td>
         <ul>
-          <li>사용자 multi-turn 대화를 위해 reprompt 필드를 <a href="/Develop/References/CEK_API.md#CustomExtResponseMessage">응답 메시지</a>에 추가</li>
+          <li>사용자 multi-turn 대화를 위해 reprompt 필드를 <a href="/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage">응답 메시지</a>에 추가</li>
           <li>일부 문서 오류 수정</li>
         </ul>
       </td>
@@ -303,7 +311,7 @@
       <td>2017-11-06</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md#CustomExtMessage">Custom extension 메시지</a> 중 요청 메시지에서 context.System.device.displayType 필드의 이름을 context.System.device.display로 바꾸고 하위 필드 구성을 변경</li>
+          <li><a href="/Develop/References/Custom_Extension_Message.md">Custom extension 메시지</a> 중 요청 메시지에서 context.System.device.displayType 필드의 이름을 context.System.device.display로 바꾸고 하위 필드 구성을 변경</li>
         </ul>
       </td>
     </tr>
@@ -322,7 +330,7 @@
       <td>2017-10-23</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md#CustomExtMessage">Custom extension 메시지</a> 중 요청 메시지에 context.System.device.displayType 필드 추가</li>
+          <li><a href="/Develop/References/Custom_Extension_Message.md">Custom extension 메시지</a> 중 요청 메시지에 context.System.device.displayType 필드 추가</li>
         </ul>
       </td>
     </tr>
@@ -354,7 +362,7 @@
       <td>2017-07-07</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md#CustomExtResponseMessage">Custom extension 응답 메시지</a>의 <a href="/Develop/References/CEK_API.md#CustomExtResponseMessage">outputSpeech</a> 객체 구성 업데이트 반영</li>
+          <li><a href="/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage">Custom extension 응답 메시지</a>의 <a href="/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage">outputSpeech</a> 객체 구성 업데이트 반영</li>
           <li><a href="/Glossary.md">용어집 추가</a></li>
           <li>CEK 메시지 포맷 파트의 목차 업데이트</li>
         </ul>

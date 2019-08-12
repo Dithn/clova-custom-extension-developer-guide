@@ -1,5 +1,5 @@
 ## Custom extension 응답 반환하기 {#ReturnCustomExtensionResponse}
-[요청 메시지를 처리](#HandleCustomExtensionRequest)하고 나면 다시 CEK로 [응답 메시지](/Develop/References/CEK_API.md#CustomExtResponseMessage)를 돌려줘야 합니다(HTTP Response). 요청 메시지의 타입에 따라 응답해야 하는 내용이 달라질 수 있지만 응답 메시지의 구조는 크게 다르지 않습니다. 다음은 LaunchRequest 타입 요청("피자봇 시작해줘"라는 사용자 요청)을 처리하고 보낸 응답 메시지입니다.
+[요청 메시지를 처리](#HandleCustomExtensionRequest)하고 나면 다시 CEK로 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)를 돌려줘야 합니다(HTTP Response). 요청 메시지의 타입에 따라 응답해야 하는 내용이 달라질 수 있지만 응답 메시지의 구조는 크게 다르지 않습니다. 다음은 LaunchRequest 타입 요청("피자봇 시작해줘"라는 사용자 요청)을 처리하고 보낸 응답 메시지입니다.
 
 {% raw %}
 ```json
@@ -102,7 +102,7 @@ HLS 방식의 음원을 제공할 때는 다음과 같이 작성할 수 있습�
 
 <div class="tip">
   <p><strong>Tip!</strong></p>
-  <p>단문이나 복문 형태의 음성 정보 외에도 스크린 없는 기기와 같이 상세 내용을 GUI로 표현하기 힘든 클라이언트를 위해 복합 형태(SpeechSet)의 음성 정보도 지원하고 있습니다. 자세한 사항은 custom extension 메시지 포맷의 <a href="/Develop/References/CEK_API.md#CustomExtResponseMessage">응답 메시지</a>를 참조합니다.</p>
+  <p>단문이나 복문 형태의 음성 정보 외에도 스크린 없는 기기와 같이 상세 내용을 GUI로 표현하기 힘든 클라이언트를 위해 복합 형태(SpeechSet)의 음성 정보도 지원하고 있습니다. 자세한 사항은 custom extension 메시지 포맷의 <a href="/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage">응답 메시지</a>를 참조합니다.</p>
 </div>
 
 음성 출력뿐만 아니라 클라이언트 기기의 화면이나 Clova 앱 화면에 원하는 데이터를 출력해야 한다면 다음과 같이 `response.card` 필드에 [content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md)에 맞춰 표시할 콘텐츠를 채우면 됩니다.

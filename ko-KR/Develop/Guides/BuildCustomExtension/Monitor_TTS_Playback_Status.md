@@ -1,6 +1,6 @@
 ## 음성 재생 상태 확인하기 {#CheckTTSPlaybackStatus}
 
-[Custom extension에서 응답을 반환](/Develop/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse)할 때 [응답 메시지](/Develop/References/CEK_API.md#CustomExtResponseMessage)에서 [SpeechInfoObject](/Develop/References/CEK_API.md#CustomExtSpeechInfoObject)의 `token` 필드를 입력하면 클라이언트에서 음성(TTS) 재생에 대한 경과를 보고 받을 수 있습니다. 이는 주로 클라이언트가 자막 또는 특정 콘텐츠를 표시할 때 음성 자막과 그 진행 단계를 맞추도록 할 때 사용할 수 있습니다.
+[Custom extension에서 응답을 반환](/Develop/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse)할 때 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)에서 [SpeechInfoObject](/Develop/References/CEK_API.md#CustomExtSpeechInfoObject)의 `token` 필드를 입력하면 클라이언트에서 음성(TTS) 재생에 대한 경과를 보고 받을 수 있습니다. 이는 주로 클라이언트가 자막 또는 특정 콘텐츠를 표시할 때 음성 자막과 그 진행 단계를 맞추도록 할 때 사용할 수 있습니다.
 
 예를 들면, "Hi, my name is Clova."와 같은 음성과 텍스트를 표시한 후 그 다음에 "How can I help you?"와 같은 텍스트를 표시한다고 가정해 봅니다. 이때, "Hi, my name is Clova"에 해당하는 음성을 재생하도록 전달한 후 해당 음성 재생이 완료된 다음에 그 다음 자막이 표시되도록 만들어야 합니다.
 
@@ -62,7 +62,7 @@
 * [`SpeechSynthesizer.SpeechStopped`](/Develop/References/CEK_API.md#SpeechStopped) 지시 메시지: 클라이언트에게 오디오 스트림 재생을 중지하도록 지시
 {% endif %}
 
-Clova는 그 보고를 [`EventRequest` 요청 타입](/Develop/References/CEK_API.md#CustomExtEventRequest) 메시지를 통해 extension에게 전달합니다. 다음은 위 음성에 대해 재생 종료 보고를 받은 예입니다. 아래와 같은 메시지를 받은 후 현재 클라이언트의 음성 재생 상태를 확인하여 다음에 전달할 음성이나 콘텐츠를 응답으로 제공하는 등의 방식으로 콘텐츠 제공 속도나 단계를 조절하면 됩니다.
+Clova는 그 보고를 [`EventRequest` 요청 타입](/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest) 메시지를 통해 extension에게 전달합니다. 다음은 위 음성에 대해 재생 종료 보고를 받은 예입니다. 아래와 같은 메시지를 받은 후 현재 클라이언트의 음성 재생 상태를 확인하여 다음에 전달할 음성이나 콘텐츠를 응답으로 제공하는 등의 방식으로 콘텐츠 제공 속도나 단계를 조절하면 됩니다.
 
 ```json
 {

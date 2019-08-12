@@ -38,8 +38,8 @@ Custom extension을 배포하려면 [interaction 모델이 등록](/DevConsole/G
 
 * **{{ book.DevConsole.cek_builder_test_service_response }}** 항목을 보고 [등록한 custom extension](/DevConsole/Guides/Register_Custom_Extension.md)이 제대로 응답하는지 확인합니다.
 * **{{ book.DevConsole.cek_builder_test_intent_result }}** 항목과 **{{ book.DevConsole.cek_builder_test_slot_result }}** 항목을 보고 의도한대로 intent와 slot이 인식되는지 확인합니다.
-* **{{ book.DevConsole.cek_builder_test_request_json }}** 항목을 보고 CEK가 custom extension으로 보내는 [요청 메시지](/Develop/References/CEK_API.md#CustomExtRequestMessage)에 이상이 없는지 확인합니다. 뿐만 아니라 해당 JSON의 내용을 수정한 후 **{{ book.DevConsole.cek_builder_test_test_again }}** 버튼을 누르면 테스트를 다시 수행할 수 있습니다.
-* **{{ book.DevConsole.cek_builder_test_response_json }}** 항목을 보고 등록한 custom extension이 의도한대로 [응답 메시지](/Develop/References/CEK_API.md#CustomExtResponseMessage)를 보내는지 확인합니다.
+* **{{ book.DevConsole.cek_builder_test_request_json }}** 항목을 보고 CEK가 custom extension으로 보내는 [요청 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)에 이상이 없는지 확인합니다. 뿐만 아니라 해당 JSON의 내용을 수정한 후 **{{ book.DevConsole.cek_builder_test_test_again }}** 버튼을 누르면 테스트를 다시 수행할 수 있습니다.
+* **{{ book.DevConsole.cek_builder_test_response_json }}** 항목을 보고 등록한 custom extension이 의도한대로 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)를 보내는지 확인합니다.
 
 ![](/DevConsole/Assets/Images/DevConsole-Test_Result.png)
 

@@ -59,8 +59,8 @@
       <td>레퍼런스</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md#HTTPMessage">HTTP 메시지</a></li>
-          <li><a href="/Develop/References/CEK_API.md#CustomExtMessage">Custom extension 메시지</a></li>
+          <li><a href="/Develop/References/HTTP_Message.md">HTTP 메시지</a></li>
+          <li><a href="/Develop/References/Custom_Extension_Message.md">Custom extension 메시지</a></li>
         </ul>
       </td>
     </tr>

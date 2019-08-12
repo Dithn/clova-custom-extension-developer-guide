@@ -85,18 +85,17 @@
 
 ### References
 
-* [CEK API 레퍼런스](/Develop/References/CEK_API.md)
-  * [HTTP 메시지](/Develop/References/CEK_API.md#HTTPMessage)
-    * [HTTP 헤더](/Develop/References/CEK_API.md#HTTPHeader)
-    * [HTTP 본문](/Develop/References/CEK_API.md#HTTPBody)
-  * [Custom extension 메시지](/Develop/References/CEK_API.md#CustomExtMessage)
-    * [요청 메시지](/Develop/References/CEK_API.md#CustomExtRequestMessage)
-    * [요청 타입](/Develop/References/CEK_API.md#CustomExtRequestType)
-      * [`EventRequest`](/Develop/References/CEK_API.md#CustomExtEventRequest)
-      * [`IntentRequest`](/Develop/References/CEK_API.md#CustomExtIntentRequest)
-      * [`LaunchRequest`](/Develop/References/CEK_API.md#CustomExtLaunchRequest)
-      * [`SessionEndedRequest`](/Develop/References/CEK_API.md#CustomExtSessionEndedRequest)
-    * [응답 메시지](/Develop/References/CEK_API.md#CustomExtResponseMessage)
+* [HTTP 메시지](/Develop/References/HTTP_Message.md)
+  * [HTTP 헤더](/Develop/References/HTTP_Message.md#HTTPHeader)
+  * [HTTP 본문](/Develop/References/HTTP_Message.md#HTTPBody)
+* [Custom extension 메시지](/Develop/References/Custom_Extension_Message.md)
+  * [요청 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)
+  * [요청 타입](/Develop/References/Custom_Extension_Message.md#CustomExtRequestType)
+    * [`EventRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest)
+    * [`IntentRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtIntentRequest)
+    * [`LaunchRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtLaunchRequest)
+    * [`SessionEndedRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtSessionEndedRequest)
+  * [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)
 
 ## Developer console guides
 

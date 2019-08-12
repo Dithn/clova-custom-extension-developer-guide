@@ -2,13 +2,13 @@
 
 <!-- Start of the shared content: CEKHTTPMessageReference -->
 
-## HTTP 메시지 {#HTTPMessage}
+# HTTP 메시지
 CEK와 extension이 통신할 때 HTTP/1.1 프로토콜을 사용하며, 기본적인 HTTP 요청과 HTTP 응답을 주고 받습니다. CEK와 extension이 서로 통신할 때 HTTP 메시지 본문(body)에는 JSON 포맷의 메시지가 포함되어 있습니다. 여기에서는 CEK와 extension 사이에서 주고 받는 HTTP 메시지가 어떻게 구성되는지 설명합니다.
 
 * [HTTP 헤더](#HTTPHeader)
 * [HTTP 본문](#HTTPBody)
 
-### HTTP 헤더 {#HTTPHeader}
+## HTTP 헤더 {#HTTPHeader}
 CEK가 extension으로 분석된 사용자의 발화 정보를 보낼 때 HTTP 요청을 사용합니다. 이때 HTTP 요청 헤더는 다음과 같이 구성됩니다.
 
 {% raw %}
@@ -38,7 +38,7 @@ Content-Type: application/json;charset-UTF-8
 * CEK가 보낸 HTTP 요청에 대한 응답으로 처리 결과를 전달합니다.
 * 본문의 데이터 형식은 JSON 포맷으로 되어 있으며, UTF-8 인코딩을 사용합니다.
 
-### HTTP 본문 {#HTTPBody}
+## HTTP 본문 {#HTTPBody}
 HTTP 요청 메시지와 응답 메시지의 본문은 JSON 포맷이며, 분석된 사용자의 발화 정보나 extension의 처리 결과가 담긴 정보입니다. 각 메시지의 구성은 어떤 종류의 extension을 사용하느냐에 따라 달라집니다. 메시지의 구성에 대한 자세한 정보는 [custom extension 메시지](#CustomExtMessage)를 참조합니다.
 
 <!-- End of the shared content -->

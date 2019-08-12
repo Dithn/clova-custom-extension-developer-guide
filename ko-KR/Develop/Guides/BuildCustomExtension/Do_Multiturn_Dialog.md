@@ -36,7 +36,7 @@ CEK로부터 전달받은 사용자 요청 정보([`IntentRequest`](/Develop/Gui
 ```
 {% endraw %}
 
-Custom extension에서 피자 종류뿐만 아니라 주문 수량 정보가 추가로 필요할 수도 있습니다. 이때, [응답 메시지](/Develop/References/CEK_API.md#CustomExtResponseMessage)의 `response.shouldEndSession` 필드를 `false`로 설정하면, 부족한 정보를 추가로 확인하기 위해 multi-turn 대화를 시도할 수 있습니다. 또한, 기존에 사용자가 먼저 보냈던 정보를 `sessionAttributes` 필드에 키(key)-값(value) 형태로 저장해둘 수 있습니다.
+Custom extension에서 피자 종류뿐만 아니라 주문 수량 정보가 추가로 필요할 수도 있습니다. 이때, [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)의 `response.shouldEndSession` 필드를 `false`로 설정하면, 부족한 정보를 추가로 확인하기 위해 multi-turn 대화를 시도할 수 있습니다. 또한, 기존에 사용자가 먼저 보냈던 정보를 `sessionAttributes` 필드에 키(key)-값(value) 형태로 저장해둘 수 있습니다.
 
 아래와 같이 응답하면 사용자가 이미 요청했던 `intent` 필드와 `pizzaType`의 정보를 보관해두도록 Clova에 요청할 수 있으며, 사용자에게 수량과 관련된 추가 정보를 요청할 수 있습니다.
 
@@ -65,7 +65,7 @@ Custom extension에서 피자 종류뿐만 아니라 주문 수량 정보가 추
 ```
 {% endraw %}
 
-추후 사용자가 필요한 수량 정보까지 응답하면 다음과 같이 분석된 수량 정보와 함께 Clova 플랫폼은 저장해둔 `sessionAttributes` 객체 정보를 [요청 메시지](/Develop/References/CEK_API.md#CustomExtRequestMessage)의 `session.sessionAttributes` 필드에 포함하여 다시 전달합니다. 이때, 추가로 전달된 메시지는 이전 메시지와 같은 `session.sessionId` 값을 가지게 되며, custom extension은 받은 추가 정보를 이용하여 다음 동작을 수행하면 됩니다.
+추후 사용자가 필요한 수량 정보까지 응답하면 다음과 같이 분석된 수량 정보와 함께 Clova 플랫폼은 저장해둔 `sessionAttributes` 객체 정보를 [요청 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)의 `session.sessionAttributes` 필드에 포함하여 다시 전달합니다. 이때, 추가로 전달된 메시지는 이전 메시지와 같은 `session.sessionId` 값을 가지게 되며, custom extension은 받은 추가 정보를 이용하여 다음 동작을 수행하면 됩니다.
 
 {% raw %}
 ```json
