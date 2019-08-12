@@ -1,7 +1,7 @@
 <!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
 
 # Custom extension 배포하기
-[Custom extension](/Develop/Guides/Build_Custom_Extension.md)을 [Clova developer console에 등록](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md)했다면 등록한 custom extension을 Clova 서비스에 배포할 수 있습니다. 배포하면 일반 사용자들이 **{{ book.DevConsole.ManageCustomExtensions }}**에서 배포된 custom extension을 사용할 수 있게 됩니다.
+[Custom extension](/Develop/Guides/Build_Custom_Extension.md)을 [Clova developer console에 등록](/DevConsole/Guides/Register_Custom_Extension.md)했다면 등록한 custom extension을 Clova 서비스에 배포할 수 있습니다. 배포하면 일반 사용자들이 **{{ book.DevConsole.ManageCustomExtensions }}**에서 배포된 custom extension을 사용할 수 있게 됩니다.
 
 Custom extension을 배포할 때 일반적으로 다음 항목을 수행해야 합니다.
 
@@ -11,7 +11,7 @@ Custom extension을 배포할 때 일반적으로 다음 항목을 수행해야 
 
 ## 배포 정보 입력 {#InputDeploymentInfo}
 
-Clova developer console에서 [custom extension](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md)과 [Interaction 모델을 등록](/DevConsole/Guides/ManageCustomExtension/Register_Interaction_Model.md)한 후 배포 정보를 입력할 수 있습니다. Custom extension 등록 메뉴에서 **{{ book.DevConsole.cek_publishing }}**를 선택합니다.
+Clova developer console에서 [custom extension](/DevConsole/Guides/Register_Custom_Extension.md)과 [Interaction 모델을 등록](/DevConsole/Guides/Register_Interaction_Model.md)한 후 배포 정보를 입력할 수 있습니다. Custom extension 등록 메뉴에서 **{{ book.DevConsole.cek_publishing }}**를 선택합니다.
 
 ![](/DevConsole/Assets/Images/DevConsole-Custom_Extension_Deployment_Info_Menu.png)
 
@@ -39,7 +39,7 @@ Custom extension을 사용자에게 설명하기 위한 정보로서 **{{ book.D
 
 <div class="tip">
   <p><strong>Tip!</strong></p>
-  <p><strong>{{ book.DevConsole.ExtensionPage }}</strong>에 표시되는 일부 정보는 <a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#InputExtensionInfo">Extension 기본 정보를 등록</a>할 때 입력된 정보를 활용합니다.</p>
+  <p><strong>{{ book.DevConsole.ExtensionPage }}</strong>에 표시되는 일부 정보는 <a href="/DevConsole/Guides/Register_Custom_Extension.md#InputExtensionInfo">Extension 기본 정보를 등록</a>할 때 입력된 정보를 활용합니다.</p>
 </div>
 
 ## 개인 정보 보호 및 규정 준수 정보 입력 {#InputComplianceInfo}

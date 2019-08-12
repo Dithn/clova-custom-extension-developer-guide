@@ -15,7 +15,7 @@ Custom extension을 통해 사용자에게 음악이나 podcast와 같은 오디
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>오디오 콘텐츠를 재생하는 custom extension을 구현하려면 <a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md">Clova developer console에 extension을 등록</a>할 때 <a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#InputExtensionInfo">기본 정보</a>로 {{ book.DevConsole.cek_audioplayer }} 항목을 <strong>네</strong>로 선택해야 합니다.</p>
+  <p>오디오 콘텐츠를 재생하는 custom extension을 구현하려면 <a href="/DevConsole/Guides/Register_Custom_Extension.md">Clova developer console에 extension을 등록</a>할 때 <a href="/DevConsole/Guides/Register_Custom_Extension.md#InputExtensionInfo">기본 정보</a>로 {{ book.DevConsole.cek_audioplayer }} 항목을 <strong>네</strong>로 선택해야 합니다.</p>
 </div>
 
 <div class="note">
@@ -37,7 +37,7 @@ Custom extension을 통해 사용자에게 음악이나 podcast와 같은 오디
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>오디오 콘텐츠를 재생하는 custom extension을 구현하려면 <a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md">Clova developer console에 extension을 등록</a>할 때 <a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#InputExtensionInfo">기본 정보</a>로 {{ book.DevConsole.cek_audioplayer }} 항목을 <strong>네</strong>로 선택해야 합니다.</p>
+  <p>오디오 콘텐츠를 재생하는 custom extension을 구현하려면 <a href="/DevConsole/Guides/Register_Custom_Extension.md">Clova developer console에 extension을 등록</a>할 때 <a href="/DevConsole/Guides/Register_Custom_Extension.md#InputExtensionInfo">기본 정보</a>로 {{ book.DevConsole.cek_audioplayer }} 항목을 <strong>네</strong>로 선택해야 합니다.</p>
 </div>
 {% endif %}
 

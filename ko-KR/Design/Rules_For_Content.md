@@ -1,6 +1,6 @@
 # 콘텐츠 제공 시 준수 사항
 
-Skill(extension)을 통해 콘텐츠를 사용자에게 제공할 때 지켜야하는 준수 사항이 있습니다. Clova 운영자는 Skill Store에 [skill을 배포](/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md)하기 전에 이 준수 사항을 위반했는지 심사합니다. Skill이 준수 사항을 위반하거나 명확히 따르지 않으면 배포를 거부하거나 이미 배포된 skill 제공을 중단할 수 있습니다. 따라서, [심사를 신청](/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md#RequestExtensionSubmission)하기 전에 반드시 이하의 준수 사항을 따랐는지 확인해야 합니다.
+Skill(extension)을 통해 콘텐츠를 사용자에게 제공할 때 지켜야하는 준수 사항이 있습니다. Clova 운영자는 Skill Store에 [skill을 배포](/DevConsole/Guides/Deploy_Custom_Extension.md)하기 전에 이 준수 사항을 위반했는지 심사합니다. Skill이 준수 사항을 위반하거나 명확히 따르지 않으면 배포를 거부하거나 이미 배포된 skill 제공을 중단할 수 있습니다. 따라서, [심사를 신청](/DevConsole/Guides/Deploy_Custom_Extension.md#RequestExtensionSubmission)하기 전에 반드시 이하의 준수 사항을 따랐는지 확인해야 합니다.
 
 * [Skill의 완전성](#SkillCompleteness)
 * [Skill의 안전성](#SkillSecurity)
@@ -14,7 +14,7 @@ Skill(extension)을 통해 콘텐츠를 사용자에게 제공할 때 지켜야�
 편의 제공 및 불편 해소와 같이 보다 나은 사용자 경험을 위해 다음을 준수하여 완전성을 추구해야 합니다.
 
 * 서버 점검 등 특수한 상황을 제외하고 skill은 사용자의 요청에 언제든지 응답할 수 있어야 합니다.
-* Skill에 대한 정보인 [기본 정보](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#InputExtensionInfo), [서버 설정 정보](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#SetServerConnection), [배포 정보](/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md#InputDeploymentInfo) 등이 부족하거나 잘못된 정보 없이 항상 최신의 정보로 업데이트되어야 합니다.
+* Skill에 대한 정보인 [기본 정보](/DevConsole/Guides/Register_Custom_Extension.md#InputExtensionInfo), [서버 설정 정보](/DevConsole/Guides/Register_Custom_Extension.md#SetServerConnection), [배포 정보](/DevConsole/Guides/Deploy_Custom_Extension.md#InputDeploymentInfo) 등이 부족하거나 잘못된 정보 없이 항상 최신의 정보로 업데이트되어야 합니다.
 * [사용 시나리오](/Design/Design_Custom_Extension.md#MakeUseCaseScenarioScript)에 불가능하거나 자연스럽지 않은 부분이 없어야 하며, 사용자의 요청이 잘 인식될 수 있도록 [interaction 모델](/Design/Design_Custom_Extension.md#DefineInteractionModel) 잘 정의하여 구현해야 합니다.
 * 콘텐츠 제공을 위해 서버를 연동하거나 계정을 연결한다면 필요한 [보안 조건](/Develop/Guides/Link_User_Account.md#ApplyAccountLinking)을 갖춰야 합니다.
 
@@ -75,5 +75,5 @@ Skill 콘텐츠 제공과 관련하여 다음과 같은 유의 사항이 있습�
 
 <div class="note">
 <p><strong>Note!</strong></p>
-<p>일부 예외가 있을 수 있기 때문에 판단이 어려울 수 있으며, 이에 대한 판단이 어렵다면 <a href="/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md#RequestExtensionSubmission">심사 시</a>에 의견을 입력해주십시오.</p>
+<p>일부 예외가 있을 수 있기 때문에 판단이 어려울 수 있으며, 이에 대한 판단이 어렵다면 <a href="/DevConsole/Guides/Deploy_Custom_Extension.md#RequestExtensionSubmission">심사 시</a>에 의견을 입력해주십시오.</p>
 </div>

@@ -4,7 +4,7 @@
 
 # Custom extension 중지 및 삭제하기
 
-심사 요청하기 이전 단계의 extension이라면 [기본 정보를 입력하는 메뉴](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#InputExtensionInfo)에서 해당 extension을 삭제할 수 있습니다.
+심사 요청하기 이전 단계의 extension이라면 [기본 정보를 입력하는 메뉴](/DevConsole/Guides/Register_Custom_Extension.md#InputExtensionInfo)에서 해당 extension을 삭제할 수 있습니다.
 
 ![](/DevConsole/Assets/Images/DevConsole-Remove_Extension.png)
 

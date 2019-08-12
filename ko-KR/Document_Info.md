@@ -42,7 +42,7 @@
       <td>2019-07-02</td>
       <td>
         <ul>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Register_Interaction_Model.md">Interaction 모델 등록하기</a>에서 발화 예시 등록 및 TSV 파일 업로드와 관련된 제약 사항을 설명에 추가</li>
+          <li><a href="/DevConsole/Guides/Register_Interaction_Model.md">Interaction 모델 등록하기</a>에서 발화 예시 등록 및 TSV 파일 업로드와 관련된 제약 사항을 설명에 추가</li>
           <li>일부 예제 오탈자 교정 및 노트 상자 수준 조정</li>
         </ul>
       </td>
@@ -137,7 +137,7 @@
       <td>2018-10-13</td>
       <td>
         <ul>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#InputExtensionInfo">Extension 기본 정보 입력</a>에 호출 이름을 한 개 이상 최대 세 개까지 등록할 수 있음을 명시</li>
+          <li><a href="/DevConsole/Guides/Register_Custom_Extension.md#InputExtensionInfo">Extension 기본 정보 입력</a>에 호출 이름을 한 개 이상 최대 세 개까지 등록할 수 있음을 명시</li>
         </ul>
       </td>
     </tr>
@@ -227,7 +227,7 @@
           <li>Extension 시작 호출(<a href="CEK/Guides/Build_Custom_Extension.md#HandleLaunchRequest">LaunchRequest</a>)에 대한 설명 수정 및 <a href="/Design/Design_Custom_Extension.md">Custom extension 설계</a> 문서 반영</li>
           <li>CEK와 extension간 통신에 사용되는 <a href="/Develop/CEK_Overview.md#WhatisCEK">HTTP 프로토콜 버전</a> 명시</li>
           <li><a href="/Develop/Tutorials/Introduction.md">튜토리얼</a> 페이지에 <a href="/Develop/Tutorials/Handle_Builtin_Intents.md">기본적인 의사 표현 처리하기</a> 페이지 추가</li>
-          <li>Extension 서버에서 사용해야 할 <a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#SetServerConnection">포트</a>를 명시</li>
+          <li>Extension 서버에서 사용해야 할 <a href="/DevConsole/Guides/Register_Custom_Extension.md#SetServerConnection">포트</a>를 명시</li>
           <li>일부 문서 오류 교정</li>
         </ul>
       </td>
@@ -236,7 +236,7 @@
       <td>2018-01-29</td>
       <td>
         <ul>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#SetServerConnection">Extension 서버 연동 설정</a> 전 연결 확인하는 방법 추가 및 <a href="/DevConsole/Guides/ManageCustomExtension/Test_Custom_Extension.md#TestOnClovaApp">테스터 ID 적용 자동화</a>에 대한 안내 추가</li>
+          <li><a href="/DevConsole/Guides/Register_Custom_Extension.md#SetServerConnection">Extension 서버 연동 설정</a> 전 연결 확인하는 방법 추가 및 <a href="/DevConsole/Guides/Test_Custom_Extension.md#TestOnClovaApp">테스터 ID 적용 자동화</a>에 대한 안내 추가</li>
           <li>Clova developer console의 일부 UI 업데이트 적용</li>
         </ul>
       </td>
@@ -247,7 +247,7 @@
         <ul>
           <li><a href="/Design/Supported_Audio_Format.md">플랫폼 지원 오디오 포맷</a>을 디자인 가이드라인에 추가</li>
           <li><a href="/Develop/Tutorials/Introduction.md">튜토리얼</a> 페이지와 <a href="/Develop/Tutorials/Build_Simple_Extension.md">기초적인 extension 만들기</a> 페이지 추가</li>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Register_Interaction_Model.md#AddCustomSlotType">Built-in intent 목록 표시</a>, <a href="/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md#InputComplianceInfo">심사 신청</a> 시 심사 요청 메시지 작성을 위한 UI 추가</li>
+          <li><a href="/DevConsole/Guides/Register_Interaction_Model.md#AddCustomSlotType">Built-in intent 목록 표시</a>, <a href="/DevConsole/Guides/Deploy_Custom_Extension.md#InputComplianceInfo">심사 신청</a> 시 심사 요청 메시지 작성을 위한 UI 추가</li>
           <li>UML 다이어그램의 이미지 포맷 변경</li>
         </ul>
       </td>
@@ -258,7 +258,7 @@
         <ul>
           <li>플랫폼 구현 상황에 맞게 <a href="/Design/Design_Custom_Extension.md#DefineInteractionModel">built-in intent</a>에 대한 설명 수정</li>
           <li><a href="/Develop/Examples/Extension_Examples.md">Extension 예제</a> 페이지 추가</li>
-          <li><strong>테스터 ID</strong> 필드 추가에 따른 <a href="/DevConsole/Guides/ManageCustomExtension/Test_Custom_Extension.md">Extension 테스트하기</a> 설명 업데이트</li>
+          <li><strong>테스터 ID</strong> 필드 추가에 따른 <a href="/DevConsole/Guides/Test_Custom_Extension.md">Extension 테스트하기</a> 설명 업데이트</li>
         </ul>
       </td>
     </tr>
@@ -274,11 +274,11 @@
       <td>2017-12-18</td>
       <td>
         <ul>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Register_Interaction_Model.md">Interaction 모델 등록하기</a>에서 <a href="/Design/Design_Custom_Extension.md#DefineInteractionModel">interaction 모델 정의</a> 절 내용을 <a href="/Design/Design_Custom_Extension.md">Custom extension 설계</a> 문서로 이동</li>
+          <li><a href="/DevConsole/Guides/Register_Interaction_Model.md">Interaction 모델 등록하기</a>에서 <a href="/Design/Design_Custom_Extension.md#DefineInteractionModel">interaction 모델 정의</a> 절 내용을 <a href="/Design/Design_Custom_Extension.md">Custom extension 설계</a> 문서로 이동</li>
           <li><a href="/Design/Design_Custom_Extension.md#DefineInteractionModel">Interaction 모델 정의</a> 절 내용에 <a href="/Design/Design_Custom_Extension.md#UtteranceExample">발화 예시</a>문 작성 가이드라인 추가</li>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Test_Custom_Extension.md">Extension 테스트하기</a>에 테스트 모드 사용하기 추가</li>
+          <li><a href="/DevConsole/Guides/Test_Custom_Extension.md">Extension 테스트하기</a>에 테스트 모드 사용하기 추가</li>
           <li>UI 개선에 따른 이미지 및 설명 수정</li>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Update_Custom_Extension.md">Extension 업데이트하기</a>, <a href="/DevConsole/Guides/ManageCustomExtension/Remove_Custom_Extension.md">Extension 중지 및 삭제하기</a> 추가</li>
+          <li><a href="/DevConsole/Guides/Update_Custom_Extension.md">Extension 업데이트하기</a>, <a href="/DevConsole/Guides/Remove_Custom_Extension.md">Extension 중지 및 삭제하기</a> 추가</li>
         </ul>
       </td>
     </tr>
@@ -312,9 +312,9 @@
       <td>
         <ul>
           <li><a href="/DevConsole/ClovaDevConsole_Overview.md">Clova developer console 개요</a> 설명 추가</li>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md">Extension 등록하기</a> 가이드 추가</li>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Register_Interaction_Model.md">Interaction 모델 등록하기</a> 가이드 추가</li>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md">Extension 배포하기</a> 가이드 추가</li>
+          <li><a href="/DevConsole/Guides/Register_Custom_Extension.md">Extension 등록하기</a> 가이드 추가</li>
+          <li><a href="/DevConsole/Guides/Register_Interaction_Model.md">Interaction 모델 등록하기</a> 가이드 추가</li>
+          <li><a href="/DevConsole/Guides/Deploy_Custom_Extension.md">Extension 배포하기</a> 가이드 추가</li>
         </ul>
       </td>
     </tr>

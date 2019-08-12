@@ -20,8 +20,8 @@
 
 ### Clova developer console {#ClovaDeveloperConsole}
 Clova 플랫폼과 연동하는 클라이언트 기기나 [Clova extension](#ClovaExtension)을 개발하는 개발자에게 다음과 같은 내용을 제공하는 <a target="_blank" href="{{ book.ServiceEnv.DeveloperConsoleURI }}">웹 도구</a>입니다.
-* Clova extension [등록](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md) 및 [배포](/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md)
-* [Interaction 모델 등록](/DevConsole/Guides/ManageCustomExtension/Register_Interaction_Model.md)
+* Clova extension [등록](/DevConsole/Guides/Register_Custom_Extension.md) 및 [배포](/DevConsole/Guides/Deploy_Custom_Extension.md)
+* [Interaction 모델 등록](/DevConsole/Guides/Register_Interaction_Model.md)
 * Clova 서비스 관련 통계 자료 제공 (추후 제공 예정)
 
 ### Clova extension {#ClovaExtension}

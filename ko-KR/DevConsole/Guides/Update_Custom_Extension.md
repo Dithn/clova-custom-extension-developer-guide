@@ -15,10 +15,10 @@ Extension이 심사를 통과하여 extension 배포가 승인되면 extension�
 
 다음과 같은 것이 업데이트될 수 있습니다.
 
-* [기본 정보](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#InputExtensionInfo)
-* [서버 연동 정보](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md#SetServerConnection)
-* [Interaction 모델](/DevConsole/Guides/ManageCustomExtension/Register_Interaction_Model.md)
-* [배포 정보](/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md)
+* [기본 정보](/DevConsole/Guides/Register_Custom_Extension.md#InputExtensionInfo)
+* [서버 연동 정보](/DevConsole/Guides/Register_Custom_Extension.md#SetServerConnection)
+* [Interaction 모델](/DevConsole/Guides/Register_Interaction_Model.md)
+* [배포 정보](/DevConsole/Guides/Deploy_Custom_Extension.md)
 
 심사를 통과하면 **{{ book.DevConsole.cek_version_service }}** 버전에 업데이트 사항이 반영된 **{{ book.DevConsole.cek_version_test }}** 버전으로 교체됩니다. 그리고 다시 **{{ book.DevConsole.cek_version_service }}** 버전의 extension 정보를 복사하여 새로운 **{{ book.DevConsole.cek_version_test }}** 버전의 extension 정보를 생성합니다.
 

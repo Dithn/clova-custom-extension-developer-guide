@@ -48,7 +48,7 @@ Custom extension을 설계할 때 가장 먼저 할 일은 custom extension의 �
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>이렇게 작성된 세부 목표들은 <a href="#MakeUseCaseScenarioScript">사용 시나리오 스크립트를 작성</a>하거나 <a href="#DefineInteractionModel">interaction 모델</a>을 정의하는 기반 정보가 됩니다. 또한, <a href="/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md#InputDeploymentInfo">extension을 배포</a>할 때 이 정보를 등록해야 하며, 이를 기준으로 custom extension이 제대로 동작하는지 <a href="/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md#RequestExtensionSubmission">심사</a>를 받게 됩니다.</p>
+  <p>이렇게 작성된 세부 목표들은 <a href="#MakeUseCaseScenarioScript">사용 시나리오 스크립트를 작성</a>하거나 <a href="#DefineInteractionModel">interaction 모델</a>을 정의하는 기반 정보가 됩니다. 또한, <a href="/DevConsole/Guides/Deploy_Custom_Extension.md#InputDeploymentInfo">extension을 배포</a>할 때 이 정보를 등록해야 하며, 이를 기준으로 custom extension이 제대로 동작하는지 <a href="/DevConsole/Guides/Deploy_Custom_Extension.md#RequestExtensionSubmission">심사</a>를 받게 됩니다.</p>
 </div>
 
 ## 사용 시나리오 스크립트 작성 {#MakeUseCaseScenarioScript}
@@ -165,7 +165,7 @@ Custom extension을 설계할 때 가장 먼저 할 일은 custom extension의 �
 
 <div class="note">
 <p><strong>Note!</strong></p>
-<p>Skill 이름에 대한 규칙은 언제든지 변경될 수 있으며, 이미 허가된 이름이 정책에 따라 사용 불가 판정을 받을 수도 있습니다. 이점 미리 양해 부탁드립니다. 이에 대한 판단이 어렵다면 <a href="/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md#RequestExtensionSubmission">심사 시</a>에 의견을 입력해주십시오.</p>
+<p>Skill 이름에 대한 규칙은 언제든지 변경될 수 있으며, 이미 허가된 이름이 정책에 따라 사용 불가 판정을 받을 수도 있습니다. 이점 미리 양해 부탁드립니다. 이에 대한 판단이 어렵다면 <a href="/DevConsole/Guides/Deploy_Custom_Extension.md#RequestExtensionSubmission">심사 시</a>에 의견을 입력해주십시오.</p>
 </div>
 
 ## Interaction 모델 정의 {#DefineInteractionModel}
@@ -327,11 +327,11 @@ BBQ 피자 하나만 배달시켜줄래?
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>추후 <a href="/DevConsole/Guides/ManageCustomExtension/Test_Custom_Extension.md#TestInteractionModel">interaction 모델 테스트</a>나 실제 사용자 로그를 통해 완성도를 높여 나갈 수 있습니다. Interaction 모델을 테스트할 때는 발화 예시를 작성한 사람이 아닌 다른 사람이 테스트해보는 것이 좋습니다. 이 방법은 새로운 표현 패턴을 찾는데 도움이 됩니다.</p>
+  <p>추후 <a href="/DevConsole/Guides/Test_Custom_Extension.md#TestInteractionModel">interaction 모델 테스트</a>나 실제 사용자 로그를 통해 완성도를 높여 나갈 수 있습니다. Interaction 모델을 테스트할 때는 발화 예시를 작성한 사람이 아닌 다른 사람이 테스트해보는 것이 좋습니다. 이 방법은 새로운 표현 패턴을 찾는데 도움이 됩니다.</p>
 </div>
 
 
-[Clova developer console](/DevConsole/ClovaDevConsole_Overview.md)을 이용하여 위에서 정의한 [interaction 모델을 등록](/DevConsole/Guides/ManageCustomExtension/Register_Interaction_Model.md)하게 되면 [등록한 custom extension](/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md)이  다음과 같은 JSON 메시지를 수신하게 됩니다.
+[Clova developer console](/DevConsole/ClovaDevConsole_Overview.md)을 이용하여 위에서 정의한 [interaction 모델을 등록](/DevConsole/Guides/Register_Interaction_Model.md)하게 되면 [등록한 custom extension](/DevConsole/Guides/Register_Custom_Extension.md)이  다음과 같은 JSON 메시지를 수신하게 됩니다.
 
 {% raw %}
 

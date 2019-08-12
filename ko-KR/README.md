@@ -49,9 +49,9 @@
             </ul>
           </li>
           <li><a href="/Develop/Guides/Link_User_Account.md">사용자 계정 연결하기</a></li>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Register_Custom_Extension.md">Extension 등록하기</a></li>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Register_Interaction_Model.md">Interaction 모델 등록하기</a></li>
-          <li><a href="/DevConsole/Guides/ManageCustomExtension/Deploy_Custom_Extension.md">Extension 배포하기</a></li>
+          <li><a href="/DevConsole/Guides/Register_Custom_Extension.md">Extension 등록하기</a></li>
+          <li><a href="/DevConsole/Guides/Register_Interaction_Model.md">Interaction 모델 등록하기</a></li>
+          <li><a href="/DevConsole/Guides/Deploy_Custom_Extension.md">Extension 배포하기</a></li>
         </ul>
       </td>
     </tr>
