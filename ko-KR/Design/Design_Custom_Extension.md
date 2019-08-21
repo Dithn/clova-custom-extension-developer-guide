@@ -483,7 +483,7 @@ Custom extension은 사용자의 요청을 처리한 후 그 결과를 Clova를 
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>오디오 콘텐츠 재생 유형으로 응답하는 방법은 <a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">오디오 콘텐츠 제공하기</a>를 참조합니다.</p>
+  <p>오디오 콘텐츠 재생 유형으로 응답하는 방법은 <a href="/Develop/Guides/Provide_Audio_Content.md">오디오 콘텐츠 제공하기</a>를 참조합니다.</p>
 </div>
 
 ## 지속적인 업데이트 {#ContinuousUpdate}

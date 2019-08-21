@@ -75,7 +75,7 @@
       <td>2019-04-01</td>
       <td>
         <ul>
-          <li>Extension이 클라이언트의 음성(TTS) 재생 상태를 보고 받을 수 있도록 <a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a>에 token 필드를 추가하고 <a href="/Develop/Guides/Build_Custom_Extension.md#CheckTTSPlaybackStatus">음성 재생 상태 확인하기</a> 가이드 문서를 추가</li>
+          <li>Extension이 클라이언트의 음성(TTS) 재생 상태를 보고 받을 수 있도록 <a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a>에 token 필드를 추가하고 <a href="/Develop/Guides/Monitor_TTS_Playback_Status.md">음성 재생 상태 확인하기</a> 가이드 문서를 추가</li>
         </ul>
       </td>
     </tr>
@@ -128,7 +128,7 @@
       <td>
         <ul>
           <li><a href="/Design/Design_Custom_Extension.md">Custom extension 설계</a> 문서의 오디오 콘텐츠 재생 유형 설명에서 예제 시나리오에 잘못 표기된 지시 메시지의 이름을 수정</li>
-          <li><a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">오디오 콘텐츠 제공하기</a> 설명에서 CIC 명세 도입 시 이를 독자가 인지할 수 있도록 표현을 수정</li>
+          <li><a href="/Develop/Guides/Provide_Audio_Content.md">오디오 콘텐츠 제공하기</a> 설명에서 CIC 명세 도입 시 이를 독자가 인지할 수 있도록 표현을 수정</li>
           <li>일부 시퀀스 다이어그램에 잘못 표기된 노드의 유형을 수정</li>
         </ul>
       </td>
@@ -199,7 +199,7 @@
       <td>
         <ul>
           <li>Custom extension의 <a href="/Design/Design_Custom_Extension.md#DecideSoundOutputType">응답 유형</a>에 대한 가이드라인 추가</li>
-          <li>Custom extension 만들기 문서에 <a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">오디오 콘텐츠 제공하기</a> 절 추가</li>
+          <li>Custom extension 만들기 문서에 <a href="/Develop/Guides/Provide_Audio_Content.md">오디오 콘텐츠 제공하기</a> 절 추가</li>
           <li>Custom extension 메시지의 <a href="/Develop/References/Custom_Extension_Message.md#CustomExtRequestType">요청 타입</a>에 <a href="/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest">EventRequest 타입</a> 추가</li>
         </ul>
       </td>
@@ -354,7 +354,7 @@
       <td>2017-08-14</td>
       <td>
         <ul>
-          <li><a href="/Develop/Guides/Build_Custom_Extension.md#DoMultiturnDialog">Multi-turn 대화 수행하기</a>절 추가 및 sessionAttributes 필드 설명 업데이트</li>
+          <li><a href="/Develop/Guides/Do_Multiturn_Dialog.md">Multi-turn 대화 수행하기</a>절 추가 및 sessionAttributes 필드 설명 업데이트</li>
         </ul>
       </td>
     </tr>

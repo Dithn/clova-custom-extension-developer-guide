@@ -18,7 +18,7 @@ Custom extension은 CEK로부터 [custom extension 메시지](/Develop/Reference
 
 <div class="tip">
 <p><strong>Tip!</strong></p>
-<p><a href="/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest"><code>EventRequest</code></a> 요청 타입은 사용자의 발화 보다는 주로 클라이언트 상태 변화 등에 의해 extension으로 전달되는 메시지입니다. 클라이언트 상태에 대한 정보 수집 및 클라이언트 상태 변화에 대한 extension의 대응을 위해 사용되며, extension이 <a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">오디오 콘텐츠를 제공</a>할 때 사용됩니다. 따라서 이 절에서는 <code>EventRequest</code>에 대해서 다루지 않습니다.</p>
+<p><a href="/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest"><code>EventRequest</code></a> 요청 타입은 사용자의 발화 보다는 주로 클라이언트 상태 변화 등에 의해 extension으로 전달되는 메시지입니다. 클라이언트 상태에 대한 정보 수집 및 클라이언트 상태 변화에 대한 extension의 대응을 위해 사용되며, extension이 <a href="/Develop/Guides/Provide_Audio_Content.md">오디오 콘텐츠를 제공</a>할 때 사용됩니다. 따라서 이 절에서는 <code>EventRequest</code>에 대해서 다루지 않습니다.</p>
 </div>
 
 ### LaunchRequest 요청 처리 {#HandleLaunchRequest}

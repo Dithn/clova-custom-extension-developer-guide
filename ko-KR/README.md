@@ -44,8 +44,8 @@
         <ul>
           <li><a href="/Develop/Guides/Build_Custom_Extension.md">Custom extension 만들기</a>
             <ul>
-              <li><a href="/Develop/Guides/Build_Custom_Extension.md#DoMultiturnDialog">Multi-turn 대화 수행하기</a></li>
-              <li><a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">오디오 콘텐츠 제공하기</a></li>
+              <li><a href="/Develop/Guides/Do_Multiturn_Dialog.md">Multi-turn 대화 수행하기</a></li>
+              <li><a href="/Develop/Guides/Provide_Audio_Content.md">오디오 콘텐츠 제공하기</a></li>
             </ul>
           </li>
           <li><a href="/Develop/Guides/Link_User_Account.md">사용자 계정 연결하기</a></li>

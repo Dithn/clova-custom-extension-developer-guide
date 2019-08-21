@@ -46,7 +46,7 @@ Custom extension을 등록하는 과정에서 가장 먼저 할 일은 등록할
       <li><strong>{{ book.DevConsole.cek_provider }}</strong>: Custom extension의 제작 주체(회사나 개인)의 이름 또는 별칭을 입력합니다. 추후 <strong>{{ book.DevConsole.ManageCustomExtensions }}</strong>에 노출되며, custom extension 승인 과정에서 심사를 받게 됩니다.</li>
     </ol>
   </li>
-  <li>(Extension이 <a href="{{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CICInterface/AudioPlayer.md">AudioPlayer</a> 지시 메시지를 이용한다면)<strong>{{ book.DevConsole.cek_audioplayer }}</strong> 항목을 <strong>{{ book.DevConsole.cek_yes }}</strong>로 선택합니다. Custom extension이 음악 스트리밍 서비스를 제공할 때 사용됩니다.</li>
+  <li>(Extension이 <a href="{{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md">AudioPlayer</a> 지시 메시지를 이용한다면)<strong>{{ book.DevConsole.cek_audioplayer }}</strong> 항목을 <strong>{{ book.DevConsole.cek_yes }}</strong>로 선택합니다. Custom extension이 음악 스트리밍 서비스를 제공할 때 사용됩니다.</li>
   <li><strong>{{ book.DevConsole.cek_email }}</strong> 항목에 연락 가능한 이메일 주소를 입력합니다.</li>
   <li><strong>{{ book.DevConsole.cek_tester }}</strong> 항목에 개발 중인 custom extension을 테스트할 때 이용할 {{ book.ServiceEnv.OrientedService }} 계정을 입력하면 됩니다. 당장 입력하지 않아도 되며 추후 <a href="/DevConsole/Guides/Test_Custom_Extension.md">extension을 테스트</a>해야 할 때 이 필드에 값을 입력할 수 있습니다.</li>
   <li>Custom extension의 기본 정보를 모두 입력한 후 <strong>{{ book.DevConsole.cek_create }}</strong> 버튼을 누릅니다.</li>

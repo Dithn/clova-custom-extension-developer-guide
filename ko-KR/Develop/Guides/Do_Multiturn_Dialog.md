@@ -1,4 +1,4 @@
-## Multi-turn 대화 수행하기 {#DoMultiturnDialog}
+# Multi-turn 대화 수행하기
 
 CEK로부터 전달받은 사용자 요청 정보([`IntentRequest`](/Develop/Guides/Build_Custom_Extension.md#HandleIntentRequest))가 custom extension이 서비스를 제공하거나 동작을 수행하기에 부족할 수도 있습니다. 또는 Single-turn 형태의 대화로 사용자의 요청을 한번에 받기 어려울 수 있습니다. 이때 custom extension은 사용자에게 부족한 정보를 추가로 받기 위해 multi-turn 대화를 수행할 수 있습니다.
 
