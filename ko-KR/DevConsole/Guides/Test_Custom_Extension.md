@@ -11,12 +11,11 @@
 
 Custom extension을 배포하려면 [interaction 모델이 등록](/DevConsole/Guides/Register_Interaction_Model.md)되어 있어야 합니다. 정의된 interaction 모델은 빌드 과정을 거쳐야 새로 작성했거나 또는 업데이트한 내용을 [테스트](#TestInteractionModel)하거나 사용할 수 있습니다. 다음과 같이 정의된 interaction 모델을 빌드할 수 있습니다.
 
-<ol>
-  <li>등록한 custom extension 목록에서 interaction 모델을 빌드하려는 custom extension 항목의 <strong>{{ book.DevConsole.cek_edit }}</strong> 메뉴를 누릅니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png" />
-  <li><strong>{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}</strong> 화면에서 왼쪽 상단에 있는 <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> 버튼을 누르면 interaction 모델을 빌드합니다. Interaction 모델의 크기 등에 따라 3~5 분 정도 소요될 수 있습니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Build_Interaction_Model.png" />
-</ol>
+1. 등록한 custom extension 목록에서 interaction 모델을 빌드하려는 custom extension 항목의 **{{ book.DevConsole.cek_edit }}** 메뉴를 누릅니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png)
+2. **{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}** 화면에서 왼쪽 상단에 있는 **{{ book.DevConsole.cek_builder_menu_build }}** 버튼을 누르면 interaction 모델을 빌드합니다.<br />
+  Interaction 모델의 크기 등에 따라 3~5 분 정도 소요될 수 있습니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Build_Interaction_Model.png)
 
 <div class="tip">
   <p><strong>Tip!</strong></p>
@@ -27,12 +26,11 @@ Custom extension을 배포하려면 [interaction 모델이 등록](/DevConsole/G
 
 [Interaction 모델 빌드](#BuildInteractionModel)가 완료되면, interaction 모델을 테스트할 수 있습니다. 다음과 같이 발화문을 테스트해볼 수 있습니다.
 
-<ol>
-  <li>왼쪽 사이드 메뉴 아래 <strong>{{ book.DevConsole.cek_test }}</strong> 메뉴를 누릅니다. 메뉴를 누르면 <strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.cek_test }}</strong> 화면이 표시됩니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Test_Menu.png" />
-  <li><strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong> 필드에 테스트할 발화문을 입력하고 <strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong> 버튼을 누릅니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Test_Utterance_Example.png" />
-</ol>
+1. 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_test }}** 메뉴를 누릅니다.<br />
+  메뉴를 누르면 **{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.cek_test }}** 화면이 표시됩니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Test_Menu.png)
+2.**{{ book.DevConsole.cek_builder_test_expression_title }}** 필드에 테스트할 발화문을 입력하고 **{{ book.DevConsole.cek_builder_test_request_test }}** 버튼을 누릅니다.</li>
+  ![](/DevConsole/Assets/Images/DevConsole-Test_Utterance_Example.png)
 
 테스트를 완료하면 다음과 같은 결과를 확인할 수 있습니다. 아래 결과를 토대로 다음과 같은 항목을 확인해야 합니다.
 

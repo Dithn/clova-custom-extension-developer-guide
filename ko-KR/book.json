@@ -31,6 +31,7 @@
       "TargetCountryCode": "KR"
     },
     "DevConsole": {
+      "supported_languages": "한국어",
       "cek_access_token_uri": "Access token URI",
       "cek_account_linking": "계정 연결 여부",
       "cek_allow_purchase": "구매/지불 기능 존재 여부",

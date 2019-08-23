@@ -65,22 +65,18 @@ intentRequest(cekResponse) {
 
 다음 순서대로 샘플 주사위 extension의 도움말 요청이 잘 동작하는지 확인합니다.
 
-<ol>
-  <li><p><a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a>에 접속합니다.</p></li>
-  <li><p>샘플 주사위의 <strong>{{ book.DevConsole.cek_interaction_model }}</strong> 항목 내 <strong>{{ book.DevConsole.cek_edit}}</strong> 버튼을 누릅니다.</p></li>
-  <li><p>화면 좌측 상단의 <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> 버튼을 눌러 interaction 모델을 빌드합니다.</p></li>
-  <li><p>빌드가 끝난 후, 왼쪽의 메뉴 목록에서 <strong>{{ book.DevConsole.cek_test }}</strong> 메뉴를 누릅니다.</p></li>
-  <li><p><strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong>에 도움말을 요청하는 문장을 입력합니다. 예를 들어, "사용법 알려줘"라고 입력합니다.</p></li>
-  <li><p>엔터키 또는 <strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong> 버튼을 누릅니다.</p></li>
-  <li>
-    <p><strong>{{ book.DevConsole.cek_builder_test_result_title }}</strong>의 <strong>{{ book.DevConsole.cek_builder_test_intent_result }}</strong> 항목에 "Clova.GuideIntent"라고 나타나는지 확인합니다.</p>
-  	<img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Intent_Test.png" />
-    <div class="note">
-    	<p><strong>Note!</strong></p>
-    	<p>외부에서 접근할 수 있는 extension 서버 URI를 등록하지 않았다면, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>은 "{{ book.DevConsole.cek_builder_test_no_response }}"라고 나타납니다.</p>
-  	</div>
-  </li>
-</ol>
+1. <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a>에 접속합니다.
+2. 샘플 주사위의 **{{ book.DevConsole.cek_interaction_model }}** 항목 내 **{{ book.DevConsole.cek_edit}}** 버튼을 누릅니다.
+3. 화면 좌측 상단의 **{{ book.DevConsole.cek_builder_menu_build }}** 버튼을 눌러 interaction 모델을 빌드합니다.
+4. 빌드가 끝난 후, 왼쪽의 메뉴 목록에서 **{{ book.DevConsole.cek_test }}** 메뉴를 누릅니다.
+5. **{{ book.DevConsole.cek_builder_test_expression_title }}**에 도움말을 요청하는 문장을 입력합니다. 예를 들어, "사용법 알려줘"라고 입력합니다.
+6. 엔터키 또는 **{{ book.DevConsole.cek_builder_test_request_test }}** 버튼을 누릅니다.
+7. **{{ book.DevConsole.cek_builder_test_result_title }}**의 **{{ book.DevConsole.cek_builder_test_intent_result }}** 항목에 "Clova.GuideIntent"라고 나타나는지 확인합니다.<br />
+	![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Intent_Test.png)
+  <div class="note">
+  	<p><strong>Note!</strong></p>
+  	<p>외부에서 접근할 수 있는 extension 서버 URI를 등록하지 않았다면, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>은 "{{ book.DevConsole.cek_builder_test_no_response }}"라고 나타납니다.</p>
+	</div>
 
 이렇게 하면 샘플 주사위 extension이 도움말 요청에 응답할 수 있게 됩니다.
 이와 같은 방법으로 extension 서버가 `Clova.CancelIntent`, `Clova.YesIntent`, `Clova.NoIntent`을 처리하도록 구현하면, 실행 취소나 긍정 혹은 부정을 의미하는 요청에도 응답할 수 있습니다.

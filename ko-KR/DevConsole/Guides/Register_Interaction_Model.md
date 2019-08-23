@@ -26,12 +26,11 @@ Custom extension을 설계하는 과정에서 [정의한 Interaction 모델](/De
 
 서비스를 제공할 custom extension이 어떤 [built-in slot 타입](/Design/Design_Custom_Extension.md#Slot)을 사용할지 결정했다면 해당 custom extension의 interaction 모델에 built-in slot 타입을 추가해야 합니다. 예를 들어 피자 배달 custom extension을 만든다면, 피자 수량에 대한 정보 표현이 사용자 발화에 사용될 수 있습니다. 따라서 이와 관련된 built-in slot 타입을 custom extension에서 사용해야 한다면 다음과 같은 단계로 built-in slot 타입을 custom extension에 추가할 수 있습니다.
 
-<ol>
-  <li><strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong> 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 <strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong> 메뉴 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누릅니다. 버튼을 누르면 <strong>{{ book.DevConsole.cek_interaction_model }}:{{ book.DevConsole.SlotType }}</strong> 화면이 표시됩니다.</li>
-  <li><strong>{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}</strong> 항목에서 필요한 built-in slot 타입의 체크 박스를 누릅니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Add_Built-in_Slot_Type.png" />
-  <li>필요한 built-in slot 타입을 선택한 후 우측 상단에 있는 <strong>{{ book.DevConsole.cek_save }}</strong> 버튼을 누릅니다.</li>
-</ol>
+1. **{{ book.DevConsole.cek_builder_list_title_slottype }}** 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_builder_list_title_slottype }}** 메뉴 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누릅니다.<br />
+  버튼을 누르면 **{{ book.DevConsole.cek_interaction_model }}:{{ book.DevConsole.SlotType }}** 화면이 표시됩니다.
+2. **{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}** 항목에서 필요한 built-in slot 타입의 체크 박스를 누릅니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Add_Built-in_Slot_Type.png)
+3. 필요한 built-in slot 타입을 선택한 후 우측 상단에 있는 **{{ book.DevConsole.cek_save }}** 버튼을 누릅니다.
 
 위 과정을 수행하고 나면 **{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}** 화면의 **{{ book.DevConsole.cek_builder_list_title_slottype }}** 패널에 다음과 같이 built-in slot 타입이 추가된 것을 확인할 수 있습니다.
 
@@ -51,18 +50,18 @@ Custom extension을 설계하는 과정에서 [정의한 Interaction 모델](/De
 
 다음 절차에 따라 custom slot 타입을 추가합니다.
 
-<ol>
-  <li><strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong> 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 <strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong> 메뉴 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누릅니다. 버튼을 누르면 <strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.SlotType }}</strong> 화면이 표시됩니다.</li>
-  <li><strong>{{ book.DevConsole.cek_builder_new_intent }}</strong>의 입력 필드에 추가할 custom slot 타입의 이름을 입력하고 <strong>{{ book.DevConsole.cek_create }}</strong> 버튼을 누릅니다. Custom slot 타입이 생성되면 해당 custom slot 타입에 대한 상세 정보를 볼 수 있는 화면이 나타납니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_1.png" />
-  <li><strong>{{ book.DevConsole.cek_builder_slottype_dictionary_title }}</strong>에 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 대표어를 추가합니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_2.png" />
-  <li>추가한 대표어에 동의어나 유사 표현을 추가합니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_3.png" />
-  <li>마지막으로 우측 상단에 있는 <strong>{{ book.DevConsole.cek_save }}</strong> 버튼을 누릅니다.</li>
-</ol>
+1. **{{ book.DevConsole.cek_builder_list_title_slottype }}** 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_builder_list_title_slottype }}** 메뉴 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누릅니다.<br />
+  버튼을 누르면 **{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.SlotType }}** 화면이 표시됩니다.
+2. **{{ book.DevConsole.cek_builder_new_intent }}**의 입력 필드에 추가할 custom slot 타입의 이름을 입력하고 **{{ book.DevConsole.cek_create }}** 버튼을 누릅니다.<br />
+  Custom slot 타입이 생성되면 해당 custom slot 타입에 대한 상세 정보를 볼 수 있는 화면이 나타납니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_1.png)
+3. **{{ book.DevConsole.cek_builder_slottype_dictionary_title }}**에 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 대표어를 추가합니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_2.png)
+4. 추가한 대표어에 동의어나 유사 표현을 추가합니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_3.png)
+5. 마지막으로 우측 상단에 있는 **{{ book.DevConsole.cek_save }}** 버튼을 누릅니다.
 
-오른쪽의 <strong>대시 보드</strong> 메뉴를 통해 **{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}**로 이동하면 custom slot 타입이 추가된 것을 확인할 수 있습니다.
+오른쪽의 **대시 보드** 메뉴를 통해 **{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}**로 이동하면 custom slot 타입이 추가된 것을 확인할 수 있습니다.
 
 ![](/DevConsole/Assets/Images/DevConsole-Added_Custom_Slot_Type.png)
 
@@ -99,21 +98,19 @@ Clova developer console은 다음과 같이 **업로드** 버튼과 **다운로�
 ## Custom intent 추가하기 {#AddCustomIntent}
 Custom extension에서 사용할 [built-in slot 타입](#AddBuiltinSlotType)과 [custom slot 타입](#AddCustomSlotType)을 추가했다면 이제 custom intent를 추가하면 됩니다. 이전 설명에 이어서 피자를 주문하는 사용자의 요청을 가정하고 다음 절차에 따라 "OrderPizza"라는 이름의 intent를 추가합니다.
 
-<ol>
-  <li><strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong> 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 <strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong> 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누릅니다. 버튼을 누르면 <strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.NewIntent }}</strong> 화면이 표시됩니다.</li>
-  <li><strong>{{ book.DevConsole.CreateCustomIntent }}</strong>의 입력 필드에 추가할 custom intent의 이름을 입력하고 <strong>{{ book.DevConsole.cek_create }}</strong> 버튼을 누릅니다. Custom intent가 생성되면 해당 custom intent에 대한 상세 정보를 볼 수 있는 화면이 나타납니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_1.png" />
-  <li><strong>{{ book.DevConsole.cek_builder_intent_slot_title }}</strong>의 입력 필드에 추가할 slot의 이름을 입력하고 오른쪽에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 slot을 추가합니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_2.png" />
-  <li>Slot을 추가한 후 해당 slot이 어떤 slot 타입인지 지정합니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_3.png" />
-  <li>이제 <strong>{{ book.DevConsole.cek_builder_intent_expression_title }}</strong>에 사용자 발화 예시를 입력하고 오른쪽에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 사용자 발화 예시를 추가합니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_4.png" />
-  <li>추가한 발화 예시에서 slot으로 처리할 부분을 드래그하여 slot을 지정해줍니다.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_5.png" />
-  <li>5 번과 6 번 단계를 반복하여 intent에 발화 예시를 필요한 만큼 추가합니다.</li>
-  <li>마지막으로 우측 상단에 있는 <strong>{{ book.DevConsole.cek_save }}</strong> 버튼을 누릅니다.</li>
-</ol>
+1. **{{ book.DevConsole.cek_builder_list_title_intent }}** 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_builder_list_title_intent }}** 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누릅니다. 버튼을 누르면 **{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.NewIntent }}** 화면이 표시됩니다.
+2. **{{ book.DevConsole.cek_builder_new_intent }}**의 입력 필드에 추가할 custom intent의 이름을 입력하고 **{{ book.DevConsole.cek_create }}** 버튼을 누릅니다. Custom intent가 생성되면 해당 custom intent에 대한 상세 정보를 볼 수 있는 화면이 나타납니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_1.png)
+3. **{{ book.DevConsole.cek_builder_intent_slot_title }}**의 입력 필드에 추가할 slot의 이름을 입력하고 오른쪽에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 slot을 추가합니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_2.png)
+4. Slot을 추가한 후 해당 slot이 어떤 slot 타입인지 지정합니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_3.png)
+5. 이제 **{{ book.DevConsole.cek_builder_intent_expression_title }}**에 사용자 발화 예시를 입력하고 오른쪽에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 사용자 발화 예시를 추가합니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_4.png)
+6. 추가한 발화 예시에서 slot으로 처리할 부분을 드래그하여 slot을 지정해줍니다.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_5.png)
+7. 5 번과 6 번 단계를 반복하여 intent에 발화 예시를 필요한 만큼 추가합니다.
+8. 마지막으로 우측 상단에 있는 **{{ book.DevConsole.cek_save }}** 버튼을 누릅니다.
 
 <div class="note">
   <p><strong>Note!</strong></p>
