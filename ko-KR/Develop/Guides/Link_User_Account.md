@@ -3,7 +3,7 @@
 <!-- Start of the shared content: LinkUserAccount -->
 
 # 사용자 계정 연결하기
-Clova는 [custom extension](/Develop/Guides/Build_Custom_Extension.md)이나 [Clova Home extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.md)을 통해 사용자 계정 권한이 필요한 외부 서비스를 제공할 수 있습니다. 예를 들면, 유료 콘텐츠 서비스인 음악 스트리밍 서비스나 쇼핑, 금융, 메신저, 홈 IoT 등과 같은 서비스가 Clova에 연동될 수 있습니다. 이를 위해, Clova는 외부 서비스의 사용자 계정과 Clova 사용자 계정을 연결하는 계정 연결(account linking)을 지원하며, 이 기술은 [OAuth 2.0](https://tools.ietf.org/html/rfc6749)을 이용합니다.
+Clova는 [custom extension](/Develop/Guides/Build_Custom_Extension.md)이나 [Clova Home extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink }})을 통해 사용자 계정 권한이 필요한 외부 서비스를 제공할 수 있습니다. 예를 들면, 유료 콘텐츠 서비스인 음악 스트리밍 서비스나 쇼핑, 금융, 메신저, 홈 IoT 등과 같은 서비스가 Clova에 연동될 수 있습니다. 이를 위해, Clova는 외부 서비스의 사용자 계정과 Clova 사용자 계정을 연결하는 계정 연결(account linking)을 지원하며, 이 기술은 [OAuth 2.0](https://tools.ietf.org/html/rfc6749)을 이용합니다.
 
 계정 연결은 사용자의 계정 인증(authentication)이 필요한 외부 서비스를 custom extension이 제공해야 할 때 사용됩니다. 계정 인증이 필요 없는 외부 서비스는 계정 연결을 하지 않아도 되며, 사용자 식별이 가능한 수준의 정보가 요구되는 서비스는 일반적으로 [custom extension 메시지](/Develop/References/Custom_Extension_Message.md)가 제공하는 기기 식별자(`context.System.device.deviceId`)와 사용자 계정 식별자(`context.System.user.userId` 또는 `session.user.userId`)를 조합한 값을 이용합니다.
 

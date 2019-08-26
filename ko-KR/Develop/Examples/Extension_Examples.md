@@ -25,7 +25,7 @@ Clova를 통해 서비스되고 있는 일부 extension을 소개합니다. 간�
 
 ### 특징
 * 사용자는 빗소리를 몇 번 반복해서 들을지 결정할 수 있으며, 이 extension의 interaction 모델은 반복 횟수에 대한 값을 slot으로 정의하고 있습니다.
-* 클라이언트가 음원을 재생할 수 있도록 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtRequestType)에 안내 문구 뿐만 아니라 [`AudioPlayer.Play`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#Play) 지시 메시지를 포함시켜 CEK로 보내줍니다.
+* 클라이언트가 음원을 재생할 수 있도록 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtRequestType)에 안내 문구 뿐만 아니라 [`AudioPlayer.Play`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#Play) 지시 메시지를 포함시켜 CEK로 보내줍니다.
 * Node.js로 구현되어 있습니다.
 
 ### GitHub 저장소

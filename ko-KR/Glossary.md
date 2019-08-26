@@ -33,17 +33,17 @@ Clova 플랫폼과 연동하는 클라이언트 기기나 [Clova extension](#Clo
 Clova extension을 개발 및 배포할 때 필요한 도구와 인터페이스를 제공하는 플랫폼으로 [Clova와 extension 사이의 커뮤니케이션](/Develop/CEK_Overview.md)을 지원합니다.
 
 ### Clova Home extension {#ClovaHomeExtension}
-IoT 기기 제어 서비스를 제공하기 위한 [extension](#ClovaExtension)입니다. 자세한 내용은 [Clova Home extension 만들기]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.md) 문서를 참조합니다.
+IoT 기기 제어 서비스를 제공하기 위한 [extension](#ClovaExtension)입니다. 자세한 내용은 [Clova Home extension 만들기]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink}}) 문서를 참조합니다.
 
 ### Clova Interface Connect (CIC) {#CIC}
-인공 지능 비서 서비스를 제공하려는 PC/모바일용 앱, 모바일 또는 가전 기기 등의 클라이언트에게 Clova와 연동할 수 있는 인터페이스를 제공하는 플랫폼입니다. 자세한 내용은 [CIC 개요]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/CIC_Overview.md) 문서를 참조합니다.
+인공 지능 비서 서비스를 제공하려는 PC/모바일용 앱, 모바일 또는 가전 기기 등의 클라이언트에게 Clova와 연동할 수 있는 인터페이스를 제공하는 플랫폼입니다. 자세한 내용은 [CIC 개요]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/CIC_Overview.{{ book.DocMeta.FileExtensionForExternalLink }}) 문서를 참조합니다.
 
 ### Clova 앱 {#ClovaApp}
 
 {{ book.ServiceEnv.OrientedService }}가 개발하여 iOS나 Android 플랫폼으로 배포한 Clova 앱입니다. Clova에 명령을 내릴 수 있을 뿐만 아니라 클라이언트 기기를 등록하고 관리할 수 있는 앱입니다.
 
 ### Content template {#ContentTemplate}
-CIC를 통해 전달되는 콘텐츠 정보를 일정 범주에 맞게 정형화한 것입니다. 자세한 내용은 [content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md) 문서를 참조합니다.
+CIC를 통해 전달되는 콘텐츠 정보를 일정 범주에 맞게 정형화한 것입니다. 자세한 내용은 [content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }}) 문서를 참조합니다.
 
 ### Custom extension {#CustomExtension}
 임의의 확장된 기능을 제공하는 [extension](#ClovaExtension)입니다. Custom extension을 사용하면 음악, 쇼핑, 금융과 같은 외부 서비스의 기능을 제공할 수 있습니다. 자세한 내용은 [Custom extension 만들기](/Develop/Guides/Build_Custom_Extension.md) 문서를 참조합니다.

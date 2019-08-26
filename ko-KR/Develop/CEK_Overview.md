@@ -22,6 +22,6 @@ Clova는 사용자의 발화를 인식하며, CEK를 통해 미리 [등록된 in
 Clova 플랫폼은 다음과 같은 두 종류의 extension을 지원 및 제공하고 있습니다.
 
 * [Custom extension](/Develop/Guides/Build_Custom_Extension.md): 임의의 확장된 기능을 제공하는 extension입니다. Custom extension을 사용하면 음악, 쇼핑, 금융과 같은 외부 서비스의 기능을 제공할 수 있습니다.
-* [Clova Home extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.md): IoT 기기 제어 서비스를 제공하기 위한 extension입니다.
+* [Clova Home extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink }}): IoT 기기 제어 서비스를 제공하기 위한 extension입니다.
 
 <!-- End of the shared content -->

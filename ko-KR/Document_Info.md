@@ -33,7 +33,7 @@
       <td>
         <ul>
           <li>Custom extension 디자인 가이드라인 문서를 <a href="/Design/Design_Custom_Extension.md">Custom extension 설계</a>, <a href="/Design/Supported_Audio_Format.md">플랫폼 지원 오디오 포맷</a>, <a href="/Design/Rules_For_Content.md">콘텐츠 제공 시 준수 사항</a> 페이지로 분리함</li>
-          <li><a href="/Design/Audio.md#SupportedAudioFormat">플랫폼 지원 오디오 포맷</a> 내용에 Clova가 지원하는 컨테이너 포맷 추가</li>
+          <li><a href="/Design/Supported_Audio_Format.md">플랫폼 지원 오디오 포맷</a> 내용에 Clova가 지원하는 컨테이너 포맷 추가</li>
         </ul>
       </td>
     </tr>
@@ -67,7 +67,7 @@
       <td>2019-05-20</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a>의 token, value 필드</li>
+          <li><a href="/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject">SpeechInfoObject</a>의 token, value 필드</li>
         </ul>
       </td>
     </tr>
@@ -75,7 +75,7 @@
       <td>2019-04-01</td>
       <td>
         <ul>
-          <li>Extension이 클라이언트의 음성(TTS) 재생 상태를 보고 받을 수 있도록 <a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a>에 token 필드를 추가하고 <a href="/Develop/Guides/Monitor_TTS_Playback_Status.md">음성 재생 상태 확인하기</a> 가이드 문서를 추가</li>
+          <li>Extension이 클라이언트의 음성(TTS) 재생 상태를 보고 받을 수 있도록 <a href="/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject">SpeechInfoObject</a>에 token 필드를 추가하고 <a href="/Develop/Guides/Monitor_TTS_Playback_Status.md">음성 재생 상태 확인하기</a> 가이드 문서를 추가</li>
         </ul>
       </td>
     </tr>
@@ -83,7 +83,7 @@
       <td>2019-03-25</td>
       <td>
         <ul>
-          <li>HLS 음원 제공을 위해 contentType 필드를 custom extension 메시지의 <a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a>에 추가</li>
+          <li>HLS 음원 제공을 위해 contentType 필드를 custom extension 메시지의 <a href="/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject">SpeechInfoObject</a>에 추가</li>
           <li>일부 링크 오류 및 예제 수정</li>
         </ul>
       </td>

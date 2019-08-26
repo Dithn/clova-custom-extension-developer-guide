@@ -12,7 +12,8 @@
       "DocVersion": "v2019-08-19",
       "OutputFormat": "Web",
       "ReleaseYear": "2019",
-      "TargetReaderType": "Internal"
+      "TargetReaderType": "Internal",
+      "FileExtensionForExternalLink": "html"
     },
     "ServiceEnv": {
       "CEKTermsOfUseURI": "https://developers.naver.com/console/clova/cek/#/terms",

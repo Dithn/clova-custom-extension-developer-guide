@@ -1,6 +1,6 @@
 # 음성 재생 상태 확인하기
 
-[Custom extension에서 응답을 반환](/Develop/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse)할 때 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)에서 [SpeechInfoObject](/Develop/References/CEK_API.md#CustomExtSpeechInfoObject)의 `token` 필드를 입력하면 클라이언트에서 음성(TTS) 재생에 대한 경과를 보고 받을 수 있습니다. 이는 주로 클라이언트가 자막 또는 특정 콘텐츠를 표시할 때 음성 자막과 그 진행 단계를 맞추도록 할 때 사용할 수 있습니다.
+[Custom extension에서 응답을 반환](/Develop/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse)할 때 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)에서 [SpeechInfoObject](/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject)의 `token` 필드를 입력하면 클라이언트에서 음성(TTS) 재생에 대한 경과를 보고 받을 수 있습니다. 이는 주로 클라이언트가 자막 또는 특정 콘텐츠를 표시할 때 음성 자막과 그 진행 단계를 맞추도록 할 때 사용할 수 있습니다.
 
 예를 들면, "Hi, my name is Clova."와 같은 음성과 텍스트를 표시한 후 그 다음에 "How can I help you?"와 같은 텍스트를 표시한다고 가정해 봅니다. 이때, "Hi, my name is Clova"에 해당하는 음성을 재생하도록 전달한 후 해당 음성 재생이 완료된 다음에 그 다음 자막이 표시되도록 만들어야 합니다.
 
@@ -49,11 +49,11 @@
 ```
 
 {% if book.L10N.TargetCountryCode == "KR" %}
-클라이언트는 각 상황에 맞는 [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md)를 사용하여 Clova에 음성(TTS) 재생에 대한 경과 보고를 하게 됩니다.
+클라이언트는 각 상황에 맞는 [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.{{ book.DocMeta.FileExtensionForExternalLink }})를 사용하여 Clova에 음성(TTS) 재생에 대한 경과 보고를 하게 됩니다.
 
-* [`SpeechSynthesizer.SpeechFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechFinished) 지시 메시지: 클라이언트에게 재생 중인 오디오 스트림을 일시 정지하도록 지시
-* [`SpeechSynthesizer.SpeechStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechStarted) 지시 메시지: 클라이언트에게 오디오 스트림 재생을 재개하도록 지시
-* [`SpeechSynthesizer.SpeechStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechStopped) 지시 메시지: 클라이언트에게 오디오 스트림 재생을 중지하도록 지시
+* [`SpeechSynthesizer.SpeechFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechFinished) 지시 메시지: 클라이언트에게 재생 중인 오디오 스트림을 일시 정지하도록 지시
+* [`SpeechSynthesizer.SpeechStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechStarted) 지시 메시지: 클라이언트에게 오디오 스트림 재생을 재개하도록 지시
+* [`SpeechSynthesizer.SpeechStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechStopped) 지시 메시지: 클라이언트에게 오디오 스트림 재생을 중지하도록 지시
 {% elif book.L10N.TargetCountryCode == "JP" %}
 클라이언트는 각 상황에 맞는 [`CIC API`](/Develop/References/CEK_API.md#CICAPIforAudioPlayback)를 사용하여 Clova에 음성(TTS) 재생에 대한 경과 보고를 하게 됩니다.
 
