@@ -33,7 +33,7 @@ Custom extension을 등록하는 과정에서 가장 먼저 할 일은 등록할
 1. **{{ book.DevConsole.cek_type }}** 항목에서 등록할 custom extension의 타입을 선택합니다.<br />
   Custom extension 타입을 선택하면 그에 해당하는 입력 필드가 추가로 나타납니다.
 2. **{{ book.DevConsole.cek_lang }}** 항목에서 custom extension에서 사용할 언어를 선택합니다. 현재 **{{ book.DevConsole.supported_languages }}**만 지원하고 있습니다.
-3. **Extension의 ID**, **Skill 이름**, **호출 이름**에 해당하는 정보를 다음 항목에 입력합니다.
+3. **Extension의 ID**, **Skill 이름**, **호출 이름**, **제작사**에 해당하는 정보를 다음 항목에 입력합니다.
   1. **{{ book.DevConsole.cek_id }}**<br />
     Custom extension의 고유 ID입니다. Reverse domain name 표기 형식(예: com.example.extension.pizzabot)으로 입력합니다.
   2. **{{ book.DevConsole.cek_name }}**<br />
