@@ -6,14 +6,14 @@
   "variables": {
     "DocMeta": {
       "ClassifiedInfo": "Confidential",
-      "ClovaClientDeveloperGuideBaseURI": "https://pages.oss.navercorp.com/JTF-P6/Clova_Client_Developer_Guide/ko-KR",
-      "ClovaHomeExtensionDeveloperGuideBaseURI": "https://pages.oss.navercorp.com/JTF-P6/Clova_Home_Extension_Developer_Guide/ko-KR",
+      "ClovaClientDeveloperGuideBaseURI": "https://developers.naver.com/docs/clova/client",
+      "ClovaHomeExtensionDeveloperGuideBaseURI": "https://developers.naver.com/docs/clova/home_ext",
       "DocOwner": "NAVER",
       "DocVersion": "v2020-02-07",
       "OutputFormat": "Web",
       "ReleaseYear": "2020",
-      "TargetReaderType": "Public",
-      "FileExtensionForExternalLink": "html"
+      "TargetReaderType": "public",
+      "FileExtensionForExternalLink": "md"
     },
     "ServiceEnv": {
       "CEKTermsOfUseURI": "https://developers.naver.com/console/clova/cek/#/terms",
