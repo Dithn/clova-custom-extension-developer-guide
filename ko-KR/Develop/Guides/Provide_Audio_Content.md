@@ -1,7 +1,7 @@
 # 오디오 콘텐츠 제공하기 {#ProvideAudioContent}
 
 {% if book.L10N.TargetCountryCode == "KR" %}
-Custom extension을 통해 사용자에게 음악이나 podcast와 같은 오디오 콘텐츠를 제공할 수 있습니다. 이를 위해 [Custom extension 메시지](/Develop/References/Custom_Extension_Message.md)의 [`EventRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest) 타입의 요청 메시지와 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage) 명세에서 클라이언트(사용자 기기나 Clova 앱)용 메시지 포맷인 오디오 콘텐츠 재생 관련 [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md)를 활용해야 합니다. 오디오 콘텐츠를 사용자에게 제공하려면 다음에 해당하는 내용을 extension에 구현해야 하며, 각 절에서는 구체적인 설명을 다룹니다. **특히, 필수 구현 항목은 반드시 구현해야 합니다.**
+Custom extension을 통해 사용자에게 음악이나 podcast와 같은 오디오 콘텐츠를 제공할 수 있습니다. 이를 위해 [Custom extension 메시지](/Develop/References/Custom_Extension_Message.md)의 [`EventRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest) 타입의 요청 메시지와 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage) 명세에서 클라이언트(사용자 기기나 Clova 앱)용 메시지 포맷인 오디오 콘텐츠 재생 관련 [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.{{ book.DocMeta.FileExtensionForExternalLink }})를 활용해야 합니다. 오디오 콘텐츠를 사용자에게 제공하려면 다음에 해당하는 내용을 extension에 구현해야 하며, 각 절에서는 구체적인 설명을 다룹니다. **특히, 필수 구현 항목은 반드시 구현해야 합니다.**
 
 * 필수 구현
   * [오디오 콘텐츠 재생 지시](#DirectClientToPlayAudio)

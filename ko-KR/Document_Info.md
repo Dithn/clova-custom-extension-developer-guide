@@ -232,7 +232,7 @@
       <td>2018-02-05</td>
       <td>
         <ul>
-          <li>Extension 시작 호출(<a href="CEK/Guides/Build_Custom_Extension.md#HandleLaunchRequest">LaunchRequest</a>)에 대한 설명 수정 및 <a href="/Design/Design_Custom_Extension.md">Custom extension 설계</a> 문서 반영</li>
+          <li>Extension 시작 호출(<a href="/Develop/Guides/Build_Custom_Extension.md#HandleLaunchRequest">LaunchRequest</a>)에 대한 설명 수정 및 <a href="/Design/Design_Custom_Extension.md">Custom extension 설계</a> 문서 반영</li>
           <li>CEK와 extension간 통신에 사용되는 <a href="/Develop/CEK_Overview.md#WhatisCEK">HTTP 프로토콜 버전</a> 명시</li>
           <li><a href="/Develop/Tutorials/Introduction.md">튜토리얼</a> 페이지에 <a href="/Develop/Tutorials/Handle_Builtin_Intents.md">기본적인 의사 표현 처리하기</a> 페이지 추가</li>
           <li>Extension 서버에서 사용해야 할 <a href="/DevConsole/Guides/Register_Custom_Extension.md#SetServerConnection">포트</a>를 명시</li>
