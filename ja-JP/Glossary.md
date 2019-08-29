@@ -30,10 +30,8 @@ Clovaプラットフォームと連携するクライアントデバイス、ま
 Clova Extensionを開発および配布する際に、必要なツールとインターフェースを提供するプラットフォームです。[ClovaとExtensionのコミュニケーション](/Develop/CEK_Overview.md)をサポートしています。
 
 ### Clova Home Extension {#ClovaHomeExtension}
-IoTデバイス制御サービスを提供するためのExtensionです。詳細については、[Clova Home Extensionを作成する](/Develop/Guides/Build_Clova_Home_Extension.md)ドキュメントを参照してください。
-
-### Clova Home Extensionメッセージ {#ClovaHomeExtMessage}
-IoTデバイスを制御する[Clova Home Extension](#ClovaHomeExtension)が[Clova Extensions Kit](#CEK)と情報のやり取りをする際、専用で使用するメッセージです。詳細については、[Clova Home Extensionメッセージ](/Develop/References/CEK_API_ClovaHome.md#ClovaHomeExtMessage)ドキュメントを参照してください。
+IoTデバイス制御サービスを提供するためのExtensionです。詳細については、[Clova Home Extensionを作成する]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI}}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink}}
+)ドキュメントを参照してください。
 
 ### Clova Interface Connect(CIC) {#CIC}
 AIアシスタントサービスを提供するコンピュータ/モバイルアプリ、モバイルデバイスまたは家電製品などのクライアントに、Clovaとの連携ができるインターフェースを提供するプラットフォームです。
@@ -46,9 +44,6 @@ AIアシスタントサービスを提供するコンピュータ/モバイル�
 
 ### Custom Extensionメッセージ {#CustomExtMessage}
 [Clova Extensions Kit](#CEK)と[Custom Extension](#CustomExtension)が情報のやり取りをする際に使用するメッセージです。詳細については、[Custom Extensionメッセージ](/Develop/References/CEK_API.md#CustomExtMessage)ドキュメントを参照してください。
-
-### Discovery機能 {#Discovery}
-ユーザーアカウントに登録されたIoTデバイスのリストをクライアントデバイスに提供する機能です。詳細については、[Discoveryを提供する](/Develop/Guides/Build_Clova_Home_Extension.md#ProvideDeviceDiscovery)ドキュメントを参照してください。
 
 ### Extension {#Extension}
 [Clova Extension](#ClovaExtension)の別名
@@ -99,5 +94,4 @@ Clovaが提供する拡張機能のことをいいます。スキルをユーザ
 Clovaデバイスに標準で搭載されているスキルで、ミュージック、LINE送受信、LINE無料通話、天気、ニュース、アラーム・タイマーなどがあります。詳細については、[Clova > Clovaのスキル](https://clova.line.me/clova-ai/) を参照してください。
 
 ### ユーザーのサンプル発話 {#UserUtteranceExample}
-
 ユーザーのリクエスト発話がどのように入力されるかを例で表現したリストです。[インテント](#Intent)ごとに複数の例を定義できます。また、例には[スロット](#Slot)が表示されます。詳細については、[対話モデルを定義する](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)ドキュメントを参照してください。

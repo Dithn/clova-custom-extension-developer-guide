@@ -21,6 +21,11 @@
     "CICBaseURL": "https://clova-cic.line-apps.com/",
     "RedirectURLforAccountLinking": "https://clova-cic.line-apps.com/v1/al/token/",
     "ReleaseYear": "2019",
+    "DocMeta": {
+      "ClovaClientDeveloperGuideBaseURI": "https://pages.oss.navercorp.com/JTF-P6/Clova_Client_Developer_Guide/ja-JP",
+      "ClovaHomeExtensionDeveloperGuideBaseURI": "https://pages.oss.navercorp.com/JTF-P6/Clova_Home_Extension_Developer_Guide/ja-JP",
+      "FileExtensionForExternalLink": "html"
+    },
     "DevConsole": {
       "ManageExtensions": "スキルストア",
       "ExtensionPage": "Extensionページ",
