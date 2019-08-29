@@ -26,47 +26,10 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
   </thead>
   <tbody>
     <tr>
-      <td>2019/08/15</td>
-      <td>
-        <ul>
-          <li><a href="/Develop/Guides/Build_Clova_Home_Extension.md">Clova Home Extensionを作成する</a> 更新（<a href="/Develop/Guides/Build_Clova_Home_Extension.md#ProvideSceneDiscovery">SceneDiscovery機能を提供する</a> 追加）</li>
-          <li><a href="/Develop/References/CEK_API_ClovaHome.md">Clova Home Extension APIのリファレンス</a> 更新</li>
-          <ul>
-            <li><a href="/Develop/References/ClovaHomeInterface/Discovery_Interfaces.md#discovery">Discovery</a> 更新</li>
-            <ul>
-              <li><a href="/Develop/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverScenesRequest">DiscoverScenesRequest</a> 追加</li>
-              <li><a href="/Develop/References/ClovaHomeInterface/Discovery_Interfaces.md#DiscoverScenesResponse">DiscoverScenesResponse</a> 追加</li>
-            </ul>
-          </ul>
-          <ul>
-            <li><a href="/Develop/References/ClovaHomeInterface/Control_Interfaces.md">Control</a> 更新</li>
-            <ul>
-              <li><a href="/Develop/References/ClovaHomeInterface/Control_Interfaces.html#ActionSceneConfirmation">ActionSceneConfirmation</a> 追加</li>
-              <li><a href="/Develop/References/ClovaHomeInterface/Control_Interfaces.html#ActionSceneRequest">ActionSceneRequest</a> 追加</li>
-            </ul>
-          </ul>
-          <ul>
-            <li><a href="/Develop/References/ClovaHomeInterface/Shared_Objects.md">共有オブジェクト</a> 更新</li>
-            <ul>
-              <li><a href="/Develop/References/ClovaHomeInterface/Shared_Objects.md#SceneInfoObject">SceneInfoObject </a> 追加</li>
-            </ul>
-          </ul>
-        </ul>
-      </td>
-    </tr>
-    <tr>
       <td>2019/07/19</td>
       <td>
         <ul>
           <li><a href="/Develop/Guides/Link_Messaging_API.md">Custom ExtensionとLINEを連携する</a> 更新（LINE公式アカウントの設定例を追加）</li>
-          <li><a href="/Develop/References/CEK_API_ClovaHome.md">Clova Home Extension APIのリファレンス</a> 更新</li>
-          <ul>
-            <li><a href="/Develop/References/ClovaHomeInterface/Shared_Objects.md">共有オブジェクト</a> 更新</li>
-            <ul>
-              <li><a href="/Develop/References/ClovaHomeInterface/Shared_Objects.md#ModeInfoObject">ModeInfoObject</a> 更新（WATERBOILERの運転モードに"washing" 追加）</li>
-              <li><a href="/Develop/References/ClovaHomeInterface/Shared_Objects.md#ApplianceInfoObject">ApplianceInfoObject</a> 更新（actionsNeededUserConfirmationの説明を追加）</li>
-            </ul>
-          </ul>
         </ul>
       </td>
     </tr>
@@ -169,18 +132,6 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
             <li><a href="/Develop/References/CEK_API.md#ClovaDuration">CLOVA.DURATION</a> 更新（フィールド名およびフィールドの説明を修正）</li>
           </ul>
           <li><a href="/DevConsole/Guides/CEK/Remove_Extension.md">Extensionを削除および中止する</a> 更新（<a href="/DevConsole/Guides/CEK/Remove_Extension.md#RemoveExtensionInService">サービス中のExtensionを削除する</a>際の連絡先メールアドレスを変更）</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>2018/11/20</td>
-      <td>
-        <ul>
-          <li><a href="/Develop/Guides/Build_Clova_Home_Extension.md">Clova Home Extension</a> 追加</li>
-          <ul>
-            <li><a href="/Develop/Guides/Build_Clova_Home_Extension.md">Clova Home Extension を作成する</a> 更新（<a href="/Develop/CEK_Overview.md">Clova Extensions Kit</a>より章を移動）</li>
-            <li><a href="/Develop/References/CEK_API_ClovaHome.md">Clova Home Extension API のリファレンス</a> 追加</li>
-          </ul>
         </ul>
       </td>
     </tr>
