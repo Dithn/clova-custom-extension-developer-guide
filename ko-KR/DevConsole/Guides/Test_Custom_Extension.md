@@ -11,9 +11,9 @@
 
 Custom extension을 배포하려면 [interaction 모델이 등록](/DevConsole/Guides/Register_Interaction_Model.md)되어 있어야 합니다. 정의된 interaction 모델은 빌드 과정을 거쳐야 새로 작성했거나 또는 업데이트한 내용을 [테스트](#TestInteractionModel)하거나 사용할 수 있습니다. 다음과 같이 정의된 interaction 모델을 빌드할 수 있습니다.
 
-1. 등록한 custom extension 목록에서 interaction 모델을 빌드하려는 custom extension 항목의 **{{ book.DevConsole.cek_edit }}** 메뉴를 누릅니다.<br />
+1. 등록한 custom extension 목록에서 interaction 모델을 빌드하려는 custom extension 항목의 **{{ book.DevConsole.cek_edit }}** 메뉴를 누르십시오.<br />
   ![](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png)
-2. **{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}** 화면에서 왼쪽 상단에 있는 **{{ book.DevConsole.cek_builder_menu_build }}** 버튼을 누르면 interaction 모델을 빌드합니다.<br />
+2. **{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}** 화면에서 왼쪽 상단에 있는 **{{ book.DevConsole.cek_builder_menu_build }}** 버튼을 누르십시오. 그러면 interaction 모델 빌드가 시작됩니다.<br />
   Interaction 모델의 크기 등에 따라 3~5 분 정도 소요될 수 있습니다.<br />
   ![](/DevConsole/Assets/Images/DevConsole-Build_Interaction_Model.png)
 
@@ -26,18 +26,18 @@ Custom extension을 배포하려면 [interaction 모델이 등록](/DevConsole/G
 
 [Interaction 모델 빌드](#BuildInteractionModel)가 완료되면, interaction 모델을 테스트할 수 있습니다. 다음과 같이 발화문을 테스트해볼 수 있습니다.
 
-1. 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_test }}** 메뉴를 누릅니다.<br />
+1. 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_test }}** 메뉴를 누르십시오.<br />
   메뉴를 누르면 **{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.cek_test }}** 화면이 표시됩니다.<br />
   ![](/DevConsole/Assets/Images/DevConsole-Test_Menu.png)
-2.**{{ book.DevConsole.cek_builder_test_expression_title }}** 필드에 테스트할 발화문을 입력하고 **{{ book.DevConsole.cek_builder_test_request_test }}** 버튼을 누릅니다.</li>
+2.**{{ book.DevConsole.cek_builder_test_expression_title }}** 필드에 테스트할 발화문을 입력하고 **{{ book.DevConsole.cek_builder_test_request_test }}** 버튼을 누르십시오.</li>
   ![](/DevConsole/Assets/Images/DevConsole-Test_Utterance_Example.png)
 
 테스트를 완료하면 다음과 같은 결과를 확인할 수 있습니다. 아래 결과를 토대로 다음과 같은 항목을 확인해야 합니다.
 
-* **{{ book.DevConsole.cek_builder_test_service_response }}** 항목을 보고 [등록한 custom extension](/DevConsole/Guides/Register_Custom_Extension.md)이 제대로 응답하는지 확인합니다.
-* **{{ book.DevConsole.cek_builder_test_intent_result }}** 항목과 **{{ book.DevConsole.cek_builder_test_slot_result }}** 항목을 보고 의도한대로 intent와 slot이 인식되는지 확인합니다.
-* **{{ book.DevConsole.cek_builder_test_request_json }}** 항목을 보고 CEK가 custom extension으로 보내는 [요청 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)에 이상이 없는지 확인합니다. 뿐만 아니라 해당 JSON의 내용을 수정한 후 **{{ book.DevConsole.cek_builder_test_test_again }}** 버튼을 누르면 테스트를 다시 수행할 수 있습니다.
-* **{{ book.DevConsole.cek_builder_test_response_json }}** 항목을 보고 등록한 custom extension이 의도한대로 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)를 보내는지 확인합니다.
+* **{{ book.DevConsole.cek_builder_test_service_response }}** 항목을 보고 [등록한 custom extension](/DevConsole/Guides/Register_Custom_Extension.md)이 제대로 응답하는지 확인해야 합니다.
+* **{{ book.DevConsole.cek_builder_test_intent_result }}** 항목과 **{{ book.DevConsole.cek_builder_test_slot_result }}** 항목을 보고 의도한대로 intent와 slot이 인식되는지 확인해야 합니다.
+* **{{ book.DevConsole.cek_builder_test_request_json }}** 항목을 보고 CEK가 custom extension으로 보내는 [요청 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)에 이상이 없는지 확인해야 합니다. 뿐만 아니라 해당 JSON의 내용을 수정한 후 **{{ book.DevConsole.cek_builder_test_test_again }}** 버튼을 누르면 테스트를 다시 수행할 수 있습니다.
+* **{{ book.DevConsole.cek_builder_test_response_json }}** 항목을 보고 등록한 custom extension이 의도한대로 [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)를 보내는지 확인해야 합니다.
 
 ![](/DevConsole/Assets/Images/DevConsole-Test_Result.png)
 
