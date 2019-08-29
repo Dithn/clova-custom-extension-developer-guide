@@ -30,7 +30,7 @@
 {% endraw %}
 
 * `event.namespace`はスキルが有効か無効かを示す名前空間で、値は`"ClovaSkill"`に固定されます。
-* スキルを利用開始したときの`event.name`は`"SkillEnabled"`になります
+* スキルを利用開始したときの`event.name`は`"SkillEnabled"`になります。
 
 ユーザーの初期設定が必要である場合は、この`EventRequest`を受け取ったときに実行してください。
 
