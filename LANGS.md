@@ -3,3 +3,4 @@
 * [ja-JP](ja-JP/)
 * [ko-KR](ko-KR/)
 * [en-KR](en-KR/)
+* [ja-KR](ja-KR)
