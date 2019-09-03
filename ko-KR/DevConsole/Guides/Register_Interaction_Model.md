@@ -119,7 +119,7 @@ Custom extension에서 사용할 [built-in slot 타입](#AddBuiltinSlotType)과 
 
 <div class="note">
   <p><strong>Note!</strong></p>
-  <p>Custom intent 하나당 등록할 수 있는 발화 예시의 최대 수는 2000 건입니다. 참고로 발화 예시의 등록 건수가 많을수록 인식률이 높아지는 것은 아닙니다. 자세한 설명은 <a href="/Design/Design_Custom_Extension.md#UtteranceExample"></a>을 참고합니다.</p>
+  <p>Custom intent 하나당 등록할 수 있는 발화 예시의 최대 수는 2000 건입니다. 참고로 발화 예시의 등록 건수가 많을수록 인식률이 높아지는 것은 아닙니다. 자세한 설명은 <a href="/Design/Design_Custom_Extension.md#UtteranceExample">발화 예시</a>를 참고합니다.</p>
 </div>
 
 Custom slot 타입을 추가할 때와 마찬가지로 정의하려는 TSV(Tab-separated values, .tsv) 형식의 파일을 업로드할 수도 있습니다. TSV 파일은 두 부분으로 나뉘며 각각 intent의 slot을 정의하는 부분과 발화 예시를 나열하는 부분으로 나뉩니다. Intent의 slot을 정의하는 부분이 파일의 앞 부분에 오며 `[INTENT SLOT]`이 입력된 줄 바로 다음에 slot이 나열됩니다. 탭 문자로 구분된 첫 번째 열은 intent에서 사용되는 slot의 이름이며, 두 번째 열은 slot type입니다.
