@@ -1,82 +1,81 @@
 !include ../../../styles/PlantUML_StyleSheet.puml
 
-participant "클라이언트 앱\nor 기기" as client #9EA0CA
+participant "Client app\nor device" as client #9EA0CA
 participant "Clova" as clova #05D686
 participant "Pizza-bot\nCustom extension" as ext #9EA0CA
 
-[->> client: 사용자 입력 수신
+[->> client: Receives user input
 
 activate client
-  client ->> clova: "피자봇 시작해줘"
-  hnote over client, clova: Extension 활성화
+  client ->> clova: "Start Pizzabot"
+  hnote over client, clova: Enables extension
 
     activate clova
-      clova -> clova: 사용자 발화 분석\l(Interaction 모델)
+      clova -> clova: Analyzes user utterance\l(Interaction model)
 
     group Session
 
       group Initiation
-        clova ->> ext: LaunchRequest 전송(HTTP Request)
+        clova ->> ext: Sends LaunchRequest (HTTP request)
 
         activate ext
-          ext -> ext: 사용자 요청 처리
-          ext -->> clova: 응답 메시지 전달(HTTP Response)
+          ext -> ext: Handles user request
+          ext -->> clova: Sends response message (HTTP response)
         deactivate ext
 
-        clova -->> client: "안녕하세요. 피자봇입니다.\l무엇을 도와드릴까요?"
+        clova -->> client: "Hello, this is Pizzabot.\lWhat can I do for you?"
 
         deactivate clova
 
       end
 
-  [->> client: 사용자 입력 수신
+  [->> client: Receives user input
 
-  client ->> clova: "페퍼로니 피자 주문해줘."
+  client ->> clova: "Order pepperoni pizza."
 
   activate clova
-    clova -> clova: 사용자 발화 분석\l(Interaction 모델)
-    clova ->> ext: IntentRequest 전송(HTTP Request)
+    clova -> clova: Analyzes user utterance\l(Interaction model)
+    clova ->> ext: Sends IntentRequest (HTTP request)
 
     activate ext
-      ext -> ext: 사용자 요청 처리
-      ext -->> clova: 응답 메시지 전달(HTTP Response)
+      ext -> ext: Handles user request
+      ext -->> clova: Sends response message (HTTP response)
     deactivate ext
 
-    clova -->> client: "몇 판 주문할까요?"
+    clova -->> client: "How many boxes of pizza do you want to order?"
 
   deactivate clova
 
-  [->> client: 사용자 입력 수신
+  [->> client: Receives user input
 
-  client ->> clova: "두 판 주문해줘."
+  client ->> clova: "Order two boxes."
 
   activate clova
-    clova -> clova: 사용자 발화 분석\l(Interaction 모델)
-    clova ->> ext: IntentRequest 전송(HTTP Request)
+    clova -> clova: Analyzes user utterance\l(Interaction model)
+    clova ->> ext: Sends IntentRequest (HTTP request)
 
     activate ext
-      ext -> ext: 사용자 요청 처리
-      ext -->> clova: 응답 메시지 전달(HTTP Response)
+      ext -> ext: Handles user request
+      ext -->> clova: Sends response message (HTTP response)
     deactivate ext
 
-    clova -->> client: "어디로 배달할까요?"
+    clova -->> client: “Where should I deliver to?"
 
   deactivate clova
 
   group Termination
 
-    [->> client: 사용자 입력 수신
+    [->> client: Receives user input
 
-    client ->> clova: "그만 종료해줘."
-    hnote over client, clova: Extension 사용 종료
+    client ->> clova: “You can stop now."
+    hnote over client, clova: Disables extension
 
     activate clova
-      clova -> clova: "사용자 발화 분석\n(Interaction 모델)"
-      clova ->> ext: SessionEndedRequest 전송(HTTP Request)
+      clova -> clova: "Analyze user utterance\n(Interaction model)"
+      clova ->> ext: Sends SessionEndedRequest (HTTP request)
     deactivate clova
-
 	activate ext
-		ext -> ext: 종료
+			ext -> ext: Stops session
 	activate ext
 	deactivate ext
 	deactivate ext
