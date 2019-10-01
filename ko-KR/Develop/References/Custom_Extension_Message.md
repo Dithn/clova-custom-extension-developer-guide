@@ -1,6 +1,6 @@
 <!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
 
-# Custom extension 메시지 {#CustomExtMessage}
+# Custom extension 메시지
 Custom extension 메시지는 CEK와 custom extension 사이에서 정보를 주고 받을 때 사용하는 메시지입니다. Custom extension 메시지는 [요청 메시지](#CustomExtRequestMessage)와 [응답 메시지](#CustomExtResponseMessage)로 나뉩니다. 요청 메시지는 다시 [요청 타입](#CustomExtRequestType)에 따라 `EventRequest`, `IntentRequest`, `LaunchRequest`, `SessionEndedRequest`과 같이 4 가지 타입으로 구분됩니다.
 
 ## 요청 메시지 {#CustomExtRequestMessage}
@@ -841,7 +841,7 @@ SpeechInfoObject 객체는 응답 메시지의 `response.outputSpeech`에서 재
 
 {% if book.L10N.TargetCountryCode == "JP" %}
 
-# 오디오 콘텐츠 재생 관련 CIC API {#CICAPIforAudioPlayback}
+## 오디오 콘텐츠 재생 관련 CIC API {#CICAPIforAudioPlayback}
 
 <!-- Start of the shared content: CICAPIforAudioPlayback -->
 
@@ -875,10 +875,10 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.Play -->
 
-## AudioPlayer.Play directive {#Play}
+### AudioPlayer.Play directive {#Play}
 클라이언트에게 특정 오디오 스트림을 재생하거나 재생 대기열에 추가하도록 지시합니다.
 
-### Payload fields
+#### Payload fields
 | 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `audioItem`               | object | 재생할 오디오 스트림의 메타 정보와 재생에 필요한 오디오 스트림 정보를 담고 있는 객체                     | 항상 |
@@ -894,12 +894,12 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 | `source.logoUrl`          | string | 오디오 스트리밍 서비스의 로고 이미지의 URI. 이 필드 또는 필드의 값이 없거나 로고 이미지를 표시할 수 없으면 `source.name` 필드에 있는 오디오 스트리밍 서비스의 이름이라도 표시해야 합니다.  | 조건부 |
 | `source.name`             | string | 오디오 스트리밍 서비스의 이름                                                        | 항상 |
 
-### Remarks
+#### Remarks
 음악 서비스의 과금 문제 등으로 인해 실제 스트리밍 정보, 즉 스트리밍 URI와 같은 정보는 재생 직전에 획득해야 할 수 있습니다. 이는 `audioItem.stream.urlPlayable` 필드 값에 따라 다음과 같이 구분됩니다.
 * `urlPlayable` 필드 값이 `true`이면 `audioItem.stream.url` 필드에 포함된 URI로 오디오 스트림을 바로 재생할 수 있습니다.
 * `urlPlayable` 필드 값이 `false`이면 `audioItem.stream.url` 필드에 포함된 URI로 오디오 스트림을 바로 재생할 수 없고 [`AudioPlayer.StreamRequested`](#StreamRequested) 이벤트 메시지를 사용하여 오디오 스트림 정보를 추가로 요청해야 합니다.
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -985,7 +985,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
@@ -999,17 +999,17 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.PlayFinished -->
 
-## AudioPlayer.PlayFinished event {#PlayFinished}
+### AudioPlayer.PlayFinished event {#PlayFinished}
 클라이언트가 오디오 스트림 재생을 완료할 때 재생 완료된 오디오 스트림 정보를 CIC로 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | 오디오 스트림 token    | 필수 |
 | `offsetInMilliseconds` | number | 현재 클라이언트가 재생하고 있는 음원의 재생 시점. 단위는 밀리 초입니다.                         | 필수  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1033,7 +1033,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
 * [`AudioPlayer.PlayStopped`](#PlayStopped)
@@ -1042,17 +1042,17 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.PlayPaused -->
 
-## AudioPlayer.PlayPaused event {#PlayPaused}
+### AudioPlayer.PlayPaused event {#PlayPaused}
 클라이언트가 오디오 스트림 재생을 일시 정지할 때 일시 정지된 오디오 스트림 정보를 CIC로 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | 오디오 스트림 token | 필수 |
 | `offsetInMilliseconds` | number | 현재 클라이언트가 재생하고 있는 음원의 재생 시점. 단위는 밀리 초입니다.                         | 필수  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1076,7 +1076,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
@@ -1084,18 +1084,18 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.PlayResumed -->
 
-## AudioPlayer.PlayResumed event {#PlayResumed}
+### AudioPlayer.PlayResumed event {#PlayResumed}
 
 클라이언트가 오디오 스트림 재생을 재개할 때 재개된 오디오 스트림 정보를 CIC로 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | 오디오 스트림 token | 필수 |
 | `offsetInMilliseconds` | number | 현재 클라이언트가 재생하고 있는 음원의 재생 시점. 단위는 밀리 초입니다.                         | 필수  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1119,7 +1119,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 
@@ -1127,17 +1127,17 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.PlayStarted -->
 
-## AudioPlayer.PlayStarted event {#PlayStarted}
+### AudioPlayer.PlayStarted event {#PlayStarted}
 클라이언트가 오디오 스트림 재생을 시작할 때 재생이 시작된 오디오 스트림 정보를 CIC로 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | 오디오 스트림 token | 필수 |
 | `offsetInMilliseconds` | number | 현재 클라이언트가 재생하고 있는 음원의 재생 시점. 단위는 밀리 초입니다.                         | 필수  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1161,7 +1161,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStopped`](#PlayStopped)
 
@@ -1169,17 +1169,17 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.PlayStopped -->
 
-## AudioPlayer.PlayStopped event {#PlayStopped}
+### AudioPlayer.PlayStopped event {#PlayStopped}
 클라이언트가 오디오 스트림 재생을 중지할 때 재생이 중지된 오디오 스트림 정보를 CIC로 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | 오디오 스트림 token | 필수 |
 | `offsetInMilliseconds` | number | 현재 재생하고 있는 음원의 재생 시점. 단위는 밀리 초입니다.                         | 필수  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1203,7 +1203,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
 
@@ -1211,17 +1211,17 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.ProgressReportDelayPassed -->
 
-## AudioPlayer.ProgressReportDelayPassed event {#ProgressReportDelayPassed}
+### AudioPlayer.ProgressReportDelayPassed event {#ProgressReportDelayPassed}
 오디오 스트림 재생이 시작된 후 지정된 지연 시간만큼 시간이 지났을 때 현재 재생 상태를 CIC로 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | 오디오 스트림 token | 필수 |
 | `offsetInMilliseconds` | number | 현재 재생하고 있는 음원의 재생 시점. 단위는 밀리 초입니다.                         | 필수  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1245,7 +1245,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.ProgressReportIntervalPassed`](#ProgressReportIntervalPassed)
 * [`AudioPlayer.ProgressReportPositionPassed`](#ProgressReportPositionPassed)
@@ -1254,17 +1254,17 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.ProgressReportIntervalPassed -->
 
-## AudioPlayer.ProgressReportIntervalPassed event {#ProgressReportIntervalPassed}
+### AudioPlayer.ProgressReportIntervalPassed event {#ProgressReportIntervalPassed}
 오디오 스트림 재생이 시작된 후 지정된 간격마다 현재 재생 상태를 CIC로 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | 오디오 스트림 token | 필수 |
 | `offsetInMilliseconds` | number | 현재 재생하고 있는 음원의 재생 시점. 단위는 밀리 초입니다.                         | 필수  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1288,7 +1288,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.ProgressReportDelayPassed`](#ProgressReportDelayPassed)
 * [`AudioPlayer.ProgressReportPositionPassed`](#ProgressReportPositionPassed)
@@ -1297,17 +1297,17 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.ProgressReportPositionPassed -->
 
-## AudioPlayer.ProgressReportPositionPassed event {#ProgressReportPositionPassed}
+### AudioPlayer.ProgressReportPositionPassed event {#ProgressReportPositionPassed}
 오디오 스트림 재생이 시작된 후 지정된 보고 시점에 현재 재생 상태를 CIC로 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | 오디오 스트림 token | 필수 |
 | `offsetInMilliseconds` | number | 현재 재생하고 있는 음원의 재생 시점. 단위는 밀리 초입니다.                         | 필수  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1331,7 +1331,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.ProgressReportDelayPassed`](#ProgressReportDelayPassed)
 * [`AudioPlayer.ProgressReportIntervalPassed`](#ProgressReportIntervalPassed)
@@ -1340,19 +1340,19 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.StreamDeliver -->
 
-## AudioPlayer.StreamDeliver directive {#StreamDeliver}
+### AudioPlayer.StreamDeliver directive {#StreamDeliver}
 [`AudioPlayer.StreamRequested`](#StreamRequested) 이벤트 메시지의 응답이며, 실제 음악 재생이 가능한 오디오 스트림 정보를 수신해야 할 때 사용합니다. 클라이언트가 음악을 재생할 수 있도록 오디오 스트림 정보에 스트리밍할 수 있는 URI 정보가 필수로 포함되어 있습니다.
 
-### Payload fields
+#### Payload fields
 | 필드 이름 | 자료형 | 필드 설명 | 포함 여부 |
 |---------|------|--------|:---------:|
 | `audioItemId` | string | 오디오 스트림 정보를 구분하는 값. 클라이언트는 이 값을 기준으로 중복된 Play 지시 메시지를 제거할 수 있습니다. | 항상 |
 | `audioStream` | [AudioStreamInfoObject](#AudioStreamInfoObject) | 재생에 필요한 오디오 스트림 정보를 담고 있는 객체       | 항상 |
 
-### Remarks
+#### Remarks
 `StreamDeliver` 지시 메시지를 통해 전달받는 `AudioStreamInfoObject` 객체는 기존 [`AudioPlayer.Play`](#Play) 지시 메시지를 통해 전달받은 `AudioStreamInfoObject` 객체의 내용과 중복을 피하기 위해 일부 내용이 생략될 수 있습니다. 따라서, 음원을 재생할 때 `StreamDeliver` 지시 메시지와 이미 수신한 [`Play`](#Play) 지시 메시지의 `payload.audioStream` 정보를 조합해서 사용해야 합니다.
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1377,7 +1377,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
 
@@ -1385,19 +1385,19 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: AudioPlayer.StreamRequested -->
 
-## AudioPlayer.StreamRequested event {#StreamRequested}
+### AudioPlayer.StreamRequested event {#StreamRequested}
 오디오 스트림 재생을 위해 CIC로 스트리밍 URI와 같은 추가 정보를 요청하는 이벤트 메시지입니다.
 
-### Payload fields
+#### Payload fields
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `audioItemId`   | string  | 오디오 스트림 token          | 필수 |
 | `audioStream`   | [AudioStreamInfoObject](#AudioStreamInfoObject) | Play 지시 메시지의 `audioItem.stream` | 필수 |
 
-### Remarks
+#### Remarks
 음악 서비스의 과금 등을 고려하여 실제 오디오 스트림 정보 발급을 재생 직전으로 지연 해야 할 때가 있습니다. 이 이벤트 메시지는 이처럼 오디오 스트림 정보를 미리 준비하면 안될 때를 위해 설계된 API이며, 따라서 클라이언트는 이 이벤트 메시지를 재생 직전 시점보다 일찍 전달하면 안됩니다.
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1431,24 +1431,24 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: PlaybackController.Pause -->
 
-## PlaybackController.Pause directive {#Pause}
+### PlaybackController.Pause directive {#Pause}
 클라이언트에게 재생 중인 오디오 스트림을 일시 정지하도록 지시합니다. 클라이언트는 이 지시 메시지를 받은 후 오디오 스트림 재생을 일시 정지해야 합니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | target            | object  | 제어 대상 정보를 가지는 객체. 이 지시 메시지를 통해 제어해야 하는 대상을 알 수 있습니다. | 조건부  |
 | target.namespace  | string  | CIC API 네임스페이스. 제어 대상이 무엇인지 파악할 수 있는 정보입니다. 다음과 같은 값을 가질 수 있습니다.<ul><li><code>"AudioPlayer"</code>: 오디오 플레이어</li><li><code>"MediaPlayer"</code>: 미디어 플레이어</li></ul>  | 항상  |
 
-### Message example
+#### Message example
 
 ```json
 예제 1: 대상이 지정되지 않은 예제
@@ -1482,24 +1482,24 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 }
 ```
 
-### See also
+#### See also
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: PlaybackController.Resume -->
 
-## PlaybackController.Resume directive {#Resume}
+### PlaybackController.Resume directive {#Resume}
 클라이언트에게 오디오 스트림 재생을 재개하도록 지시합니다. 클라이언트는 이 지시 메시지를 받은 후 오디오 스트림 재생을 재개해야 합니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | target            | object  | 제어 대상 정보를 가지는 객체. 이 지시 메시지를 통해 제어해야 하는 대상을 알 수 있습니다. | 조건부  |
 | target.namespace  | string  | CIC API 네임스페이스. 제어 대상이 무엇인지 파악할 수 있는 정보입니다. 다음과 같은 값을 가질 수 있습니다.<ul><li><code>"AudioPlayer"</code>: 오디오 플레이어</li><li><code>"MediaPlayer"</code>: 미디어 플레이어</li></ul>  | 항상  |
 
-### Message example
+#### Message example
 
 ```json
 // 예제 1: 대상이 지정되지 않은 예제
@@ -1533,24 +1533,24 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 }
 ```
 
-### See also
+#### See also
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: PlaybackController.Stop -->
 
-## PlaybackController.Stop directive {#Stop}
+### PlaybackController.Stop directive {#Stop}
 클라이언트에게 오디오 스트림 재생을 중지하도록 지시합니다. 클라이언트는 이 지시 메시지를 받은 후 오디오 스트림 재생을 중지해야 합니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | target            | object  | 제어 대상 정보를 가지는 객체. 이 지시 메시지를 통해 제어해야 하는 대상을 알 수 있습니다. | 조건부  |
 | target.namespace  | string  | CIC API 네임스페이스. 제어 대상이 무엇인지 파악할 수 있는 정보입니다. 다음과 같은 값을 가질 수 있습니다.<ul><li><code>"AudioPlayer"</code>: 오디오 플레이어</li><li><code>"MediaPlayer"</code>: 미디어 플레이어</li></ul>  | 항상  |
 
-### Message example
+#### Message example
 
 ```json
 // 예제 1: 대상이 지정되지 않은 예제
@@ -1584,23 +1584,23 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 }
 ```
 
-### See also
+#### See also
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: SpeechSynthesizer.SpeechFinished -->
 
-## SpeechSynthesizer.SpeechFinished event {#SpeechFinished}
+### SpeechSynthesizer.SpeechFinished event {#SpeechFinished}
 클라이언트가 TTS 재생을 완료했음을 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`       | string  | TTS 식별용 token 값           | 항상    |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1623,7 +1623,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`SpeechSynthesizer.SpeechStarted`](#SpeechStarted)
 * [`SpeechSynthesizer.SpeechStopped`](#SpeechStopped)
 
@@ -1634,13 +1634,13 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 ### SpeechSynthesizer.SpeechStarted event {#SpeechStarted}
 클라이언트가 TTS 재생을 시작했음을 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`       | string  | TTS 식별용 token 값           | 항상    |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1663,7 +1663,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`SpeechSynthesizer.SpeechFinished`](#SpeechFinished)
 * [`SpeechSynthesizer.SpeechStopped`](#SpeechStopped)
 
@@ -1671,16 +1671,16 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: SpeechSynthesizer.SpeechStopped -->
 
-## SpeechSynthesizer.SpeechStopped event {#SpeechStopped}
+### SpeechSynthesizer.SpeechStopped event {#SpeechStopped}
 클라이언트가 TTS 재생을 중지했음을 보고하기 위해 사용됩니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`       | string  | TTS 식별용 token 값           | 항상    |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1703,7 +1703,7 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`SpeechSynthesizer.SpeechFinished`](#SpeechFinished)
 * [`SpeechSynthesizer.SpeechStarted`](#SpeechStarted)
 
@@ -1711,11 +1711,11 @@ CIC API는 사용자의 클라이언트 기기가 Clova와 통신할 때 주고 
 
 <!-- Start of the shared content: TemplateRuntime.RenderPlayerInfo -->
 
-## TemplateRuntime.RenderPlayerInfo directive {#RenderPlayerInfo}
+### TemplateRuntime.RenderPlayerInfo directive {#RenderPlayerInfo}
 
 CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 앨범 이미지, 가사와 같은 재생 메타 정보를 전달하고 이를 표시하도록 지시합니다. 사용자가 음악 재생을 요청하면 클라이언트는 [`AudioPlayer.Play`](#Play) 지시 메시지를 받아 미디어를 재생하게 됩니다. 디스플레이 장치가 있는 클라이언트라면 필요에 따라 미디어 플레이어에 재생 관련 정보를 표현해야 할 수 있습니다. 이때, [`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo) 이벤트 메시지를 통해 재생 메타 정보를 CIC에 요청할 수 있으며, `TemplateRuntime.RenderPlayerInfo` 지시 메시지를 수신할 수 있습니다. `TemplateRuntime.RenderPlayerInfo` 지시 메시지는 현재 재생해야 하는 미디어 콘텐츠와 추후 재생해야 하는 미디어 콘텐츠의 재생 메타 정보를 담고 있습니다. 클라이언트는 `TemplateRuntime.RenderPlayerInfo` 지시 메시지의 재생 메타 정보를 사용자에게 제공하므로써 현재 재생 미디어의 메타 정보 및 재생 목록을 표시할 수 있습니다.
 
-### Payload fields
+#### Payload fields
 | 필드 이름       | 자료형    | 필드 설명                     | 포함 여부 |
 |---------------|---------|-----------------------------|:---------:|
 | `displayType`               | string | 미디어 콘텐츠 표시 형태.<ul><li><code>"list"</code>: 목록 표시 형태</li><li><code>"single"</code>: 단일 항목 표시 형태</li></ul>       | 항상 |
@@ -1747,7 +1747,7 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 | `provider.name`                    | string        | 미디어 콘텐츠 제공자의 이름                                                                   | 항상  |
 | `provider.smallLogoUrl`            | string        | 크기가 작은 미디어 콘텐츠 제공자 로고 이미지의 URI                                                | 조건부 |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1846,7 +1846,7 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo)
 
@@ -1854,10 +1854,10 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 
 <!-- Start of the shared content: TemplateRuntime.RequestPlayerInfo -->
 
-## TemplateRuntime.RequestPlayerInfo event {#RequestPlayerInfo}
+### TemplateRuntime.RequestPlayerInfo event {#RequestPlayerInfo}
 클라이언트가 미디어 플레이어에 표시할 재생 목록, 앨범 이미지, 가사와 같은 재생 메타 정보를 CIC에게 요청합니다.
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
@@ -1866,7 +1866,7 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 | `range.before` | number  | 기준 미디어 콘텐츠로부터 n개만큼 이전 재생 목록에 포함되는 재생 메타 정보를 요청합니다.  | 선택  |
 | `range.after`  | number  | 기준 미디어 콘텐츠로부터 n개만큼 다음 재생 목록에 포함되는 재생 메타 정보를 요청합니다. 예를 들어, `range.before` 필드의 값을 지정하지 않고 `range.after`의 값을 `5`로 설정하면 기준 미디어 콘텐츠를 포함한 총 6 개의 미디어 콘텐츠에 해당하는 재생 메타 정보를 수신하게 됩니다. | 선택  |
 
-### Message example
+#### Message example
 
 {% raw %}
 
@@ -1889,13 +1889,13 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 ```
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 
-## AudioStreamInfoObject {#AudioStreamInfoObject}
+### AudioStreamInfoObject {#AudioStreamInfoObject}
 재생할 음악의 오디오 스트림의 스트리밍 정보를 담고 있는 객체입니다. 클라이언트에게 재생할 스트리밍 정보를 전달하거나 클라이언트가 CIC로 현재 재생 중인 음악의 스트리밍 정보를 전달해야 할 때 사용합니다.
 
-### Object fields
+#### Object fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수/포함 여부 |
 |---------------|---------|-----------------------------|:-------------:|
@@ -1911,10 +1911,10 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 | `url`                    | string  | 오디오 스트림 URL.<div class="note"><p><strong>Note!</strong></p><p>이 필드의 최대 길이는 2048 바이트입니다.</p></div>                              | 필수/항상 |
 | `urlPlayable`            | boolean | `url` 필드의 오디오 스트림 URI가 바로 재생 가능한 형태인지 구분하는 값. <ul><li><code>true</code>: 바로 재생이 가능한 형태의 URI</li><li><code>false</code>: 바로 재생이 불가능한 형태의 URI. <a href="#StreamRequested"><code>AudioPlayer.StreamRequested</code></a> 이벤트 메시지를 사용하여 오디오 스트림 정보를 추가로 요청해야 합니다.</li></ul>        | 필수/항상 |
 
-### Remarks
+#### Remarks
 * 클라이언트는 `beginAtInMilliseconds`와 `durationInMilliseconds` 필드에 지정된 구간에 대해 음악 재생을 완료하면 [`AudioPlayer.PlayFinished`](#PlayFinished) 이벤트 메시지를 CIC로 전송합니다.
 
-### Object Example
+#### Object Example
 {% raw %}
 
 ```json
@@ -1949,7 +1949,7 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayFinished`](#PlayFinished)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
@@ -1958,13 +1958,13 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 
 <!-- Start of the shared content: AudioPlayer.PlaybackState -->
 
-# 오디오 콘텐츠 재생 관련 맥락 정보 {#ContextObjectforAudioPlayback}
+## 오디오 콘텐츠 재생 관련 맥락 정보 {#ContextObjectforAudioPlayback}
 클라이언트가 Clova에게 [CIC API](#CICAPIforAudioPlayback) 이벤트 메시지를 전송할 때 다음과 같은 다양한 맥락 정보(context)를 보냅니다. 이 중 오디오 콘텐츠 재생과 관련된 맥락 정보는 [`AudioPlayer.PlaybackState`](#PlaybackState) 입니다.
 
-## AudioPlayer.PlaybackState {#PlaybackState}
+### AudioPlayer.PlaybackState {#PlaybackState}
 `AudioPlayer.PlaybackState`는 현재 재생하고 있거나 마지막으로 재생한 미디어 정보를 CIC에게 보고할때 사용하는 메시지 포맷입니다.
 
-### Object structure
+#### Object structure
 
 {% raw %}
 ```json
@@ -1984,7 +1984,7 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 ```
 {% endraw %}
 
-### Payload fields
+#### Payload fields
 
 | 필드 이름       | 자료형    | 필드 설명                     | 필수 여부 |
 |---------------|---------|-----------------------------|:---------:|
@@ -1994,7 +1994,7 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 | `stream`               | [AudioStreamInfoObject](#AudioStreamInfoObject) | 재생 중인 미디어의 상세 정보를 보관한 객체. `playerActivity` 값이 `"IDLE"`이면 이 필드 값은 입력하지 않아도 됩니다. [`AudioPlayer.Play`](#Play) 또는 [`AudioPlayer.StreamDeliver`](#StreamDeliver) 지시 메시지로 전달되었던 미디어 정보(`stream` 객체)의 값을 입력합니다. | 선택 |
 | `totalInMilliseconds`  | number | 최근 재생 미디어의 전체 길이. [`AudioPlayer.Play`](#Play) 지시 메시지를 통해 전달받은 오디오 정보([AudioStreamInfoObject](#AudioStreamInfoObject))에 `durationInMilliseconds` 필드 값이 있으면 이 필드의 값으로 입력하면 됩니다. 단위는 밀리초이며, `playerActivity` 값이 `"IDLE"`이면 이 필드 값은 입력하지 않아도 됩니다.                                                               | 선택 |
 
-### Object example
+#### Object example
 
 {% raw %}
 
@@ -2039,7 +2039,7 @@ CIC가 클라이언트에게 미디어 플레이어에 표시할 재생 목록, 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.StreamDeliver`](#StreamDeliver)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
