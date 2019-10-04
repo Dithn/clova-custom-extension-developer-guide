@@ -173,7 +173,7 @@ Interaction 모델이란, Clova가 사용자의 발화를 어떻게 인식하게
 
 ![](/Design/Assets/Images/Extension_Design-Interaction_Model_Analysis_Diagram.png)
 
-Extension에 필요한 interaction 모델은 Clova developer console에서 정의할 수 있습니다. 그 전에 우선 interaction 모델을 이해하고 설계하는 과정이 필요합니다. 이런 과정 없이 무작정 Clova developer console에서 interaction 모델을 정의하게 되면 작업 효율이 떨어지거나 사용자 요청이 의도된 대로 인식되지 않을 수 있습니다. 사용자의 실제 의도를 잘 파악하는 interaction 모델을 만들려면 interaction 모델을 만들기 전에 다음과 같은 내용을 이해하고 interaction 모델 설계에 반영해야 합니다.
+Custom extension에 필요한 interaction 모델은 Clova developer console에서 정의할 수 있습니다. 그 전에 우선 interaction 모델을 이해하고 설계하는 과정이 필요합니다. 이런 과정 없이 무작정 Clova developer console에서 interaction 모델을 정의하게 되면 작업 효율이 떨어지거나 사용자 요청이 의도된 대로 인식되지 않을 수 있습니다. 사용자의 실제 의도를 잘 파악하는 interaction 모델을 만들려면 interaction 모델을 만들기 전에 다음과 같은 내용을 이해하고 interaction 모델 설계에 반영해야 합니다.
 
 * [Intent](#Intent)
 * [Slot](#Slot)
