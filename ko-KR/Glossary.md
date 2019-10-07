@@ -30,7 +30,7 @@ Clova 플랫폼과 연동하는 클라이언트 기기나 [Clova extension](#Clo
 * [Clova Home extension](#ClovaHomeExtension)
 
 ### Clova Extensions Kit (CEK) {#CEK}
-Clova extension을 개발 및 배포할 때 필요한 도구와 인터페이스를 제공하는 플랫폼으로 [Clova와 extension 사이의 커뮤니케이션](/Develop/CEK_Overview.md)을 지원합니다.
+CEK는 Clova와 [Clova extension(이하 extension) 사이의 커뮤니케이션](/Develop/CEK_Overview.md)을 지원하는 플랫폼으로 extension을 개발 및 배포할 때 필요한 도구와 인터페이스를 제공합니다.
 
 ### Clova Home extension {#ClovaHomeExtension}
 IoT 기기 제어 서비스를 제공하기 위한 [extension](#ClovaExtension)입니다. 자세한 내용은 [Clova Home extension 만들기]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink}}) 문서를 참조합니다.
