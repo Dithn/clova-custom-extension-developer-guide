@@ -4,14 +4,14 @@
 
 웹 서비스의 정보 조회, 쇼핑 및 배달 서비스, 대화형 게임, 방송 또는 실시간 브리핑 및 그 밖의 음성을 통한 활동이나 서비스를 제공하는 custom extension을 만들 수 있습니다. Custom extension을 설계할 때 보통 다음의 절차를 따릅니다. 참고로 여기서 다루는 내용은 custom extension 설계의 기본 권장 사항이며 간단한 예시와 함께 설명하고 있습니다. 물론, 보유하고 있는 사업적 경험과 서비스의 특성에 따라 custom extension이 더 많은 가능성을 가지도록 설계/구현할 수도 있습니다.
 
-* [목표 수립](#SettingGoal)
+* [목표 수립](#SetGoal)
 * [사용 시나리오 스크립트 작성](#MakeUseCaseScenarioScript)
 * [Skill 이름 정의](#DefineInvocationName)
 * [Interaction 모델 정의](#DefineInteractionModel)
 * [응답 유형 결정](#DecideSoundOutputType)
 * [지속적인 업데이트](#ContinuousUpdate)
 
-## 목표 수립 {#SettingGoal}
+## 목표 수립 {#SetGoal}
 
 Custom extension을 설계할 때 가장 먼저 할 일은 custom extension의 목표를 정하는 것입니다. Custom extension의 목표는 구체적으로 사용자에게 무엇을 어떻게 전달할 것인지 정하는 것이라고 보면 됩니다. Custom extension의 목표를 정하는 것은 추후 사용자에게 어떤 기능을 제공하고 이 기능을 사용자가 어떤 시나리오로 사용할지 예상하는 근거가 됩니다. Custom extension의 목표는 다음과 같은 하나의 근본적이고 추상적인 목표가 있을 수 있습니다.
 
@@ -53,7 +53,7 @@ Custom extension을 설계할 때 가장 먼저 할 일은 custom extension의 �
 
 ## 사용 시나리오 스크립트 작성 {#MakeUseCaseScenarioScript}
 
-사용 시나리오 스크립트는 사용자와 Clova 사이의 대화를 미리 예상한 것입니다. 세부 목표를 기반으로 다양한 사용 시나리오에 사용자와 Clova의 대화를 미리 예상해 봄으로써 서비스의 편의성, 흐름 등을 점검할 수 있습니다. [목표 수립](#SettingGoal)에서 정한 세부 목표를 기준으로 예상되는 사용 시나리오 스크립트를 작성합니다. 이는 추후 [interaction 모델](#DefineInteractionModel)을 등록할 때 재사용될 수 있습니다.
+사용 시나리오 스크립트는 사용자와 Clova 사이의 대화를 미리 예상한 것입니다. 세부 목표를 기반으로 다양한 사용 시나리오에 사용자와 Clova의 대화를 미리 예상해 봄으로써 서비스의 편의성, 흐름 등을 점검할 수 있습니다. [목표 수립](#SetGoal)에서 정한 세부 목표를 기준으로 예상되는 사용 시나리오 스크립트를 작성합니다. 이는 추후 [interaction 모델](#DefineInteractionModel)을 등록할 때 재사용될 수 있습니다.
 
 사용 시나리오 스크립트를 작성할 때는 다음을 고려하여 작성할 것을 권장합니다.
 

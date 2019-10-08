@@ -7,7 +7,7 @@
 ## Design guidelines
 
 * [Custom extension 설계](/Design/Design_Custom_Extension.md)
-  * [목표 수립](/Design/Design_Custom_Extension.md#SettingGoal)
+  * [목표 수립](/Design/Design_Custom_Extension.md#SetGoal)
   * [사용 시나리오 스크립트 작성](/Design/Design_Custom_Extension.md#MakeUseCaseScenarioScript)
   * [Interaction 모델 정의](/Design/Design_Custom_Extension.md#DefineInteractionModel)
     * [Intent](/Design/Design_Custom_Extension.md#Intent)
@@ -36,7 +36,7 @@
 
 * [CEK 개요](/Develop/CEK_Overview.md)
   * [CEK란?](/Develop/CEK_Overview.md#WhatisCEK)
-  * [CEK 동작 구조](/Develop/CEK_Overview.md#CEKInteractionStructure)
+  * [CEK 구성 및 동작 구조](/Develop/CEK_Overview.md#CEKComponentsAndOperationStructure)
   * [Extension 종류](/Develop/CEK_Overview.md#ExtensionType)
 * [튜토리얼](/Develop/Tutorials/Introduction.md)
   * [기초적인 Extension 만들기](/Develop/Tutorials/Build_Simple_Extension.md)
