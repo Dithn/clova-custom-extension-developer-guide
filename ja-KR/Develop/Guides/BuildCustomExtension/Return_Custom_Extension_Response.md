@@ -27,7 +27,7 @@
 
 * `version`：使用しているCustom Extensionのメッセージフォーマットのバージョンです。現在のバージョンはv0.1.0です。
 * `response.outputSpeech`：ユーザーが英語で「Hi, nice to meet you」の文章を話すように設定します。
-* `response.card`：クライアントの画面に表示するデータがありません。[コンテンツテンプレート]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md) 形式のデータで、クライアントの画面に表示するコンテンツをこのフィールドで渡すことができます。
+* `response.card`：クライアントの画面に表示するデータがありません。[コンテンツテンプレート]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }}) 形式のデータで、クライアントの画面に表示するコンテンツをこのフィールドで渡すことができます。
 * `response.shouldEndSession`：セッションを終了せず、引き続きユーザーの入力を受け付けます。このフィールドの値がtrueの場合、[`SessionEndedRequest`](#HandleSessionEndedRequest)リクエストを受け取る前に、Extensionからセッションを終了できます。
 
 <div class="tip">
@@ -105,7 +105,7 @@ HLS形式のストリームを提供する場合、以下のように作成し�
   <p>単文や複文タイプの音声情報の他にも、画面を持たないデバイスのように、詳しい内容をGUIで表現できないクライアントのために、複合タイプ（SpeechSet）の音声情報もサポートしています。詳細については、Custom Extensionのメッセージフォーマットの<a href="/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage">レスポンスメッセージ</a>を参照してください。</p>
 </div>
 
-音声出力だけでなく、クライアントデバイスの画面やClovaアプリの画面にデータを出力する必要がある場合、次のように`response.card`フィールドの[コンテンツテンプレート]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md)に合わせて表示するコンテンツを設定します。
+音声出力だけでなく、クライアントデバイスの画面やClovaアプリの画面にデータを出力する必要がある場合、次のように`response.card`フィールドの[コンテンツテンプレート]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }})に合わせて表示するコンテンツを設定します。
 
 {% raw %}
 ```json

@@ -32,50 +32,36 @@ Clovaには、すべてのExtensionで汎用で使用できるように、一般
 
 <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova Developer Center</a>に接続し、次のようにサンプルサイコロExtensionで使用するスロットタイプを宣言します。
 
-<ol>
-  <li><p>サンプルサイコロの<strong>{{ book.DevConsole.cek_interaction_model }}</strong>項目の<strong>{{ book.DevConsole.cek_edit }}</strong>ボタンをクリックします。</p></li>
-  <li><p><strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>の右側にある<img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" />ボタンをクリックします。</p></li>
-  <li>
-    <p><strong>{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}</strong>の下のテーブルで、<code>CLOVA.NUMBER</code>のチェックボックスを選択します。</p>
-    <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Register_Slot_Type.png" />
-  </li>
-  <li><p><strong>{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}</strong>の右側にある<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</p></li>
-</ol>
+1. サンプルサイコロの**{{ book.DevConsole.cek_interaction_model }}**項目の**{{ book.DevConsole.cek_edit }}**ボタンをクリックします。
+2. **{{ book.DevConsole.cek_builder_list_title_slottype }}**の右側にある<img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" />ボタンをクリックします。
+3. **{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}**の下のテーブルで、`CLOVA.NUMBER`のチェックボックスを選択します。<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Register_Slot_Type.png)
+4. **{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}**の右側にある**{{ book.DevConsole.cek_save }}**ボタンをクリックします。
 
 ### インテントにスロットを登録する
 振るサイコロの数は、サイコロを振るときに必要とされる追加情報です。サイコロを振るアクションは、1番目のチュートリアルで`ThrowDiceIntent`というインテントとして登録しました。次に、そのインテントにサイコロの数に対応するスロットを登録する必要があります。
 前にスロットタイプを宣言した画面で、次のようにスロットを登録します。
 
-<ol>
-  <li><p><strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong>の下にあるカスタムインテントの<code>ThrowDiceIntent</code>を選択します。</p></li>
-  <li><p><strong>{{ book.DevConsole.cek_builder_intent_slot_title }}</strong>の下の入力スペースに「diceCount」と入力します。</p></li>
-  <li><p>Enterキーや右側の<img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" />ボタンをクリックします。</p></li>
-  <li><p> 登録した「diceCount」の右の<strong>{{ book.DevConsole.cek_builder_utterance_select_slot }}</strong>コンボボックスをクリックします。</p></li>
-  <li>
-    <p>表示されるリストから、先ほど登録した<strong>{{ book.DevConsole.cek_builder_select_slottype_builtin }}</strong>の<code>CLOVA.NUMBER</code>を選択します。</p>
-    <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Add_Slot.png" />
-  </li>
-  <li><p>画面の右上にある<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</p></li>
-</ol>
+1. **{{ book.DevConsole.cek_builder_list_title_intent }}**の下にあるカスタムインテントの`ThrowDiceIntent`を選択します。
+2. **{{ book.DevConsole.cek_builder_intent_slot_title }}**の下の入力スペースに「diceCount」と入力します。
+3. Enterキーを押すか、または右側にある<img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" />ボタンをクリックします。
+4. 登録した「diceCount」の右の **{{ book.DevConsole.cek_builder_utterance_select_slot }}**コンボボックスをクリックします。
+5. 表示されるリストから、先ほど登録した**{{ book.DevConsole.cek_builder_select_slottype_builtin }}**の`CLOVA.NUMBER`を選択します。<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Add_Slot.png)
+6. 画面の右上にある**{{ book.DevConsole.cek_save }}**ボタンをクリックします。
 
 ### サンプル発話を入力する
 1番目のチュートリアルでは、サンプル発話として、サイコロを振れという単純なフレーズを入力しましたが、ここではスロットを使用して、サイコロの数を指定する新しいフレーズを入力してみます。
 
 先ほどスロットを登録した画面で、次のようにサンプル発話を入力します。
 
-<ol>
-  <li>
-    <p><strong>{{ book.DevConsole.cek_builder_intent_expression_title }}</strong>の下の入力スペースに「サイコロを2つ振って」と入力します。</p>
-    <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Sample_Utterance.png" />
-  </li>
-  <li><p>Enterキーを押すか、または<img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" />ボタンをクリックします。</p></li>
-  <li><p>登録したフレーズの「2つ」という単語をマウスでドラッグして選択します。</p></li>
-  <li>
-    <p><strong>{{ book.DevConsole.cek_builder_slot_layer_select_slot }}</strong>の下にある「diceCount」を選択します。</p>
-    <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Set_Slot.png" />
-  </li>
-  <li><p>「1つ振って」「5つのサイコロを振って」というフレーズでステップ1～4を繰り返し行います。</p></li>
-</ol>
+1. **{{ book.DevConsole.cek_builder_intent_expression_title }}**の下の入力スペースに「サイコロを2つ振って」と入力します。<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Sample_Utterance.png)
+2. Enterキーを押すか、または<img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" />ボタンをクリックします。
+3. 登録したフレーズの「2つ」という単語をマウスでドラッグして選択します。
+4. **{{ book.DevConsole.cek_builder_slot_layer_select_slot }}**の下にある「diceCount」を選択します。<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Set_Slot.png)
+5. 「1つ振って」「5つのサイコロを振って」というフレーズでステップ1～4を繰り返し行います。
 
 ## ステップ2スロットの処理を実装する {#Step2}
 
@@ -128,22 +114,18 @@ intentRequest(cekResponse) {
 
 <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova Developer Center</a>に接続し、次のようにサンプルサイコロExtensionがサイコロの数をうまく認識することを確認します。
 
-<ol>
-  <li><p>サンプルサイコロの<strong>{{ book.DevConsole.cek_interaction_model }}</strong>項目の<strong>{{ book.DevConsole.cek_edit}}</strong>ボタンをクリックします。</p></li>
-  <li><p>画面左上の<strong>{{ book.DevConsole.cek_builder_menu_build }}</strong>ボタンをクリックして、対話モデルをビルドします。</p></li>
-  <li><p>ビルドが終わったら、左側のメニューリストで<strong>{{ book.DevConsole.cek_test }}</strong>メニューを選択します。</p></li>
-  <li><p><strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong>に、複数のサイコロを振れというフレーズを入力します。例えば、「サイコロを2つ振ってみて」と入力します。</p></li>
-  <li><p>Enterキーを押すか、または<strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong>ボタンをクリックします。</p></li>
-  <li>
-    <p><strong>{{ book.DevConsole.cek_builder_test_result_title }}</strong>の<strong>{{ book.DevConsole.cek_builder_test_intent_result }}</strong>項目に<code>ThrowDiceIntent</code>、<strong>{{ book.DevConsole.cek_builder_test_slot_result }}</strong>項目に<code>diceCount</code>が表示され、<strong>{{ book.DevConsole.cek_builder_test_slot_data}}</strong>に入力したサイコロの数が表示されることを確認します。</p>
-  	<img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slot_Test.png" />
-    <div class="note">
-    	<p><strong>メモ</strong></p>
-    	<p>外部からアクセスできるExtensionサーバーのURIを登録していない場合、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>は「{{ book.DevConsole.cek_builder_test_no_response }}」と表示されます。</p>
-  	</div>
-  </li>
-  <li><p>「サイコロを10個振って」「4つのサイコロを振れ」などのフレーズで、ステップ4～6を繰り返します。</p></li>
-</ol>
+1. サンプルサイコロの**{{ book.DevConsole.cek_interaction_model }}**項目の**{{ book.DevConsole.cek_edit}}**ボタンをクリックします。
+2. 画面左上の**{{ book.DevConsole.cek_builder_menu_build }}**ボタンをクリックして、対話モデルをビルドします。
+3. ビルドが終わったら、左側のメニューリストで**{{ book.DevConsole.cek_test }}**メニューを選択します。
+4. **{{ book.DevConsole.cek_builder_test_expression_title }}**に、複数のサイコロを振れというフレーズを入力します。例えば、「サイコロを2つ振ってみて」と入力します。
+5. Enterキーを押すか、または**{{ book.DevConsole.cek_builder_test_request_test }}**ボタンをクリックします。
+6. **{{ book.DevConsole.cek_builder_test_result_title }}**の**{{ book.DevConsole.cek_builder_test_intent_result }}**項目に`ThrowDiceIntent`、**{{ book.DevConsole.cek_builder_test_slot_result }}**項目に`diceCount`が表示され、**{{ book.DevConsole.cek_builder_test_slot_data}}**に入力したサイコロの数が表示されるか確認します。<br />
+  <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slot_Test.png" />
+  <div class="note">
+  	<p><strong>メモ</strong></p>
+  	<p>外部からアクセスできるExtensionサーバーのURIを登録していない場合、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>は「{{ book.DevConsole.cek_builder_test_no_response }}」と表示されます。</p>
+	</div>
+7. 「サイコロを10個振って」「4つのサイコロを振れ」などのフレーズで、ステップ4～6を繰り返します。
 
 うまく認識されない場合、さまざまなサンプル発話を追加して、認識率を向上させることができます。
 

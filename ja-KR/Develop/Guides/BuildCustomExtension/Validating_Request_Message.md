@@ -6,12 +6,13 @@
 
 ExtensionがCEKからのHTTPリクエストを受信するとき、そのリクエストが第三者ではなく、Clovaから送信された信頼できるリクエストかどうかを検証する必要があります。[HTTPヘッダー](/Develop/References/HTTP_Message.md#HTTPHeader)にある`SignatureCEK`とRSA公開鍵を使用して、以下のようにリクエストメッセージを検証してください。
 
-<ol>
-  <li><p>Clovaの署名用RSA公開鍵を以下のURIからダウンロードします。</p>
-<p>{{ book.ServiceEnv.PublicKeyURIforCEKMessageValidation }}</p></li>
-  <li><p><a href="/Develop/References/HTTP_Message.md#HTTPHeader">HTTPヘッダー</a>から`SignatureCEK`フィールドの値を取得します。</p><p>`SignatureCEK`フィールドの値は、HTTPリクエストメッセージのボディをBase64エンコードした<a href="https://tools.ietf.org/html/rfc3447" target="_blank">RSA PKCS#1 v1.5</a>署名（signature）です。</p></li>
-  <li>ステップ1でダウンロードしたRSA公開鍵を用いて、ステップ2で取得した`SignatureCEK`ヘッダーを以下のように<a href="https://tools.ietf.org/html/rfc3447#section-5.2" target="_blank">検証（verify）</a>してください。</li>
-</ol>
+1. Clovaの署名用RSA公開鍵を以下のURIからダウンロードします。<br />
+  ```
+  {{ book.ServiceEnv.PublicKeyURIforCEKMessageValidation }}
+  ```
+2. [HTTPヘッダー](/Develop/References/HTTP_Message.md#HTTPHeader)から`SignatureCEK`フィールドの値を取得します。<br />
+  `SignatureCEK`フィールドの値は、HTTPリクエストメッセージのボディをBase64エンコードした<a href="https://tools.ietf.org/html/rfc3447" target="_blank">RSA PKCS#1 v1.5</a>署名（signature）です。
+3. ステップ1でダウンロードしたRSA公開鍵を用いて、ステップ2で取得した`SignatureCEK`ヘッダーを以下のように<a href="https://tools.ietf.org/html/rfc3447#section-5.2" target="_blank">検証（verify）</a>してください。
 
 以下は、リクエストメッセージを検証するコードサンプルです。
 ```java

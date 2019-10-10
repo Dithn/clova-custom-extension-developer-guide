@@ -7,15 +7,10 @@
 
 Custom Extensionの登録は、通常次の順で行います。
 
-<ol>
-  <li><a href="#AgreeTermsOfUse">利用規約および個人情報の取得に同意する</a></li>
-  <li><a href="#InputExtensionInfo">Custom Extensionの基本情報を入力する</a></li>
-  <li><a href="#SetServerConnection">サーバー設定を行う</a>
-    <ul>
-      <li><a href="#SetAccountLinking">アカウント連携を設定する</a></li>
-    </ul>
-  </li>
-</ol>
+1. [利用規約および個人情報の取得に同意する](#AgreeTermsOfUse)
+2. [Custom Extensionの基本情報を入力する](#InputExtensionInfo)
+3. [サーバー設定を行う](#SetServerConnection)
+  * [アカウント連携を設定する](#SetAccountLinking)
 
 <!-- Start of the shared content: AgreeTermsOfUse -->
 
@@ -35,22 +30,23 @@ Custom Extensionを登録する最初のステップは、登録するCustom Ext
 
 ![](/DevConsole/Assets/Images/DevConsole-Create_New_Custom_Extension.png)
 
-<ol>
-  <li><strong>{{ book.DevConsole.cek_type }}</strong>項目で、登録するCustom Extensionのタイプを選択します。Custom Extensionのタイプを選択すると、該当する入力フィールドが表示されます。</li>
-  <li><strong>{{ book.DevConsole.cek_lang }}</strong>項目で、Custom Extensionで使用する言語を選択します。現在、<strong>{{ book.DevConsole.ko_KR }}</strong>のみサポートされています。</li>
-  <li><strong>Extension ID</strong>、<strong>スキル名</strong>、<strong>呼び出し名</strong>を次の項目に入力します。
-    <ol>
-      <li><strong>{{ book.DevConsole.cek_id }}</strong>：Custom Extension固有IDです。リバースドメインネームの形式（例：com.yourdomain.extension.pizzabot）を入力します。</li>
-      <li><strong>{{ book.DevConsole.cek_name }}</strong>：Custom Extension名です。<strong>{{ book.DevConsole.ManageCustomExtensions }}</strong>に表示されます。</li>
-      <li><strong>{{ book.DevConsole.cek_invocation_name }}</strong>：ユーザーがCustom Extensionを呼び出す際に呼ぶ名前です。1つから最大3つまで{{ book.DevConsole.cek_invocation_name }}を登録できます。お持ちのサービス、会社および組織の名前を使用できますが、ユーザーにとって呼びやすい、シンプルな言葉を指定することをお勧めします。汎用的な言葉、他社の名前やサービスに該当する言葉は使用できません。<strong>{{ book.DevConsole.cek_invocation_name }}</strong>は、Custom Extensionを審査する際にチェックされます。</li>
-      <li><strong>{{ book.DevConsole.cek_provider }}</strong>：Custom Extensionを作成した主体（会社や個人）の名前またはニックネームを入力します。<strong>{{ book.DevConsole.ManageCustomExtensions }}</strong>に表示され、Custom Extensionを審査する際にチェックされます。</li>
-    </ol>
-  </li>
-  <li>Extensionが<a href="{{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md">AudioPlayer</a>ディレクティブを使用する場合、<strong>{{ book.DevConsole.cek_audioplayer }}</strong>項目で<strong>{{ book.DevConsole.cek_yes }}</strong>を選択します。Custom Extensionがオーディオストリーミングサービスを提供する際に使用されます。</li>
-  <li><strong>{{ book.DevConsole.cek_email }}</strong>項目に、連絡可能なメールアドレスを入力します。</li>
-  <li><strong>{{ book.DevConsole.cek_tester }}</strong>項目にCustom Extensionのテストに使用する{{ book.ServiceEnv.OrientedService }}アカウントを入力します。必須ではなく、後ほど<a href="/DevConsole/Guides/Test_Custom_Extension.md">のExtensionをテスト</a>する際に入力することもできます。</li>
-  <li>Custom Extensionの基本情報をすべて入力したら、<strong>{{ book.DevConsole.cek_create }}</strong>ボタンをクリックします。</li>
-</ol>
+1. **{{ book.DevConsole.cek_type }}**項目で、登録するCustom Extensionのタイプを選択します。<br />
+  Custom Extensionのタイプを選択すると、該当する入力フィールドが表示されます。
+2. **{{ book.DevConsole.cek_lang }}**項目で、Custom Extensionで使用する言語を選択します。現在、**{{ book.DevConsole.supported_languages }}**のみサポートされています。
+3. **Extension ID**、**スキル名**、**呼び出し名**、**開発会社**を次の項目に入力します。
+  1. **{{ book.DevConsole.cek_id }}**<br />
+    Custom Extension固有IDを入力します。です。リバースドメインネームの形式（例：com.yourdomain.extension.pizzabot)を入力してください。
+  2. **{{ book.DevConsole.cek_name }}**<br />
+    Custom Extensionの名前を入力します。後で**{{ book.DevConsole.ManageCustomExtensions }}**に表示されます。
+  3. **{{ book.DevConsole.cek_invocation_name }}**<br />
+    ：ユーザーがCustom Extensionを呼び出す際に呼ぶ名前を入力します。1つから最大3つまで{{ book.DevConsole.cek_invocation_name }}を登録できます。お持ちのサービス、会社および組織の名前を使用できますが、ユーザーにとって呼びやすい、シンプルな言葉を指定することをお勧めします。汎用的な言葉、他社の名前やサービスに該当する言葉は使用できません。**{{ book.DevConsole.cek_invocation_name }}**は、Custom Extensionを審査する際にチェックされます。
+  4. **{{ book.DevConsole.cek_provider }}**<br />
+    Custom Extensionを作成した主体（会社や個人）の名前またはニックネームを入力します。後で**{{ book.DevConsole.ManageCustomExtensions }}**に表示され、Custom Extensionを審査する際にチェックされます。
+4. Extensionが[AudioPlayer]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }})ディレクティブを使用する場合、**{{ book.DevConsole.cek_audioplayer }}**項目で**{{ book.DevConsole.cek_yes }}**を選択します。Custom Extensionがオーディオストリーミングサービスを提供する際に使用されます。
+5. **{{ book.DevConsole.cek_email }}**項目に、連絡可能なメールアドレスを入力します。
+6. **{{ book.DevConsole.cek_tester }}**項目に、Custom Extensionのテストに使用する{{ book.ServiceEnv.OrientedService }}アカウントを入力します。<br />
+  必須ではなく、後で[Extensionをテスト](/DevConsole/Guides/Test_Custom_Extension.md)する際に入力することもできます。
+7. Custom Extensionの基本情報をすべて入力したら、**{{ book.DevConsole.cek_create }}**ボタンをクリックします。
 
 Custom Extensionの基本情報をすべて入力すると、作成されたCustom Extensionの情報を編集する画面に切り替わります。ページの下にある**{{ book.DevConsole.cek_save }}**ボタンをクリックして、入力中の内容を自由に保存できます。また、CEKのメニューで登録されたCustom Extensionのリストを確認することもできます。
 
@@ -72,18 +68,15 @@ $ curl "https://example.com/pizzabot" -X POST
 
 ![](/DevConsole/Assets/Images/DevConsole-Custom_Extension_Server_Settings.png)
 
-<ol>
-  <li>Extensionの情報入力UIで、上にある<strong>{{ book.DevConsole.cek_configuration }}</strong>タブをクリックします。</li>
-  <li>Custom ExtensionサーバーのURI（エンドポイント）を<strong>{{ book.DevConsole.cek_service_endpoint_url }}</strong>項目に入力します。
-    <div class="note">
-      <p><strong>メモ</strong></p>
-      <p>テスト段階ではHTTPも使用できますが、正式なサービスのためにはHTTPSを使用する必要があります。Custom Extensionのサーバーは、HTTPで80ポート、HTTPSで443ポートに設定してください。</p>
-    </div>
-  </li>
-  <li>Custom Extensionが提供するサービスのアカウントが、Clovaのユーザーアカウントとの連携を必要とする場合、<strong>{{ book.DevConsole.cek_account_linking }}</strong>項目で<strong>{{ book.DevConsole.cek_yes }}</strong>を選択します。アカウント連携の詳細については、<a href="#SetAccountLinking">アカウント連携を設定する</a>を参照してください。</li>
-  <li><strong>{{ book.DevConsole.cek_ssl_certificate }}</strong>項目のオプションボタンをクリックします。Custom Extensionを提供するサーバーは、必ず信頼された認証局から発行された証明書を使用してください。（自己署名証明書は使用できません）</li>
-  <li>サーバーとの連携に関する内容を入力して、<strong>{{ book.DevConsole.cek_save }}</strong>ボタンをクリックします。</li>
-</ol>
+1. Extensionの情報入力UIで、上にある**{{ book.DevConsole.cek_configuration }}**タブをクリックします。
+2. Custom ExtensionサーバーのURI（エンドポイント）を**{{ book.DevConsole.cek_service_endpoint_url }}**項目に入力します。
+  <div class="note">
+    <p>**メモ**</p>
+    <p>テスト段階ではHTTPも使用できますが、正式なサービスのためにはHTTPSを使用する必要があります。Custom Extensionのサーバーは、HTTPで80ポート、HTTPSで443ポートに設定してください。</p>
+  </div>
+3. [アカウント連携](#SetAccountLinking)を必要とする場合、**{{ book.DevConsole.cek_account_linking }}**項目で**{{ book.DevConsole.cek_yes }}**を選択します。
+4. **{{ book.DevConsole.cek_ssl_certificate }}**項目のオプションボタンをクリックします。Custom Extensionを提供するサーバーは、必ず信頼された認証局から発行された証明書を使用してください。（自己署名証明書は使用できません）
+5. サーバーとの連携に関する内容を入力して、**{{ book.DevConsole.cek_save }}**ボタンをクリックします。</li>
 
 ### アカウント連携を設定する {#SetAccountLinking}
 
@@ -91,26 +84,27 @@ Custom Extensionで提供するサービスのアカウントがClovaのユー�
 
 次の順で、アカウント連携の設定に[必要な情報](/Develop/Guides/Link_User_Account.md#RegisterAccountLinkingInfo)を入力します。
 
-<ol>
-  <img src="/DevConsole/Assets/Images/DevConsole-Custom_Extension_Accoun_Linking_Settings_1.png" />
-  <li><strong>{{ book.DevConsole.cek_account_linking }}</strong>項目で<strong>{{ book.DevConsole.cek_yes }}</strong>を選択します。</li>
-  <li>ユーザーにアカウント認証のためのUIを提供する認証URIを、<strong>{{ book.DevConsole.cek_authorization_url }}</strong>項目に入力します。ユーザーがCustom Extensionをアクティブにすると、このページに移動します。</li>
-  <li>ユーザーが自身のアカウントを即座に設定できるようにする場合には、<strong>{{ book.DevConsole.cek_configuration_url }}</strong>項目にアカウント設定ページのURIを入力します。</li>
-  <li>ユーザーアカウント認証を行うとき、HTTPリクエストに必要な<strong>{{ book.DevConsole.cek_client_id }}</strong>を入力します。クライアントIDは、<a href="/Develop/Guides/Link_User_Account.md#BuildAuthServer">認可サーバーを構築</a>する際に生成した値です。</li>
-  <li><strong>{{ book.DevConsole.cek_privacy_policy_url }}</strong>項目に、Custom Extensionが提供するサービスのプライバシーポリシーが提供されるURIを入力します。このページの内容は、<strong>{{ book.DevConsole.ManageCustomExtensions }}</strong>で表示されます。</li>
-  <li><strong>{{ book.DevConsole.cek_authorization_url }}</strong>または<strong>{{ book.DevConsole.cek_privacy_policy_url }}</strong>で提供するページが別のドメインから必要なリソースを読み込む場合、<strong>{{ book.DevConsole.cek_domain_list }}</strong>項目に必要なドメインを追加します。</li>
-  <li>（任意）アカウント連携の際に発行されるアクセストークンのスコープをあらかじめ定義している場合、<strong>{{ book.DevConsole.cek_scope }}</strong>項目にそのスコープを追加します。</li>
+<img src="/DevConsole/Assets/Images/DevConsole-Custom_Extension_Accoun_Linking_Settings_1.png" />
+
+1. **{{ book.DevConsole.cek_account_linking }}**項目で**{{ book.DevConsole.cek_yes }}**を選択します。
+2. ユーザーにアカウント認証UIを提供する認証URIを**{{ book.DevConsole.cek_authorization_url }}**項目に入力します。<br />
+  ユーザーがCustom Extensionをアクティブにすると、このページに移動します。
+3. ユーザーが自身のアカウントをすぐに設定できるようにする場合には、**{{ book.DevConsole.cek_configuration_url }}**項目にアカウント設定ページのURIを入力します。
+4. ユーザーアカウント認証を行うとき、HTTPリクエストに必要な**{{ book.DevConsole.cek_client_id }}**を入力します。<br />
+  クライアントIDは、[認可サーバーを構築](/Develop/Guides/Link_User_Account.md#BuildAuthServer)する際に生成した値です。
+5. **{{ book.DevConsole.cek_privacy_policy_url }}**項目に、Custom Extensionが提供するサービスのプライバシーポリシーのURIを入力します。<br />
+  このページの内容は、後で**{{ book.DevConsole.ManageCustomExtensions }}**に表示されます。
+6. **{{ book.DevConsole.cek_authorization_url }}**または**{{ book.DevConsole.cek_privacy_policy_url }}**に登録したページが別のドメインから必要なリソースを読み込む場合、**{{ book.DevConsole.cek_domain_list }}**項目に必要なドメインを追加します。
+7. （任意）アカウント連携の際に発行されるアクセストークンのスコープをあらかじめ定義している場合、**{{ book.DevConsole.cek_scope }}**項目に追加します。<br />
   <img src="/DevConsole/Assets/Images/DevConsole-Custom_Extension_Accoun_Linking_Settings_2.png" />
-  <li><strong>{{ book.DevConsole.cek_access_token_uri }}</strong>項目に、サービスのアクセストークンを発行できるURIを入力します。現在、<strong>認可グラントタイプはAuthorization code grantのみサポート</strong>しています。</li>
-  <li><strong>{{ book.DevConsole.cek_refresh_token_uri }}</strong>項目に、サービスのアクセストークンを更新できるURIを入力します。</li>
-  <li>サービスのアクセストークンを取得した後、HTTPリクエストの送信に必要な<strong>{{ book.DevConsole.cek_client_secret }}</strong>を入力します。クライアントシークレットは、<a href="/Develop/Guides/Link_User_Account.md#BuildAuthServer">認可サーバーを構築</a>する際に生成した値です。</li>
-  <li><strong>{{ book.DevConsole.cek_client_authentication_scheme }}</strong>は、次のうち認可サーバーのインターフェースの実装に適した値を設定します。
-    <ul>
-      <li><strong>HTTPベーシック認証（推奨）</strong>：サービスのアクセストークンを取得するために、資格情報をヘッダーに入力される場合</li>
-      <li><strong>リクエストボディーの資格情報</strong>：サービスのアクセストークンを取得するために、資格情報をボディーに入力される場合</li>
-    </ul>
-  </li>
-</ol>
+8. **{{ book.DevConsole.cek_access_token_uri }}**項目に、サービスのアクセストークンを発行できるURIを入力します。<br />
+  現在、**認可グラントタイプはAuthorization code grantのみサポート**されています。
+9. **{{ book.DevConsole.cek_refresh_token_uri }}**項目に、サービスのアクセストークンを更新できるURIを入力します。
+10. サービスのアクセストークンを取得するときに、HTTPリクエストに必要な**{{ book.DevConsole.cek_client_secret }}**を入力します。<br />
+  クライアントシークレットは、[認可サーバーを構築](/Develop/Guides/Link_User_Account.md#BuildAuthServer)する際に生成した値です。
+11. **{{ book.DevConsole.cek_client_authentication_scheme }}**は、次のうち認可サーバーのインターフェースの実装に適した値を設定します。
+  *. **HTTP Basic（推奨）**：サービスのアクセストークンを取得するために資格情報をヘッダーに入力される場合
+  * **Credentials in request body**：サービスのアクセストークンを取得するために資格情報をボディに入力される場合
 
 <div id="RedirectURI" class="note">
   <p><strong>メモ</strong></p>

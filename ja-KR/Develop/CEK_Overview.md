@@ -22,6 +22,6 @@ ClovaプラットフォームとExtensionは、次のように情報をやり取
 Clovaプラットフォームは、次の2種類のExtensionをサポートおよび提供しています。
 
 * [Custom Extension](/Develop/Guides/Build_Custom_Extension.md)：任意に拡張された機能を提供するExtensionです。Custom Extensionを利用すると、音楽、ショッピング、金融など、外部サービスの機能を提供できます。
-* [Clova Home Extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.md)：IoTデバイス制御サービスを提供するExtensionです。
+* [Clova Home Extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink }})：IoTデバイス制御サービスを提供するExtensionです。
 
 <!-- End of the shared content -->

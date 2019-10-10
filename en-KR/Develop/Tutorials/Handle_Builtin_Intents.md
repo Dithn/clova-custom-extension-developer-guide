@@ -65,22 +65,18 @@ This tutorial checks the operation of the interaction model only.
 
 Follow the steps below to check whether the help request of the Sample Dice extension is operating properly:
 
-<ol>
-  <li><p>Access the <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a>.</p></li>
-  <li><p>Click <strong>{{ book.DevConsole.cek_edit}}</strong> on the <strong>{{ book.DevConsole.cek_interaction_model }}</strong> item of the Sample Dice extension.</p></li>
-  <li><p>Click <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> on the top left section of the screen to build the interaction model.</p></li>
-  <li><p>Once the build is complete, click the <strong>{{ book.DevConsole.cek_test }}</strong> menu from the menu list on the left.</p></li>
-  <li><p>Enter the sentence to request help in <strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong>. For example, enter "Give me the instructions."</p></li>
-  <li><p>Press Enter or click the <strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong> button.</p></li>
-  <li>
-    <p>Check whether "Clova.GuideIntent" appears in the <strong>{{ book.DevConsole.cek_builder_test_intent_result }}</strong> field under the <strong>{{ book.DevConsole.cek_builder_test_result_title }}</strong>.</p>
-  	<img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Intent_Test.png" />
-    <div class="note">
-    	<p><strong>Note!</strong></p>
-    	<p>If you have not registered an extension server URI that can be accessed externally, a "{{ book.DevConsole.cek_builder_test_no_response }}" message is displayed as a <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>.</p>
-  	</div>
-  </li>
-</ol>
+1. Access the <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a>.
+2. Click **{{ book.DevConsole.cek_edit}}** on the **{{ book.DevConsole.cek_interaction_model }}** item of the Sample Dice extension.
+3. Click **{{ book.DevConsole.cek_builder_menu_build }}** on the top-left section of the screen to build the interaction model.
+4. Once the build is complete, click the **{{ book.DevConsole.cek_test }}** menu from the menu list on the left.
+5. Enter the sentence to request help in **{{ book.DevConsole.cek_builder_test_expression_title }}**. For example, enter "Give me the instructions."
+6. Press Enter or click the **{{ book.DevConsole.cek_builder_test_request_test }}** button.
+7. Check whether "Clova.GuideIntent" appears in the **{{ book.DevConsole.cek_builder_test_intent_result }}** field under the **{{ book.DevConsole.cek_builder_test_result_title }}**.<br />
+	![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Intent_Test.png)
+  <div class="note">
+  	<p><strong>Note!</strong></p>
+  	<p>If you have not registered an extension server URI that can be accessed externally, a "{{ book.DevConsole.cek_builder_test_no_response }}" message is displayed as a <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>.</p>
+	</div>
 
 This way, the Sample Dice extension can respond to help requests.
 If you implement the extension server to handle `Clova.CancelIntent`, `Clova.YesIntent`, and `Clova.NoIntent` using this method, the extension will be able to respond to undo actions and positive or negative requests.

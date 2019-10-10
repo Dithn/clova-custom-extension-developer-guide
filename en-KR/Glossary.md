@@ -33,17 +33,17 @@ A web application that provides extended capabilities to Clova for a more divers
 A platform that provides tools and interfaces for development and deployment of a Clova extension. It supports [communication between Clova and extensions](/Develop/CEK_Overview.md).
 
 ### Clova Home extension {#ClovaHomeExtension}
-An [extension](#ClovaExtension) that provides a service for controlling IoT appliances. For more information, see [Building a Clova Home extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.md).
+An [extension](#ClovaExtension) that provides a service for controlling IoT appliances. For more information, see [Building a Clova Home extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink}}).
 
 ### Clova Interface Connect (CIC) {#CIC}
-A platform that serves as an interface between Clova and a client aiming to provide AI assistant services such as PC/mobile apps, mobile devices, or home appliances. For more information, see [CIC overview]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/CIC_Overview.md).
+A platform that serves as an interface between Clova and a client aiming to provide AI assistant services such as PC/mobile apps, mobile devices, or home appliances. For more information, see [CIC overview]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/CIC_Overview.{{ book.DocMeta.FileExtensionForExternalLink }}).
 
 ### Clova app {#ClovaApp}
 
 A Clova app developed by {{ book.ServiceEnv.OrientedService }} and deployed to the iOS or Android platform. These apps can send commands to Clova and also register and manage client devices.
 
 ### Content template {#ContentTemplate}
-Standardized formats for displaying content returned from CIC. For more information, see [Content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md).
+Standardized formats for displaying content returned from CIC. For more information, see [Content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }}).
 
 ### Custom extension {#CustomExtension}
 An [extension](#ClovaExtension) that provides extended capabilities. A custom extension lets you provide third-party services such as music, shopping, or banking. For more information, see [Building a custom extension](/Develop/Guides/Build_Custom_Extension.md).

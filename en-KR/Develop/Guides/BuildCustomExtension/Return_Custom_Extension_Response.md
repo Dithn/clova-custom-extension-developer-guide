@@ -27,7 +27,7 @@ The fields represent the following information:
 
 * `version`: The current version of the custom extension message format is v0.1.0.
 * `response.outputSpeech`: The response "Hi, nice to meet you" is set to be said to the user in English.
-* `response.card`: There is no data to display on the client screen. The data is in the [content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md) format and can be displayed on the client screen via this field.
+* `response.card`: There is no data to display on the client screen. The data is in the [content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }}) format and can be displayed on the client screen via this field.
 * `response.shouldEndSession`: The current session does not end and continuously receives user input. If the field value is set to true, the extension can end the session before receiving the [`SessionEndedRequest`](#HandleSessionEndedRequest) request.
 
 <div class="tip">
@@ -105,7 +105,7 @@ You can write this as follows when providing an HLS audio. At this time, you mus
   <p>In addition to simple or complex sentence type of audio data, we support a combined format (SpeechSet) for client devices with limitations for expressing detailed GUIs such as devices without a display. For more information, see <a href="/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage">Response message</a> in the custom extension message format.</p>
 </div>
 
-To display data on the screen of a client device or Clova app in addition to outputting audio, fill in the content in the `response.card` field in accordance with the [content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md).
+To display data on the screen of a client device or Clova app in addition to outputting audio, fill in the content in the `response.card` field in accordance with the [content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }}).
 
 {% raw %}
 ```json

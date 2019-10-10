@@ -29,22 +29,18 @@ This tutorial checks the operation of the interaction model only.
 
 Connect to the <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a> and check that the Sample Dice extension correctly recognizes the number of dice by completing the following steps:
 
-<ol>
-  <li><p>Click <strong>{{ book.DevConsole.cek_edit}}</strong> on the <strong>{{ book.DevConsole.cek_interaction_model }}</strong> item of the Sample Dice extension.</p></li>
-  <li><p>Click <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> on the top left section of the screen to build the interaction model.</p></li>
-  <li><p>Once the build is complete, select the <strong>{{ book.DevConsole.cek_test }}</strong> menu from the menu list on the left.</p></li>
-  <li><p>In the <strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong>, enter a sentence to roll multiple dice. For example, enter "Roll two dice."</p></li>
-  <li><p>Press Enter or click the <strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong> button.</p></li>
-  <li>
-    <p>Check that <code>ThrowDiceIntent</code> appears in the <strong>{{ book.DevConsole.cek_builder_test_intent_result }}</strong> field under the <strong>{{ book.DevConsole.cek_builder_test_result_title }}</strong>, <code>diceCount</code> appears in the <strong>{{ book.DevConsole.cek_builder_test_slot_result }}</strong> field, and that the correct number of dice appears in the <strong>{{ book.DevConsole.cek_builder_test_slot_data}}</strong> field.</p>
-  	<img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slot_Test.png" />
-    <div class="note">
-    	<p><strong>Note!</strong></p>
-    	<p>If you have not registered an extension server URI that can be accessed externally, a "{{ book.DevConsole.cek_builder_test_no_response }}" message is displayed as a <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>.</p>
-  	</div>
-  </li>
-  <li><p>Repeat steps 4-6 with sentences such as "Roll ten dice" or "Throw four dice."</p></li>
-</ol>
+1. Click **{{ book.DevConsole.cek_edit}}** on the **{{ book.DevConsole.cek_interaction_model }}** item of the Sample Dice extension.
+2. Click **{{ book.DevConsole.cek_builder_menu_build }}** on the top-left section of the screen to build the interaction model.
+3. Once the build is complete, select the **{{ book.DevConsole.cek_test }}** menu from the menu list on the left.
+4. In **{{ book.DevConsole.cek_builder_test_expression_title }}**, type in a sentence to roll multiple dice. For example, type in "Roll two dice."
+5. Press Enter or click the **{{ book.DevConsole.cek_builder_test_request_test }}** button.
+6. Check that `ThrowDiceIntent` appears in the **{{ book.DevConsole.cek_builder_test_intent_result }}** field under the **{{ book.DevConsole.cek_builder_test_result_title }}** `diceCount` appears in the **{{ book.DevConsole.cek_builder_test_slot_result }}** field and that the correct number of dice appears in the **{{ book.DevConsole.cek_builder_test_slot_data}}** field.<br />
+	![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slot_Test.png)
+  <div class="note">
+  	<p><strong>Note!</strong></p>
+  	<p>If you have not registered an extension server URI that can be accessed externally, a "{{ book.DevConsole.cek_builder_test_no_response }}" message is displayed as a <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>.</p>
+	</div>
+7. Repeat steps 4-6 with sentences such as "Roll ten dice" or "Throw four dice."
 
 If the speech recognition is unsatisfactory, you can increase the probability of recognition by adding further types of sample utterances.
 
@@ -65,28 +61,18 @@ Clova analyzes user utterances and sends the analyzed results to the extension s
 Access the <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a> and register the basic information of the extension.
 The main items are as follows:
 
-<ul>
-  <li>Extension information
-    <ul>
-      <li><p><strong>{{ book.DevConsole.cek_id }}</strong>: The unique ID value of the extension. Generally uses a combination of the package name and extension name. Enter the extension ID of Sample Dice as "my.clova.extension.sampledice".</p></li>
-    	<li><p><strong>{{ book.DevConsole.cek_invocation_name }}</strong>: The name used to call the extension. Select a word that can be easily recognized by the Clova app or speaker devices. The invocation name used for the Sample Dice extension is "Sample Dice."</p></li>
-    </ul>
-  </li>
-  <li>Setting up a server connection
-    <ul>
-      <li>
-        <p><strong>{{ book.DevConsole.cek_service_endpoint_url }}</strong>: The REST API server of the extension to communicate with Clova. It must be a publicly accessible URI. In Step 1, enter the URI of the server that executed the Sample Dice code.</p>
-    		<div class="note">
-    			<p><strong>Note!</strong></p>
-    			<p>An HTTP connection can be used for testing but an HTTPS connection is required for the official service. The extension server must use ports 80 and 443 for HTTP and HTTPS connections respectively.</p>
-    		</div>
-      </li>
-      <li><p><strong>{{ book.DevConsole.cek_account_linking }}</strong>: Only use when connecting with the membership information of a third-party using an authorization server (based on OAuth 2.0). Set the Sample Dice extension as <strong>{{ book.DevConsole.cek_no }}</strong>.</p></li>
-    </ul>
-  <li>Deployment information and privacy and compliance information<br />
-    <p>This information is required for extension review and deployment. You do not need to enter this information when following the tutorial.</p>
-  </li>
-</ul>
+* Extension information
+  * **{{ book.DevConsole.cek_id }}**: The unique ID value of the extension. Generally uses a combination of the package name and extension name. Enter the extension ID of Sample Dice as "my.clova.extension.sampledice".
+  * **{{ book.DevConsole.cek_invocation_name }}**: The name used to call the extension. Select a word that can be easily recognized by the Clova app or speaker devices. The invocation name used for the Sample Dice extension is "Sample Dice."
+* Server connection settings
+  * **{{ book.DevConsole.cek_service_endpoint_url }}**: The REST API server of the extension to communicate with Clova. It must be a publicly accessible URI. In Step 1, enter the URL of the server that executed the Sample Dice code.
+		<div class="note">
+			<p><strong>Note!</strong></p>
+			<p>An HTTP connection can be used for testing but an HTTPS connection is required for the official service. The extension server must use ports 80 and 443 for HTTP and HTTPS connections respectively.</p>
+		</div>
+  * **{{ book.DevConsole.cek_account_linking }}**: Only use when connecting with the membership information of a third-party using an authorization server (based on OAuth 2.0). Set the Sample Dice extension as **{{ book.DevConsole.cek_no }}**.
+* Deployment information and privacy and compliance information<br />
+  This information is required for extension review and deployment. You do not need to enter this information when following the tutorial.
 
 ## Step 3. Registering an interaction model {#Step3}
 
@@ -97,55 +83,41 @@ In this tutorial, the Sample Dice extension rolls one dice by default if the use
 ### Creating a new custom intent
 Follow the steps below to make a simple intent to roll one dice upon user request.
 
-<ol>
-  <li><p>Click <strong>{{ book.DevConsole.cek_edit }}</strong> on the <strong>{{ book.DevConsole.cek_interaction_model }}</strong> item of the Sample Dice extension.</p></li>
-  <li><p>Click <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> next to <strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong>.</p></li>
-  <li><p>Enter the name "ThrowDiceIntent" in the input field below<strong>{{ book.DevConsole.cek_builder_new_intent }}</strong>.</p></li>
-  <li>
-    <p>Press Enter or click <strong>{{ book.DevConsole.cek_builder_new_intent_create }}</strong> next to the input field.</p>
-  	<img src="/Develop/Assets/Images/CEK_Tutorial_NewIntent.png" />
-  	<div class="note">
-  	  <p><strong>Note!</strong></p>
-  		<p>The intent name is case-sensitive.</p>
-  	</div>
-  </li>
-</ol>
+1. Click **{{ book.DevConsole.cek_edit }}** on the **{{ book.DevConsole.cek_interaction_model }}** item of the Sample Dice extension.
+2. Click <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> next to **{{ book.DevConsole.cek_builder_list_title_intent }}**.
+3. Enter the name "ThrowDiceIntent" in the input field below **{{ book.DevConsole.cek_builder_new_intent }}**.
+4. Press Enter or click **{{ book.DevConsole.cek_builder_new_intent_create }}** next to the input field.<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_NewIntent.png)
+	<div class="note">
+	  <p><strong>Note!</strong></p>
+		<p>The intent name is case-sensitive.</p>
+	</div>
 
 ### Adding a phrase to the sample utterance list
 Follow the steps below to configure the user utterances to be processed with the intent created above. We will only add one user utterance for this tutorial, but it is beneficial to have as many sample utterances as possible.
 
-<ol>
-  <li><p>Enter "Throw dice" in the <strong>{{ book.DevConsole.cek_builder_intent_expression_title }}</strong> field.</p></li>
-  <li><p>Press Enter or click the <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> button.</p></li>
-  <li>
-    <p>Once you have finished entering all sample utterances, click <strong>{{ book.DevConsole.cek_save }}</strong>.</p>
-    <img src="/Develop/Assets/Images/CEK_Tutorial_SpeechExample.png" style="margin-top:10px; margin-bottom:10px;" />
-  </li>
-</ol>
+1. Enter "Throw dice" in the **{{ book.DevConsole.cek_builder_intent_expression_title }}** field.
+2. Press Enter or click the <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> button.
+3. Once you have finished entering all sample utterances, click **{{ book.DevConsole.cek_save }}**.<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_SpeechExample.png)
 
 ### Building and testing
 To check that the interaction model is operating as intended, build and test the interaction model.
 
-<ol>
-  <li>
-    <p>Click <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> on the upper-left corner of the <strong>Custom extension</strong> screen.</p>
-  	<div class="note">
-  	  <p><strong>Note!</strong></p>
-  		<p>The build takes around 3-5 minutes to complete. Once the build starts, the button changes to a <strong>{{ book.DevConsole.cek_builder_menu_build_in_progress }}</strong> button. It returns to a <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> button again once the build is complete.</p>
-  	</div>
-  </li>
-  <li><p>Once the build is complete, click the <strong>{{ book.DevConsole.cek_test }}</strong> menu below the <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> button.</p></li>
-  <li><p>Enter the sentence to test in the <strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong> field. For example, enter "Roll the dice".</p></li>
-  <li><p>Press Enter or click the <strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong> button.</p>
-  <li>
-    <p>Check whether "ThrowDiceIntent" appears in the <strong>{{ book.DevConsole.cek_builder_test_intent_result }}</strong> field under the <strong>{{ book.DevConsole.cek_builder_test_result_title }}</strong>.</p>
-  	<img src="/Develop/Assets/Images/CEK_Tutorial_Test.png" />
-  	<div class="note">
-    	<p><strong>Note!</strong></p>
-    	<p>If you have not registered an extension server URI that can be accessed externally in step 2, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong> is displayed as "{{ book.DevConsole.cek_builder_test_no_response }}".</p>
-  	</div>
-  </li>
-</ol>
+1. Click **{{ book.DevConsole.cek_builder_menu_build }}** in the upper-left corner of the **Custom extension** screen.
+	<div class="note">
+	  <p><strong>Note!</strong></p>
+		<p>The build takes around 3-5 minutes to complete. Once the build starts, the button changes to a <strong>{{ book.DevConsole.cek_builder_menu_build_in_progress }}</strong> button. It returns to a <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> button again once the build is complete.</p>
+	</div>
+2. Once the build is complete, click the **{{ book.DevConsole.cek_test }}** menu below the **{{ book.DevConsole.cek_builder_menu_build }}** button.
+3. Enter the sentence to test in the **{{ book.DevConsole.cek_builder_test_expression_title }}** field. For example, enter "Roll the dice"
+4. Press Enter or click the **{{ book.DevConsole.cek_builder_test_request_test }}** button.
+5. Check whether "ThrowDiceIntent" appears in the **{{ book.DevConsole.cek_builder_test_intent_result }}** field under the **{{ book.DevConsole.cek_builder_test_result_title }}**.<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_Test.png)
+	<div class="note">
+  	<p><strong>Note!</strong></p>
+  	<p>If you have not registered an extension server URI that can be accessed externally in step 2, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong> is displayed as "{{ book.DevConsole.cek_builder_test_no_response }}".</p>
+	</div>
 
 ## Step 4. Testing the actual execution of the extension {#Step4}
 

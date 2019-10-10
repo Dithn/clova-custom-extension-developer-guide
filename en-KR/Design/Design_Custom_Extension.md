@@ -1,8 +1,8 @@
 # Designing custom extensions
 
-When creating a custom extension, you must first consider how your technology and services can bring the most convenience and benefit to Clova users. The document provides guidelines for designing a custom extension to bring a healthy and beneficial service to users. Note that the Clova functionalities are provided to the users in the name of a "skill" and you must implement a custom extension to provide skills to users.
+When creating a custom extension, you must first decide which user requests your technology and services will handle, and which responses they will return on Clova. This document describes how to design custom extensions. Note that the Clova functionalities are provided to the users in the name of a "skill" and you must implement a custom extension to provide skills to users.
 
-It is possible to create a custom extension for looking up web service information, shopping and delivery services, interactive games, broadcasts, real-time briefings, IoT device control, and even for other voice-initiated activities or services. To design a custom extension, you must follow the guidelines stated below. Note that the details covered here are only the basic recommendations for designing the custom extension with examples. You can further design and implement the custom extension according to your own business experience and service characteristics.
+It is possible to create a custom extension for looking up web service information, shopping and delivery services, interactive games, broadcasts, real-time briefings, and even for other voice-initiated activities or services. When designing a custom extension, complete the following steps: Note that the details covered here are only the basic recommendations for designing the custom extension with examples. You can further design and implement the custom extension according to your own business experience and service characteristics.
 
 * [Setting goals](#SettingGoal)
 * [Writing user scenario scripts](#MakeUseCaseScenarioScript)
@@ -33,18 +33,18 @@ This goal can be written again into a series of detailed, more specific goals. S
 Below is an example of detailed goals for a pizza delivery service.
 
 | Detailed goal ID | Classification                | Goal                                                            |
-|------------|--------------------|---------------------------------------------------------------|
+|:----------:|-----------------------|-----------------------------------------------------------------|
 | #1         | Call the service           | A user can start using the pizza delivery service by saying "Start Pizzabot" or "On Pizzabot _[execution commands registered by extension]_"    |
-| #2         | Usage suggestions or recommendations     | Once the pizza delivery service starts, the user can receive information on the next or the anticipated action in the pizza delivery process. |
-| #3         | Menu lookup and selection      | The user can view the menu and choose their pizza.                                   |
-| #4         | Brand lookup and selection     | The user can select a pizza brand of their choice.                                 |
-| #5         | Order and payment          | The user can order pizza if information on the pizza type, quantity, and delivery address exists. |
-| #6         | Usage suggestions or recommendations     | If the user selects a pizza brand of their choice, they can get suggestions for the pizza, the delivery destination, and the payment method based on their latest order information. |
-| #7         | Usage suggestions or recommendations     | If the user requests a different menu, they can get a menu recommendation from the custom extension. |
-| #8         | Order and payment          | For payment, the user can use the camera to scan and apply coupon discounts.                    |
-| #9         | Checking delivery             | Once the order is complete, the user checks the preparation and delivery status.  |
-| #10        | End service            | The user can end the service after completing the desired task.
-| ...        | ...                 | ...                                                            |
+| #2         | Usage suggestions or recommendations   | Once the pizza delivery service starts, the user can receive information on the next or the anticipated action in the pizza delivery process.       |
+| #3         | Menu lookup and selection     | The user can view the menu and choose their pizza.                                                                            |
+| #4         | Brand lookup and selection   | The user can select a pizza brand of their choice.                                                                                   |
+| #5         | Order and payment          | The user can order pizza if information on the pizza type, quantity, and delivery address exist.                                              |
+| #6         | Usage suggestions or recommendations   | If the user selects a pizza brand of their choice, they can get suggestions for the pizza, the delivery destination, and the payment method based on their latest order information.               |
+| #7         | Usage suggestions or recommendations   | If the user requests a different menu, they can get a menu recommendation from the extension.                                     |
+| #8         | Order and payment          | For payment, the user can use the camera to scan and apply coupon discounts.                                                                |
+| #9         | Checking delivery             | Once the order is complete, the user checks the preparation and delivery status.                                          |
+| #10        | End service           | The user can end the service after completing the desired task.                                                                |
+| ...        | ...                   | ...                                                                                                                      |
 
 <div class="note">
   <p><strong>Note!</strong></p>
@@ -58,9 +58,8 @@ The user scenario script anticipates the conversation between the user and Clova
 See the following recommendations for writing user scenario scripts:
 
 * Write in a colloquial style rather than in a written style.
-* Do not give too much information or choices when providing information.
 * Make suggestions for the next action or make service usage recommendations to the user.
-* Avoid use of repetitive expressions.
+* Avoid repetitive/redundant expressions.
 * Keep in mind that an unexpected user request or situation can occur at any point.
 
 Next is an example of writing a script by dividing the usage scenario into multi-turn requests and single-turn requests.
@@ -79,7 +78,7 @@ Next is an example of writing a script by dividing the usage scenario into multi
 | User      | Tell me another menu.                                                                                                   | #7             |
 | Extension | I can order one super supreme pizza and one 1.5 liter coke sent to 111, AA-dong. The total is 20 USD and you can pay the deliveryman. Shall I order it?          | #2, #7         |
 | User     | Yes.                                                                                                             | #5             |
-| Extension | I have made your order.                                                                                                | #2             |
+| Extension | I have made your order.                                                                                                | #8             |
 | User     | Exit Pizzabot.                                                                                                      | #10            |
 
 * Single-turn request scenario
@@ -87,7 +86,7 @@ Next is an example of writing a script by dividing the usage scenario into multi
 | Speaker   | Sample utterance                                              | Relevant detailed goal  |
 |-----------|------------------------------------------------------|-------------|
 | User      | Update me on the order from Pizzabot.                               | #1, #9      |
-| Extension | It's on its way. Please wait a little while longer.                 | #9          |
+| Extension | It's on its way. Please wait a little while longer.                       | #9          |
 
 ## Defining the skill name {#DefineInvocationName}
 
@@ -106,11 +105,11 @@ The **skill name** and **invocation name** must satisfy the following conditions
   <tbody>
     <tr>
       <td>No one-word names or universally used words</td>
-      <td>One-word names are not permitted unless they are the names of private brands or services. Also, universally used words such as "sports news," are not permitted. It is recommended that you combine common words with another name such as the name of the developer, developer company, service, or brand (e.g., "Taro's sports news").</td>
+      <td>One-word names cannot be used unless they are the names of private brands or services. Also, universally used words such as "sports news," are not permitted. It is recommended that you combine common words with another name such as the name of the developer, developer company, service, or brand (e.g., "Taro's sports news").</td>
     </tr>
     <tr>
       <td>No words that refer to the name of a person or place</td>
-      <td>Using the name of a person or place is not permitted. In some cases, the use may be permitted after a review if only a part of the name of a person or place is used.
+      <td>The name of a person or place cannot be used. In some cases, the use may be permitted after a review if only a part of the name of a person or place is used.
         <ul>
           <li>Not permitted: "King Sejong the Great," "Yi Sun-shin," "Seoul City," "Gangnam District"</li>
           <li>Permitted after review: "King Sejong's Korean class," "Hotspots in Seoul"</li>
@@ -119,7 +118,7 @@ The **skill name** and **invocation name** must satisfy the following conditions
     </tr>
     <tr>
       <td>No words or expressions that affect the functions of Clova</td>
-      <td>The name cannot contain any expressions that affect the functions of Clova.
+      <td>Names that contain any expressions that affect the functions of Clova cannot be used.
         <ul>
           <li>Clova invocation words: "Clova," "Hey Clova," "Hey Sally," "Hey Jessica," "Hey Jjanggu"</li>
           <li>Default Clova skill invocation words: Expressions to execute and invoke basic Clova skills such as "Today's weather" and "News headlines"</li>
@@ -134,11 +133,11 @@ The **skill name** and **invocation name** must satisfy the following conditions
     </tr>
     <tr>
       <td>No names that are the same as or similar to another skill</td>
-      <td>The names already in use by another skill or similar names are not permitted.</td>
+      <td>The names already in use by another skill or similar names cannot be used.</td>
     </tr>
     <tr>
       <td>No name that could be easily misunderstood</td>
-      <td>The following names may be misleading and are not allowed:
+      <td>The following names that may be misleading cannot be used:
         <ul>
           <li>Names that can be mistaken for those of a third party {{ book.ServiceEnv.OrientedService }} or an affiliated company (e.g. Naver fishing master)</li>
           <li>The <strong>skill name</strong> and <strong>invocation name</strong> are very different to the point of having contradicting meanings (e.g. The skill name is "Cat meowing" and the invocation name is "Dog barking")</li>
@@ -148,7 +147,7 @@ The **skill name** and **invocation name** must satisfy the following conditions
     </tr>
     <tr>
       <td>No names that violate the Terms and Conditions</td>
-      <td>The names must comply with the <a href="{{ book.ServiceEnv.CEKTermsOfUseURI }}" target="_blank">Clova extensions kit Terms and Conditions</a>. Names that infringe on the rights of a third party or use obscene expressions are not allowed.</td>
+      <td>The names must comply with the <a href="{{ book.ServiceEnv.CEKTermsOfUseURI }}" target="_blank">Clova extensions kit Terms and Conditions</a>. Names that infringe the rights of a third party or use obscene expressions cannot be used.</td>
     </tr>
     <tr>
       <td>Other precautions</td>
@@ -184,8 +183,25 @@ Before defining the interaction model in the Clova developer console, there is a
 
 Intent is a category used for processing user requests. It is usually classified using the **verb** factor in a user's speech. Then it is divided into a custom intent or built-in intent.
 
-* [Custom intent](#CustomIntent)
 * [Built-in intent](#BuiltinIntent)
+* [Custom intent](#CustomIntent)
+
+#### Built-in intent {#BuiltinIntent}
+
+The built-in intent is declared by the Clova platform for shared use on common user request types. The following built-in intents are predefined as commonly invoked intents:
+
+| Built-in intent              | Intent                    | Sample response utterance                      |
+|-----------------------------------|-------------------------|------------------------------------------------|
+| `Clova.CancelIntent`              | Undo action request          | "Cancel," "Cancel please"                             |
+| `Clova.GuideIntent`               | Help request             | "What can you do?", "Tell me how to use it"          |
+| `Clova.NextIntent`                | Next content request        | "Next," "Play the next song"                        |
+| `Clova.NoIntent`                  | Negative response (e.g. No)   | "No," "No, thank you," "Absolutely not"                       |
+| `Clova.PauseIntent`               | Pause request.     | "Pause for a moment," "Pause."                        |
+| `Clova.PreviousIntent`            | Previous content request        | "Previous," "Play the previous song"                       |
+| `Clova.RequestAlternativesIntent` | Request new content playback | "Try something else", "Play something else"             |
+| `Clova.ResumeIntent`              | Resume play request          | "Play again," "Play the song again"                 |
+| `Clova.StopIntent`                | Cancel play request          | "Stop"                                    |
+| `Clova.YesIntent`                 | Positive response (e.g. Yes.)      | "Yes," "Sure," "All right," "Certainly," "Okay" |
 
 #### Custom intent {#CustomIntent}
 
@@ -208,23 +224,6 @@ Based on this example, we can see that defining the interaction model of a pizza
 
 Then, you must **define what information ([Slot](#Slot)) is to be recognized** from the utterance of the "OrderPizza" intent and **list various [sample utterances](#UtteranceExample)** on the types of user utterances that can be processed.
 
-#### Built-in intent {#BuiltinIntent}
-
-The built-in intent is a specification declared by the Clova platform for shared used on common user request types. As a commonly invoked intents, the following user requests are allowed:
-
-| Built-in intent       | Intent               | Sample response utterance                                      |
-|---------------------------|-------------------|----------------------------------------------------------|
-| `Clova.CancelIntent`                | Undo action request        | "Cancel," "Cancel please"                                          |
-| `Clova.GuideIntent`                 | Help request          | "What can you do?", "Tell me how to use it"                           |
-| `Clova.NextIntent`                  | Next content request      | "Next," "Play the next song"                                       |
-| `Clova.NoIntent`                    | Negative response (e.g. No) | "No," "No, thank you," "Absolutely not"                                     |
-| `Clova.PauseIntent`                 | Pause request.   | "Pause for a moment," "Pause."                                       |
-| `Clova.PreviousIntent`              | Previous content request      | "Previous," "Play the previous song"                                      |
-| `Clova.RequestAlternativesIntent`   | Request new content playback | "Try something else", "Play something else"                    |
-| `Clova.ResumeIntent`                | Resume play request       | "Play again," "Play the song again"                                  |
-| `Clova.StopIntent`                  | Cancel play request       | "Stop"                                                 |
-| `Clova.YesIntent`                   | Positive response (e.g. Yes.)   | "Yes," "Sure," "All right," "Certainly," "Okay"                   |
-
 ### Slot {#Slot}
 
 A slot is the information acquired from a user utterance and the **noun** factor used in the utterance can become a slot. When defining [custom intent](#Intent), you must define the slot required by the corresponding intent. To explain this more by comparing it with software development, the intent is a function or handler to process a specific type of user request while the slots are parameters required for this function or handler. From the utterance, "Order two boxes of pepperoni pizza," you can see that information on pizza type "pepperoni pizza" and quantity "two" are required to process the "OrderPizza" intent. Therefore, you must identify the information (slot) needed before defining the intent.
@@ -236,7 +235,7 @@ When declaring a slot, you must classify the type of information in the slot whi
 
 #### Built-in slot type {#BuiltinSlotType}
 
-The built-in slot type is an information type pre-defined by Clova which defines information expression that can be universally used in all services (extension). The built-in slot type is mainly used for recognizing information such as time, place, and quantity. For the above utterance, a built-in slot type can be used to recognize the information of "two boxes." Clova provides the following built-in slot types:
+The built-in slot type is an information type pre-defined by Clova which defines information expression that can be universally used in all services (extension). The built-in slot type is mainly used for recognizing information such as the time, place, or number. For the above utterance, a built-in slot type can be used to recognize the information of "two boxes." Clova provides the following built-in slot types:
 
 | Built-in slot type | Description                                            |
 | ----------------------|------------------------------------------------|
@@ -254,14 +253,15 @@ The built-in slot type is an information type pre-defined by Clova which defines
 
 #### Custom slot type {#CustomSlotType}
 
-The custom slot type is an information type specialized to the domain of the provided service (extension) and is mainly comprised of proper nouns or nouns. For the aforementioned utterance, the "OrderPizza" intent must identify the relevant information (slot) for the pizza type from user utterance, but there is also a high possibility that the pizza type expressions will be used only in services related to pizza. Therefore, you can define a custom slot type like "PIZZA_TYPE" and declare various items in "PIZZA_TYPE" such as "pepperoni pizza," "combination pizza," and "cheese pizza," which can be ordered from the pizza delivery service.
+The custom slot type is an information type specialized to the provided service (extension) and is mainly comprised of proper nouns or nouns. For the aforementioned utterance, the "OrderPizza" intent must identify the relevant information (slot) for the pizza type from user utterance, but there is also a high possibility that the pizza type expressions will be used only in services related to pizza. Therefore, you can define a custom slot type like "PIZZA_TYPE" and declare various items in "PIZZA_TYPE" such as "pepperoni pizza," "combination pizza," and "cheese pizza," which can be ordered from the pizza delivery service.
 
 In a sentence however, these items can be expressed in various ways with a same or similar meaning. "Barbecue pizza" has the same meaning as "BBQ pizza" and long names, such as "shrimp golden crust pizza," may be shortened to "shrimp gold-crust pizza." Therefore, there is a need to not only declare the items classified by the concept but also the representative term for each item and its synonyms when declaring custom slot types. This allows for converting the various synonyms used in the user utterance to the representative term during the recognition process and helps to receive a unified value of information under a similar concept for when the custom extension is handling the intent.
 
-Once the slot type is defined in this way, you must define the name of the slot to be used in each intent and declare its slot type. For example, you can declare a "pizzaType" slot for the pizza type information and a "pizzaAmount" slot for the number of pizzas for the "OrderPizza" intent and designate the "PIZZA_TYPE" you defined as a custom slot type and the CLOVA.NUMBER predefined built-in slot type to the slots, respectively.
+Once the slot type is defined in this way, you must define the name of the slot to be used in each intent and declare its slot type. For example, you can declare a "pizzaType" slot for the pizza type information and a "pizzaAmount" slot for the number of pizzas for the "OrderPizza" intent, and designate the "PIZZA_TYPE" you defined as a custom slot type and the predefined `CLOVA.NUMBER` built-in slot type to the slots, respectively.
 
 ###  Sample utterance {#UtteranceExample}
-You can list various sample of user utterances when defining the intent. These sample become the base data necessary for Clova to recognize diverse user expressions with similar intentions and can be used for identifying the location of the aforementioned slot within user utterance. Well written sample utterances help to build a strong interaction model for user intention recognition. When writing sample utterances, it is highly recommended that you follow the recommendations below:
+
+You can list various sample of user utterances when defining the intent. The user expresses the words with same intents in various ways depending on the tone or the situation. These sample become the base data necessary for Clova to recognize diverse user expressions with similar intentions and can be used for identifying the location of the aforementioned slot within user utterance. Well written sample utterances help to build a strong interaction model for user intention recognition. When writing sample utterances, it is highly recommended that you follow the recommendations below:
 
 * Input as many sample utterances as possible conveying the same intention but with different expressions.
 * Write sample utterances with variations without duplicated patterns.

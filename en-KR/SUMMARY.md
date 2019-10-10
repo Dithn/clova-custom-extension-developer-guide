@@ -9,11 +9,10 @@
 * [Designing custom extensions](/Design/Design_Custom_Extension.md)
   * [Setting goals](/Design/Design_Custom_Extension.md#SettingGoal)
   * [Writing user scenario scripts](/Design/Design_Custom_Extension.md#MakeUseCaseScenarioScript)
-  * [Defining the skill name](/Design/Design_Custom_Extension.md#DefineInvocationName)
   * [Defining an interaction model](/Design/Design_Custom_Extension.md#DefineInteractionModel)
     * [Intent](/Design/Design_Custom_Extension.md#Intent)
-      * [Custom intent](/Design/Design_Custom_Extension.md#CustomIntent)
       * [Built-in intent](/Design/Design_Custom_Extension.md#BuiltinIntent)
+      * [Custom intent](/Design/Design_Custom_Extension.md#CustomIntent)
     * [Slot](/Design/Design_Custom_Extension.md#Slot)
       * [Built-in slot type](/Design/Design_Custom_Extension.md#BuiltinSlotType)
       * [Custom slot type](/Design/Design_Custom_Extension.md#CustomSlotType)
@@ -96,6 +95,7 @@
     * [`LaunchRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtLaunchRequest)
     * [`SessionEndedRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtSessionEndedRequest)
   * [Response messages](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)
+    * [SpeechInfoObject](/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject)
 
 ## Developer console guides
 

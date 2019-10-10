@@ -11,12 +11,11 @@ You can test the registered custom extension or interaction model prior to deplo
 
 In order to deploy the custom extension, the [interaction model must be registered](/DevConsole/Guides/Register_Interaction_Model.md). The defined interaction must go through the build process to [test](#TestInteractionModel) or use the newly written or updated details. Build the interaction model by completing the following steps:
 
-<ol>
-  <li>On the list of registered custom extensions, click the <strong>{{ book.DevConsole.cek_edit }}</strong> menu of the custom extension to build the interaction model.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png" />
-  <li>On the <strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.cek_builder_header_title_dashboard }}</strong> screen, click <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> on the top left section to build the interaction model. It may take around 3-5 minutes depending on the size of the interaction model, etc.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Build_Interaction_Model.png" />
-</ol>
+1. On the list of registered custom extensions, click the **{{ book.DevConsole.cek_edit }}** menu of the custom extension to build the interaction model.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png)
+2. On the **{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}** screen, click **{{ book.DevConsole.cek_builder_menu_build }}** on the top-left corner. Then, the interaction interaction model build will begin.<br />
+  It may take around 3-5 minutes depending on the size of the interaction model, etc.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Build_Interaction_Model.png)
 
 <div class="tip">
   <p><strong>Tip!</strong></p>
@@ -27,19 +26,18 @@ In order to deploy the custom extension, the [interaction model must be register
 
 Once the [interaction model build](#BuildInteractionModel) is complete, you can test the interaction model. Follow the steps below to test the utterances:
 
-<ol>
-  <li>Click the <strong>{{ book.DevConsole.cek_test }}</strong> menu below the side menu on the left. When you click the menu, the <strong>{{ book.DevConsole.cek_interaction_model }}:{{ book.DevConsole.cek_test }}</strong> screen will be displayed.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Test_Menu.png" />
-  <li>On the <strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong> field, enter the utterance to test and click <strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong>.</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Test_Utterance_Example.png" />
-</ol>
+1. Click the **{{ book.DevConsole.cek_test }}** menu below the side menu on the left.<br />
+  When you click the menu, the **{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.cek_test }}** screen will be displayed.<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Test_Menu.png)
+2.**{{ book.DevConsole.cek_builder_test_expression_title }}** On the field, enter the utterance to test and click **{{ book.DevConsole.cek_builder_test_request_test }}**.</li>
+  ![](/DevConsole/Assets/Images/DevConsole-Test_Utterance_Example.png)
 
 Once the test is complete, you can check the results. Based on the results below, you must check the following items:
 
-* Use the **{{ book.DevConsole.cek_builder_test_service_response }}** item to check whether the [registered custom extension](/DevConsole/Guides/Register_Custom_Extension.md) is responding properly.
-* Use the **{{ book.DevConsole.cek_builder_test_intent_result }}** and **{{ book.DevConsole.cek_builder_test_slot_result }}** item to check whether intents and slots are recognized as intended.
-* Use the **{{ book.DevConsole.cek_builder_test_request_json }}** item to check whether there are any problems with the [request messages](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage) which the CEK sends to the custom extension. In addition, you can perform the test again after editing the details of the corresponding JSON by pressing **{{ book.DevConsole.cek_builder_test_test_again }}**.
-* Use the **{{ book.DevConsole.cek_builder_test_response_json }}** item to check whether the registered custom extension sends [response messages](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage) as intended.
+* You must use the **{{ book.DevConsole.cek_builder_test_service_response }}** item to check whether the [registered custom extension](/DevConsole/Guides/Register_Custom_Extension.md) is responding properly.
+* You must use the **{{ book.DevConsole.cek_builder_test_intent_result }}** and **{{ book.DevConsole.cek_builder_test_slot_result }}** items to check whether intents and slots are recognized as intended.
+* You must use the **{{ book.DevConsole.cek_builder_test_request_json }}** item to check whether there are any problems with the [request messages](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage) which the CEK sends to the custom extension. In addition, you can perform the test again after editing the details of the corresponding JSON by pressing **{{ book.DevConsole.cek_builder_test_test_again }}**.
+* You must use the **{{ book.DevConsole.cek_builder_test_response_json }}** item to check whether the registered custom extension sends [response messages](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage) as intended.
 
 ![](/DevConsole/Assets/Images/DevConsole-Test_Result.png)
 

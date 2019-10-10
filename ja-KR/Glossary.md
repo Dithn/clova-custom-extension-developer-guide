@@ -33,17 +33,17 @@ Clovaプラットフォームと連携するクライアントデバイス、ま
 Clova Extensionを開発および配布する際に、必要なツールとインターフェースを提供するプラットフォームです。[ClovaとExtensionのコミュニケーション](/Develop/CEK_Overview.md)をサポートします。
 
 ### Clova Home Extension {#ClovaHomeExtension}
-IoTデバイス制御サービスを提供するための[Extension](#ClovaExtension)です。詳細については、[Clova Home Extensionを作成する]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.md)ドキュメントを参照してください。
+IoTデバイス制御サービスを提供するための[Extension](#ClovaExtension)です。詳細については、[Clova Home Extensionを作成する]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink}})ドキュメントを参照してください。
 
 ### Clova Interface Connect（CIC） {#CIC}
-AIアシスタントサービスを提供するパソコン/モバイルアプリ、モバイルデバイスまたは家電製品などのクライアントに、Clovaとの連携ができるインターフェースを提供するプラットフォームです。詳細については、[CICの概要]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/CIC_Overview.md)ドキュメントを参照してください。
+AIアシスタントサービスを提供するパソコン/モバイルアプリ、モバイルデバイスまたは家電製品などのクライアントに、Clovaとの連携ができるインターフェースを提供するプラットフォームです。詳細については、[CICの概要]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/CIC_Overview.{{ book.DocMeta.FileExtensionForExternalLink }})ドキュメントを参照してください。
 
 ### Clovaアプリ {#ClovaApp}
 
 {{ book.ServiceEnv.OrientedService }}が開発し、iOSおよびAndroidプラットフォームで配布したClovaアプリです。Clovaに指示を与えるだけでなく、クライアントデバイスを登録し、管理できるアプリです。
 
 ### コンテンツテンプレート {#ContentTemplate}
-CICから渡されるコンテンツ情報をスケジュールカテゴリに合った形で標準化したものです。詳細については、[content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md)ドキュメントを参照してください。
+CICから渡されるコンテンツ情報をスケジュールカテゴリに合った形で標準化したものです。詳細については、[content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }})ドキュメントを参照してください。
 
 ### Custom Extension {#CustomExtension}
 任意の拡張された機能を提供する[Extension](#ClovaExtension)です。Custom Extensionを利用すると、音楽、ショッピング、金融など、外部サービスの機能を提供できます。詳細については、[Custom Extensionを作成する](/Develop/Guides/Build_Custom_Extension.md)ドキュメントを参照してください。

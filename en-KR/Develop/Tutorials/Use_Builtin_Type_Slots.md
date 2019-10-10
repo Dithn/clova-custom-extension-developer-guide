@@ -32,50 +32,36 @@ Commonly used information types are predefined in Clova so that it can be univer
 
 Connect to the <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a> and declare the slot type to use in the Sample Dice extension as follows:
 
-<ol>
-  <li><p>Click <strong>{{ book.DevConsole.cek_edit }}</strong> on the <strong>{{ book.DevConsole.cek_interaction_model }}</strong> item of the Sample Dice extension.</p></li>
-  <li><p>Click <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> next to <strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>.</p></li>
-  <li>
-    <p>Select the <code>CLOVA.NUMBER</code> checkbox in the table below <strong>{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}</strong>.</p>
-    <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Register_Slot_Type.png" />
-  </li>
-  <li><p>Click <strong>{{ book.DevConsole.cek_save }}</strong> next to <strong>{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}</strong>.</p></li>
-</ol>
+1. Click **{{ book.DevConsole.cek_edit }}** on the **{{ book.DevConsole.cek_interaction_model }}** item of the Sample Dice extension.
+2. Click <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> next to **{{ book.DevConsole.cek_builder_list_title_slottype }}**.
+3. Select the `CLOVA.NUMBER` checkbox in the table below **{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}**.<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Register_Slot_Type.png)
+4. Click **{{ book.DevConsole.cek_save }}** next to **{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}**.
 
 ### Registering slots to an intent
 The number of dice to roll is additional information required for the action of rolling dice. Since we registered the action of rolling the dice as an intent named `ThrowDiceIntent` in the first tutorial, we now need to register a slot to this intent to indicate the number of dice.
 You can register the slot as follows on the same window that was previously used for declaring the slot type:
 
-<ol>
-  <li><p>Select <code>ThrowDiceIntent</code>, a custom intent, below <strong>{{ book.DevConsole.cek_builder_list_title_intent }}</strong>.</p></li>
-  <li><p>Enter "diceCount" in the input field below <strong>{{ book.DevConsole.cek_builder_intent_slot_title }}</strong>.</p></li>
-  <li><p>Press Enter or click the <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> button next to the input field.</p></li>
-  <li><p>Click the <strong>{{ book.DevConsole.cek_builder_utterance_select_slot }}</strong> combo box next to the registered "diceCount."</p></li>
-  <li>
-    <p>On the displayed list, select <code>CLOVA.NUMBER</code> of the <strong>{{ book.DevConsole.cek_builder_select_slottype_builtin }}</strong> registered earlier.</p>
-    <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Add_Slot.png" />
-  </li>
-  <li><p>Click <strong>{{ book.DevConsole.cek_save }}</strong> on the top-right corner of the screen.</p></li>
-</ol>
+1. Select `ThrowDiceIntent`, a custom intent, below **{{ book.DevConsole.cek_builder_list_title_intent }}**.
+2. Type in "diceCount" in the input field below **{{ book.DevConsole.cek_builder_intent_slot_title }}**.
+3. Press Enter or click the <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> button next to the input field.
+4. Click the **{{ book.DevConsole.cek_builder_utterance_select_slot }}** combo box next to the registered "diceCount."
+5. On the displayed list, select `CLOVA.NUMBER` of the **{{ book.DevConsole.cek_builder_select_slottype_builtin }}** registered earlier.<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Add_Slot.png)
+6. Click **{{ book.DevConsole.cek_save }}** in the top-right corner of the screen.
 
 ### Entering a sample utterance
 In the first tutorial, we added a simple sample utterance for throwing a die. Now, we must enter a new sample utterance to specify the number of dice to roll using a slot.
 
 On the same window used to register the slot, enter the sample utterance as follows:
 
-<ol>
-  <li>
-    <p>Enter "Roll two dice" in the input field below <strong>{{ book.DevConsole.cek_builder_intent_expression_title }}</strong>.</p>
-    <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Sample_Utterance.png" />
-  </li>
-  <li><p>Press Enter or click the <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> button.</p></li>
-  <li><p>Drag-and-select the text "Two" with the mouse from the list of registered sentences.</p></li>
-  <li>
-    <p>Select "diceCount" below <strong>{{ book.DevConsole.cek_builder_slot_layer_select_slot }}</strong>.</p>
-    <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Set_Slot.png" />
-  </li>
-  <li><p>Repeat steps 1-4 with sentences "Throw one" and "Roll five dices."</p></li>
-</ol>
+1. Type in "Roll two dice" in the input field below **{{ book.DevConsole.cek_builder_intent_expression_title }}**.<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Sample_Utterance.png)
+2. Press Enter or click the <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> button.
+3. Drag-and-select the text "Two" with the mouse from the list of registered sentences.
+4. Select "diceCount" below **{{ book.DevConsole.cek_builder_slot_layer_select_slot }}**.<br />
+  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Set_Slot.png)
+5. Repeat steps 1-4 with sentences "Throw one" and "Roll five dices."
 
 ## Step 2. Implementing slot processing {#Step2}
 
@@ -128,22 +114,18 @@ This tutorial checks the operation of the interaction model only.
 
 Connect to the <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova developer console</a> and check that the Sample Dice extension correctly recognizes the number of dice by completing the following steps:
 
-<ol>
-  <li><p>Click <strong>{{ book.DevConsole.cek_edit}}</strong> on the <strong>{{ book.DevConsole.cek_interaction_model }}</strong> item of the Sample Dice extension.</p></li>
-  <li><p>Click <strong>{{ book.DevConsole.cek_builder_menu_build }}</strong> on the top left section of the screen to build the interaction model.</p></li>
-  <li><p>Once the build is complete, select the <strong>{{ book.DevConsole.cek_test }}</strong>  menu from the menu list on the left.</p></li>
-  <li><p>In the <strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong>, enter a sentence to roll multiple dice. For example, enter "Roll two dice."</p></li>
-  <li><p>Press Enter or click the <strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong> button.</p></li>
-  <li>
-    <p>Check that <code>ThrowDiceIntent</code> appears in the <strong>{{ book.DevConsole.cek_builder_test_intent_result }}</strong> field under the <strong>{{ book.DevConsole.cek_builder_test_result_title }}</strong>, <code>diceCount</code> appears in the <strong>{{ book.DevConsole.cek_builder_test_slot_result }}</strong> field, and that the correct number of dice appears in the <strong>{{ book.DevConsole.cek_builder_test_slot_data}}</strong> field.</p>
-  	<img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slot_Test.png" />
-    <div class="note">
-    	<p><strong>Note!</strong></p>
-    	<p>If you have not registered an extension server URI that can be accessed externally, a "{{ book.DevConsole.cek_builder_test_no_response }}" message is displayed as a <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>.</p>
-  	</div>
-  </li>
-  <li><p>Repeat steps 4-6 with sentences such as "Roll ten dice" or "Throw four dice."</p></li>
-</ol>
+1. Click **{{ book.DevConsole.cek_edit}}** on the **{{ book.DevConsole.cek_interaction_model }}** item of the Sample Dice extension.
+2. Click **{{ book.DevConsole.cek_builder_menu_build }}** in the top-left section of the screen to build the interaction model.
+3. Once the build is complete, select the **{{ book.DevConsole.cek_test }}** menu from the menu list on the left.
+4. In **{{ book.DevConsole.cek_builder_test_expression_title }}**, type in a sentence to roll multiple dice. For example, type in "Roll two dice."
+5. Press Enter or click **{{ book.DevConsole.cek_builder_test_request_test }}**.
+6. Check that `ThrowDiceIntent` appears in the **{{ book.DevConsole.cek_builder_test_intent_result }}** field under the **{{ book.DevConsole.cek_builder_test_result_title }}** `diceCount` appears in the **{{ book.DevConsole.cek_builder_test_slot_result }}** field and that the correct number of dice appears in the **{{ book.DevConsole.cek_builder_test_slot_data}}** field.<br />
+  <img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slot_Test.png" />
+  <div class="note">
+  	<p><strong>Note!</strong></p>
+  	<p>If you have not registered an extension server URI that can be accessed externally, a "{{ book.DevConsole.cek_builder_test_no_response }}" message is displayed as a <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>.</p>
+	</div>
+7. Repeat steps 4-6 with sentences, such as "Roll ten dice" or "Throw four dice."
 
 If the speech recognition is unsatisfactory, you can increase the probability of recognition by adding further types of sample utterances.
 

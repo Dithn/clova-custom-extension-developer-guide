@@ -33,7 +33,7 @@ The revision history of this document is as follows:
       <td>
         <ul>
           <li>Separated the Design guidelines for Custom extensions document into <a href="/Design/Design_Custom_Extension.md">Designing the custom extension</a>, <a href="/Design/Supported_Audio_Format.md">Supported audio formats</a>, and <a href="/Design/Rules_For_Content.md">Guidelines for providing content</a> pages</li>
-          <li>Added the container formats supported by Clova in the details of <a href="/Design/Audio.md#SupportedAudioFormat">Supported audio formats</a></li>
+          <li>Added the container formats supported by Clova in the details of <a href="/Design/Supported_Audio_Format.md">Supported audio formats</a></li>
         </ul>
       </td>
     </tr>
@@ -67,7 +67,7 @@ The revision history of this document is as follows:
       <td>2019-05-20</td>
       <td>
         <ul>
-          <li>Token and URL fields of <a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a></li>
+          <li>Token and URL fields of <a href="/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject">SpeechInfoObject</a></li>
         </ul>
       </td>
     </tr>
@@ -75,7 +75,7 @@ The revision history of this document is as follows:
       <td>2019-04-01</td>
       <td>
         <ul>
-          <li>Added a token field to the <a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a> and the <a href="/Develop/Guides/Monitor_TTS_Playback_Status.md">Checking TTS playback status</a> guide so that the extension can receive reports on the speech (TTS) playback status of the client</li>
+          <li>Added a token field to the <a href="/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject">SpeechInfoObject</a> and the <a href="/Develop/Guides/Monitor_TTS_Playback_Status.md">Checking TTS playback status</a> guide so that the extension can receive reports on the speech (TTS) playback status of the client</li>
         </ul>
       </td>
     </tr>
@@ -83,7 +83,7 @@ The revision history of this document is as follows:
       <td>2019-03-25</td>
       <td>
         <ul>
-          <li>Added the contentType field to the <a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a> of the custom extension message to provide the HLS audio</li>
+          <li>Added the contentType field to the <a href="/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject">SpeechInfoObject</a> of the custom extension message to provide the HLS audio</li>
           <li>Corrected some errors and examples in the link</li>
         </ul>
       </td>
@@ -232,7 +232,7 @@ The revision history of this document is as follows:
       <td>2018-02-05</td>
       <td>
         <ul>
-          <li>Modified the description of invoking the extension (<a href="CEK/Guides/Build_Custom_Extension.md#HandleLaunchRequest">LaunchRequest</a>) and applied the changed contents to the <a href="/Design/Design_Custom_Extension.md">Designing custom extensions</a></li>
+          <li>Modified the description of invoking the extension (<a href="/Develop/Guides/Build_Custom_Extension.md#HandleLaunchRequest">LaunchRequest</a>) and applied the changed contents to the <a href="/Design/Design_Custom_Extension.md">Designing custom extensions</a></li>
           <li>Specified <a href="/Develop/CEK_Overview.md#WhatisCEK">HTTP versions</a> used for communicating between CEK and extensions</li>
           <li>Added the <a href="/Develop/Tutorials/Handle_Builtin_Intents.md">Handling built-in intents</a> page to the <a href="/Develop/Tutorials/Introduction.md">tutorial</a></li>
           <li>Specified the <a href="/DevConsole/Guides/Register_Custom_Extension.md#SetServerConnection">port</a> to be used by the extension server</li>

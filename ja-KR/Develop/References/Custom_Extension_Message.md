@@ -1,6 +1,6 @@
 <!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
 
-# Custom Extensionのメッセージ {#CustomExtMessage}
+# Custom Extensionのメッセージ
 Custom Extensionのメッセージは、CEKとCustom Extensionが情報をやり取りする際に使用されるメッセージです。Custom Extensionのメッセージは、[リクエストメッセージ](#CustomExtRequestMessage)と[レスポンスメッセージ](#CustomExtResponseMessage)の2種類があります。リクエストメッセージには、[リクエストタイプ](#CustomExtRequestType)によって`EventRequest`、`IntentRequest`、`LaunchRequest`、`SessionEndedRequest`の4つのタイプがあります。
 
 ## リクエストメッセージ {#CustomExtRequestMessage}
@@ -62,7 +62,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 | `context.AudioPlayer`                      | object  | クライアントが現在再生しているか、最後に再生したメディアの情報を持っているオブジェクト | 条件付き |
 | `context.AudioPlayer.offsetInMilliseconds` | number  | 最近再生したメディアアイテムの最後の再生ポイント（オフセット）。ミリ秒単位で、`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。                                       | 条件付き |
 | `context.AudioPlayer.playerActivity`       | string  | プレイヤーの状態を示す値です。次のような値を持ちます。<ul><li><code>"IDLE"</code>：非アクティブ状態</li><li><code>"PLAYING"</code>：再生中</li><li><code>"PAUSED"</code>：一時停止状態</li><li><code>"STOPPED"</code>：停止状態</li></ul> |  |
-| `context.AudioPlayer.stream`               | [AudioStreamInfoObject]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#AudioStreamInfoObject) | 再生中のオーディオの詳細情報が保存されているオブジェクト`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。    | 条件付き |
+| `context.AudioPlayer.stream`               | [AudioStreamInfoObject]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#AudioStreamInfoObject) | 再生中のオーディオの詳細情報が保存されているオブジェクト`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。    | 条件付き |
 | `context.AudioPlayer.totalInMilliseconds`  | number  | 最近再生したメディアの全長ミリ秒単位で、`playerActivity`の値が`"IDLE"`の場合、このフィールドが空であることがあります。                                                                  | 条件付き |
 | `context.System`                           | object  | クライアントシステムのコンテキスト情報を持っているオブジェクト                          |  |
 | `context.System.application`               | object  | ユーザーの意図によって実行されるExtensionの情報を持っているオブジェクト       |  |
@@ -272,7 +272,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 
 ### 次の項目も参照してください。
 * [Custom Extensionでリクエストを処理する](/Develop/Guides/Build_Custom_Extension.md#HandleCustomExtensionRequest)
-* [AudioStreamInfoObject]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#AudioStreamInfoObject)
+* [AudioStreamInfoObject]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#AudioStreamInfoObject)
 
 ## リクエストタイプ {#CustomExtRequestType}
 リクエストメッセージは、次の4つのタイプがあります。リクエストのタイプによって、リクエストメッセージの`request`オブジェクトのフィールドの構成が異なります。
@@ -288,21 +288,21 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 * [オーディオ再生に関連する付加情報をExtensionにリクエストする](/Develop/Guides/Build_Custom_Extension.md#ProvidingMetaDataForDisplay)
 * クライアントの[合成音声（TTS）の再生状態をExtensionにレポートする](/Develop/Guides/Monitor_TTS_Playback_Status.md)
 
-Extensionの開発者は、オーディオや合成音声の再生状態のレポート、または付加情報のリクエストに応じて適切に処理する必要があります。現在`EventRequest`リクエストタイプで上記の項目を処理するとき、以下の[CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md)の[イベント]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md#Event)を使用します。
+Extensionの開発者は、オーディオや合成音声の再生状態のレポート、または付加情報のリクエストに応じて適切に処理する必要があります。現在`EventRequest`リクエストタイプで上記の項目を処理するとき、以下の[CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.{{ book.DocMeta.FileExtensionForExternalLink }})の[イベント]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.{{ book.DocMeta.FileExtensionForExternalLink }}#Event)を使用します。
 
-* [`AudioPlayer.PlayFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#PlayFinished)
-* [`AudioPlayer.PlayPaused`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#PlayPaused)
-* [`AudioPlayer.PlayResumed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#PlayResumed)
-* [`AudioPlayer.PlayStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#PlayStarted)
-* [`AudioPlayer.PlayStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#PlayStopped)
-* [`AudioPlayer.ProgressReportDelayPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#ProgressReportDelayPassed)
-* [`AudioPlayer.ProgressReportIntervalPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#ProgressReportIntervalPassed)
-* [`AudioPlayer.ProgressReportPositionPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#ProgressReportPositionPassed)
-* [`AudioPlayer.StreamRequested`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#StreamRequested)
-* [`SpeechSynthesizer.SpeechFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechFinished)
-* [`SpeechSynthesizer.SpeechStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechStarted)
-* [`SpeechSynthesizer.SpeechStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechStopped)
-* [`TemplateRuntime.RequestPlayerInfo`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/TemplateRuntime.md#RequestPlayerInfo)
+* [`AudioPlayer.PlayFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#PlayFinished)
+* [`AudioPlayer.PlayPaused`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#PlayPaused)
+* [`AudioPlayer.PlayResumed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#PlayResumed)
+* [`AudioPlayer.PlayStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#PlayStarted)
+* [`AudioPlayer.PlayStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#PlayStopped)
+* [`AudioPlayer.ProgressReportDelayPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#ProgressReportDelayPassed)
+* [`AudioPlayer.ProgressReportIntervalPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#ProgressReportIntervalPassed)
+* [`AudioPlayer.ProgressReportPositionPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#ProgressReportPositionPassed)
+* [`AudioPlayer.StreamRequested`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#StreamRequested)
+* [`SpeechSynthesizer.SpeechFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechFinished)
+* [`SpeechSynthesizer.SpeechStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechStarted)
+* [`SpeechSynthesizer.SpeechStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechStopped)
+* [`TemplateRuntime.RequestPlayerInfo`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/TemplateRuntime.{{ book.DocMeta.FileExtensionForExternalLink }}#RequestPlayerInfo)
 {% elif book.L10N.TargetCountryCode == "JP" %}
 `EventRequest`タイプは、クライアントの状態の変化や、それに伴うリクエストをExtensionに渡すために使用されるリクエストタイプです。CEKは、`EventRequest`リクエストタイプを使用して以下の項目を処理します。
 * ユーザーが特定のスキルを有効または無効にした結果をレポートする
@@ -351,7 +351,7 @@ Extensionの開発者は、スキルの有効化/無効化、オーディオや�
 | `event`           | object  | クライアントがClovaに渡した情報が保存されているオブジェクト                                       |    |
 | `event.name`      | string  | {{ "クライアントからClovaに送信したイベントの名前" if book.L10N.TargetCountryCode == "KR" else "クライアントからClovaに送信したイベントの名前、または、スキルの有効化/無効化を表す名前。スキルの有効化/無効化を表す名前は、`SkillEnabled`/`SkillDisabled`になります。スキルの有効化/無効化に関するリクエストを受信した場合、[リクエストメッセージ](#CustomExtRequestMessage)の`context.System.application.applicationId`フィールドと`context.System.user.userId`フィールドを使用して、ユーザーの情報を取得したり、ユーザーの情報を廃棄したりするように実装することができます。"}} |    |
 | `event.namespace` | string  | {{ "クライアントからClovaに送信したイベントの名前空間" if book.L10N.TargetCountryCode == "KR" else "クライアントからClovaに送信したイベントの名前空間、または、スキルの有効化/無効化を表す名前空間。スキルの有効化/無効化を表す名前空間は、`ClovaSkill`に固定されます。"}}   |   |
-| `event.payload`   | object  | {{ "クライアントからClovaに送信したイベントの`payload`、または`payload`の一部の情報。一部のイベントの`EventRequest`リクエストタイプは、`payload`が空のオブジェクトの場合があります。" if book.L10N.TargetCountryCode == "KR" else "クライアントからClovaに送信したイベントの`payload`、または`payload`の一部の情報。一部のイベントや、スキルの有効化/無効化を表すための`EventRequest`リクエストタイプは、`payload`が空のオブジェクトの場合があります。"}}  |   |
+| `event.payload`   | object  | {{ "クライアントからClovaに送信したイベントの`payload`、または`payload`の一部の情報。一部のイベントの`EventRequest`リクエストタイプは、`payload`が空のオブジェクトの場合があります。"if book.L10N.TargetCountryCode == "KR" else "クライアントからClovaに送信したイベントの`payload`、または`payload`の一部の情報。一部のイベントや、スキルの有効化/無効化を表すための`EventRequest`リクエストタイプは、`payload`が空のオブジェクトの場合があります。"}}  |   |
 | `requestId`       | string  | クライアントがClovaに情報を渡すときに作成されたダイアログID（`event.header.dialogRequestId`）    |    |
 | `timestamp`       | string  | クライアントがClovaに情報を渡した日時（`YYYY-MM-DDThh:mm:ssZ`<a href="https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations" target="_blank">ISO 8601</a>形式）<div class="tip"><p><strong>ヒント</strong></p><p>CEKは<code>EventRequest</code>タイプのリクエストの順序を保証しません。クライアントからのリクエストの順序は、このフィールドの値から把握する必要があります。</p></div>                    |   |
 | `type`            | string  | リクエストメッセージのタイプ。`"EventRequest"`の値に固定されます。         |  |
@@ -570,8 +570,8 @@ Extensionは、リクエストメッセージを処理して、レスポンス�
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `response`                               | object       | Extensionのレスポンス情報を含むオブジェクト                            |  |
-| `response.card`                          | object       | [コンテンツテンプレート]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md) 形式のデータで、クライアントの画面に表示するコンテンツをこのフィールドで渡すことができます。このフィールドにデータがある場合、CICはクライアントに[Clova.RenderTemplate]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/Clova.md#RenderTemplate)ディレクティブを送信します。空のオブジェクトの場合、CICはクライアントに[Clova.RenderText]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/Clova.md#RenderText)ディレクティブを送信し、`response.outputSpeech.values`フィールドの値を表示するようにします。        |  |
-| `response.directives[]`                  | object array | ExtensionがCEKに渡すディレクティブです。`response.directives`フィールドは、主にオーディオコンテンツを提供するために使用されます。次の {%- if book.L10N.TargetCountryCode == "KR" -%}[CIC API](https://pages.oss.navercorp.com/JTF-P6/Clova_Client_Developer_Guide/ko-KR/Develop/References/CIC_API.md){%- elif book.L10N.TargetCountryCode == "JP" -%}[CIC API](#CICAPIforAudioPlayback){%- endif -%} ディレクティブをサポートしています。<ul><li><code>AudioPlayer.Play</code></li><li><code>AudioPlayer.StreamDeliver</code></li><li><code>PlaybackController.Pause</code></li><li><code>PlaybackController.Resume</code></li><li><code>PlaybackController.Stop</code></li><li><code>TemplateRuntime.RenderPlayerInfo</code></li></ul><div class="note"><p><strong>メモ</strong></p><p>CIC APIディレクティブ</p>を作成するとき、「Optional」項目が<strong>空白</strong>のフィールドは必須なので、必ず作成してください。</p></div> |  |
+| `response.card`                          | object       | [コンテンツテンプレート]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }}) 形式のデータで、クライアントの画面に表示するコンテンツをこのフィールドで渡すことができます。このフィールドにデータがある場合、CICはクライアントに[Clova.RenderTemplate]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/Clova.{{ book.DocMeta.FileExtensionForExternalLink }}#RenderTemplate)ディレクティブを送信します。空のオブジェクトの場合、CICはクライアントに[Clova.RenderText]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/Clova.{{ book.DocMeta.FileExtensionForExternalLink }}#RenderText)ディレクティブを送信し、`response.outputSpeech.values`フィールドの値を表示するようにします。        |  |
+| `response.directives[]`                  | object array | ExtensionがCEKに渡すディレクティブです。`response.directives`フィールドは、主にオーディオコンテンツを提供するために使用されます。次の {%- if book.L10N.TargetCountryCode == "KR" -%}[CIC API](https://pages.oss.navercorp.com/JTF-P6/Clova_Client_Developer_Guide/ko-KR/Develop/References/CIC_API{{ book.DocMeta.FileExtensionForExternalLink }}){%- elif book.L10N.TargetCountryCode == "JP" -%}[CIC API](#CICAPIforAudioPlayback){%- endif -%} ディレクティブがサポートされています。<ul><li><code>AudioPlayer.Play</code></li><li><code>AudioPlayer.StreamDeliver</code></li><li><code>PlaybackController.Pause</code></li><li><code>PlaybackController.Resume</code></li><li><code>PlaybackController.Stop</code></li><li><code>TemplateRuntime.RenderPlayerInfo</code></li></ul><div class="note"><p><strong>メモ</strong></p><p>CIC APIディレクティブ</p>を作成するとき、「Optional」項目が<strong>空白</strong>のフィールドは必須なので、必ず作成してください。</p></div> |  |
 | `response.directives[].header`           | object       | ディレクティブのヘッダー                                          |  |
 | `response.directives[].header.messageId` | string       | メッセージID（UUID）。メッセージを区別するための識別子です。   |  |
 | `response.directives[].header.name`      | string       | ディレクティブのAPI名                                      |  |
@@ -584,7 +584,7 @@ Extensionは、リクエストメッセージを処理して、レスポンス�
 | `response.outputSpeech.verbose`          | object       | 画面を持たないクライアントデバイスに渡す際に使用されます。詳細音声情報を含んでいます。 | 選択 |
 | `response.outputSpeech.verbose.type`     | string       | 出力する音声情報のタイプ単文と複文タイプの音声情報のみ入力できます。<ul><li><code>"SimpleSpeech"</code>：単文タイプの音声情報です。最も基本的な音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.verbose.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li></ul> |  |
 | `response.outputSpeech.verbose.values[]`           | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | クライアントデバイスで出力する詳細音声情報を持っているオブジェクトまたはオブジェクト配列 |  |
-| `response.reprompt`                               | obejct       | ユーザーの追加の発話を促す音声情報を含んでいるオブジェクト。`response.reprompt`フィールドを使用すると、ユーザーにマルチターン対話を続けるか尋ねたり、または必須情報を話すように促すことができます。通常、マルチターン対話を行う際、ユーザーが追加の発話をしないと、入力待ち時間が過ぎ、マルチターン対話が自動的に終了します。ただし、`response.reprompt`フィールドを使用すると、Clovaは、入力待ち時間が過ぎた後、クライアントが`response.reprompt`フィールドに作成した音声を出力し、再度ユーザーの追加の発話を促すように[`SpeechSynthesizer.Speak`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#Speak)ディレクティブと[`SpeechRecognizer.ExpectSpeech`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechRecognizer.md#ExpectSpeech)ディレクティブをクライアントに渡します。<div class="tip"><p><strong>ヒント</strong></p><p><code>response.reprompt</code>フィールドは、<code>response.shouldEndSession</code>フィールド値を<code>false</code>に入力した場合、有効です。主に単文タイプの音声情報（<code>"SimpleSpeech"</code>）を渡すことをお勧めします。<code>response.reprompt</code>フィールドを使用すると、入力待ち時間を最大1回延長できます。</p></div> | 選択 |
+| `response.reprompt`                               | obejct       | ユーザーの追加の発話を促す音声情報を含んでいるオブジェクト。`response.reprompt`フィールドを使用すると、ユーザーにマルチターン対話を続けるか尋ねたり、または必須情報を話すように促すことができます。通常、マルチターン対話を行う際、ユーザーが追加の発話をしないと、入力待ち時間が過ぎ、マルチターン対話が自動的に終了します。ただし、`response.reprompt`フィールドを使用すると、Clovaは、入力待ち時間が過ぎた後、クライアントが`response.reprompt`フィールドに作成した音声を出力し、再度ユーザーの追加の発話を促すように[`SpeechSynthesizer.Speak`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#Speak)ディレクティブと[`SpeechRecognizer.ExpectSpeech`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechRecognizer.{{ book.DocMeta.FileExtensionForExternalLink }}#ExpectSpeech)ディレクティブをクライアントに渡します。<div class="tip"><p><strong>ヒント</strong></p><p><code>response.reprompt</code>フィールドは、<code>response.shouldEndSession</code>フィールド値を<code>false</code>に入力した場合、有効です。主に単文タイプの音声情報（<code>"SimpleSpeech"</code>）を渡すことをお勧めします。<code>response.reprompt</code>フィールドを使用すると、入力待ち時間を最大1回延長できます。</p></div> | 選択 |
 | `response.reprompt.outputSpeech`                  | object       | 音声に合成する情報を含んでいるオブジェクト。合成された音声はCICを介してクライアントに渡されます。              |  |
 | `response.reprompt.outputSpeech.brief`            | [SpeechInfoObject](#CustomExtSpeechInfoObject) | 出力する要約音声情報                    | 選択 |
 | `response.reprompt.outputSpeech.type`             | string       | 出力する音声情報のタイプ<ul><li>"SimpleSpeech"：単文タイプの音声情報です。最も基本となるタイプで、この値を指定した場合、<code>response.outputSpeech.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクトを持っている必要があります。</li><li><code>"SpeechList"</code>：複文タイプの音声情報です。複数の文章を出力する際に使用されます。この値を指定した場合、<code>response.outputSpeech.values</code>フィールドが<a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a>オブジェクト配列を持っている必要があります。</li><li><code>"SpeechSet"</code>：複合タイプの音声情報です。画面を持たないクライアントデバイスに、要約音声情報と詳細音声情報を渡す際に使用されます。この値を指定した場合、<code>response.outputSpeech.values</code>フィールドの代わりに<code>response.outputSpeech.brief</code>と<code>response.outputSpeech.verbose</code>フィールドを持っている必要があります。</li></ul> |  |
@@ -837,11 +837,11 @@ SpeechInfoObjectオブジェクトはレスポンスメッセージの`response.
 
 ### 次の項目も参照してください。
 * [Custom Extensionでレスポンスを返す](/Develop/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse)
-* [Content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md)
+* [Content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }})
 
 {% if book.L10N.TargetCountryCode == "JP" %}
 
-# オーディオコンテンツ再生関連のCIC API {#CICAPIforAudioPlayback}
+## オーディオコンテンツ再生関連のCIC API {#CICAPIforAudioPlayback}
 
 <!-- Start of the shared content: CICAPIforAudioPlayback -->
 
@@ -875,10 +875,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.Play -->
 
-## AudioPlayer.Playディレクティブ {#Play}
+### AudioPlayer.Playディレクティブ {#Play}
 クライアントに対して、特定のオーディオストリームを再生するか、または再生キューに追加するように指示します。
 
-### Payload fields
+#### Payload fields
 | フィールド名       | データ型    | フィールドの説明                     | 任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `audioItem`               | object | 再生するオーディオストリームのメタデータと、再生に必要なオーディオストリームの情報を持つオブジェクト                     |  |
@@ -894,12 +894,12 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 | `source.logoUrl`          | string | オーディオストリーミングサービスのロゴ画像のURI。このフィールドまたはフィールドの値がなかったり、ロゴ画像を表示できない場合、`source.name`フィールド内のオーディオストリーミングサービスの名前を表示する必要があります。  | 条件付き |
 | `source.name`             | string | オーディオストリーミングサービスの名前                                                        |  |
 
-### 備考
+#### 備考
 ストリーミングサービスの課金などの理由により、実際のストリーミング情報、つまりストリーミングのURIなどの情報を、再生する直前に取得する必要がある場合があります。`audioItem.stream.urlPlayable`フィールドの値によって、次のように区分されます。
 * `urlPlayable`フィールドの値が`true`の場合、`audioItem.stream.url`フィールドに含まれたURIでオーディオストリームをすぐに再生できます。
 * `urlPlayable`フィールドの値が`false`の場合、`audioItem.stream.url`フィールドに含まれたURIではオーディオストリームをすぐに再生できず、[`AudioPlayer.StreamRequested`](#StreamRequested)イベントでオーディオストリームの情報を追加でリクエストする必要があります。
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -985,7 +985,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
@@ -999,17 +999,17 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.PlayFinished -->
 
-## AudioPlayer.PlayFinishedイベント {#PlayFinished}
+### AudioPlayer.PlayFinishedイベント {#PlayFinished}
 クライアントがオーディオストリームの再生を終了するとき、そのオーディオストリームの情報をCICにレポートするために使用します。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | オーディオストリームのトークン    |  |
 | `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         |   |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1033,7 +1033,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
 * [`AudioPlayer.PlayStopped`](#PlayStopped)
@@ -1042,17 +1042,17 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.PlayPaused -->
 
-## AudioPlayer.PlayPausedイベント {#PlayPaused}
+### AudioPlayer.PlayPausedイベント {#PlayPaused}
 クライアントがオーディオストリームの再生を一時停止するとき、そのオーディオストリームの情報をCICにレポートするために使用します。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | オーディオストリームのトークン |  |
 | `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         |   |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1076,7 +1076,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
@@ -1084,18 +1084,18 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.PlayResumed -->
 
-## AudioPlayer.PlayResumedイベント {#PlayResumed}
+### AudioPlayer.PlayResumedイベント {#PlayResumed}
 
 クライアントがオーディオストリームの再生を再開するとき、そのオーディオストリームの情報をCICにレポートするために使用します。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | オーディオストリームのトークン |  |
 | `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         |   |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1119,7 +1119,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 
@@ -1127,17 +1127,17 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.PlayStarted -->
 
-## AudioPlayer.PlayStartedイベント {#PlayStarted}
+### AudioPlayer.PlayStartedイベント {#PlayStarted}
 クライアントがオーディオストリームの再生を開始するとき、そのオーディオストリームの情報をCICにレポートするために使用します。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | オーディオストリームのトークン |  |
 | `offsetInMilliseconds` | number | クライアントが再生しているストリームの現在のオフセット。ミリ秒単位です。                         |   |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1161,7 +1161,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStopped`](#PlayStopped)
 
@@ -1169,17 +1169,17 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.PlayStopped -->
 
-## AudioPlayer.PlayStoppedイベント {#PlayStopped}
+### AudioPlayer.PlayStoppedイベント {#PlayStopped}
 クライアントがオーディオストリームの再生を停止するとき、そのオーディオストリームの情報をCICにレポートするために使用します。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | オーディオストリームのトークン |  |
 | `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         |   |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1203,7 +1203,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
 
@@ -1211,17 +1211,17 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.ProgressReportDelayPassed -->
 
-## AudioPlayer.ProgressReportDelayPassedイベント {#ProgressReportDelayPassed}
+### AudioPlayer.ProgressReportDelayPassedイベント {#ProgressReportDelayPassed}
 オーディオストリームの再生が開始してから、指定された遅延期間が経過したタイミングの再生状態をCICにレポートするために使用します。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | オーディオストリームのトークン |  |
 | `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         |   |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1245,7 +1245,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.ProgressReportIntervalPassed`](#ProgressReportIntervalPassed)
 * [`AudioPlayer.ProgressReportPositionPassed`](#ProgressReportPositionPassed)
@@ -1254,17 +1254,17 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.ProgressReportIntervalPassed -->
 
-## AudioPlayer.ProgressReportIntervalPassedイベント {#ProgressReportIntervalPassed}
+### AudioPlayer.ProgressReportIntervalPassedイベント {#ProgressReportIntervalPassed}
 オーディオストリームの再生が開始してから、指定された間隔ごとの再生状態をCICにレポートするために使用します。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | オーディオストリームのトークン |  |
 | `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         |   |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1288,7 +1288,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.ProgressReportDelayPassed`](#ProgressReportDelayPassed)
 * [`AudioPlayer.ProgressReportPositionPassed`](#ProgressReportPositionPassed)
@@ -1297,17 +1297,17 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.ProgressReportPositionPassed -->
 
-## AudioPlayer.ProgressReportPositionPassedイベント {#ProgressReportPositionPassed}
+### AudioPlayer.ProgressReportPositionPassedイベント {#ProgressReportPositionPassed}
 オーディオストリームの再生が開始してから、指定されたタイミングに、そのときの再生状態をCICにレポートするために使用します。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | オーディオストリームのトークン |  |
 | `offsetInMilliseconds` | number | 再生しているストリームの現在のオフセット。ミリ秒単位です。                         |   |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1331,7 +1331,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.ProgressReportDelayPassed`](#ProgressReportDelayPassed)
 * [`AudioPlayer.ProgressReportIntervalPassed`](#ProgressReportIntervalPassed)
@@ -1340,19 +1340,19 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.StreamDeliver -->
 
-## AudioPlayer.StreamDeliverディレクティブ {#StreamDeliver}
+### AudioPlayer.StreamDeliverディレクティブ {#StreamDeliver}
 [`AudioPlayer.StreamRequested`](#StreamRequested)イベントに対する応答です。実際に再生できるオーディオストリームの情報を受信するために使用します。クライアントがコンテンツを再生できるように、オーディオストリームの情報には、ストリーミングURIが必ず含まれます。
 
-### Payload fields
+#### Payload fields
 | フィールド名 | データ型 | フィールドの説明 | 任意 |
 |---------|------|--------|:---------:|
 | `audioItemId` | string | オーディオストリームの情報を区別するための値。クライアントはこの値に基づいて、重複するPlayディレクティブを削除できます。 |  |
 | `audioStream` | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生に必要なオーディオストリームの情報を持つオブジェクト       |  |
 
-### 備考
+#### 備考
 `StreamDeliver`ディレクティブで送信される`AudioStreamInfoObject`オブジェクトは、既存の[`AudioPlayer.Play`](#Play)ディレクティブで送信された`AudioStreamInfoObject`オブジェクトと重複しないように、一部の内容が省略されることがあります。ストリームを再生する際、`StreamDeliver`ディレクティブと、すでに受信した[`Play`](#Play)ディレクティブの`payload.audioStream`情報を組み合わせて使用する必要があります。
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1377,7 +1377,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
 
@@ -1385,19 +1385,19 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: AudioPlayer.StreamRequested -->
 
-## AudioPlayer.StreamRequestedイベント {#StreamRequested}
+### AudioPlayer.StreamRequestedイベント {#StreamRequested}
 オーディオストリームを再生するために、ストリーミングのURIなど、追加の情報をCICにリクエストするイベントです。
 
-### Payload fields
+#### Payload fields
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `audioItemId`   | string  | オーディオストリームのトークン          |  |
 | `audioStream`   | [AudioStreamInfoObject](#AudioStreamInfoObject) | Playディレクティブの`audioItem.stream` |  |
 
-### 備考
+#### 備考
 ストリーミングサービスの課金などの理由により、ときには、実際のオーディオストリームの情報の発行を、再生直前に遅延させる必要が生じます。このイベントは、そのようにオーディオストリームの情報を前もって用意してはいけない場合のために設計されたAPIです。クライアントは、このイベントを再生直前より先に送信しないようにする必要があります。
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1431,24 +1431,24 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: PlaybackController.Pause -->
 
-## PlaybackController.Pauseディレクティブ {#Pause}
+### PlaybackController.Pauseディレクティブ {#Pause}
 クライアントに、再生中のオーディオストリームを一時停止するように指示します。クライアントは、このディレクティブを受信すると、オーディオストリームの再生を一時停止する必要があります。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 任意 |
 |---------------|---------|-----------------------------|:---------:|
 | target            | object  | 制御対象の情報を持つオブジェクト。このディレクティブから制御対象を確認できます。 | 条件付き  |
 | target.namespace  | string  | CIC APIの名前空間。制御対象を確認するための情報です。以下の値を持ちます。<ul><li><code>"AudioPlayer"</code>：AudioPlayer</li><li><code>"MediaPlayer"</code>：MediaPlayer</li></ul>  | 常時  |
 
-### Message example
+#### Message example
 
 ```json
 サンプル1：対象が指定されていないサンプル
@@ -1482,24 +1482,24 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 }
 ```
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: PlaybackController.Resume -->
 
-## PlaybackController.Resumeディレクティブ {#Resume}
+### PlaybackController.Resumeディレクティブ {#Resume}
 クライアントに、オーディオストリームの再生を再開するように指示します。クライアントは、このディレクティブを受信すると、オーディオストリームの再生を再開する必要があります。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 任意 |
 |---------------|---------|-----------------------------|:---------:|
 | target            | object  | 制御対象の情報を持つオブジェクト。このディレクティブから制御対象を確認できます。 | 条件付き  |
 | target.namespace  | string  | CIC APIの名前空間。制御対象を確認するための情報です。以下の値を持ちます。<ul><li><code>"AudioPlayer"</code>：AudioPlayer</li><li><code>"MediaPlayer"</code>：MediaPlayer</li></ul>  | 常時  |
 
-### Message example
+#### Message example
 
 ```json
 //サンプル1：対象が指定されていないサンプル
@@ -1533,24 +1533,24 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 }
 ```
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: PlaybackController.Stop -->
 
-## PlaybackController.Stopディレクティブ {#Stop}
+### PlaybackController.Stopディレクティブ {#Stop}
 クライアントに、オーディオストリームの再生を停止するように指示します。クライアントは、このディレクティブを受信すると、オーディオストリームの再生を停止する必要があります。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 任意 |
 |---------------|---------|-----------------------------|:---------:|
 | target            | object  | 制御対象の情報を持つオブジェクト。このディレクティブから制御対象を確認できます。 | 条件付き  |
 | target.namespace  | string  | CIC APIの名前空間。制御対象を確認するための情報です。以下の値を持ちます。<ul><li><code>"AudioPlayer"</code>：AudioPlayer</li><li><code>"MediaPlayer"</code>：MediaPlayer</li></ul>  | 常時  |
 
-### Message example
+#### Message example
 
 ```json
 //サンプル1：対象が指定されていないサンプル
@@ -1584,23 +1584,23 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 }
 ```
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: SpeechSynthesizer.SpeechFinished -->
 
-## SpeechSynthesizer.SpeechFinishedイベント {#SpeechFinished}
+### SpeechSynthesizer.SpeechFinishedイベント {#SpeechFinished}
 クライアントから、合成音声の再生を完了したことをレポートします。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`       | string  | 合成音声を識別するためのトークン           | 常時    |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1623,7 +1623,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`SpeechSynthesizer.SpeechStarted`](#SpeechStarted)
 * [`SpeechSynthesizer.SpeechStopped`](#SpeechStopped)
 
@@ -1634,13 +1634,13 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 ### SpeechSynthesizer.SpeechStartedイベント {#SpeechStarted}
 クライアントから、合成音声の再生を開始したことをレポートします。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`       | string  | 合成音声を識別するためのトークン           | 常時    |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1663,7 +1663,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`SpeechSynthesizer.SpeechFinished`](#SpeechFinished)
 * [`SpeechSynthesizer.SpeechStopped`](#SpeechStopped)
 
@@ -1671,16 +1671,16 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: SpeechSynthesizer.SpeechStopped -->
 
-## SpeechSynthesizer.SpeechStoppedイベント {#SpeechStopped}
+### SpeechSynthesizer.SpeechStoppedイベント {#SpeechStopped}
 クライアントから、合成音声の再生を停止したことをレポートします。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `token`       | string  | 合成音声を識別するためのトークン           | 常時    |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1703,7 +1703,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`SpeechSynthesizer.SpeechFinished`](#SpeechFinished)
 * [`SpeechSynthesizer.SpeechStarted`](#SpeechStarted)
 
@@ -1711,11 +1711,11 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 <!-- Start of the shared content: TemplateRuntime.RenderPlayerInfo -->
 
-## TemplateRuntime.RenderPlayerInfoディレクティブ {#RenderPlayerInfo}
+### TemplateRuntime.RenderPlayerInfoディレクティブ {#RenderPlayerInfo}
 
 CICから、メディアプレーヤーに表示する再生リスト、アルバムの画像、歌詞のような再生メタデータをクライアントに送信し、表示するように指示します。ユーザーがオーディオを再生するようにリクエストすると、クライアントは[`AudioPlayer.Play`](#Play)を受信してメディアを再生します。ディスプレイを持つクライアントは、必要に応じてメディアプレーヤーに再生関連情報を表示する必要があります。その際、[`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo)イベントで再生メタデータをCICにリクエストし、`TemplateRuntime.RenderPlayerInfo`ディレクティブを受信します。`TemplateRuntime.RenderPlayerInfo`ディレクティブには、現在再生するメディアコンテンツと、後で再生するメディアコンテンツの再生メタデータが含まれます。クライアントは、`TemplateRuntime.RenderPlayerInfo`ディレクティブの再生メタデータをユーザーに提供して、現在再生しているメディアのメタデータおよび再生リストを表示することができます。
 
-### Payload fields
+#### Payload fields
 | フィールド名       | データ型    | フィールドの説明                     | 任意 |
 |---------------|---------|-----------------------------|:---------:|
 | `displayType`               | string | メディアコンテンツを表示する形式。<ul><li><code>"list"</code>：リストで表示する</li><li><code>"single"</code>：1つのアイテムを表示する</li></ul>       |  |
@@ -1747,7 +1747,7 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 | `provider.name`                    | string        | メディアコンテンツ提供元の名前                                                                   |   |
 | `provider.smallLogoUrl`            | string        | メディアコンテンツ提供元の小さなロゴ画像のURI                                                | 条件付き |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1846,7 +1846,7 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo)
 
@@ -1854,10 +1854,10 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 
 <!-- Start of the shared content: TemplateRuntime.RequestPlayerInfo -->
 
-## TemplateRuntime.RequestPlayerInfoイベント {#RequestPlayerInfo}
+### TemplateRuntime.RequestPlayerInfoイベント {#RequestPlayerInfo}
 クライアントから、メディアプレーヤーに表示する再生リスト、アルバムの画像、歌詞のような再生メタデータをCICにリクエストします。
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
@@ -1866,7 +1866,7 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 | `range.before` | number  | 基準となるメディアコンテンツから、n個前以前の再生リストに含まれた再生メタデータをリクエストします。  | 任意  |
 | `range.after`  | number  | 基準となるメディアコンテンツから、n個以降の再生リストに含まれた再生メタデータをリクエストします。例えば、`range.before`フィールドの値を指定しないで、`range.after`を`5`に設定すると、基準のメディアコンテンツを含めて、合計6つのメディアコンテンツに該当する再生メタデータを受信します。 | 任意  |
 
-### Message example
+#### Message example
 
 {% raw %}
 
@@ -1889,18 +1889,18 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 ```
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 
-## AudioStreamInfoObject {#AudioStreamInfoObject}
+### AudioStreamInfoObject {#AudioStreamInfoObject}
 再生するオーディオストリームのストリーミング情報を持つオブジェクトです。クライアントに対して再生するストリーミングの情報を送信したり、クライアントがCICに対して、現在再生しているコンテンツのストリーミング情報を送信するとき使用します。
 
-### Object fields
+#### Object fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:-------------:|
 | `beginAtInMilliseconds`  | number | 再生を開始するオフセット。ミリ秒単位で、この値が指定されている場合、クライアントは、そのオーディオストリームを指定されたオフセットから再生する必要があります。この値が0に設定されている場合、ストリームを最初から再生します。          |  |
-| `customData`             | string | 現在のストリームに関連して、任意の形式を持つメタデータ情報。特定のカテゴリに分類されたり、定義されないストリーミング情報は、このフィールドに含まれるか、または入力される必要があります。オーディオストリーム再生のコンテキストに必要な追加の値を、サービスプロバイダーがカスタムで追加できます。<div class="warning"><p><strong>警告</strong></p><p>クライアントは、このフィールドの値を任意に使用してはいけません。問題が発生する恐れがあります。また、このフィールドの値は、オーディオ再生状態を送信する際、<a href="{{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Context_Objects.md#PlaybackState">PlaybackStateコンテキスト</a>の`stream`フィールドにそのまま含まれる必要があります。</p></div> | 任意/条件付き  |
+| `customData`             | string | 現在のストリームに関連して、任意の形式を持つメタデータ情報。特定のカテゴリに分類されたり、定義されないストリーミング情報は、このフィールドに含まれるか、または入力される必要があります。オーディオストリーム再生のコンテキストに必要な追加の値を、サービスプロバイダーがカスタムで追加できます。<div class="warning"><p><strong>警告</strong></p><p>クライアントは、このフィールドの値を任意に使用してはいけません。問題が発生する恐れがあります。また、このフィールドの値は、オーディオ再生状態を送信する際、<a href="{{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Context_Objects.{{ book.DocMeta.FileExtensionForExternalLink }}#PlaybackState">PlaybackStateコンテキスト</a>の`stream`フィールドにそのまま含まれる必要があります。</p></div> | 任意/条件付き  |
 | `durationInMilliseconds` | number | オーディオストリームの再生時間。クライアントは、`beginAtInMilliseconds`フィールドに指定されている再生のオフセットから、このフィールドに指定されている再生時間だけ、そのオーディオストリームをシークおよび再生できます。例えば、`beginAtInMilliseconds`フィールドの値が`10000`で、このフィールドの値が`60000`の場合、そのオーディオストリームの10秒から70秒までの区間を再生およびシークすることができます。ミリ秒単位です。   | 任意/条件付き  |
 | `format`                 | string  | メディアフォーマット（MIMEタイプ）。このフィールドから、HLS（HTTP Live Streaming）コンテンツかどうかを確認できます。次の値を持ちます。デフォルト値は`"audio/mpeg"`です。<ul><li><code>"audio/mpeg"</code></li><li><code>"audio/mpegurl"</code></li><li><code> "audio/aac"</code></li><li><code>"application/vnd.apple.mpegurl"</code></li></ul><div class="note"><p><strong>メモ</strong></p><p>HLSでコンテンツを提供するExtensionの開発者は、<a href="mailto:{{ book.ServiceEnv.ExtensionAdminEmail }}">{{ book.ServiceEnv.ExtensionAdminEmail }}</a>までご連絡ください。</p></div>   | 任意/条件付き  |
 | `progressReport`         | object  | 再生が開始してから、再生状態をレポートするタイミングを指定するオブジェクト                                                  | 任意/条件付き |
@@ -1911,10 +1911,10 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 | `url`                    | string  | オーディオストリームのURL。<div class="note"><p><strong>メモ</strong></p><p>このフィールドの最大の長さは2048バイトです。</p></div>                              |  |
 | `urlPlayable`            | boolean | `url`フィールドのオーディオストリームのURIがすぐに再生できるかを示す値。<ul><li><code>true</code>：すぐに再生できるURI</li><li><code>false</code>：すぐに再生できないURI。<a href="#StreamRequested"><code>AudioPlayer.StreamRequested</code></a>イベントでオーディオストリームの情報を追加でリクエストする必要があります。</li></ul>        |  |
 
-### 備考
+#### 備考
 * クライアントは、`beginAtInMilliseconds`と`durationInMilliseconds`フィールドに指定されている区間に対してストリームの再生を完了すると、[`AudioPlayer.PlayFinished`](#PlayFinished)イベントをCICに送信します。
 
-### Object Example
+#### Object Example
 {% raw %}
 
 ```json
@@ -1949,7 +1949,7 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayFinished`](#PlayFinished)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
@@ -1958,13 +1958,13 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 
 <!-- Start of the shared content: AudioPlayer.PlaybackState -->
 
-# オーディオコンテンツ再生関連のコンテキスト {#ContextObjectforAudioPlayback}
+## オーディオコンテンツ再生関連のコンテキスト {#ContextObjectforAudioPlayback}
 クライアントがClovaに[CIC API](#CICAPIforAudioPlayback)イベントを送信するとき、以下のようなさまざまなコンテキストが含まれます。そのうち、オーディオコンテンツの再生に関連するコンテキストは、[`AudioPlayer.PlaybackState`](#PlaybackState)です。
 
-## AudioPlayer.PlaybackState {#PlaybackState}
+### AudioPlayer.PlaybackState {#PlaybackState}
 `AudioPlayer.PlaybackState`は、現在再生しているか、または最後に再生したオーディオの情報をCICにレポートするときに使用されるメッセージ形式です。
 
-### Object structure
+#### Object structure
 
 {% raw %}
 ```json
@@ -1984,7 +1984,7 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 ```
 {% endraw %}
 
-### Payload fields
+#### Payload fields
 
 | フィールド名       | データ型    | フィールドの説明                     | 必須/任意 |
 |---------------|---------|-----------------------------|:---------:|
@@ -1994,7 +1994,7 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 | `stream`               | [AudioStreamInfoObject](#AudioStreamInfoObject) | 再生中のオーディオの詳細情報が保存されているオブジェクト`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。[`AudioPlayer.Play`](#Play)または[`AudioPlayer.StreamDeliver`](#StreamDeliver)ディレクティブで送信されたメディアアイテムの情報（`stream`オブジェクト）の値を入力します。 | 任意 |
 | `totalInMilliseconds`  | number | 最近再生したメディアアイテムの全長。[`AudioPlayer.Play`](#Play)ディレクティブで送信されたオーディオストリームの情報（[AudioStreamInfoObject](#AudioStreamInfoObject)）に`durationInMilliseconds`フィールド値がある場合、このフィールドに入力します。ミリ秒単位で、`playerActivity`の値が`"IDLE"`の場合、このフィールドの値を入力する必要はありません。                                                               | 任意 |
 
-### Object example
+#### Object example
 
 {% raw %}
 
@@ -2039,7 +2039,7 @@ CICから、メディアプレーヤーに表示する再生リスト、アル�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.StreamDeliver`](#StreamDeliver)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)

@@ -25,7 +25,7 @@ Clovaでサービス提供中の一部のExtensionを紹介します。簡単な
 
 ### 特徴
 * ユーザーは雨音を何回繰り返して聞くか選択できます。このExtensionの対話モデルには、繰り返し回数の値がスロットとして定義されています。
-* クライアントがオーディオを再生できるように、[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtRequestType)に案内および[`AudioPlayer.Play`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#Play)ディレクティブを含めてCEKに送信します。
+* クライアントがオーディオを再生できるように、[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtRequestType)に案内および[`AudioPlayer.Play`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#Play)ディレクティブを含めてCEKに送信します。
 * Node.jsで実装されています。
 
 ### GitHubリポジトリ

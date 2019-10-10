@@ -11,12 +11,11 @@
 
 Custom Extensionを配布する場合、先に[対話モデルを登録](/DevConsole/Guides/Register_Interaction_Model.md)しておく必要があります。また、対話モデルの[テスト](#TestInteractionModel)や実行には、ビルドが必要です。作成した対話モデルは次のようにビルドすることができます。
 
-<ol>
-  <li>登録したCustom Extensionのリストから、対話モデルをビルドするCustom Extensionの<strong>{{ book.DevConsole.cek_edit }}</strong>メニューをクリックします。</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png" />
-  <li><strong>{{ book.DevConsole.cek_interaction_model }}：{{ book.DevConsole.cek_builder_header_title_dashboard }}</strong>画面の左上にある<strong>{{ book.DevConsole.cek_builder_menu_build }}</strong>ボタンをクリックすると、対話モデルのビルドが開始されます。対話モデルのサイズなどによって、数分ぐらいかかることがあります。</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Build_Interaction_Model.png" />
-</ol>
+1. 登録したCustom Extensionのリストから、対話モデルをビルドするCustom Extensionの**{{ book.DevConsole.cek_edit }}**メニューをクリックします。<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png)
+2. **{{ book.DevConsole.cek_interaction_model }}：{{ book.DevConsole.cek_builder_header_title_dashboard }}**画面の左上にある**{{ book.DevConsole.cek_builder_menu_build }}**ボタンをクリックします。対話モデルのビルドが開始されます。<br />
+  対話モデルのサイズなどによって、数分ぐらいかかることがあります。<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Build_Interaction_Model.png)
 
 <div class="tip">
   <p><strong>ヒント</strong></p>
@@ -27,19 +26,18 @@ Custom Extensionを配布する場合、先に[対話モデルを登録](/DevCon
 
 [対話モデルのビルド](#BuildInteractionModel)が完了すると、対話モデルをテストできます。次のように発話をテストできます。
 
-<ol>
-  <li>左側のサイドメニューの<strong>{{ book.DevConsole.cek_test }}</strong>をクリックします。<strong>{{ book.DevConsole.cek_interaction_model }}：{{ book.DevConsole.cek_test }}</strong>画面が表示されます。</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Test_Menu.png" />
-  <li><strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong>フィールドにテストする発話を入力し、<strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong>ボタンをクリックします。</li>
-  <img src="/DevConsole/Assets/Images/DevConsole-Test_Utterance_Example.png" />
-</ol>
+1. 左側のサイドメニューの**{{ book.DevConsole.cek_test }}**をクリックします。<br />
+  **{{ book.DevConsole.cek_interaction_model }}：{{ book.DevConsole.cek_test }}**画面が表示されます。<br />
+  ![](/DevConsole/Assets/Images/DevConsole-Test_Menu.png)
+2.**{{ book.DevConsole.cek_builder_test_expression_title }}** フィールドにテストする発話を入力し、**{{ book.DevConsole.cek_builder_test_request_test }}**ボタンをクリックします。</li>
+  ![](/DevConsole/Assets/Images/DevConsole-Test_Utterance_Example.png)
 
 テストが完了すると、次のような結果を確認できます。結果から、下記の項目を確認します。
 
-* **{{ book.DevConsole.cek_builder_test_service_response }}**項目から、[登録したCustom Extension](/DevConsole/Guides/Register_Custom_Extension.md)が正しく応答しているか確認します。
-* **{{ book.DevConsole.cek_builder_test_intent_result }}**項目と**{{ book.DevConsole.cek_builder_test_slot_result }}**項目から、インテントとスロットが正しく認識されているか確認します。
-* **{{ book.DevConsole.cek_builder_test_request_json }}**項目から、CEKがCustom Extensionに送る[リクエストメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)に異常がないか確認します。JSONファイルの内容を編集してから**{{ book.DevConsole.cek_builder_test_test_again }}**ボタンをクリックすると、再度テストできます。
-* **{{ book.DevConsole.cek_builder_test_response_json }}**項目から、登録したCustom Extensionが正しく[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)を返しているか確認します。
+* **{{ book.DevConsole.cek_builder_test_service_response }}**項目から、[登録したCustom Extension](/DevConsole/Guides/Register_Custom_Extension.md)が正しく応答しているか確認してください。
+* **{{ book.DevConsole.cek_builder_test_intent_result }}**項目と**{{ book.DevConsole.cek_builder_test_slot_result }}**項目から、インテントとスロットが正しく認識されているか確認してください。
+* **{{ book.DevConsole.cek_builder_test_request_json }}**項目から、CEKがCustom Extensionに送る[リクエストメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)に異常がないか確認してください。JSONファイルの内容を編集してから**{{ book.DevConsole.cek_builder_test_test_again }}**ボタンをクリックすると、再度テストできます。
+* **{{ book.DevConsole.cek_builder_test_response_json }}**項目から、登録したCustom Extensionが正しく[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)を返しているか確認してください。
 
 ![](/DevConsole/Assets/Images/DevConsole-Test_Result.png)
 

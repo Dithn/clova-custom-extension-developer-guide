@@ -22,6 +22,6 @@ The diagram below shows the operating structure between the Clova platform and e
 The Clova platform currently supports and provides two types of extensions as follows:
 
 * [Custom extension](/Develop/Guides/Build_Custom_Extension.md): An extension that provides tailored extended functions. A custom extension lets you provide third-party services such as music, shopping, or banking.
-* [Clova Home extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.md): An extension that provides a service for controlling IoT appliances.
+* [Clova Home extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink }}): An extension that provides a service for controlling IoT appliances.
 
 <!-- End of the shared content -->

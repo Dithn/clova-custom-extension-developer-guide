@@ -12,7 +12,8 @@
       "DocVersion": "v2019-08-19",
       "OutputFormat": "Web",
       "ReleaseYear": "2019",
-      "TargetReaderType": "Internal"
+      "TargetReaderType": "Internal",
+      "FileExtensionForExternalLink": "html"
     },
     "ServiceEnv": {
       "CEKTermsOfUseURI": "https://developers.naver.com/console/clova/cek/#/terms",
@@ -31,6 +32,7 @@
       "TargetCountryCode": "KR"
     },
     "DevConsole": {
+      "supported_languages": "Korean",
       "cek_access_token_uri": "Access token URI",
       "cek_account_linking": "Account linking status",
       "cek_allow_purchase": "Purchase/payment feature",

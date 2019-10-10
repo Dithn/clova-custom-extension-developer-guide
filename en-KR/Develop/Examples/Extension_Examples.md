@@ -24,8 +24,8 @@ Magic Ball is an extension that returns a random response to a user's question, 
 Rain Sound is an extension that responds by making the client play the pre-recorded audio file (.mp3) upon user request.
 
 ### Features
-* The user can select the number of repeats for the rain audio. The interaction of the extension defines the value of repeats as a slot.
-* It sends the [response message](/Develop/References/Custom_Extension_Message.md#CustomExtRequestType) by including not only the guide message but also the [`AudioPlayer.Play`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#Play) directive message to CEK so that the client can play the audio content.
+* The user can select the number of repeats for the rain sound. The interaction of the extension defines the value of repeats as a slot.
+* It sends the [response message](/Develop/References/Custom_Extension_Message.md#CustomExtRequestType) by including not only the guide message but also the [`AudioPlayer.Play`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#Play) directive message to CEK so that the client can play the audio content.
 * It is implemented in Node.js.
 
 ### GitHub repository

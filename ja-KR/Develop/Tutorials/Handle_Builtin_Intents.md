@@ -65,22 +65,18 @@ intentRequest(cekResponse) {
 
 次の順で、サンプルサイコロExtensionがヘルプのリクエストを正しく処理するか確認します。
 
-<ol>
-  <li><p><a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova Developer Center</a>に接続します。</p></li>
-  <li><p>サンプルサイコロの<strong>{{ book.DevConsole.cek_interaction_model }}</strong>項目の<strong>{{ book.DevConsole.cek_edit}}</strong>ボタンをクリックします。</p></li>
-  <li><p>画面左上の<strong>{{ book.DevConsole.cek_builder_menu_build }}</strong>ボタンをクリックして、対話モデルをビルドします。</p></li>
-  <li><p>ビルドが終わったら、左側のメニューリストで<strong>{{ book.DevConsole.cek_test }}</strong>メニューをクリックします。</p></li>
-  <li><p><strong>{{ book.DevConsole.cek_builder_test_expression_title }}</strong>にヘルプをリクエストするフレーズを入力します。例えば「使い方を教えて」と入力します。</p></li>
-  <li><p>Enterキーを押すか、または<strong>{{ book.DevConsole.cek_builder_test_request_test }}</strong>ボタンをクリックします。</p></li>
-  <li>
-    <p><strong>{{ book.DevConsole.cek_builder_test_result_title }}</strong>の<strong>{{ book.DevConsole.cek_builder_test_intent_result }}</strong>項目に「Clova.GuideIntent」と表示されるか確認します。</p>
-  	<img src="/Develop/Assets/Images/CEK_Tutorial_Builtin_Intent_Test.png" />
-    <div class="note">
-    	<p><strong>メモ</strong></p>
-    	<p>外部からアクセスできるExtensionサーバーのURIを登録していない場合、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>は「{{ book.DevConsole.cek_builder_test_no_response }}」と表示されます。</p>
-  	</div>
-  </li>
-</ol>
+1. <a href="{{ book.ServiceEnv.DeveloperConsoleURI }}/cek/#/list" target="_blank">Clova Developer Center</a>に接続します。
+2. サンプルサイコロの**{{ book.DevConsole.cek_interaction_model }}**項目の**{{ book.DevConsole.cek_edit}}**ボタンをクリックします。
+3. 画面左上の**{{ book.DevConsole.cek_builder_menu_build }}**ボタンをクリックして、対話モデルをビルドします。
+4. ビルドが終わったら、左側のメニューリストで**{{ book.DevConsole.cek_test }}**メニューをクリックします。
+5. **{{ book.DevConsole.cek_builder_test_expression_title }}**に、ヘルプを求めるフレーズを入力します。例えば、「使い方を教えて」と入力します。
+6. Enterキーを押すか、または**{{ book.DevConsole.cek_builder_test_request_test }}**ボタンをクリックします。
+7. **{{ book.DevConsole.cek_builder_test_result_title }}**の**{{ book.DevConsole.cek_builder_test_intent_result }}**項目に「Clova.GuideIntent」と表示されるか確認します。<br />
+	![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Intent_Test.png)
+  <div class="note">
+  	<p><strong>メモ</strong></p>
+  	<p>外部からアクセスできるExtensionサーバーのURIを登録していない場合、<strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>は「{{ book.DevConsole.cek_builder_test_no_response }}」と表示されます。</p>
+	</div>
 
 こうすることで、サンプルサイコロExtensionが、ヘルプのリクエストに応答できるようになります。
 このようにExtensionサーバーが`Clova.CancelIntent`、`Clova.YesIntent`、`Clova.NoIntent`を処理するように実装すると、実行のキャンセル、肯定または否定を表すリクエストにも応答できます。

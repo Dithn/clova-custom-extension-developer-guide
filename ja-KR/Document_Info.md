@@ -33,7 +33,7 @@
       <td>
         <ul>
           <li>Custom Extensionのデザインガイドラインドキュメントを<a href="/Design/Design_Custom_Extension.md">Custom Extensionをデザインする</a>、<a href="/Design/Supported_Audio_Format.md">プラットフォームでサポートされる音声ファイルフォーマット</a>、<a href="/Design/Rules_For_Content.md">コンテンツガイドライン</a>ページに分割</li>
-          <li><a href="/Design/Audio.md#SupportedAudioFormat">プラットフォームでサポートされる音声ファイルフォーマット</a>に、Clovaでサポートされるコンテナフォーマットを追加</li>
+          <li><a href="/Design/Supported_Audio_Format.md">プラットフォームでサポートされる音声ファイルフォーマット</a>に、Clovaでサポートされるコンテナフォーマットを追加</li>
         </ul>
       </td>
     </tr>
@@ -67,7 +67,7 @@
       <td>2019/05/20</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a>のtoken、valueフィールド</li>
+          <li><a href="/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject">SpeechInfoObject</a>のtoken、valueフィールド</li>
         </ul>
       </td>
     </tr>
@@ -75,7 +75,7 @@
       <td>2019/04/01</td>
       <td>
         <ul>
-          <li>Extensionがクライアントから合成音声（TTS）の再生状態のレポートを受信できるように、<a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a>にtokenフィールドを追加し、<a href="/Develop/Guides/Monitor_TTS_Playback_Status.md">音声の再生状態を確認する</a>ガイドドキュメントを追加</li>
+          <li>Extensionがクライアントから合成音声（TTS）の再生状態のレポートを受信できるように、<a href="/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject">SpeechInfoObject</a>にtokenフィールドを追加し、<a href="/Develop/Guides/Monitor_TTS_Playback_Status.md">音声の再生状態を確認する</a>ガイドドキュメントを追加</li>
         </ul>
       </td>
     </tr>
@@ -83,7 +83,7 @@
       <td>2019/03/25</td>
       <td>
         <ul>
-          <li>HLSストリームを提供するために、contentTypeフィールドをCustom Extensionのメッセージの<a href="/Develop/References/CEK_API.md#CustomExtSpeechInfoObject">SpeechInfoObject</a>に追加</li>
+          <li>HLSストリームを提供するために、contentTypeフィールドをCustom Extensionのメッセージの<a href="/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject">SpeechInfoObject</a>に追加</li>
           <li>一部リンクの誤りおよびサンプルを訂正</li>
         </ul>
       </td>
@@ -232,7 +232,7 @@
       <td>2018/02/05</td>
       <td>
         <ul>
-          <li>Extensionを開始する呼び出し（<a href="CEK/Guides/Build_Custom_Extension.md#HandleLaunchRequest">LaunchRequest</a>）の説明を修正および<a href="/Design/Design_Custom_Extension.md">Custom Extensionをデザインする</a>ドキュメントに反映</li>
+          <li>Extensionを開始する呼び出し（<a href="/Develop/Guides/Build_Custom_Extension.md#HandleLaunchRequest">LaunchRequest</a>）の説明を修正および<a href="/Design/Design_Custom_Extension.md">Custom Extensionをデザインする</a>ドキュメントに反映</li>
           <li>CEKとExtensionの通信に使用される<a href="/Develop/CEK_Overview.md#WhatisCEK">HTTPプロトコルのバージョン</a>を明記</li>
           <li><a href="/Develop/Tutorials/Introduction.md">チュートリアル</a>ページに<a href="/Develop/Tutorials/Handle_Builtin_Intents.md">基本的な意思表現を処理する</a>ページを追加</li>
           <li>Extensionサーバーで使用すべき<a href="/DevConsole/Guides/Register_Custom_Extension.md#SetServerConnection">ポート</a>を明記</li>

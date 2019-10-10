@@ -1,6 +1,6 @@
 <!-- Note! This content includes shared parts. Therefore, when you update this, you should beware of synchronization. -->
 
-# Custom extension messages {#CustomExtMessage}
+# Custom extension messages
 Custom extension messages are used when exchanging information between CEK and the custom extension. Custom extension messages are classified as [request messages](#CustomExtRequestMessage) and [response messages](#CustomExtResponseMessage). Depending on the [request type](#CustomExtRequestType), request messages are classified into four types: `EventRequest`, `IntentRequest`, `LaunchRequest`, and `SessionEndedRequest`.
 
 ## Request messages {#CustomExtRequestMessage}
@@ -62,7 +62,7 @@ CEK uses request messages (via HTTP request) to send user intents analyzed by Cl
 | `context.AudioPlayer`                      | object  | The object that holds the details of the media content currently playing or that was played last. | Conditional |
 | `context.AudioPlayer.offsetInMilliseconds` | number  | The most recent playback position (offset) of the recently played media. The unit is milliseconds and this field value may be empty if the `playerActivity` value is `"IDLE"`.                                       | Conditional |
 | `context.AudioPlayer.playerActivity`       | string  | The value for indicating the state of player. Available values are:<ul><li><code>"IDLE"</code>: Deactivated</li><li><code>"PLAYING"</code>: Playing</li><li><code>"PAUSED"</code>: Paused</li><li><code>"STOPPED"</code>: Stopped</li></ul> | Always |
-| `context.AudioPlayer.stream`               | [AudioStreamInfoObject]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#AudioStreamInfoObject) | The object that contains the details of the currently playing media. This field value may be empty if the `playerActivity` value is `"IDLE"`.    | Conditional |
+| `context.AudioPlayer.stream`               | [AudioStreamInfoObject]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#AudioStreamInfoObject) | The object that contains the details of the currently playing media. This field value may be empty if the `playerActivity` value is `"IDLE"`.    | Conditional |
 | `context.AudioPlayer.totalInMilliseconds`  | number  | The total duration of the recently played media. The unit is milliseconds and this field value may be empty if the `playerActivity` value is `"IDLE"`.                                                                  | Conditional |
 | `context.System`                           | object  | The object that has the context information of the client system.                          | Always |
 | `context.System.application`               | object  | The object that has the information of the extension that must be executed by the user intent.       | Always |
@@ -272,7 +272,7 @@ CEK uses request messages (via HTTP request) to send user intents analyzed by Cl
 
 ### See also
 * [Handling a custom extension request](/Develop/Guides/Build_Custom_Extension.md#HandleCustomExtensionRequest)
-* [AudioStreamInfoObject]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#AudioStreamInfoObject)
+* [AudioStreamInfoObject]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#AudioStreamInfoObject)
 
 ## Request types {#CustomExtRequestType}
 Request messages are classified into the following four types, and the field configuration of the `request` object of the request message varies for each request type.
@@ -288,21 +288,21 @@ Request messages are classified into the following four types, and the field con
 * [Request additional information related to audio playback from the extension](/Develop/Guides/Build_Custom_Extension.md#ProvidingMetaDataForDisplay)
 * [Report speech (TTS) playback status of the client to the extension](/Develop/Guides/Monitor_TTS_Playback_Status.md)
 
-You must develop the extension to handle the tasks of reporting the audio or speech playback state or requesting additional information. Use the `EventRequest` request type and the following [event messages]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md#Event) of [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md) when handling the tasks above.
+You must develop the extension to handle the tasks of reporting the audio or speech playback state or requesting additional information. Use the `EventRequest` request type and the following [event messages]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.{{ book.DocMeta.FileExtensionForExternalLink }}#Event) of [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.{{ book.DocMeta.FileExtensionForExternalLink }}) when handling the tasks above.
 
-* [`AudioPlayer.PlayFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#PlayFinished)
-* [`AudioPlayer.PlayPaused`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#PlayPaused)
-* [`AudioPlayer.PlayResumed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#PlayResumed)
-* [`AudioPlayer.PlayStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#PlayStarted)
-* [`AudioPlayer.PlayStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#PlayStopped)
-* [`AudioPlayer.ProgressReportDelayPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#ProgressReportDelayPassed)
-* [`AudioPlayer.ProgressReportIntervalPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#ProgressReportIntervalPassed)
-* [`AudioPlayer.ProgressReportPositionPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#ProgressReportPositionPassed)
-* [`AudioPlayer.StreamRequested`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.md#StreamRequested)
-* [`SpeechSynthesizer.SpeechFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechFinished)
-* [`SpeechSynthesizer.SpeechStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechStarted)
-* [`SpeechSynthesizer.SpeechStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechStopped)
-* [`TemplateRuntime.RequestPlayerInfo`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/TemplateRuntime.md#RequestPlayerInfo)
+* [`AudioPlayer.PlayFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#PlayFinished)
+* [`AudioPlayer.PlayPaused`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#PlayPaused)
+* [`AudioPlayer.PlayResumed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#PlayResumed)
+* [`AudioPlayer.PlayStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#PlayStarted)
+* [`AudioPlayer.PlayStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#PlayStopped)
+* [`AudioPlayer.ProgressReportDelayPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#ProgressReportDelayPassed)
+* [`AudioPlayer.ProgressReportIntervalPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#ProgressReportIntervalPassed)
+* [`AudioPlayer.ProgressReportPositionPassed`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#ProgressReportPositionPassed)
+* [`AudioPlayer.StreamRequested`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/AudioPlayer.{{ book.DocMeta.FileExtensionForExternalLink }}#StreamRequested)
+* [`SpeechSynthesizer.SpeechFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechFinished)
+* [`SpeechSynthesizer.SpeechStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechStarted)
+* [`SpeechSynthesizer.SpeechStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechStopped)
+* [`TemplateRuntime.RequestPlayerInfo`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/TemplateRuntime.{{ book.DocMeta.FileExtensionForExternalLink }}#RequestPlayerInfo)
 {% elif book.L10N.TargetCountryCode == "JP" %}
 `EventRequest` type is a request type used when changes in the client state or related requests need to be sent to the extension. CEK handles the following tasks using the `EventRequest` request type:
 * Report the results of the user enabling or disabling specific skills
@@ -570,8 +570,8 @@ The extension must deliver a response message (via HTTP response) after handling
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
 | `response`                               | object       | The object containing the response information of the extension.                            | Required |
-| `response.card`                          | object       | The data is in the [content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md) format and can be displayed on the client screen via this field. If data exists in this field, CIC sends the [Clova.RenderTemplate]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/Clova.md#RenderTemplate) directive message to the client. If the object is empty, CIC delivers the [Clova.RenderText]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/Clova.md#RenderText) directive message to the client to display the values in the `response.outputSpeech.values` field.        | Required |
-| `response.directives[]`                  | object array | The directive message that the extension delivers to CEK. The `response.directives` field is normally used to provide audio content and supports the following {%- if book.L10N.TargetCountryCode == "KR" -%}[CIC API](https://pages.oss.navercorp.com/JTF-P6/Clova_Client_Developer_Guide/ko-KR/Develop/References/CIC_API.md){%- elif book.L10N.TargetCountryCode == "JP" -%}[CIC API](#CICAPIforAudioPlayback){%- endif -%} directive messages:<ul><li><code>AudioPlayer.Play</code></li><li><code>AudioPlayer.StreamDeliver</code></li><li><code>PlaybackController.Pause</code></li><li><code>PlaybackController.Resume</code></li><li><code>PlaybackController.Stop</code></li><li><code>TemplateRuntime.RenderPlayerInfo</code></li></ul><div class="note"><p><strong>Note!</strong></p>When writing the <p>CIC API directive message</p>, the fields whose "Inclusion status" is set to <strong>"always"</strong> are required fields and must be filled out.</p></div> | Required |
+| `response.card`                          | object       | The data is in the [content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }}) format and can be displayed on the client screen via this field. If data exists in this field, CIC sends the [Clova.RenderTemplate]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/Clova.{{ book.DocMeta.FileExtensionForExternalLink }}#RenderTemplate) directive message to the client. If the object is empty, CIC delivers the [Clova.RenderText]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/Clova.{{ book.DocMeta.FileExtensionForExternalLink }}#RenderText) directive message to the client to display the values in the `response.outputSpeech.values` field.        | Required |
+| `response.directives[]`                  | object array | The directive message that the extension delivers to CEK. The `response.directives` field is normally used to provide audio content and supports the following {%- if book.L10N.TargetCountryCode == "KR" -%}[CIC API](https://pages.oss.navercorp.com/JTF-P6/Clova_Client_Developer_Guide/ko-KR/Develop/References/CIC_API.{{ book.DocMeta.FileExtensionForExternalLink }}{%- elif book.L10N.TargetCountryCode == "JP" -%}[CIC API](#CICAPIforAudioPlayback){%- endif -%} directive messages:<ul><li><code>AudioPlayer.Play</code></li><li><code>AudioPlayer.StreamDeliver</code></li><li><code>PlaybackController.Pause</code></li><li><code>PlaybackController.Resume</code></li><li><code>PlaybackController.Stop</code></li><li><code>TemplateRuntime.RenderPlayerInfo</code></li></ul><div class="note"><p><strong>Note!</strong></p>When writing the <p>CIC API directive message</p>, the fields whose "Inclusion status" is set to <strong>"always"</strong> are required fields and must be filled out.</p></div> | Required |
 | `response.directives[].header`           | object       | The header of the directive message.                                          | Required |
 | `response.directives[].header.messageId` | string       | The message ID (UUID). The message ID used to distinguish individual messages.   | Required |
 | `response.directives[].header.name`      | string       | The API name of the directive message.                                      | Required |
@@ -584,7 +584,7 @@ The extension must deliver a response message (via HTTP response) after handling
 | `response.outputSpeech.verbose`          | object       | The object that contains detailed voice information and is used when delivering content to a client device without a display. | Optional |
 | `response.outputSpeech.verbose.type`     | string       | The type of voice information to output. Only the voice information in simple and complex sentence formats can be entered. <ul><li><code>"SimpleSpeech"</code>: Voice information in a simple sentence format. This is used when delivering the most basic voice information. If this value is designated, the <code>response.outputSpeech.verbose.values</code> field must have the <a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a> object.</li><li><code>"SpeechList"</code>: Voice information in a complex sentence format. This is used when outputting many sentences. If this value is designated, the <code>response.outputSpeech.verbose.values</code> field must have a <a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a> object array.</li></ul> | Required |
 | `response.outputSpeech.verbose.values[]`           | [SpeechInfoObject](#CustomExtSpeechInfoObject) or [SpeechInfoObject](#CustomExtSpeechInfoObject) array | The object or object array that contains the detailed voice information to output from the client device. | Required |
-| `response.reprompt`                               | object       | The object that contains voice information to encourage additional user utterances. If the `response.reprompt` field is used, the intention to continue multi-turn dialogue can be asked to the user or the user can be encouraged to enter additional mandatory information. Generally, if there is no additional utterance from the user during a multi-turn dialogue, the multi-turn dialogue exits automatically after the waiting time for input is exceeded. However, if the `response.reprompt` field is used, the Clova outputs the voice written in the `response.reprompt` field after the client exceeds the waiting time for input and delivers the [`SpeechSynthesizer.Speak`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#Speak) directive message and the [`SpeechRecognizer.ExpectSpeech`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechRecognizer.md#ExpectSpeech) directive message to the client to receive additional utterances from the user.<div class="tip"><p><strong>Tip!</strong></p><p><code>response.reprompt</code>: The field is valid when the <code>response.shouldEndSession</code> field value is entered as <code>false</code>. It is recommended to send voice information in a short sentence format (<code>"SimpleSpeech"</code>). If the <code>response.reprompt</code> field is used, the input waiting time can be extended (only) once.</p></div> | Optional |
+| `response.reprompt`                               | object       | The object that contains voice information to encourage additional user utterances. If the `response.reprompt` field is used, the intention to continue multi-turn dialogue can be asked to the user or the user can be encouraged to enter additional mandatory information. Generally, if there is no additional utterance from the user during a multi-turn dialogue, the multi-turn dialogue exits automatically after the waiting time for input is exceeded. However, if the `response.reprompt` field is used, the Clova outputs the voice written in the `response.reprompt` field after the client exceeds the waiting time for input and delivers the [`SpeechSynthesizer.Speak`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#Speak) directive message and the [`SpeechRecognizer.ExpectSpeech`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechRecognizer.{{ book.DocMeta.FileExtensionForExternalLink }}#ExpectSpeech) directive message to the client to receive additional utterances from the user.<div class="tip"><p><strong>Tip!</strong></p><p><code>response.reprompt</code>: The field is valid when the <code>response.shouldEndSession</code> field value is entered as <code>false</code>. It is recommended to send voice information in a short sentence format (<code>"SimpleSpeech"</code>). If the <code>response.reprompt</code> field is used, the input waiting time can be extended (only) once.</p></div> | Optional |
 | `response.reprompt.outputSpeech`                  | object       | The object that contains the information to be synthesized as a voice. The synthesized voice information is delivered to the client via CIC.              | Required |
 | `response.reprompt.outputSpeech.brief`            | [SpeechInfoObject](#CustomExtSpeechInfoObject) | The summary of voice information to output.                    | Optional |
 | `response.reprompt.outputSpeech.type`             | string       | The type of voice information to output. <ul><li>"SimpleSpeech": Voice information in a simple sentence format. This is the most basic type, and the <code>response.outputSpeech.values</code> field must have a <a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a> object if this value is designated.</li><li><code>"SpeechList"</code>: Voice information in a complex sentence format. This is used when outputting many sentences. If this value is designated, the <code>response.outputSpeech.values</code> field must have a <a href="#CustomExtSpeechInfoObject"><code>SpeechInfoObject</code></a> object array.</li><li><code>"SpeechSet"</code>: Voice information in a combined format. This is used to deliver the summary of the voice information and detailed voice information to a client device without a display. If this value is designated, it must have the <code>response.outputSpeech.brief</code> and <code>response.outputSpeech.verbose</code> fields instead of the <code>response.outputSpeech.values</code> field.</li></ul> | Required |
@@ -837,11 +837,11 @@ SpeechInfoObject is an object reused in the `response.outputSpeech` of a respons
 
 ### See also
 * [Returning a custom extension response](/Develop/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse)
-* [Content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.md)
+* [Content template]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Content_Templates.{{ book.DocMeta.FileExtensionForExternalLink }})
 
 {% if book.L10N.TargetCountryCode == "JP" %}
 
-# CIC API related to the audio content playback {#CICAPIforAudioPlayback}
+## CIC API related to the audio content playback {#CICAPIforAudioPlayback}
 
 <!-- Start of the shared content: CICAPIforAudioPlayback -->
 
@@ -875,10 +875,10 @@ Therefore, if your custom extension provides audio content, you need an understa
 
 <!-- Start of the shared content: AudioPlayer.Play -->
 
-## AudioPlayer.Play directive {#Play}
+### AudioPlayer.Play directive {#Play}
 Instructs the client to either play or add to the playback queue the specified audio stream.
 
-### Payload fields
+#### Payload fields
 | Field name       | Data type    | Description                     | Included |
 |---------------|---------|-----------------------------|:---------:|
 | `audioItem`               | object | The metadata of an audio stream to play and audio stream information required for playback.                     | Always |
@@ -894,12 +894,12 @@ Instructs the client to either play or add to the playback queue the specified a
 | `source.logoUrl`          | string | The URI for the logo of the audio streaming service. If this field is unavailable or undefined, or if the logo cannot be displayed, you must at least display the name of the music service provider specified in the `source.name` field.  | Conditional |
 | `source.name`             | string | The text field containing the name of the audio streaming service.                                                        | Always |
 
-### Remarks
+#### Remarks
 Based on the policy of music service providers, certain information required for playback (e.g. streaming URI) may have to be acquired right before playback. Whether additional information will be requested is specified in the `audioItem.stream.urlPlayable` field, as shown below:
 * `urlPlayable` is `true`: No additional information is required. You can play the audio stream only with the URI specified in the `audioItem.stream.url` field.
 * `urlPlayable` is `false`: Additional information is required for you to play the given audio stream with the URI specified in the `audioItem.stream.url` field. Make a request for additional information with the [`AudioPlayer.StreamRequested`](#StreamRequested) event message.
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -985,7 +985,7 @@ Based on the policy of music service providers, certain information required for
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
@@ -999,17 +999,17 @@ Based on the policy of music service providers, certain information required for
 
 <!-- Start of the shared content: AudioPlayer.PlayFinished -->
 
-## AudioPlayer.PlayFinished event {#PlayFinished}
+### AudioPlayer.PlayFinished event {#PlayFinished}
 Reports to CIC that the client has finished playback with the information on the audio stream.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | The token of the audio stream.    | Required |
 | `offsetInMilliseconds` | number | The current-time indicator of the audio playing (in milliseconds).                         | Required  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1033,7 +1033,7 @@ Reports to CIC that the client has finished playback with the information on the
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
 * [`AudioPlayer.PlayStopped`](#PlayStopped)
@@ -1042,17 +1042,17 @@ Reports to CIC that the client has finished playback with the information on the
 
 <!-- Start of the shared content: AudioPlayer.PlayPaused -->
 
-## AudioPlayer.PlayPaused event {#PlayPaused}
+### AudioPlayer.PlayPaused event {#PlayPaused}
 Reports to CIC that the client has paused playback with the information on the audio stream.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | The token of the audio stream. | Required |
 | `offsetInMilliseconds` | number | The current-time indicator of the audio playing (in milliseconds).                         | Required  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1076,7 +1076,7 @@ Reports to CIC that the client has paused playback with the information on the a
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
@@ -1084,18 +1084,18 @@ Reports to CIC that the client has paused playback with the information on the a
 
 <!-- Start of the shared content: AudioPlayer.PlayResumed -->
 
-## AudioPlayer.PlayResumed event {#PlayResumed}
+### AudioPlayer.PlayResumed event {#PlayResumed}
 
 Reports to CIC that the client has resumed playback with the information on the audio stream.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | The token of the audio stream. | Required |
 | `offsetInMilliseconds` | number | The current-time indicator of the audio playing (in milliseconds).                         | Required  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1119,7 +1119,7 @@ Reports to CIC that the client has resumed playback with the information on the 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 
@@ -1127,17 +1127,17 @@ Reports to CIC that the client has resumed playback with the information on the 
 
 <!-- Start of the shared content: AudioPlayer.PlayStarted -->
 
-## AudioPlayer.PlayStarted event {#PlayStarted}
+### AudioPlayer.PlayStarted event {#PlayStarted}
 Reports to CIC that the client has started playback with the information on the audio stream.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | The token of the audio stream. | Required |
 | `offsetInMilliseconds` | number | The current-time indicator of the audio playing (in milliseconds).                         | Required  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1161,7 +1161,7 @@ Reports to CIC that the client has started playback with the information on the 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStopped`](#PlayStopped)
 
@@ -1169,17 +1169,17 @@ Reports to CIC that the client has started playback with the information on the 
 
 <!-- Start of the shared content: AudioPlayer.PlayStopped -->
 
-## AudioPlayer.PlayStopped event {#PlayStopped}
+### AudioPlayer.PlayStopped event {#PlayStopped}
 Reports to CIC that the client has stopped playback with the information on the audio stream.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | The token of the audio stream. | Required |
 | `offsetInMilliseconds` | number | The current-time indicator of the audio playing (in milliseconds).                         | Required  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1203,7 +1203,7 @@ Reports to CIC that the client has stopped playback with the information on the 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
 
@@ -1211,17 +1211,17 @@ Reports to CIC that the client has stopped playback with the information on the 
 
 <!-- Start of the shared content: AudioPlayer.ProgressReportDelayPassed -->
 
-## AudioPlayer.ProgressReportDelayPassed event {#ProgressReportDelayPassed}
+### AudioPlayer.ProgressReportDelayPassed event {#ProgressReportDelayPassed}
 Reports the current playback state to CIC after the specified time (delay) has passed playing the audio stream.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | The token of the audio stream. | Required |
 | `offsetInMilliseconds` | number | The current-time indicator of the audio playing (in milliseconds).                         | Required  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1245,7 +1245,7 @@ Reports the current playback state to CIC after the specified time (delay) has p
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.ProgressReportIntervalPassed`](#ProgressReportIntervalPassed)
 * [`AudioPlayer.ProgressReportPositionPassed`](#ProgressReportPositionPassed)
@@ -1254,17 +1254,17 @@ Reports the current playback state to CIC after the specified time (delay) has p
 
 <!-- Start of the shared content: AudioPlayer.ProgressReportIntervalPassed -->
 
-## AudioPlayer.ProgressReportIntervalPassed event {#ProgressReportIntervalPassed}
+### AudioPlayer.ProgressReportIntervalPassed event {#ProgressReportIntervalPassed}
 Reports the current playback state to CIC on a regular interval while playing an audio stream.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | The token of the audio stream. | Required |
 | `offsetInMilliseconds` | number | The current-time indicator of the audio playing (in milliseconds).                         | Required  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1288,7 +1288,7 @@ Reports the current playback state to CIC on a regular interval while playing an
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.ProgressReportDelayPassed`](#ProgressReportDelayPassed)
 * [`AudioPlayer.ProgressReportPositionPassed`](#ProgressReportPositionPassed)
@@ -1297,17 +1297,17 @@ Reports the current playback state to CIC on a regular interval while playing an
 
 <!-- Start of the shared content: AudioPlayer.ProgressReportPositionPassed -->
 
-## AudioPlayer.ProgressReportPositionPassed event {#ProgressReportPositionPassed}
+### AudioPlayer.ProgressReportPositionPassed event {#ProgressReportPositionPassed}
 Reports the current playback state to CIC when the client reaches a specific playback point.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
 | `token`                | string | The token of the audio stream. | Required |
 | `offsetInMilliseconds` | number | The current-time indicator of the audio playing (in milliseconds).                         | Required  |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1331,7 +1331,7 @@ Reports the current playback state to CIC when the client reaches a specific pla
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.ProgressReportDelayPassed`](#ProgressReportDelayPassed)
 * [`AudioPlayer.ProgressReportIntervalPassed`](#ProgressReportIntervalPassed)
@@ -1340,19 +1340,19 @@ Reports the current playback state to CIC when the client reaches a specific pla
 
 <!-- Start of the shared content: AudioPlayer.StreamDeliver -->
 
-## AudioPlayer.StreamDeliver directive {#StreamDeliver}
+### AudioPlayer.StreamDeliver directive {#StreamDeliver}
 Receives the audio stream information that can be played as a response to the [`AudioPlayer.StreamRequested`](#StreamRequested) event message. The directive message contains the URI for audio streaming as mandatory information so the client can play the audio.
 
-### Payload fields
+#### Payload fields
 | Field name | Data type | Description | Included |
 |---------|------|--------|:---------:|
 | `audioItemId` | string | ID of the audio stream. Use this ID to remove redundant Play directive messages. | Always |
 | `audioStream` | [AudioStreamInfoObject](#AudioStreamInfoObject) | The audio stream information required for playback.       | Always |
 
-### Remarks
+#### Remarks
 Some contents of the `AudioStreamInfoObject` object provided by the `StreamDeliver` directive message may be omitted to avoid overlapping of information with the `AudioStreamInfoObject` object provided by the [`AudioPlayer.Play`](#Play) directive message. Therefore, you must combine the `payload.audioStream` information of the `StreamDeliver` directive message and the received [`Play`](#Play) directive message when playing the audio.
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1377,7 +1377,7 @@ Some contents of the `AudioStreamInfoObject` object provided by the `StreamDeliv
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
 
@@ -1385,19 +1385,19 @@ Some contents of the `AudioStreamInfoObject` object provided by the `StreamDeliv
 
 <!-- Start of the shared content: AudioPlayer.StreamRequested -->
 
-## AudioPlayer.StreamRequested event {#StreamRequested}
+### AudioPlayer.StreamRequested event {#StreamRequested}
 Requests CIC for additional information needed for audio stream playback such as a streaming URI.
 
-### Payload fields
+#### Payload fields
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
 | `audioItemId`   | string  | The token of the audio stream.          | Required |
 | `audioStream`   | [AudioStreamInfoObject](#AudioStreamInfoObject) | The `audioItem.stream` of the Play directive message. | Required |
 
-### Remarks
+#### Remarks
 Based on the policy of music service providers, certain information required for playback (e.g. streaming URL) may not be shared to clients until right before playback. This event message is an API designed for such situations where you cannot get stream information in advance. Do not send this event message any earlier than right before playing an audio stream.
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1431,24 +1431,24 @@ Based on the policy of music service providers, certain information required for
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: PlaybackController.Pause -->
 
-## PlaybackController.Pause directive {#Pause}
+### PlaybackController.Pause directive {#Pause}
 Instructs the client to pause the current audio stream. Upon receiving the directive message, the client must pause playing the audio stream.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Included |
 |---------------|---------|-----------------------------|:---------:|
-| target            | object  | The object that has control target. You can see  the target to control through this directive message. | Conditional  |
+| target            | object  | The object that has control target. You can see the target to control through this directive message. | Conditional  |
 | target.namespace  | string  | CIC API namespace. This is the information to identify the control target. Available values are:<ul><li><code>"AudioPlayer"</code>: audio player</li><li><code>"MediaPlayer"</code>: media player</li></ul>  | Always  |
 
-### Message example
+#### Message example
 
 ```json
 Example 1: An example where target is not specified
@@ -1482,24 +1482,24 @@ Example 2: An example where target is specified as "AudioPlayer"
 }
 ```
 
-### See also
+#### See also
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: PlaybackController.Resume -->
 
-## PlaybackController.Resume directive {#Resume}
+### PlaybackController.Resume directive {#Resume}
 Instructs the client to resume playing the audio stream. Upon receiving the directive message, the client must resume playing the audio stream.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Included |
 |---------------|---------|-----------------------------|:---------:|
-| target            | object  | The object that has control target. You can see  the target to control through this directive message. | Conditional  |
+| target            | object  | The object that has control target. You can see the target to control through this directive message. | Conditional  |
 | target.namespace  | string  | CIC API namespace. This is the information to identify the control target. Available values are:<ul><li><code>"AudioPlayer"</code>: audio player</li><li><code>"MediaPlayer"</code>: media player</li></ul>  | Always  |
 
-### Message example
+#### Message example
 
 ```json
 // Example 1: An example where target is not specified
@@ -1533,24 +1533,24 @@ Instructs the client to resume playing the audio stream. Upon receiving the dire
 }
 ```
 
-### See also
+#### See also
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: PlaybackController.Stop -->
 
-## PlaybackController.Stop directive {#Stop}
+### PlaybackController.Stop directive {#Stop}
 Instructs the client to stop playing an audio stream. Upon receiving the directive message, the client must stop playing the audio stream.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Included |
 |---------------|---------|-----------------------------|:---------:|
-| target            | object  | The object that has control target. You can see  the target to control through this directive message. | Conditional  |
+| target            | object  | The object that has control target. You can see the target to control through this directive message. | Conditional  |
 | target.namespace  | string  | CIC API namespace. This is the information to identify the control target. Available values are:<ul><li><code>"AudioPlayer"</code>: audio player</li><li><code>"MediaPlayer"</code>: media player</li></ul>  | Always  |
 
-### Message example
+#### Message example
 
 ```json
 // Example 1: An example where target is not specified
@@ -1584,23 +1584,23 @@ Instructs the client to stop playing an audio stream. Upon receiving the directi
 }
 ```
 
-### See also
+#### See also
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 
 <!-- End of the shared content -->
 
 <!-- Start of the shared content: SpeechSynthesizer.SpeechFinished -->
 
-## SpeechSynthesizer.SpeechFinished event {#SpeechFinished}
+### SpeechSynthesizer.SpeechFinished event {#SpeechFinished}
 Reports that the client has finished playing the TTS.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Included |
 |---------------|---------|-----------------------------|:---------:|
 | `token`       | string  | The token value for TTS identification.           | Always    |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1623,7 +1623,7 @@ Reports that the client has finished playing the TTS.
 
 {% endraw %}
 
-### See also
+#### See also
 * [`SpeechSynthesizer.SpeechStarted`](#SpeechStarted)
 * [`SpeechSynthesizer.SpeechStopped`](#SpeechStopped)
 
@@ -1634,13 +1634,13 @@ Reports that the client has finished playing the TTS.
 ### SpeechSynthesizer.SpeechStarted event {#SpeechStarted}
 Reports that the client has started playing the TTS.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Included |
 |---------------|---------|-----------------------------|:---------:|
 | `token`       | string  | The token value for TTS identification.           | Always    |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1663,7 +1663,7 @@ Reports that the client has started playing the TTS.
 
 {% endraw %}
 
-### See also
+#### See also
 * [`SpeechSynthesizer.SpeechFinished`](#SpeechFinished)
 * [`SpeechSynthesizer.SpeechStopped`](#SpeechStopped)
 
@@ -1671,16 +1671,16 @@ Reports that the client has started playing the TTS.
 
 <!-- Start of the shared content: SpeechSynthesizer.SpeechStopped -->
 
-## SpeechSynthesizer.SpeechStopped event {#SpeechStopped}
+### SpeechSynthesizer.SpeechStopped event {#SpeechStopped}
 Reports that the client has stopped playing the TTS.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Included |
 |---------------|---------|-----------------------------|:---------:|
 | `token`       | string  | The token value for TTS identification.           | Always    |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1703,7 +1703,7 @@ Reports that the client has stopped playing the TTS.
 
 {% endraw %}
 
-### See also
+#### See also
 * [`SpeechSynthesizer.SpeechFinished`](#SpeechFinished)
 * [`SpeechSynthesizer.SpeechStarted`](#SpeechStarted)
 
@@ -1711,11 +1711,11 @@ Reports that the client has stopped playing the TTS.
 
 <!-- Start of the shared content: TemplateRuntime.RenderPlayerInfo -->
 
-## TemplateRuntime.RenderPlayerInfo directive {#RenderPlayerInfo}
+### TemplateRuntime.RenderPlayerInfo directive {#RenderPlayerInfo}
 
 Instructs the client to display the sent playback metadata such as a playlist, album image, and lyrics on the media player. When the user requests to play music, the client plays the media by receiving the [`AudioPlayer.Play`](#Play) directive message. If necessary, a client with a display may have to express information related to playback on the media player. For this process, the playback metadata can be requested from CIC using the [`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo) event message and the `TemplateRuntime.RenderPlayerInfo` directive message is returned. The `TemplateRuntime.RenderPlayerInfo` directive message contains playback metadata on the media to play now and media to play later. The client is able to display metadata and play list of the currently playing media by providing the playback metadata of the `TemplateRuntime.RenderPlayerInfo` directive message to the user.
 
-### Payload fields
+#### Payload fields
 | Field name       | Data type    | Description                     | Included |
 |---------------|---------|-----------------------------|:---------:|
 | `displayType`               | string | Display format of the media content.<ul><li><code>"list"</code>: Display a list</li><li><code>"single"</code>: Display a single item</li></ul>       | Always |
@@ -1747,7 +1747,7 @@ Instructs the client to display the sent playback metadata such as a playlist, a
 | `provider.name`                    | string        | The name of the media content provider.                                                                   | Always  |
 | `provider.smallLogoUrl`            | string        | The URI for the small logo of the media content provider.                                                | Conditional |
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -1846,7 +1846,7 @@ Instructs the client to display the sent playback metadata such as a playlist, a
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`TemplateRuntime.RequestPlayerInfo`](#RequestPlayerInfo)
 
@@ -1854,10 +1854,10 @@ Instructs the client to display the sent playback metadata such as a playlist, a
 
 <!-- Start of the shared content: TemplateRuntime.RequestPlayerInfo -->
 
-## TemplateRuntime.RequestPlayerInfo event {#RequestPlayerInfo}
+### TemplateRuntime.RequestPlayerInfo event {#RequestPlayerInfo}
 Requests CIC for playback metadata such as a playlist, album image, and lyrics to display on the media player.
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
@@ -1866,7 +1866,7 @@ Requests CIC for playback metadata such as a playlist, album image, and lyrics t
 | `range.before` | number  | Requests n number of playback metadata included in the previous playlist from the base media content.  | Optional  |
 | `range.after`  | number  | Requests n number of playback metadata included in the next playlist from the existing media content. For example, if the value of `range.after` is set as `5` without specifying the value of `range.before` field, the playback metadata equivalent to a total of six media contents, including the base media content, is received. | Optional  |
 
-### Message example
+#### Message example
 
 {% raw %}
 
@@ -1889,18 +1889,18 @@ Requests CIC for playback metadata such as a playlist, album image, and lyrics t
 ```
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 
-## AudioStreamInfoObject {#AudioStreamInfoObject}
+### AudioStreamInfoObject {#AudioStreamInfoObject}
 The object containing streaming details of an audio stream. This object is used when CIC returns streaming details to a client or when the client sends the details of the currently playing audio stream to CIC.
 
-### Object fields
+#### Object fields
 
 | Field name       | Data type    | Description                     | Required/Included |
 |---------------|---------|-----------------------------|:-------------:|
 | `beginAtInMilliseconds`  | number | The playback start point. The unit is in milliseconds. If this field is specified, play the audio stream from the specified point of the stream. If set to 0, play the audio stream from the beginning.          | Required/Always |
-| `customData`             | string | The metadata on the current audio in a random format. Any streaming information that cannot be classified into a specific category or defined must be included or entered in this field. Additionally required custom values can be added arbitrarily by the streaming service providers to the context of audio stream playback.<div class="warning"><p><strong>Warning!</strong></p><p>Clients must not arbitrarily use the value of this field, as it can cause problems. Also, make sure to enter this field value in the `stream` field of the <a href="{{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Context_Objects.md#PlaybackState">PlaybackState context</a> without any alterations, when reporting the playback state to CIC.</p></div> | Optional/Conditional  |
+| `customData`             | string | The metadata on the current audio in a random format. Any streaming information that cannot be classified into a specific category or defined must be included or entered in this field. Additionally required custom values can be added arbitrarily by the streaming service providers to the context of audio stream playback.<div class="warning"><p><strong>Warning!</strong></p><p>Clients must not arbitrarily use the value of this field, as it can cause problems. Also, make sure to enter this field value in the `stream` field of the <a href="{{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/Context_Objects.{{ book.DocMeta.FileExtensionForExternalLink }}#PlaybackState">PlaybackState context</a> without any alterations, when reporting the playback state to CIC.</p></div> | Optional/Conditional  |
 | `durationInMilliseconds` | number | The length of the audio stream. The client can play and navigate audio from the playback time specified in the `beginAtInMilliseconds` field by the amount of time defined in this field. For example, if the value of `beginAtInMilliseconds` field is `10000` and the value of this field is `60000`, you can play and navigate within 10-70 seconds of the audio stream. The unit is in milliseconds.   | Optional/Conditional  |
 | `format`                 | string  | The media format (MIME type). This field can be used to identify whether the content uses the HTTP Live Streaming (HLS) protocol. Available values are: The default value is `"audio/mpeg"`.<ul><li><code>"audio/mpeg"</code></li><li><code>"audio/mpegurl"</code></li><li><code> "audio/aac"</code></li><li><code>"application/vnd.apple.mpegurl"</code></li></ul> <div class="note"><p><strong>Note!</strong></p><p>If you want to develop an extension that provides content using the HLS protocol, email <a href="mailto:{{ book.ServiceEnv.ExtensionAdminEmail }}">{{ book.ServiceEnv.ExtensionAdminEmail }}</a>.</p></div>   | Optional/Conditional  |
 | `progressReport`         | object  | The time specified to receive the playback state after the audio starts.                                                  | Optional/Conditional |
@@ -1911,10 +1911,10 @@ The object containing streaming details of an audio stream. This object is used 
 | `url`                    | string  | The URL of the audio stream.<div class="note"><p><strong>Note!</strong></p><p>The maximum length of this field is 2048 bytes.</p></div>                              | Required/Always |
 | `urlPlayable`            | boolean | Indicates whether the audio stream URI in the `url` field can be played immediately. <ul><li><code>true</code>: The client can play the audio without additional information.</li><li><code>false</code>: The client requires additional information. To obtain additional information on audio streaming, send the <a href="#StreamRequested"><code>AudioPlayer.StreamRequested</code></a> event message to CIC.</li></ul>        | Required/Always |
 
-### Remarks
+#### Remarks
 * Once the audio section designated in `beginAtInMilliseconds` and `durationInMilliseconds` fields finishes playing, the client must send the [`AudioPlayer.PlayFinished`](#PlayFinished) event message to CIC.
 
-### Object Example
+#### Object Example
 {% raw %}
 
 ```json
@@ -1949,7 +1949,7 @@ The object containing streaming details of an audio stream. This object is used 
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.PlayFinished`](#PlayFinished)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)
@@ -1958,13 +1958,13 @@ The object containing streaming details of an audio stream. This object is used 
 
 <!-- Start of the shared content: AudioPlayer.PlaybackState -->
 
-# Context information related to audio content playback {#ContextObjectforAudioPlayback}
+## Context information related to audio content playback {#ContextObjectforAudioPlayback}
 When the client sends the [CIC API](#CICAPIforAudioPlayback) event message to the client, various types of the context information is sent. Among them, the context information related to audio content playback is [`AudioPlayer.PlaybackState`](#PlaybackState).
 
-## AudioPlayer.PlaybackState {#PlaybackState}
+### AudioPlayer.PlaybackState {#PlaybackState}
 `AudioPlayer.PlaybackState` is a format for reporting to CIC the details of media currently playing or the last played media.
 
-### Object structure
+#### Object structure
 
 {% raw %}
 ```json
@@ -1984,7 +1984,7 @@ When the client sends the [CIC API](#CICAPIforAudioPlayback) event message to th
 ```
 {% endraw %}
 
-### Payload fields
+#### Payload fields
 
 | Field name       | Data type    | Description                     | Required |
 |---------------|---------|-----------------------------|:---------:|
@@ -1994,7 +1994,7 @@ When the client sends the [CIC API](#CICAPIforAudioPlayback) event message to th
 | `stream`               | [AudioStreamInfoObject](#AudioStreamInfoObject) | The object that contains the details of the currently playing media. This field is omissible if the `playerActivity` field is set as `"IDLE"`. [`AudioPlayer.Play`](#Play) Or enter the value of media information defined in the `stream` object provided by the [`AudioPlayer.StreamDeliver`](#StreamDeliver) directive message. | Optional |
 | `totalInMilliseconds`  | number | The total duration of the recently played media. [`AudioPlayer.Play`](#Play) If a value exists in the `durationInMilliseconds` field of the ([AudioStreamInfoObject](#AudioStreamInfoObject)) provided by the directive message, use the value of this field. The unit is in milliseconds. This field is omissible if the `playerActivity` field is set to `"IDLE"`.                                                               | Optional |
 
-### Object example
+#### Object example
 
 {% raw %}
 
@@ -2039,7 +2039,7 @@ When the client sends the [CIC API](#CICAPIforAudioPlayback) event message to th
 
 {% endraw %}
 
-### See also
+#### See also
 * [`AudioPlayer.Play`](#Play)
 * [`AudioPlayer.StreamDeliver`](#StreamDeliver)
 * [`AudioPlayer.StreamRequested`](#StreamRequested)

@@ -15,33 +15,33 @@ deactivate cek
 user ->> app: Enables extension
 
 activate app
-  app ->> cek: Requests authorization URI
+  app ->> cek: Requests the authorization URI
 
   activate cek
-    cek -->> app: Returns authorization URI
+    cek -->> app: Returns the authorization URI
   deactivate cek
 
-  app ->> auth: Requests login page (authorization URI)
+  app ->> auth: Requests the login page (authorization URI)
 
   activate auth
-    auth -->> app: Returns login page
+    auth -->> app: Returns the login page
   deactivate auth
 
-  app -> app: Displays login page
-  user ->> app: Authenticates account (login)
-  app ->> auth: Requests authorization
+  app -> app: Displays the login page
+  user ->> app: Authenticates the account (login)
+  app ->> auth: Requests the authorization
 
   activate auth
-  auth -->> app: Returns Authorization code\lor access token with redirect URI
+  auth -->> app: Returns the Authorization code\lor access token with redirect URI
   deactivate auth
 
   app ->> cek: Passes the\lauthorization code\lor access token
 deactivate app
 
   activate cek
-    cek ->> auth: Passes authorization code as a parameter to the access token URI
+    cek ->> auth: Passes the authorization code as a parameter to the access token URI
     activate auth
-      auth -->> cek: Returns access token
+      auth -->> cek: Returns the access token
     deactivate auth
 
     cek -> cek: Saves the access token\nto user account information

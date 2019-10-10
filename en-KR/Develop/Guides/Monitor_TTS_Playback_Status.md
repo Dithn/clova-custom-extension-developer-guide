@@ -1,6 +1,6 @@
 # Checking the TTS playback status
 
-When [returning a response in the custom extension](/Develop/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse), you can receive a progress report on the TTS playback from the client by inputting data in the `token` field of [SpeechInfoObject](/Develop/References/CEK_API.md#CustomExtSpeechInfoObject) in the [response message](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage). This can be used to adjust the caption and its progress stage when the client displays subtitles or specific content.
+When [returning a response in the custom extension](/Develop/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse), you can receive a progress report on the TTS playback from the client by inputting data in the `token` field of [SpeechInfoObject](/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject) in the [response message](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage). This can be used to adjust the caption and its progress stage when the client displays subtitles or specific content.
 
 For example, assume that the client displays "How can I help you?" after saying or displaying "Hi, my name is Clova." In this case, you must first send the audio for "Hi, my name is Clova" and only display the caption after the speech has ended.
 
@@ -49,11 +49,11 @@ Because there is no guarantee that the client will handle the action correctly, 
 ```
 
 {% if book.L10N.TargetCountryCode == "KR" %}
-The client can report the progress of the TTS playback to Clova using the appropriate [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.md) for each situation.
+The client can report the progress of the TTS playback to Clova using the appropriate [CIC API]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/CIC_API.{{ book.DocMeta.FileExtensionForExternalLink }}) for each situation.
 
-* [`SpeechSynthesizer.SpeechFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechFinished) directive: Directs the client to pause the playing audio stream.
-* [`SpeechSynthesizer.SpeechStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechStarted) directive: Directs the client to resume the audio stream.
-* [`SpeechSynthesizer.SpeechStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.md#SpeechStopped) directive: Directs the client to stop the audio stream.
+* [`SpeechSynthesizer.SpeechFinished`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechFinished) directive: Directs the client to pause the playing audio stream.
+* [`SpeechSynthesizer.SpeechStarted`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechStarted) directive: Directs the client to resume the audio stream.
+* [`SpeechSynthesizer.SpeechStopped`]({{ book.DocMeta.ClovaClientDeveloperGuideBaseURI }}/Develop/References/MessageInterfaces/SpeechSynthesizer.{{ book.DocMeta.FileExtensionForExternalLink }}#SpeechStopped) directive: Directs the client to stop the audio stream.
 {% elif book.L10N.TargetCountryCode == "JP" %}
 The client can report the progress of the TTS playback to Clova using the appropriate [`CIC API`](/Develop/References/CEK_API.md#CICAPIforAudioPlayback) for each situation.
 

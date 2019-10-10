@@ -3,7 +3,7 @@
 <!-- Start of the shared content: LinkUserAccount -->
 
 # ユーザーアカウントを連携する
-Clovaは、[Custom Extension](/Develop/Guides/Build_Custom_Extension.md)、または[Clova Home Extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.md)を介して、ユーザーアカウント権限を必要とする外部サービスを提供することができます。例えば、有料コンテンツサービスの音楽ストリーミングサービスや、ショッピング、金融、ホームIoTなどのサービスをClovaと連携することができます。そのために、Clovaは外部サービスのユーザーアカウントとClovaのユーザーアカウントを関連付けるアカウント連携（account linking）をサポートしています。アカウントの連携は、[OAuth 2.0](https://tools.ietf.org/html/rfc6749)を使用して行われます。
+Clovaは、[Custom Extension](/Develop/Guides/Build_Custom_Extension.md)、または[Clova Home Extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI }}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink }})を介して、ユーザーアカウント権限を必要とする外部サービスを提供することができます。例えば、有料コンテンツサービスの音楽ストリーミングサービスや、ショッピング、金融、ホームIoTなどのサービスをClovaと連携することができます。そのために、Clovaは外部サービスのユーザーアカウントとClovaのユーザーアカウントを関連付けるアカウント連携（account linking）をサポートしています。アカウントの連携は、[OAuth 2.0](https://tools.ietf.org/html/rfc6749)を使用して行われます。
 
 アカウント連携は、Custom Extensionがユーザーのアカウント認証を必要とする外部サービスを提供する際に使用されます。アカウント認証を必要としない外部サービスはアカウント連携なしに提供できます。ユーザーを識別できる程度の情報を必要とするサービスは、通常、[Custom Extensionのメッセージ](/Develop/References/Custom_Extension_Message.md)が提供する端末識別子（`context.System.device.deviceId`）とユーザーアカウント識別子（`context.System.user.userId`または`session.user.userId`）を組み合わせた値を使用します。
 

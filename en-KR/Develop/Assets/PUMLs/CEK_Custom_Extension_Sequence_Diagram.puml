@@ -5,17 +5,17 @@ participant "Clova" as clova #05D686
 participant "Weather Forecast\nCustom extension" as ext #9EA0CA
 
 group Session
-  [->> client: Receives user input
+  [->> client: Receives a user input
   activate client
     client ->> clova: "Ask Weather Forecast about today's weather"
 
     activate clova
-      clova -> clova: Analyzes user utterance\n(Interaction model)
-      clova ->> ext: Sends IntentRequest (HTTP Request)
+      clova -> clova: Analyzes the user utterance\n(Interaction model)
+      clova ->> ext: Sends the IntentRequest (HTTP Request)
 
       activate ext
-        ext -> ext: Handles user request
-        ext -->> clova: Sends response message (HTTP Response)
+        ext -> ext: Handles the user request
+        ext -->> clova: Sends a response message (HTTP Response)
       deactivate ext
 
       clova -->> client: "It's sunny today"
@@ -25,17 +25,17 @@ group Session
 end
 
 group Session
-  [->> client: Receives user input
+  [->> client: Receives a user input
   activate client
     client ->> clova: "Ask Weather Forecast about tomorrow's weather"
 
     activate clova
-      clova -> clova: Analyzes user utterance\n(Interaction model)
-      clova ->> ext: Sends IntentRequest (HTTP Request)
+      clova -> clova: Analyzes the user utterance\n(Interaction model)
+      clova ->> ext: Sends the IntentRequest (HTTP Request)
 
       activate ext
-        ext -> ext: Handles user request
-        ext -->> clova: Sends response message (HTTP Response)
+        ext -> ext: Handles the user request
+        ext -->> clova: Sends a response message (HTTP Response)
       deactivate ext
 
       clova -->> client: "It will be cloudy tomorrow"
@@ -45,17 +45,17 @@ group Session
 end
 
 group Session
-  [->> client: Receives user input
+  [->> client: Receives a user input
   activate client
     client ->> clova: "Ask Weather Forecast about the weather in Seoul"
 
     activate clova
-      clova -> clova: Analyzes user utterance\n(Interaction model)
-      clova ->> ext: Sends IntentRequest (HTTP Request)
+      clova -> clova: Analyzes the user utterance\n(Interaction model)
+      clova ->> ext: Sends the IntentRequest (HTTP Request)
 
       activate ext
-        ext -> ext: Handles user request
-        ext -->> clova: Sends response message (HTTP Response)
+        ext -> ext: Handles the user request
+        ext -->> clova: Sends a response message (HTTP Response)
       deactivate ext
 
       clova -->> client: "It's sunny in Seoul"

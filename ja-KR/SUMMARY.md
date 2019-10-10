@@ -9,11 +9,10 @@
 * [Custom Extensionをデザインする](/Design/Design_Custom_Extension.md)
   * [目標を設定する](/Design/Design_Custom_Extension.md#SettingGoal)
   * [ユーザーシナリオスクリプトを作成する](/Design/Design_Custom_Extension.md#MakeUseCaseScenarioScript)
-  * [スキル名/呼び出し名を定義する](/Design/Design_Custom_Extension.md#DefineInvocationName)
   * [対話モデルを定義する](/Design/Design_Custom_Extension.md#DefineInteractionModel)
     * [インテント](/Design/Design_Custom_Extension.md#Intent)
-      * [カスタムインテント](/Design/Design_Custom_Extension.md#CustomIntent)
       * [ビルトインインテント](/Design/Design_Custom_Extension.md#BuiltinIntent)
+      * [カスタムインテント](/Design/Design_Custom_Extension.md#CustomIntent)
     * [スロット](/Design/Design_Custom_Extension.md#Slot)
       * [ビルトインスロットタイプ](/Design/Design_Custom_Extension.md#BuiltinSlotType)
       * [カスタムスロットタイプ](/Design/Design_Custom_Extension.md#CustomSlotType)
@@ -96,6 +95,7 @@
     * [`LaunchRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtLaunchRequest)
     * [`SessionEndedRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtSessionEndedRequest)
   * [レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)
+    * [SpeechInfoObject](/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject)
 
 ## Developer Centerガイド
 

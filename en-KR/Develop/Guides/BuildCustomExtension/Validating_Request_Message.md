@@ -6,12 +6,13 @@
 
 When an extension receives an HTTP request from CEK, you need to validate the integrity of the request to check that the request was sent from Clova and not from a third party. Using `SignatureCEK` in the [HTTP header](/Develop/References/HTTP_Message.md#HTTPHeader) and the RSA public key, you can validate the request message as follows:
 
-<ol>
-  <li><p>Download the RSA public key for Clova signature from the URI below.</p>
-<p>{{ book.ServiceEnv.PublicKeyURIforCEKMessageValidation }}</p></li>
-  <li><p>Obtain the `SignatureCEK` field value from the <a href="/Develop/References/HTTP_Message.md#HTTPHeader">HTTP header</a>.</p><p>`SignatureCEK` The field value is the <a href="https://tools.ietf.org/html/rfc3447" target="_blank">RSA PKCS#1 v1.5</a> signature value that has encoded the body of the HTTP request message in Base64.</p></li>
-  <li><a href="https://tools.ietf.org/html/rfc3447#section-5.2" target="_blank">Verify</a> the message using the RSA public key downloaded in step 1 and the `SignatureCEK` header value acquired in step 2.</li>
-</ol>
+1. Download the RSA public key for Clova signature from the URI below.<br />
+  ```
+  {{ book.ServiceEnv.PublicKeyURIforCEKMessageValidation }}
+  ```
+2. Obtain the `SignatureCEK` field value from the [HTTP header](/Develop/References/HTTP_Message.md#HTTPHeader).<br />
+  The `SignatureCEK` field value is the <a href="https://tools.ietf.org/html/rfc3447" target="_blank">RSA PKCS#1 v1.5</a> signature value that has encoded the body of the HTTP request message in Base64.
+3. <a href="https://tools.ietf.org/html/rfc3447#section-5.2" target="_blank">Verify</a> the message using the RSA public key downloaded in step 1 and the `SignatureCEK` header value acquired in step 2.
 
 The following is an example of the code for verifying the request message.
 ```java
