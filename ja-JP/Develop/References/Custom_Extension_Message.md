@@ -362,7 +362,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 ```
 
 #### IntentRequest {#CustomExtIntentRequest}
-`IntentRequest`は、解析されたユーザーのリクエストを渡し、その内容を処理するように要求するリクエストタイプです。Extensionの開発者はサービスを開発する際、ユーザーのリクエストをどう受け付けるかについて[対話モデルを定義](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)する必要があります。対話モデルは、[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)で登録できます。その際、区別されるユーザーのリクエストをインテントという情報形式で定義します。解析されたユーザーの発話情報はインテントに変換され、`intent`フィールドでExtensionに渡されます。
+`IntentRequest`は、解析されたユーザーのリクエストを渡し、その内容を処理するように要求するリクエストタイプです。Extensionの開発者はサービスを開発する際、ユーザーのリクエストをどう受け付けるかについて[対話モデルを定義](/Design/Design_Custom_Extension.md#DefineInteractionModel)する必要があります。対話モデルは、[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)で登録できます。その際、区別されるユーザーのリクエストをインテントという情報形式で定義します。解析されたユーザーの発話情報はインテントに変換され、`intent`フィールドでExtensionに渡されます。
 
 `IntentRequest`タイプのメッセージの`request`オブジェクトのフィールドは、次のように構成されます。
 
@@ -380,9 +380,9 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 
 | フィールド名   | データ型 | フィールドの説明 | Optional |
 | -------------- | -------- | ---------------- | :------: |
-| `intent`       | object   | ユーザーのリクエストを解析した情報が保存されたオブジェクト([インテント](/Design/Design_Guideline_For_Extension.md#Intent)) | <!-- --> |
-| `intent.name`  | string   | インテント名。対話モデルに定義した[インテント](/Design/Design_Guideline_For_Extension.md#Intent)をこのフィールドで識別できます。 | <!-- --> |
-| `intent.slots` | object   | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト。このフィールドは、`intent.name`フィールドに入力された[インテント](/Design/Design_Guideline_For_Extension.md#Intent)によって構成が異なることがあります。 | <!-- --> |
+| `intent`       | object   | ユーザーのリクエストを解析した情報が保存されたオブジェクト([インテント](/Design/Design_Custom_Extension.md#Intent)) | <!-- --> |
+| `intent.name`  | string   | インテント名。対話モデルに定義した[インテント](/Design/Design_Custom_Extension.md#Intent)をこのフィールドで識別できます。 | <!-- --> |
+| `intent.slots` | object   | Extensionがインテントを処理する際に要求される情報(スロット)が保存されたオブジェクト。このフィールドは、`intent.name`フィールドに入力された[インテント](/Design/Design_Custom_Extension.md#Intent)によって構成が異なることがあります。 | <!-- --> |
 | `type`         | string   | リクエストメッセージのタイプ。`"IntentRequest"`の値に固定されます。 | <!-- --> |
 
 以下は、`IntentRequest`タイプのメッセージの`request`オブジェクトフィールドのサンプルです。
@@ -549,7 +549,7 @@ SpeechInfoObjectオブジェクトはレスポンスメッセージの`response.
 | ------------ | -------- | --------------------------------------- | :------: |
 | `lang`       | string   | 音声を合成する際に使用する言語のコード。現在、次の値を持ちます。<ul><li><code>"en"</code>：英語</li><li><code>"ja"</code>：日本語</li><li><code>"ko"</code>：韓国語</li><li><code>""</code>：<code>type</code>フィールドの値が<code>"URL"</code>の場合、このフィールドは空の文字列(empty string)を持ちます。</li></ul> | <!-- --> |
 | `type`       | string   | 再生する音声のタイプ。このフィールドの値によって、`value`フィールドの値の形式が異なります。現在、次の値を持ちます。<ul><li><code>"PlainText"</code>：テキスト</li><li><code>"URL"</code>：音声および音楽を再生できるファイルのURI</li></ul> | <!-- --> |
-| `value`      | string   | 音声を合成する内容または音声ファイルのURI<ul><li>音声ファイル：ファイル形式については、<a href="/Design/Design_Guideline_For_Extension.md#SupportedAudioCompressionFormat">プラットフォームでサポートされるオーディオ圧縮形式</a>を参照してください。</li></ul> | <!-- --> |
+| `value`      | string   | 音声を合成する内容または音声ファイルのURI<ul><li>音声ファイル：ファイル形式については、<a href="/Design/Supported_Audio_Format.md">プラットフォームでサポートされるオーディオ圧縮形式</a>を参照してください。</li></ul> | <!-- --> |
 
 #### Message example
 {% raw %}

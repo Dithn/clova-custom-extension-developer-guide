@@ -1,6 +1,6 @@
 ## 対話モデルを登録する {#RegisterInteractionModel}
 
-CEKがExtensionにユーザーのリクエストを送る際、ユーザーの発話をどう解析し、どんな形式で送るかを決めるために、あらかじめ[対話モデルを定義](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)する必要があります。対話モデルは、[Custom Extension](/Develop/Guides/Build_Custom_Extension.md)に渡されるリクエストを標準化したスキーマです。
+CEKがExtensionにユーザーのリクエストを送る際、ユーザーの発話をどう解析し、どんな形式で送るかを決めるために、あらかじめ[対話モデルを定義](/Design/Design_Custom_Extension.md#DefineInteractionModel)する必要があります。対話モデルは、[Custom Extension](/Develop/Guides/Build_Custom_Extension.md)に渡されるリクエストを標準化したスキーマです。
 
 対話モデルを登録するには、左メニューの **{{ book.DevConsole.cek_interaction_model }}** をクリックします。
 
@@ -10,7 +10,7 @@ CEKがExtensionにユーザーのリクエストを送る際、ユーザーの�
 
 ![](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Dashboard.png)
 
-Extensionを設計するための[対話モデル](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)は、次の順で登録していきます。
+Extensionを設計するための[対話モデル](/Design/Design_Custom_Extension.md#DefineInteractionModel)は、次の順で登録していきます。
 
 1. [ビルトインスロットタイプを追加する](#AddBuiltinSlotType)
 2. [カスタムスロットタイプを追加する](#AddCustomSlotType)
@@ -24,7 +24,7 @@ Extensionを設計するための[対話モデル](/Design/Design_Guideline_For_
 
 ### ビルトインスロットタイプを追加する {#AddBuiltinSlotType}
 
-サービスを提供するExtensionがどの[ビルトインスロットタイプ](/Design/Design_Guideline_For_Extension.md#Slot)を使用するか決めたら、そのExtensionの対話モデルにビルトインスロットタイプを追加する必要があります。例えば、ピザの宅配Extensionを作成する場合、ユーザーの発話に、ピザの数量に関する情報の表現が含まれることが予想されます。従って、この場合は数量に関するビルトインスロットタイプを使用する必要があり、次の手順でExtensionに追加します。
+サービスを提供するExtensionがどの[ビルトインスロットタイプ](/Design/Design_Custom_Extension.md#Slot)を使用するか決めたら、そのExtensionの対話モデルにビルトインスロットタイプを追加する必要があります。例えば、ピザの宅配Extensionを作成する場合、ユーザーの発話に、ピザの数量に関する情報の表現が含まれることが予想されます。従って、この場合は数量に関するビルトインスロットタイプを使用する必要があり、次の手順でExtensionに追加します。
 
 <ol>
   <li><strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>パネル、または左側のサイドメニューの<strong>{{ book.DevConsole.cek_builder_list_title_slottype }}</strong>内にある<strong>{{ book.DevConsole.cek_builder_select_slottype_builtin }}</strong>の右に表示された<img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" />ボタンをクリックします。</li>
@@ -40,7 +40,7 @@ Extensionを設計するための[対話モデル](/Design/Design_Guideline_For_
 
 ### カスタムスロットタイプを追加する {#AddCustomSlotType}
 
-次に、Extensionで使用する[カスタムスロットタイプ](/Design/Design_Guideline_For_Extension.md#Slot)を定義します。[ビルトインスロットタイプを追加する](#AddBuiltinSlotType)時と同様に、ピザの宅配Extensionを作成すると仮定します。この場合、ユーザーの発話の中で、ピザの種類に当たる部分をカスタムスロットタイプとして定義することができます。以下の表のような代表語と同義語を持つ、「PIZZA_TYPE」というカスタムスロットタイプを追加してみます。
+次に、Extensionで使用する[カスタムスロットタイプ](/Design/Design_Custom_Extension.md#Slot)を定義します。[ビルトインスロットタイプを追加する](#AddBuiltinSlotType)時と同様に、ピザの宅配Extensionを作成すると仮定します。この場合、ユーザーの発話の中で、ピザの種類に当たる部分をカスタムスロットタイプとして定義することができます。以下の表のような代表語と同義語を持つ、「PIZZA_TYPE」というカスタムスロットタイプを追加してみます。
 
 | 代表語                     | 同義語                     |
 | -------------------------- | -------------------------- |
@@ -90,7 +90,7 @@ Clova Developer Centerには、以下のように **アップロード** ボタ�
 
 ### ビルトインインテントを追加する {#AddBuiltinIntent}
 
-Clovaプラットフォームでは共通したユーザーリクエストのカテゴリを決め、それを共有して利用するために[ビルトインインテント](/Design/Design_Guideline_For_Extension.md#Intent)が提供されています。例えば、頻繁に発生すると予想されるユーザーの肯定・否定の返事や、キャンセルなどのリクエストを、インテントとしてあらかじめ定義したものです。
+Clovaプラットフォームでは共通したユーザーリクエストのカテゴリを決め、それを共有して利用するために[ビルトインインテント](/Design/Design_Custom_Extension.md#Intent)が提供されています。例えば、頻繁に発生すると予想されるユーザーの肯定・否定の返事や、キャンセルなどのリクエストを、インテントとしてあらかじめ定義したものです。
 ビルトインインテントは次の手順でExtensionに追加します。
 
 <ol>
@@ -135,7 +135,7 @@ Extensionが使用する[ビルトインスロットタイプ](#AddBuiltinSlotTy
 </div>
 
 現在、登録できるサンプル発話の上限は、1つのインテントあたり2000件です。ただし、単純にサンプル発話の登録件数が多いほど認識率が上がるというものではなく、例えばスロットの値は同じで語尾だけ変化させたサンプル発話を多数登録した場合は、逆にパフォーマンスが低下することがあります。
-サンプル発話を作成する際の注意点については、[サンプル発話](/Design/Design_Guideline_For_Extension.md#UtteranceExample)を参照してください。
+サンプル発話を作成する際の注意点については、[サンプル発話](/Design/Design_Custom_Extension.md#UtteranceExample)を参照してください。
 
 カスタムスロットタイプと同じく、TSV(タブ区切りの値、.tsv)形式のファイルをアップロードして定義することもできます。TSVファイルは、インテントのスロットを定義する部分と、サンプル発話を列挙する部分の2つに分けられます。インテントのスロット定義がファイルの先頭にあり、`[INTENT SLOT]`ヘッダの次の行でスロットが列挙されます。タブで区切られた最初の列はインテントで使用されるスロットの名前で、2番目の列はスロットタイプです。
 

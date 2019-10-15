@@ -1,6 +1,6 @@
 ﻿<a href="{{ book.DeveloperConsoleURL }}" target="_blank">Clova Developer Center</a>で対話モデルを登録します。
 
-対話モデルに保存する情報は[インテント](/Design/Design_Guideline_For_Extension.md#Intent)と[スロット](/Design/Design_Guideline_For_Extension.md#Slot)です。インテントは入力されたフレーズを解析してExtensionサーバーに渡す情報で、スロットはそのインテントの解析に必要な情報です。
+対話モデルに保存する情報は[インテント](/Design/Design_Custom_Extension.md#Intent)と[スロット](/Design/Design_Custom_Extension.md#Slot)です。インテントは入力されたフレーズを解析してExtensionサーバーに渡す情報で、スロットはそのインテントの解析に必要な情報です。
 
 サンプルサイコロは、ユーザーからサイコロの数の指定なしにサイコロを振るようにリクエストされると、デフォルトで1つのサイコロを振ります。ここでは、このように1つのサイコロを振るという指示を処理する、簡単な対話モデルを使用することにします。サイコロの数を収集しないため、スロットを持たないインテントを1つ登録することになります。
 

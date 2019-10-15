@@ -37,10 +37,10 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>2019/06/12</td>
       <td>
         <ul>
-          <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新</li>
+          <li><a href="/Design/Design_Custom_Extension.md">デザインガイドライン</a> 更新</li>
           <ul>
-            <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（新規ビルトインスロットタイプ 追加）</li>
-            <li><a href="/Design/Design_Guideline_For_Extension.md#DecideSoundOutputType">応答タイプを決める</a> 更新（音源のリソースに関する注意を追加）</li>
+            <li><a href="/Design/Design_Custom_Extension.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（新規ビルトインスロットタイプ 追加）</li>
+            <li><a href="/Design/Design_Custom_Extension.md#DecideSoundOutputType">応答タイプを決める</a> 更新（音源のリソースに関する注意を追加）</li>
           </ul>
           <li><a href="/Develop/Tutorials/Introduction.md">チュートリアル</a> 更新（LINE Developersの<a href="https://developers.line.biz/ja/docs/clova-extensions-kit/" target="_blank">Clova Extensions Kitチュートリアル</a>へのリンクを追加）</li>
           <li><a href="/Develop/Guides/Build_Custom_Extension.md">Custom Extensionを作成する</a> 更新（<a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a>に音源のリソースに関する注意を追加）</li>
@@ -64,10 +64,10 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>2019/04/25</td>
       <td>
         <ul>
-          <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新</li>
+          <li><a href="/Design/Design_Custom_Extension.md">デザインガイドライン</a> 更新</li>
           <ul>
-            <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinIntent">ビルトインインテント</a> 更新（Clova.FallbackIntent 追加）</li>
-            <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（CLOVA.DATETIME_RECENT 追加）</li>
+            <li><a href="/Design/Design_Custom_Extension.md#BuiltinIntent">ビルトインインテント</a> 更新（Clova.FallbackIntent 追加）</li>
+            <li><a href="/Design/Design_Custom_Extension.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（CLOVA.DATETIME_RECENT 追加）</li>
           </ul>
           <li><a href="/Develop/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>
           <ul>
@@ -82,10 +82,10 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>2019/04/08</td>
       <td>
         <ul>
-          <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新</li>
+          <li><a href="/Design/Design_Custom_Extension.md">デザインガイドライン</a> 更新</li>
           <ul>
-            <li><a href="/Design/Design_Guideline_For_Extension.md#BuiltinIntent">ビルトインインテント</a>更新（Clova.NextIntent、Clova.PauseIntent、Clova.PreviousIntent、Clova.ResumeIntentを追加）</li>
-            <li><a href="/Design/Design_Guideline_For_Extension.md#AudioPlayer">オーディオコンテンツ再生タイプ</a> 更新（ユーザーシナリオに一時停止/再生再開の例を追加）</li>
+            <li><a href="/Design/Design_Custom_Extension.md#BuiltinIntent">ビルトインインテント</a>更新（Clova.NextIntent、Clova.PauseIntent、Clova.PreviousIntent、Clova.ResumeIntentを追加）</li>
+            <li><a href="/Design/Design_Custom_Extension.md#AudioPlayer">オーディオコンテンツ再生タイプ</a> 更新（ユーザーシナリオに一時停止/再生再開の例を追加）</li>
           </ul>
           <li><a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a> 更新（<a href="/Develop/Guides/Build_Custom_Extension.md#ControlAudioPlayback">オーディオコンテンツの再生をコントロールする</a> 追加）</li>
           <li><a href="/Develop/References/CEK_API.md">CEK APIのリファレンス</a> 更新（<a href="/Develop/References/CEK_API.md#BuiltinIntent">ビルトインインテント</a> 更新）</li>
@@ -148,7 +148,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>2018/11/08</td>
       <td>
         <ul>
-          <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新（<a href="/Design/Design_Guideline_For_Extension.md#DefineSubInvocationName">呼び出し名（サブ）を定義する</a> 追加）</li>
+          <li><a href="/Design/Design_Custom_Extension.md">デザインガイドライン</a> 更新（<a href="/Design/Design_Custom_Extension.md#DefineSubInvocationName">呼び出し名（サブ）を定義する</a> 追加）</li>
         </ul>
       </td>
     </tr>
@@ -167,7 +167,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>2018/09/20</td>
       <td>
         <ul>
-          <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a> 更新（<a href="/Design/Design_Guideline_For_Extension.md#CustomSlotType">カスタムスロットタイプ</a> 同義語登録数の上限の説明 追加）</li>
+          <li><a href="/Design/Design_Custom_Extension.md">デザインガイドライン</a> 更新（<a href="/Design/Design_Custom_Extension.md#CustomSlotType">カスタムスロットタイプ</a> 同義語登録数の上限の説明 追加）</li>
           <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel">対話モデルを登録する</a> 更新</li>
           <ul>
             <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#AddCustomSlotType">カスタムスロットタイプ</a> 同義語の登録数上限の説明を追加</li>
@@ -234,7 +234,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>
         <ul>
           <li><a href="/Develop/Guides/Clova_CEK_SDK.md">Clova Extensions Kitソフトウェア開発キット</a> 更新（<a href="/Develop/Guides/Clova_CEK_SDK.md#SDK_For_Kotlin">CEK SDK for Kotlin</a> 追加）</li>
-          <li><a href="/Design/Design_Guideline_For_Extension.md#InvocationNameRequirement" target="_blank">スキル名/呼び出し名の要件</a> 更新（Clovaの呼び名を「ねぇClova」に統一）</li>
+          <li><a href="/Design/Design_Custom_Extension.md#InvocationNameRequirement" target="_blank">スキル名/呼び出し名の要件</a> 更新（Clovaの呼び名を「ねぇClova」に統一）</li>
           <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo" target="_blank">Extensionの基本情報を入力する</a> 更新（「提供者について」の説明を追加）</li>
           <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo" target="_blank">配布情報を入力する</a> 更新（「代表サンプル発話」の入力例を追加）</li>
         </ul>

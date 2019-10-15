@@ -82,7 +82,7 @@ LaunchRequestタイプのメッセージは、`request.type`フィールドに`"
 
 ### IntentRequestの処理 {#HandleIntentRequest}
 
-[`IntentRequest`タイプのリクエスト](/Develop/References/CEK_API.md#CustomExtIntentRequest)は、あらかじめ定義した[対話モデル](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)に従って、CEKがExtensionにユーザー発話のリクエストを送信する際に使用されます。例えば、ユーザーが「ピザボットを起動して」と発話してサービスを開始した後に、「ピザを頼んで」と指示した時に、CEKはピザの宅配サービスを提供するExtensionに`IntentRequest`タイプのリクエストを渡します。
+[`IntentRequest`タイプのリクエスト](/Develop/References/CEK_API.md#CustomExtIntentRequest)は、あらかじめ定義した[対話モデル](/Design/Design_Custom_Extension.md#DefineInteractionModel)に従って、CEKがExtensionにユーザー発話のリクエストを送信する際に使用されます。例えば、ユーザーが「ピザボットを起動して」と発話してサービスを開始した後に、「ピザを頼んで」と指示した時に、CEKはピザの宅配サービスを提供するExtensionに`IntentRequest`タイプのリクエストを渡します。
 
 IntentRequestタイプのリクエストは、`request.type`フィールドに`"IntentRequest"`の値を持ちます。呼び出されたインテントの名前と、解析されたユーザーの発話情報は、`request.intent`フィールドから確認できます。このフィールドを分析してユーザーのリクエストを処理してから、[レスポンスメッセージ](#ReturnCustomExtensionResponse)を返します。
 
@@ -145,7 +145,7 @@ IntentRequestタイプのリクエストは、`request.type`フィールドに`"
 * `version`：使用しているCustom Extensionメッセージフォーマットのバージョンです。現在のバージョンはv1.0です。
 * `session`: **既存のセッションに続くユーザーのリクエストです**。既存セッションのIDとユーザーの情報(ID、アクセストークン)が含まれています。
 * `context`：クライアントデバイスの情報です。デバイスのIDとデフォルトユーザーの情報が含まれています。
-* `request`: `IntentRequest`タイプのリクエストです。`"OrderPizza"`という名前で登録された[インテント](/Design/Design_Guideline_For_Extension.md#Intent)を呼び出しています。該当するインテントが必要とする情報として`"pizzaType"`という[スロット](/Design/Design_Guideline_For_Extension.md#Slot)が一緒に渡されます。そのスロットは`"ペパロニ"`という値を持っています。
+* `request`: `IntentRequest`タイプのリクエストです。`"OrderPizza"`という名前で登録された[インテント](/Design/Design_Custom_Extension.md#Intent)を呼び出しています。該当するインテントが必要とする情報として`"pizzaType"`という[スロット](/Design/Design_Custom_Extension.md#Slot)が一緒に渡されます。そのスロットは`"ペパロニ"`という値を持っています。
 
 <div class="note">
   <p><strong>メモ</strong></p>

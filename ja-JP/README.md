@@ -14,9 +14,9 @@
       <td>
         <ul>
           <li><a href="/Develop/CEK_Overview.md#WhatisCEK">CEKとは?</a></li>
-          <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a></li>
-          <li><a href="/Design/Design_Guideline_For_Extension.md#SupportedAudioCompressionFormat">プラットフォームでサポートされるオーディオ圧縮形式</a></li>
-          <li><a href="/Design/Design_Guideline_For_Extension.md#ClovaSkillContentGuideline">Clovaコンテンツガイドライン</a></li>
+          <li><a href="/Design/Design_Custom_Extension.md">Custom Extensionのデザインガイドライン</a></li>
+          <li><a href="/Design/Supported_Audio_Format.md">プラットフォームでサポートされるオーディオ圧縮形式</a></li>
+          <li><a href="/Design/Rules_For_Content.md">Clovaコンテンツガイドライン</a></li>
         </ul>
       </td>
     </tr>

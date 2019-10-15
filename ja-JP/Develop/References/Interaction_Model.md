@@ -1,6 +1,6 @@
 # 対話モデル {#InteractionModel}
 
-[対話モデル](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)は、ユーザーのリクエストをサービスの提供に必要な標準形式(JSON)に変換するルールを定義したものです。
+[対話モデル](/Design/Design_Custom_Extension.md#DefineInteractionModel)は、ユーザーのリクエストをサービスの提供に必要な標準形式(JSON)に変換するルールを定義したものです。
 
 CEKでは、あらかじめ次の情報が定義されています。
 

@@ -48,14 +48,14 @@ Extensionの審査をリクエストするには、左のメニューから **{{
 
 Extensionを審査する際に確認する評価項目は次のとおりです。
 
-* [ユーザーシナリオ](/Design/Design_Guideline_For_Extension.md#MakeUseCaseScenarioScript)の検証
+* [ユーザーシナリオ](/Design/Design_Custom_Extension.md#MakeUseCaseScenarioScript)の検証
   * 会話のコンテクストに不自然なところがないか確認します。
   * シナリオで使用される発話データに、禁止用語や差別用語などが含まれていないか確認します。
   * Extensionが[ユーザーアカウントと連携](/Develop/Guides/Link_User_Account.md)する場合、サービスに特化した部分をさらに検討することがあります。
 * スキルの動作検証
   * Extensionがサービスに適切な用語を使用しているか確認します。
   * インテント、スロットなどの対話モデルを検証します。
-  * Extensionの[詳細な目標](/Design/Design_Guideline_For_Extension.md#SettingGoal)に合ったサービスを提供しているか確認します。
+  * Extensionの[詳細な目標](/Design/Design_Custom_Extension.md#SettingGoal)に合ったサービスを提供しているか確認します。
 * 配布情報の検証
   * Extensionの説明、カテゴリ、検索キーワードなどの配布情報が正しく入力されているか確認します。
   * スキルが、配布情報に入力された利用規約やプライバシーポリシーに違反していないことを確認します。
