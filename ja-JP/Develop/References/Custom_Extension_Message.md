@@ -1,10 +1,10 @@
-## Custom Extensionメッセージ {#CustomExtMessage}
+# Custom Extensionメッセージ {#CustomExtMessage}
 Custom Extensionメッセージは、CEKとCustom Extensionが情報をやり取りする際に使用されるメッセージです。Custom Extensionメッセージは、[リクエストメッセージ](#CustomExtRequestMessage)と[レスポンスメッセージ](#CustomExtResponseMessage)の2種類があります。リクエストメッセージには、[リクエストタイプ](#CustomExtRequestType)によって`EventRequest`、`IntentRequest`、`LaunchRequest`、`SessionEndedRequest`の4つのタイプがあります。
 
-### リクエストメッセージ {#CustomExtRequestMessage}
+## リクエストメッセージ {#CustomExtRequestMessage}
 CEKは、Clovaが解析したユーザーのリクエストをCustom Extensionに渡すために、リクエストメッセージを送信します(HTTPリクエスト)。ここでは、リクエストメッセージの構造、各フィールドの説明、リクエストタイプとそれによって異なる`request`フィールドについて説明します。
 
-#### Message structure
+### Message structure
 
 {% raw %}
 ```json
@@ -53,7 +53,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 ```
 {% endraw %}
 
-#### Message fields
+### Message fields
 | フィールド名 | データ型 | フィールドの説明 | Optional |
 | ------------ | -------- | ---------------- | :------: |
 | `context`    | object   | クライアントのコンテキスト情報を持っているオブジェクト | <!-- --> |
@@ -87,7 +87,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 | `session.user.accessToken` | string   | 特定のサービスのユーザーアカウントのアクセストークン。現在のユーザーと連携されたユーザーアカウントのアクセストークンが渡されます。CEKは、外部サービスの認可サーバーから取得したユーザーアカウントのアクセストークンを渡します。詳細については、[ユーザーアカウントを連携する](/Develop/Guides/Link_User_Account.md)を参照してください。 | Optional |
 | `version`    | string   | メッセージフォーマットのバージョン(CEKのバージョン) | <!-- --> |
 
-#### Message example
+### Message example
 {% raw %}
 ```json
 //例1：EventRequestタイプ
@@ -268,18 +268,18 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 ```
 {% endraw %}
 
-#### 次の項目も参照してください。
+### 次の項目も参照してください。
 * [Custom Extensionリクエストを処理する](/Develop/Guides/Build_Custom_Extension.md#HandleCustomExtensionRequest)
 * [AudioStreamInfoObject](#AudioStreamInfoObject)
 
-### リクエストタイプ {#CustomExtRequestType}
+## リクエストタイプ {#CustomExtRequestType}
 リクエストメッセージは、次の4つのタイプがあります。リクエストのタイプによって、リクエストメッセージの`request`オブジェクトのフィールドの構成が異なります。
 * [`EventRequest`](#CustomExtEventRequest)
 * [`IntentRequest`](#CustomExtIntentRequest)
 * [`LaunchRequest`](#CustomExtLaunchRequest)
 * [`SessionEndedRequest`](#CustomExtSessionEndedRequest)
 
-#### EventRequest {#CustomExtEventRequest}
+### EventRequest {#CustomExtEventRequest}
 `EventRequest`タイプは、クライアントの状態の変化や、それに伴うリクエストをExtensionに渡すために使用されるリクエストタイプです。CEKは、`EventRequest`のリクエストタイプを使用して、ユーザーが特定のスキルを有効または無効にした結果を渡したり、クライアントの[オーディオ再生状態をExtensionにレポート](/Develop/Guides/Build_Custom_Extension.md#CollectPlaybackStatusAndProgress)したりすることができます。Extensionの開発者は、スキルの有効化/無効化、オーディオ再生状態のレポートまたは付加情報のリクエストに適切な作業を処理する必要があります。
 
 `EventRequest`リクエストタイプでオーディオ再生状態をレポートしたり、付加情報のリクエストをExtensionに送信するとき、以下の[CIC API](#CICAPIforAudioPlayback)を使用します。
@@ -361,7 +361,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 }
 ```
 
-#### IntentRequest {#CustomExtIntentRequest}
+### IntentRequest {#CustomExtIntentRequest}
 `IntentRequest`は、解析されたユーザーのリクエストを渡し、その内容を処理するように要求するリクエストタイプです。Extensionの開発者はサービスを開発する際、ユーザーのリクエストをどう受け付けるかについて[対話モデルを定義](/Design/Design_Custom_Extension.md#DefineInteractionModel)する必要があります。対話モデルは、[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)で登録できます。その際、区別されるユーザーのリクエストをインテントという情報形式で定義します。解析されたユーザーの発話情報はインテントに変換され、`intent`フィールドでExtensionに渡されます。
 
 `IntentRequest`タイプのメッセージの`request`オブジェクトのフィールドは、次のように構成されます。
@@ -402,7 +402,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 }
 ```
 
-#### LaunchRequest {#CustomExtLaunchRequest}
+### LaunchRequest {#CustomExtLaunchRequest}
 `LaunchRequest`は、ユーザーが特定のExtensionの使用を開始したことを示すリクエストタイプです。例えば、ユーザーが「サイコロ遊びを起動して」と言ったときのように、特定のスキルを使用すると宣言した状況です。ユーザーがスキルの使用をやめると宣言するまで、そのExtensionから[`IntentRequest`](#CustomExtIntentRequest)タイプのメッセージを受信します。
 
 `LaunchRequest`タイプのメッセージの`request`オブジェクトのフィールドは、次のように構成されます。
@@ -419,7 +419,7 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 | ------------ | -------- | ---------------- | :------: |
 | `type`       | string   | リクエストメッセージのタイプ。`"LaunchRequest"`の値に固定されます。 | <!-- --> |
 
-#### SessionEndedRequest {#CustomExtSessionEndedRequest}
+### SessionEndedRequest {#CustomExtSessionEndedRequest}
 `SessionEndedRequest`タイプは、ユーザーの特定のスキルの使用が終了したことを示すリクエストです。次の状況でこのメッセージを受信します。
 * ユーザーがスキルの終了をリクエストした場合
 * 特定の時間内にユーザーからの入力がない場合(Timeout)
@@ -445,10 +445,10 @@ CEKは、Clovaが解析したユーザーのリクエストをCustom Extension�
 | ------------ | -------- | ---------------- | :------: |
 | `type`       | string   | リクエストメッセージのタイプ。`"SessionEndedRequest"`の値に固定されます。 | <!-- --> |
 
-### レスポンスメッセージ {#CustomExtResponseMessage}
+## レスポンスメッセージ {#CustomExtResponseMessage}
 Extensionは、リクエストメッセージを処理して、レスポンスメッセージを渡す必要があります(HTTPレスポンス)。ここでは、レスポンスメッセージの構造と各フィールドについて説明します。
 
-#### Message structure
+### Message structure
 {% raw %}
 ```json
 {
@@ -497,7 +497,7 @@ Extensionは、リクエストメッセージを処理して、レスポンス�
   <p>日本では現在、cardをサポートしておりません。</p>
 </div>
 
-#### Message fields
+### Message fields
 | フィールド名 | データ型 | フィールドの説明 | Optional |
 | ------------ | -------- | ---------------- | :------: |
 | `response`   | object | Extensionのレスポンス情報を含むオブジェクト | <!-- --> |
@@ -542,7 +542,7 @@ Extensionは、リクエストメッセージを処理して、レスポンス�
   <p>日本では現在、cardをサポートしておりません。</p>
 </div>
 
-#### SpeechInfoObject {#CustomExtSpeechInfoObject}
+### SpeechInfoObject {#CustomExtSpeechInfoObject}
 SpeechInfoObjectオブジェクトはレスポンスメッセージの`response.outputSpeech`で再使用されるオブジェクトです。ユーザーに出力する音声情報の最も小さな単位である単文レベルの発話情報です。このオブジェクトは、次のフィールドを持ちます。
 
 | フィールド名 | データ型 | 説明                                    | Optional |
@@ -758,10 +758,10 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 | PlaybackController | [`Resume`](#Resume) | ディレクティブ | クライアントに、オーディオストリームの再生を再開するように指示します。 |
 | PlaybackController | [`Stop`](#Stop) | ディレクティブ | クライアントに、オーディオストリームの再生を停止するように指示します。 |
 
-## Playディレクティブ {#Play}
+### Playディレクティブ {#Play}
 クライアントに対して、特定のオーディオストリームを再生するか、または再生キューに追加するように指示します。
 
-### Payload fields
+#### Payload fields
 | フィールド名              | データ型 | フィールドの説明 | Optional |
 | ------------------------- | -------- | ---------------- | :------: |
 | `audioItem`               | object   | 再生するオーディオストリームのメタデータと、再生に必要なオーディオストリームの情報を持つオブジェクト | <!-- --> |
@@ -777,12 +777,12 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 | `source.logoUrl`          | string   | オーディオストリーミングサービスのロゴ画像のURL。このフィールドがなかったり、またはフィールド値が空の場合や、ロゴ画像を表示できない場合、`source.name`フィールド内のオーディオストリーミングサービスの名前を表示する必要があります。 | Optional |
 | `source.name`             | string   | オーディオストリーミングサービスの名前 | <!-- --> |
 
-### 備考
+#### 備考
 ストリーミングサービスの課金などの理由により、実際のストリーミング情報、つまりストリーミングのURLなどの情報を、再生する直前に取得する場合があります。`audioItem.stream.urlPlayable`フィールドの値によって、次のように区分されます。
 * `urlPlayable`フィールドの値が`true`の場合、`audioItem.stream.url`フィールドに含まれたURLで、オーディオストリームをすぐに再生できます。
 * `urlPlayable`フィールドの値が`false`の場合、`audioItem.stream.url`フィールドに含まれたURLではオーディオストリームをすぐに再生できず、[`AudioPlayer.StreamRequested`](#StreamRequested)イベントでオーディオストリームの情報を追加でリクエストする必要があります。
 
-### Message example
+#### Message example
 {% raw %}
 
 ```json
@@ -870,7 +870,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 
 {% endraw %}
 
-### 次の項目も参照してください。
+#### 次の項目も参照してください。
 * [`AudioPlayer.PlayPaused`](#PlayPaused)
 * [`AudioPlayer.PlayResumed`](#PlayResumed)
 * [`AudioPlayer.PlayStarted`](#PlayStarted)
@@ -1328,13 +1328,13 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 ```
 {% endraw %}
 
-## PlaybackController.Stopディレクティブ {#Stop}
+### PlaybackController.Stopディレクティブ {#Stop}
 クライアントに、オーディオストリームの再生を停止するように指示します。クライアントは、このディレクティブを受信すると、オーディオストリームの再生を停止する必要があります。
 
-### Payload fields
+#### Payload fields
 なし
 
-### Message example
+#### Message example
 {% raw %}
 ```json
 {
