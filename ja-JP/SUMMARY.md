@@ -6,9 +6,9 @@
 * [ドキュメント情報](/Document_Info.md)
 * [用語および略語](/Glossary.md)
 
-## デザイン
+## デザインガイドライン
 
-* [Extensionのデザインガイドライン](/Design/Design_Guideline_For_Extension.md)
+* [Custom Extensionをデザインする](/Design/Design_Custom_Extension.md)
   * [目標を設定する](/Design/Design_Guideline_For_Extension.md#SettingGoal)
   * [ユーザーシナリオスクリプトを作成する](/Design/Design_Guideline_For_Extension.md#MakeUseCaseScenarioScript)
   * [スキル名/呼び出し名を定義する](/Design/Design_Guideline_For_Extension.md#DefineInvocationName)
@@ -27,9 +27,15 @@
   * [応答タイプを決める](/Design/Design_Guideline_For_Extension.md#DecideSoundOutputType)
     * [音声出力タイプ](/Design/Design_Guideline_For_Extension.md#OutputSpeech)
     * [オーディオコンテンツの再生タイプ](/Design/Design_Guideline_For_Extension.md#AudioPlayer)
-  * [プラットフォームでサポートされるオーディオ圧縮形式](/Design/Design_Guideline_For_Extension.md#SupportedAudioCompressionFormat)
-  * [Clovaコンテンツガイドライン](/Design/Design_Guideline_For_Extension.md#ClovaSkillContentGuideline)
   * [継続的にアップデートする](/Design/Design_Guideline_For_Extension.md#ContinuousUpdate)
+* [プラットフォームでサポートされる音声ファイルフォーマット](/Design/Supported_Audio_Format.md)
+* [Clovaコンテンツガイドライン](/Design/Rules_For_Content.md)
+  * [スキルの完全性](/Design/Rules_For_Content.md#SkillCompleteness)
+  * [スキルの安全性](/Design/Rules_For_Content.md#SkillSecurity)
+  * [権利、法律](/Design/Rules_For_Content.md#RightAndLegal)
+  * [モラル](/Design/Rules_For_Content.md#Morals)
+  * [プライバシー](/Design/Rules_For_Content.md#Privacy)
+  * [その他の留意事項](/Design/Rules_For_Content.md#OtherPrecautions)
 
 ## 開発
 
