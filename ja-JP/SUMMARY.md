@@ -98,7 +98,7 @@
   * [レスポンスメッセージ](/Develop/References/CEK_API.md#CustomExtResponseMessage)
     * [SpeechInfoObject](/Develop/References/Custom_Extension_Message.md#CustomExtSpeechInfoObject)
   * [オーディオコンテンツ再生関連のCIC API](/Develop/References/CEK_API.md#CICAPIforAudioPlayback)
-  * [オーディオコンテンツ再生関連のコンテキスト](#ContextObjectforAudioPlayback)
+  * [オーディオコンテンツ再生関連のコンテキスト](/Develop/References/CEK_API.md#ContextObjectforAudioPlayback)
 * [対話モデル](/Develop/References/CEK_API.md#InteractionModel)
   * [ビルトインインテント](/Develop/References/CEK_API.md#BuiltinIntent)
     * [`Clova.FallbackIntent`](/Develop/References/CEK_API.md#ClovaFallbackIntent)
