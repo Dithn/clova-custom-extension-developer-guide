@@ -1,6 +1,6 @@
 ## オーディオコンテンツを提供する {#ProvideAudioContent}
 
-Custom Extensionで、ユーザーに音楽やポッドキャストなどのオーディオコンテンツを提供することができます。そのためには、[Custom Extensionメッセージ](/Develop/References/CEK_API.md#CustomExtMessage)の[`EventRequest`](/Develop/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージと[レスポンスメッセージ](/Develop/References/CEK_API.md#CustomExtResponseMessage)の仕様のうち、[オーディオコンテンツ再生関連のCIC API](/Develop/References/CEK_API.md#CICAPIforAudioPlayback)を使用する必要があります。ユーザーにオーディオコンテンツを提供するには、次の内容をExtensionに実装する必要があります。
+Custom Extensionで、ユーザーに音楽やポッドキャストなどのオーディオコンテンツを提供することができます。そのためには、[Custom Extensionメッセージ](/Develop/References/Custom_Extension_Message.md)の[`EventRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest)タイプのリクエストメッセージと[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)の仕様のうち、[オーディオコンテンツ再生関連のCIC API](/Develop/References/Custom_Extension_Message.md#CICAPIforAudioPlayback)を使用する必要があります。ユーザーにオーディオコンテンツを提供するには、次の内容をExtensionに実装する必要があります。
 
 * 必須
   * [オーディオコンテンツの再生を指示する](#DirectClientToPlayAudio)
@@ -18,7 +18,7 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
 
 ### オーディオコンテンツの再生を指示する {#DirectClientToPlayAudio}
 
-ユーザーから音楽や、または音楽のような形でオーディオコンテンツの再生をリクエストされたとき、そのオーディオコンテンツの情報を渡す必要があります。ユーザーからのオーディオコンテンツ再生のリクエストが[`IntentRequest`](/Develop/References/CEK_API.md#CustomExtIntentRequest)タイプのリクエストでCustom Extensionに渡され、Custom Extensionはその`IntentRequest`タイプのリクエストメッセージに対する[レスポンスメッセージ](/Develop/References/CEK_API.md#CustomExtResponseMessage)を返す必要があります。そのとき、そのメッセージにクライアントがオーディオコンテンツを再生するように指示する[`AudioPlayer.Play`](/Develop/References/CEK_API.md#Play)ディレクティブを含めます。
+ユーザーから音楽や、または音楽のような形でオーディオコンテンツの再生をリクエストされたとき、そのオーディオコンテンツの情報を渡す必要があります。ユーザーからのオーディオコンテンツ再生のリクエストが[`IntentRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtIntentRequest)タイプのリクエストでCustom Extensionに渡され、Custom Extensionはその`IntentRequest`タイプのリクエストメッセージに対する[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)を返す必要があります。そのとき、そのメッセージにクライアントがオーディオコンテンツを再生するように指示する[`AudioPlayer.Play`](/Develop/References/Custom_Extension_Message.md#Play)ディレクティブを含めます。
 
 <div class="danger">
   <p><strong>注意</strong></p>
@@ -87,7 +87,7 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
 * `Clova.NextIntent`
 * `Clova.PreviousIntent`
 
-ユーザーが「前」「次」に該当する発話をして、`Clova.NextIntent`または`Clova.PreviousIntent`ビルトインインテントを`IntentReqeust`タイプのリクエストメッセージで受け取ると、[レスポンスメッセージ](/Develop/References/CEK_API.md#CustomExtResponseMessage)でユーザーが前に聞いた、または次に聞くはずの[オーディオコンテンツを再生するように指示する(`AudioPlayer.Play`)](#DirectClientToPlayAudio)必要があります。
+ユーザーが「前」「次」に該当する発話をして、`Clova.NextIntent`または`Clova.PreviousIntent`ビルトインインテントを`IntentReqeust`タイプのリクエストメッセージで受け取ると、[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)でユーザーが前に聞いた、または次に聞くはずの[オーディオコンテンツを再生するように指示する(`AudioPlayer.Play`)](#DirectClientToPlayAudio)必要があります。
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -96,13 +96,13 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
 
 ### 再生状態の変更および進行状況のレポートを収集する {#CollectPlaybackStatusAndProgress}
 
-[`AudioPlayer.Play`](/Develop/References/CEK_API.md#Play)ディレクティブでオーディオを再生するクライアントは、再生が開始、一時停止、再開、終了するタイミングで、[`AudioPlayer.PlayStarted`](/Develop/References/CEK_API.md#PlayStarted)、[`AudioPlayer.PlayPaused`](/Develop/References/CEK_API.md#PlayPaused)、[`AudioPlayer.PlayResumed`](/Develop/References/CEK_API.md#PlayResumed)、[`AudioPlayer.PlayStopped`](/Develop/References/CEK_API.md#PlayStopped)、[`AudioPlayer.PlayFinished`](/Develop/References/CEK_API.md#PlayFinished)のようなイベントをClovaに送信します。そのとき、Clovaはそのイベントの内容を[`EventRequest`](/Develop/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージでCustom Extensionに送信します。
+[`AudioPlayer.Play`](/Develop/References/Custom_Extension_Message.md#Play)ディレクティブでオーディオを再生するクライアントは、再生が開始、一時停止、再開、終了するタイミングで、[`AudioPlayer.PlayStarted`](/Develop/References/Custom_Extension_Message.md#PlayStarted)、[`AudioPlayer.PlayPaused`](/Develop/References/Custom_Extension_Message.md#PlayPaused)、[`AudioPlayer.PlayResumed`](/Develop/References/Custom_Extension_Message.md#PlayResumed)、[`AudioPlayer.PlayStopped`](/Develop/References/Custom_Extension_Message.md#PlayStopped)、[`AudioPlayer.PlayFinished`](/Develop/References/Custom_Extension_Message.md#PlayFinished)のようなイベントをClovaに送信します。そのとき、Clovaはそのイベントの内容を[`EventRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest)タイプのリクエストメッセージでCustom Extensionに送信します。
 
-また、クライアントは[オーディオコンテンツを再生するように指示(`AudioPlayer.Play`)](#DirectClientToPlayAudio)を受けた後、`AudioPlayer.Play`ディレクティブの`progressReport`フィールドに定義されている設定に従って再生の進行状況をレポートします。その内容もまた、[`EventRequest`](/Develop/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージでCustom Extensionに送信されます。クライアントは、進行状況をレポートするために、以下のイベントを送信します。
+また、クライアントは[オーディオコンテンツを再生するように指示(`AudioPlayer.Play`)](#DirectClientToPlayAudio)を受けた後、`AudioPlayer.Play`ディレクティブの`progressReport`フィールドに定義されている設定に従って再生の進行状況をレポートします。その内容もまた、[`EventRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest)タイプのリクエストメッセージでCustom Extensionに送信されます。クライアントは、進行状況をレポートするために、以下のイベントを送信します。
 
-* [`AudioPlayer.ProgressReportDelayPassed`](/Develop/References/CEK_API.md#ProgressReportDelayPassed)イベント：再生が開始してから特定の時間が経過した後、再生の進行状況をレポートする
-* [`AudioPlayer.ProgressReportPositionPassed`](/Develop/References/CEK_API.md#ProgressReportPositionPassed)イベント：オーディオコンテンツの特定の位置(オフセット)を再生するときに、進行状況をレポートする
-* [`AudioPlayer.ProgressReportIntervalPassed`](/Develop/References/CEK_API.md#ProgressReportIntervalPassed)イベント：再生中の場合、特定の間隔で繰り返し進行状況をレポートする
+* [`AudioPlayer.ProgressReportDelayPassed`](/Develop/References/Custom_Extension_Message.md#ProgressReportDelayPassed)イベント：再生が開始してから特定の時間が経過した後、再生の進行状況をレポートする
+* [`AudioPlayer.ProgressReportPositionPassed`](/Develop/References/Custom_Extension_Message.md#ProgressReportPositionPassed)イベント：オーディオコンテンツの特定の位置(オフセット)を再生するときに、進行状況をレポートする
+* [`AudioPlayer.ProgressReportIntervalPassed`](/Develop/References/Custom_Extension_Message.md#ProgressReportIntervalPassed)イベント：再生中の場合、特定の間隔で繰り返し進行状況をレポートする
 
 以下は、`EventRequest`タイプのリクエストメッセージで送信されたレポートのサンプルです。
 ```json
@@ -167,7 +167,7 @@ Custom Extensionで、ユーザーに音楽やポッドキャストなどのオ�
 
 ### セキュリティのためにオーディオコンテンツのURLを更新する {#UpdateAudioURLForSecurity}
 
-Custom Extensionがクライアントに[オーディオコンテンツの再生を指示する](#DirectClientToPlayAudio)とき、[レスポンスメッセージ](/Develop/References/CEK_API.md#CustomExtResponseMessage)に[`AudioPlayer.Play`](/Develop/References/CEK_API.md#Play)ディレクティブを含める必要があります。そのとき、`AudioPlayer.Play`ディレクティブの`audioItem.stream.url`フィールドにオーディオコンテンツを再生できるURLを設定して送信します。
+Custom Extensionがクライアントに[オーディオコンテンツの再生を指示する](#DirectClientToPlayAudio)とき、[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)に[`AudioPlayer.Play`](/Develop/References/Custom_Extension_Message.md#Play)ディレクティブを含める必要があります。そのとき、`AudioPlayer.Play`ディレクティブの`audioItem.stream.url`フィールドにオーディオコンテンツを再生できるURLを設定して送信します。
 
 ただし、サービスの提供元によっては、セキュリティ上の問題により、永久に有効なURLを含めることができないことがあります。例えば、そのURLがさらされた場合、コンテンツを盗み取るための攻撃が発生する可能性がある場合などが考えられます。そのため、大抵の場合、比較的短い有効期限を持つインスタンスURLを使用します。また、クライアントが`AudioPlayer.Play`ディレクティブを受信していても、より優先順位の高いタスクや、先に開始したタスク、またはネットワークの状況によって、オーディオコンテンツの再生開始が遅延することがあります。その場合、URLの有効期限が切れ、オーディオコンテンツを正常に再生できない可能性があります。
 
@@ -195,7 +195,7 @@ Custom Extensionがクライアントに[オーディオコンテンツの再生
 }
 ```
 
-後にクライアントが`AudioPlayer.Play`ディレクティブを処理するとき、`urlPlayable`フィールドが`false`に指定されていると、有効なオーディオコンテンツのURLを取得するために[`AudioPlayer.StreamRequested`](/Develop/References/CEK_API.md#StreamRequested)イベントをClovaに送信します。そのとき、イベントの内容は[`EventRequest`](/Develop/References/CEK_API.md#CustomExtEventRequest)タイプのリクエストメッセージで、以下のように送信されます。
+後にクライアントが`AudioPlayer.Play`ディレクティブを処理するとき、`urlPlayable`フィールドが`false`に指定されていると、有効なオーディオコンテンツのURLを取得するために[`AudioPlayer.StreamRequested`](/Develop/References/Custom_Extension_Message.md#StreamRequested)イベントをClovaに送信します。そのとき、イベントの内容は[`EventRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest)タイプのリクエストメッセージで、以下のように送信されます。
 
 ```json
 {
@@ -236,7 +236,7 @@ Custom Extensionがクライアントに[オーディオコンテンツの再生
 }
 ```
 
-Custom Extensionは、そのタイミングで、再生できるオーディオコンテンツのURLを[レスポンスメッセージ](/Develop/References/CEK_API.md#CustomExtResponseMessage)で返す必要があります。そのために、`AudioPlayer.StreamDeliver`ディレクティブをレスポンスメッセージに含める必要があります。クライアントは、以下のような`AudioPlayer.StreamDeliver`ディレクティブのボディを用いて、`AudioPlayer.Play`ディレクティブを引き続き処理することができます。
+Custom Extensionは、そのタイミングで、再生できるオーディオコンテンツのURLを[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)で返す必要があります。そのために、`AudioPlayer.StreamDeliver`ディレクティブをレスポンスメッセージに含める必要があります。クライアントは、以下のような`AudioPlayer.StreamDeliver`ディレクティブのボディを用いて、`AudioPlayer.Play`ディレクティブを引き続き処理することができます。
 
 ```json
 {

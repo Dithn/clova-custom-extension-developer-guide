@@ -1,4 +1,4 @@
-# HTTPメッセージ {#HTTPMessage}
+# HTTPメッセージ
 CEKとExtensionが通信する際、HTTP/1.1を使用して基本的なHTTPSリクエストとHTTPSレスポンスをやり取りします。CEKとExtensionが通信する際、HTTPメッセージのボディには、JSON形式のメッセージが含まれます。ここでは、CEKとExtensionがやり取りするHTTPメッセージの構成について説明します。
 
 * [HTTPヘッダー](#HTTPHeader)
@@ -39,4 +39,4 @@ Content-Type: application/json;charset-UTF-8
 ExtensionがCEKからHTTPリクエストを受信するとき、そのリクエストが第三者ではなく、Clovaから送信された信頼できるリクエストかどうかを検証する必要があります。検証の方法については、[リクエストメッセージを検証する](/Develop/Guides/Build_Custom_Extension.md#RequestMessageValidation)を参照してください。
 
 ## HTTPボディ {#HTTPBody}
-リクエストメッセージとレスポンスメッセージのボディはJSON形式で、解析されたユーザーの発話情報や、Extensionの処理結果が含まれています。それぞれのメッセージの構成は、使用するExtensionの種類によって異なります。メッセージ構成の詳細については、[Custom Extensionメッセージ](/Develop/References/CEK_API.md#CustomExtMessage)を参照してください。
+リクエストメッセージとレスポンスメッセージのボディはJSON形式で、解析されたユーザーの発話情報や、Extensionの処理結果が含まれています。それぞれのメッセージの構成は、使用するExtensionの種類によって異なります。メッセージ構成の詳細については、[Custom Extensionメッセージ](/Develop/References/Custom_Extension_Message.md)を参照してください。

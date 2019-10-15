@@ -44,18 +44,18 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
           </ul>
           <li><a href="/Develop/Tutorials/Introduction.md">チュートリアル</a> 更新（LINE Developersの<a href="https://developers.line.biz/ja/docs/clova-extensions-kit/" target="_blank">Clova Extensions Kitチュートリアル</a>へのリンクを追加）</li>
           <li><a href="/Develop/Guides/Build_Custom_Extension.md">Custom Extensionを作成する</a> 更新（<a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a>に音源のリソースに関する注意を追加）</li>
-          <li><a href="/Develop/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>
+          <li><a href="(/Develop/References/Interaction_Model.md">APIリファレンス/a> 更新</li>
           <ul>
-            <li><a href="/Develop/References/CEK_API.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新</li>
+            <li><a href="/Develop/References/Interaction_Model.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新</li>
             <ul>
-              <li><a href="/Develop/References/CEK_API.md#Location">地域・都市名を取得する</a></li>
-              <li><a href="/Develop/References/CEK_API.md#Time">日時・時間を取得する</a></li>
-              <li><a href="/Develop/References/CEK_API.md#Number">数値を取得する</a>（<a href="/Develop/References/CEK_API.md#ClovaWholeNumber">CLOVA.WHOLE_NUMBER</a> 追加）</li>
-              <li><a href="/Develop/References/CEK_API.md#Unit">単位を取得する</a>（<a href="/Develop/References/CEK_API.md#ClovaUnit">CLOVA.UNIT</a>、<a href="/Develop/References/CEK_API.md#ClovaUnitCurrency">CLOVA.UNIT_CURRENCY</a> 追加）</li>
-              <li><a href="/Develop/References/CEK_API.md#NumberUnit">数値と単位を取得する</a>（<a href="/Develop/References/CEK_API.md#ClovaNumber">CLOVA.NUMBER</a>、<a href="/Develop/References/CEK_API.md#ClovaGenericNumber">CLOVA.GENERIC_NUMBER</a>、<a href="/Develop/References/CEK_API.md#ClovaMoney">CLOVA.MONEY</a> 追加）</li>
+              <li><a href="/Develop/References/Interaction_Model.md#Location">地域・都市名を取得する</a></li>
+              <li><a href="/Develop/References/Interaction_Model.md#Time">日時・時間を取得する</a></li>
+              <li><a href="/Develop/References/Interaction_Model.md#Number">数値を取得する</a>（<a href="/Develop/References/Interaction_Model.md#ClovaWholeNumber">CLOVA.WHOLE_NUMBER</a> 追加）</li>
+              <li><a href="/Develop/References/Interaction_Model.md#Unit">単位を取得する</a>（<a href="/Develop/References/Interaction_Model.md#ClovaUnit">CLOVA.UNIT</a>、<a href="/Develop/References/Interaction_Model.md#ClovaUnitCurrency">CLOVA.UNIT_CURRENCY</a> 追加）</li>
+              <li><a href="/Develop/References/Interaction_Model.md#NumberUnit">数値と単位を取得する</a>（<a href="/Develop/References/Interaction_Model.md#ClovaNumber">CLOVA.NUMBER</a>、<a href="/Develop/References/Interaction_Model.md#ClovaGenericNumber">CLOVA.GENERIC_NUMBER</a>、<a href="/Develop/References/Interaction_Model.md#ClovaMoney">CLOVA.MONEY</a> 追加）</li>
             </ul>
           </ul>
-          <li><a href="/Develop/References/CEK_API.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/CEK/Register_Extension.md#AddBuiltinSlotType">ビルトインスロットタイプを追加する</a> 更新）</li>
+          <li><a href="/DevConsole/Guides/CEK/Register_Extension.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/CEK/Register_Extension.md#AddBuiltinSlotType">ビルトインスロットタイプを追加する</a> 更新）</li>
           <li><a href="https://clova-developers.line.biz/#/updatehistory/">アップデート履歴</a> 追加</li>
         </ul>
       </td>
@@ -69,12 +69,12 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
             <li><a href="/Design/Design_Custom_Extension.md#BuiltinIntent">ビルトインインテント</a> 更新（Clova.FallbackIntent 追加）</li>
             <li><a href="/Design/Design_Custom_Extension.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（CLOVA.DATETIME_RECENT 追加）</li>
           </ul>
-          <li><a href="/Develop/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>
+          <li><a href="/Develop/References/Interaction_Model.md">APIリファレンス</a> 更新</li>
           <ul>
-            <li><a href="/Develop/References/CEK_API.md#BuiltinIntent">ビルトインインテント</a> 更新（<a href="/Develop/References/CEK_API.md#ClovaFallbackIntent">Clova.FallbackIntent</a> 追加）</li>
-            <li><a href="/Develop/References/CEK_API.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（<a href="/Develop/References/CEK_API.md#ClovaDatetimeRecent">CLOVA.DATETIME_RECENT</a> 追加）</li>
+            <li><a href="/Develop/References/Interaction_Model.md#BuiltinIntent">ビルトインインテント</a> 更新（<a href="/Develop/References/Interaction_Model.md#ClovaFallbackIntent">Clova.FallbackIntent</a> 追加）</li>
+            <li><a href="/Develop/References/Interaction_Model.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（<a href="/Develop/References/Interaction_Model.md#ClovaDatetimeRecent">CLOVA.DATETIME_RECENT</a> 追加）</li>
           </ul>
-          <li><a href="/Develop/References/CEK_API.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/CEK/Register_Extension.md#AddBuiltinIntent">ビルトインインテントを追加する</a> 更新）</li>
+          <li><a href="/DevConsole/Guides/CEK/Register_Extension.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/CEK/Register_Extension.md#AddBuiltinIntent">ビルトインインテントを追加する</a> 更新）</li>
         </ul>
       </td>
     </tr>
@@ -88,7 +88,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
             <li><a href="/Design/Design_Custom_Extension.md#AudioPlayer">オーディオコンテンツ再生タイプ</a> 更新（ユーザーシナリオに一時停止/再生再開の例を追加）</li>
           </ul>
           <li><a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a> 更新（<a href="/Develop/Guides/Build_Custom_Extension.md#ControlAudioPlayback">オーディオコンテンツの再生をコントロールする</a> 追加）</li>
-          <li><a href="/Develop/References/CEK_API.md">CEK APIのリファレンス</a> 更新（<a href="/Develop/References/CEK_API.md#BuiltinIntent">ビルトインインテント</a> 更新）</li>
+          <li><a href="/Develop/References/Interaction_Model.md">対話モデル</a> 更新（<a href="/Develop/References/Interaction_Model.md#BuiltinIntent">ビルトインインテント</a> 更新）</li>
           <li><a href="/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel">対話モデルをテストする</a> 更新（AudioPlayer使用時のテスト機能の動作について注記を追加）</li>
         </ul>
       </td>
@@ -126,10 +126,10 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>2019/01/15</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>
+          <li><a href="/Develop/References/Interaction_Model.md">APIリファレンス</a> 更新</li>
           <ul>
-            <li><a href="/Develop/References/CEK_API.md#ClovaDatetime">CLOVA.DATETIME</a> 更新（フィールド名およびフィールドの説明を修正）</li>
-            <li><a href="/Develop/References/CEK_API.md#ClovaDuration">CLOVA.DURATION</a> 更新（フィールド名およびフィールドの説明を修正）</li>
+            <li><a href="/Develop/References/Interaction_Model.md#ClovaDatetime">CLOVA.DATETIME</a> 更新（フィールド名およびフィールドの説明を修正）</li>
+            <li><a href="/Develop/References/Interaction_Model.md#ClovaDuration">CLOVA.DURATION</a> 更新（フィールド名およびフィールドの説明を修正）</li>
           </ul>
           <li><a href="/DevConsole/Guides/CEK/Remove_Extension.md">Extensionを削除および中止する</a> 更新（<a href="/DevConsole/Guides/CEK/Remove_Extension.md#RemoveExtensionInService">サービス中のExtensionを削除する</a>際の連絡先メールアドレスを変更）</li>
         </ul>
@@ -159,7 +159,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
           <li><a href="/Develop/Guides/Handle_ClovaSkill_EventRequest.md">ユーザーの利用開始および停止を処理する</a> 追加</li>
           <li><a href="/DevConsole/Guides/CEK/Use_Analytics.md">Clova Analyticsを使用する</a> 追加</li>
           <li><a href="/Develop/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse">Custom Extensionレスポンスを返す</a> 更新（タイムアウト値の説明 追加）</li>
-          <li><a href="/Develop/References/CEK_API.md">CEK APIのリファレンス</a> 更新（<a href="/Develop/References/CEK_API.md#CustomExtResponseMessage">レスポンスメッセージ</a> タイムアウト値の説明 追加）</li>
+          <li><a href="/Develop/References/Custom_Extension_Message.md">APIリファレンス</a> 更新（<a href="/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage">Custom Extensionのメッセージ</a> タイムアウト値の説明 追加）</li>
         </ul>
       </td>
     </tr>
@@ -188,10 +188,10 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>2018/08/29</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md">CEK APIのリファレンス</a> 更新</li>
+          <li><a href="/Develop/References/Interaction_Model.md">CEK APIのリファレンス</a> 更新</li>
           <ul>
-            <li><a href="/Develop/References/CEK_API.md#InteractionModel">対話モデル</a> 追加</li>
-            <li>ビルトインスロットタイプ（<a href="/Develop/References/CEK_API.md#ClovaDatetime">CLOVA.DATETIME</a>、<a href="/Develop/References/CEK_API.md#ClovaDuration">CLOVA.DURATION</a>）の説明 追加</li>
+            <li><a href="/Develop/References/Interaction_Model.md">対話モデル</a> 追加</li>
+            <li>ビルトインスロットタイプ（<a href="/Develop/References/Interaction_Model.md#ClovaDatetime">CLOVA.DATETIME</a>、<a href="/Develop/References/Interaction_Model.md#ClovaDuration">CLOVA.DURATION</a>）の説明 追加</li>
           </ul>
         </ul>
       </td>

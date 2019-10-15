@@ -1,4 +1,4 @@
-# Custom Extensionメッセージ {#CustomExtMessage}
+# Custom Extensionメッセージ
 Custom Extensionメッセージは、CEKとCustom Extensionが情報をやり取りする際に使用されるメッセージです。Custom Extensionメッセージは、[リクエストメッセージ](#CustomExtRequestMessage)と[レスポンスメッセージ](#CustomExtResponseMessage)の2種類があります。リクエストメッセージには、[リクエストタイプ](#CustomExtRequestType)によって`EventRequest`、`IntentRequest`、`LaunchRequest`、`SessionEndedRequest`の4つのタイプがあります。
 
 ## リクエストメッセージ {#CustomExtRequestMessage}
@@ -1361,7 +1361,7 @@ CIC APIは、ユーザーのクライアントデバイスがClovaと通信を�
 | フィールド名 | データ型 | フィールドの説明 | Optional |
 | ------------ | -------- | ---------------- | :------: |
 | `beginAtInMilliseconds` | number   | 再生を開始するオフセット。ミリ秒単位で、この値が指定されている場合、クライアントは、そのオーディオストリームを指定されたオフセットから再生する必要があります。この値が0に設定されている場合、ストリームを最初から再生します。 | <!-- --> |
-| `customData` | string   | 現在のストリームに関連して、任意の形式を持つメタデータ情報。特定のカテゴリに分類されたり、定義されないストリーミング情報は、このフィールドに含まれるか、または入力される必要があります。オーディオストリーム再生のコンテキストに必要な追加の値を、サービスプロバイダーがカスタムで追加できます。<div class="danger"><p><strong>注意</strong></p><p>クライアントは、このフィールドの値を任意に使用してはなりません。問題が発生する恐れがあります。また、このフィールドの値はストリームの再生状態を送信する際、<a href="/Develop/References/CEK_API.md#PlaybackState">PlaybackStateコンテキスト</a>の`stream`フィールドにそのまま含まれる必要があります。</p></div> | Optional |
+| `customData` | string   | 現在のストリームに関連して、任意の形式を持つメタデータ情報。特定のカテゴリに分類されたり、定義されないストリーミング情報は、このフィールドに含まれるか、または入力される必要があります。オーディオストリーム再生のコンテキストに必要な追加の値を、サービスプロバイダーがカスタムで追加できます。<div class="danger"><p><strong>注意</strong></p><p>クライアントは、このフィールドの値を任意に使用してはなりません。問題が発生する恐れがあります。また、このフィールドの値はストリームの再生状態を送信する際、<a href="/Develop/References/Custom_Extension_Message.md#PlaybackState">PlaybackStateコンテキスト</a>の`stream`フィールドにそのまま含まれる必要があります。</p></div> | Optional |
 | `durationInMilliseconds` | number   | オーディオストリームの再生時間。クライアントは、`beginAtInMilliseconds`フィールドに指定されている再生のオフセットから、このフィールドに指定されている再生時間だけ、そのオーディオストリームをシークおよび再生できます。例えば、`beginAtInMilliseconds`フィールドの値が`10000`で、このフィールドの値が`60000`の場合、そのオーディオストリームの10秒から70秒までの区間を再生およびシークすることができます。ミリ秒単位です。 | Optional |
 | `progressReport` | object   | 再生が開始してから、再生状態をレポートするタイミングを指定するオブジェクト | Optional |
 | `progressReport.progressReportDelayInMilliseconds` | number   | 再生が開始してから、指定された時間が経過した後に、再生状態をレポートするように指定する値です。ミリ秒単位で、このフィールドの値はnullの場合があります。 | Optional |

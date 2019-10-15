@@ -60,8 +60,8 @@
 * チャットウィンドウに表示される **{{ book.DevConsole.cek_builder_test_service_response }}** から、[登録したCustom Extension](/DevConsole/Guides/CEK/Register_Extension.md)が正しく応答しているか確認します。
 * **{{ book.DevConsole.cek_builder_test_service_response }}** の右に表示される **読み上げ** ボタンをクリックすると、レスポンス内容を読み上げることができます。
 * **{{ book.DevConsole.cek_builder_test_intent_result }}** 項目と **{{ book.DevConsole.cek_builder_test_slot_result }}** 項目から、インテントとスロットが正しく認識されているか確認します。
-* **{{ book.DevConsole.cek_builder_test_request_json }}** 項目から、CEKがCustom Extensionに送る[リクエストメッセージ](/Develop/References/CEK_API.md#CustomExtRequestMessage)を確認します。
-* **{{ book.DevConsole.cek_builder_test_response_json }}** 項目から、登録したCustom Extensionが正しく[レスポンスメッセージ](/Develop/References/CEK_API.md#CustomExtResponseMessage)を返しているか確認します。
+* **{{ book.DevConsole.cek_builder_test_request_json }}** 項目から、CEKがCustom Extensionに送る[リクエストメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)を確認します。
+* **{{ book.DevConsole.cek_builder_test_response_json }}** 項目から、登録したCustom Extensionが正しく[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)を返しているか確認します。
 
 <div class="note">
   <p><strong>メモ</strong></p>

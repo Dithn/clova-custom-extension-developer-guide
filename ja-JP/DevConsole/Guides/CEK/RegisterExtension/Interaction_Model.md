@@ -103,7 +103,7 @@ Clovaプラットフォームでは共通したユーザーリクエストのカ
 
 ![](/DevConsole/Assets/Images/DevConsole-Built-in_Intent_List.png)
 
-すべてのExtensionは、[**Clova.GuideIntent**](/Develop/References/CEK_API.md#ClovaGuideIntent) に対応する必要があります。それ以外のビルトインインテントについては、必要に応じて選択し対応してください。
+すべてのExtensionは、[**Clova.GuideIntent**](/Develop/References/Interaction_Model.md#ClovaGuideIntent) に対応する必要があります。それ以外のビルトインインテントについては、必要に応じて選択し対応してください。
 
 <div class="note">
   <p><strong>メモ</strong></p>

@@ -36,7 +36,7 @@ Custom Extensionがサービスを提供したり、または動作するため�
 ```
 {% endraw %}
 
-Custom Extensionがピザの種類だけでなく、注文する数量に関する情報を必要とすることがあります。その際、[レスポンスメッセージ](/Develop/References/CEK_API.md#CustomExtResponseMessage)の`response.shouldEndSession`フィールドを`false`に設定すると、マルチターン対話で足りない情報を確認することができます。また、ユーザーが先に入力した情報を`sessionAttributes`フィールドにキー(key)-値(value)の形で保存することもできます。
+Custom Extensionがピザの種類だけでなく、注文する数量に関する情報を必要とすることがあります。その際、[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)の`response.shouldEndSession`フィールドを`false`に設定すると、マルチターン対話で足りない情報を確認することができます。また、ユーザーが先に入力した情報を`sessionAttributes`フィールドにキー(key)-値(value)の形で保存することもできます。
 
 以下のようにレスポンスを返すことで、ユーザーがすでにリクエストした`intent`フィールドと`pizzaType`の情報を保存するようにClovaにリクエストすることができます。また、ユーザーに数量に関する追加の情報を求めることができます。
 
@@ -66,7 +66,7 @@ Custom Extensionがピザの種類だけでなく、注文する数量に関す�
 {% endraw %}
 
 ユーザーの応答サンプルリクエストは次のようになります。マルチターン対話において追加で送信されたメッセージの`session.new`は`false`になり、前のメッセージと同じ`session.sessionId`値を持ちます。
-また、解析した結果と共に、前回のレスポンスに含まれていた`sessionAttributes`オブジェクトの情報を[リクエストメッセージ](/Develop/References/CEK_API.md#CustomExtRequestMessage)の`session.sessionAttributes`フィールドに含めて再送信します。Custom Extensionはこれらの受信した追加の情報を使用して次の動作を行うことができます。
+また、解析した結果と共に、前回のレスポンスに含まれていた`sessionAttributes`オブジェクトの情報を[リクエストメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)の`session.sessionAttributes`フィールドに含めて再送信します。Custom Extensionはこれらの受信した追加の情報を使用して次の動作を行うことができます。
 
 {% raw %}
 ```json

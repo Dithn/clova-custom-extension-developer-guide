@@ -1,4 +1,4 @@
-# 対話モデル {#InteractionModel}
+# 対話モデル
 
 [対話モデル](/Design/Design_Custom_Extension.md#DefineInteractionModel)は、ユーザーのリクエストをサービスの提供に必要な標準形式(JSON)に変換するルールを定義したものです。
 
