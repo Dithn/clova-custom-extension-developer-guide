@@ -49,9 +49,9 @@
       <td>リファレンス</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md#HTTPMessage">HTTPメッセージ</a></li>
-          <li><a href="/Develop/References/CEK_API.md#CustomExtMessage">Custom Extensionのメッセージ</a></li>
-          <li><a href="/Develop/References/CEK_API.md#InteractionModel">対話モデル</a></li>
+          <li><a href="/Develop/References/HTTP_Message.md">HTTPメッセージ</a></li>
+          <li><a href="/Develop/References/Custom_Extension_Message.md">Custom Extensionのメッセージ</a></li>
+          <li><a href="/Develop/References/Interaction_Model.md">対話モデル</a></li>
         </ul>
       </td>
     <tr>

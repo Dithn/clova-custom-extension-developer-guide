@@ -100,7 +100,7 @@
   * [オーディオコンテンツ再生関連のCIC API](/Develop/References/Custom_Extension_Message.md#CICAPIforAudioPlayback)
   * [オーディオコンテンツ再生関連のコンテキスト](/Develop/References/Custom_Extension_Message.md#ContextObjectforAudioPlayback)
 * [対話モデル](/Develop/References/Interaction_Model.md)
-  * [ビルトインインテント](/Develop/References/CEK_API.md#BuiltinIntent)
+  * [ビルトインインテント](/Develop/References/Interaction_Model.md#BuiltinIntent)
     * [`Clova.FallbackIntent`](/Develop/References/Interaction_Model.md#ClovaFallbackIntent)
     * [`Clova.GuideIntent`](/Develop/References/Interaction_Model.md#ClovaGuideIntent)
   * [ビルトインスロットタイプ](/Develop/References/Interaction_Model.md#BuiltinSlotType)

@@ -43,7 +43,7 @@ AIアシスタントサービスを提供するコンピュータ/モバイル�
 任意の拡張された機能を提供する[Extension](#ClovaExtension)です。Custom Extensionを利用すると、音楽、ショッピング、金融など、外部サービスの機能を提供できます。詳細については、[Custom Extensionを作成する](/Develop/Guides/Build_Custom_Extension.md)ドキュメントを参照してください。
 
 ### Custom Extensionメッセージ {#CustomExtMessage}
-[Clova Extensions Kit](#CEK)と[Custom Extension](#CustomExtension)が情報のやり取りをする際に使用するメッセージです。詳細については、[Custom Extensionメッセージ](/Develop/References/CEK_API.md#CustomExtMessage)ドキュメントを参照してください。
+[Clova Extensions Kit](#CEK)と[Custom Extension](#CustomExtension)が情報のやり取りをする際に使用するメッセージです。詳細については、[Custom Extensionメッセージ](/Develop/References/Custom_Extension_Message.md)ドキュメントを参照してください。
 
 ### Extension {#Extension}
 [Clova Extension](#ClovaExtension)の別名
