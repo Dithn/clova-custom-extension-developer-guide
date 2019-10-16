@@ -39,9 +39,9 @@
               <li><a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a></li>
             </ul>
           <li><a href="/Develop/Guides/Link_User_Account.md">ユーザーアカウントを連携する</a></li>
-          <li><a href="/DevConsole/Guides/CEK/Register_Extension.md">Extensionを登録する</a></li>
-          <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel">対話モデルを登録する</a></li>
-          <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md">Extensionを配布する</a></li>
+          <li><a href="/DevConsole/Guides/Register_Extension.md">Extensionを登録する</a></li>
+          <li><a href="/DevConsole/Guides/Register_Extension.md#RegisterInteractionModel">対話モデルを登録する</a></li>
+          <li><a href="/DevConsole/Guides/Deploy_Extension.md">Extensionを配布する</a></li>
         </ul>
       </td>
     </tr>

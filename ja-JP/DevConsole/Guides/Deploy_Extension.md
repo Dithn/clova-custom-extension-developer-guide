@@ -1,5 +1,5 @@
 # Extensionを配布する
-[Custom Extension](/Develop/Guides/Build_Custom_Extension.md)を[Clova Developer Centerに登録](/DevConsole/Guides/CEK/Register_Extension.md)すると、登録したExtensionをClovaサービスに配布できます。Extensionを配布すると、エンドユーザーが **{{ book.DevConsole.ManageExtensions }}** から選んで使用することができます。
+[Custom Extension](/Develop/Guides/Build_Custom_Extension.md)を[Clova Developer Centerに登録](/DevConsole/Guides/Register_Extension.md)すると、登録したExtensionをClovaサービスに配布できます。Extensionを配布すると、エンドユーザーが **{{ book.DevConsole.ManageExtensions }}** から選んで使用することができます。
 
 Extensionの配布は、通常、次の順で行われます。
 
@@ -8,7 +8,7 @@ Extensionの配布は、通常、次の順で行われます。
 * [スキルが公開される](#DeployInSkillStore)
 
 ## 審査情報を入力する {#InputReviewInfo}
-[Clova Developer Centerに登録](/DevConsole/Guides/CEK/Register_Extension.md)されたスキルは、Clova事務局による審査を受け、通過すると配布されます。その審査に必要な情報を入力します。
+[Clova Developer Centerに登録](/DevConsole/Guides/Register_Extension.md)されたスキルは、Clova事務局による審査を受け、通過すると配布されます。その審査に必要な情報を入力します。
 **登録済みスキル** リストの **管理** 項目にある **審査申請** を選択します。
 
 ![](/DevConsole/Assets/Images/DevConsole-Deployment_Info_Menu.png)
@@ -24,7 +24,7 @@ Extensionの配布は、通常、次の順で行われます。
   <li><strong>{{ book.DevConsole.cek_provider_email }}</strong>項目に、当社より連絡可能なメールアドレスを入力します。{{ book.DevConsole.ManageExtensions }}には表示されません。</li>
   <li>{{ book.DevConsole.cek_provider_type }}で<strong>{{ book.DevConsole.cek_provider_corporation }}</strong>を選んだ場合は、<strong>本社所在地</strong>、<strong>代表電話番号</strong>、<strong>代表者名</strong>、<strong>企業サイト</strong>項目を入力してください。こちらは審査に必要な情報であり、{{ book.DevConsole.ManageExtensions }}には表示されません。</li>
   <li><strong>{{ book.DevConsole.cek_line_bot_mid }}</strong>：<a href="/Develop/Guides/Link_Messaging_API.md" target="_blank">Custom ExtensionとLINEの連携</a>を行う場合に、スキルと連動するLINEのアカウントを選択してください。ここで選択したLINEアカウントを友だち追加できるリンクがスキルストアに追加されます。</li>
-  <li><strong>{{ book.DevConsole.cek_test_instructions }}</strong>：<a href="/DevConsole/Guides/CEK/Deploy_Extension.md#RequestExtensionSubmission" target="_blank">Extensionの審査</a>プロセスでClova事務局がExtensionを確認する際、必要とされる参考情報です。{{ book.DevConsole.ManageExtensions }}には表示されません。案内に従って作成します。</li>
+  <li><strong>{{ book.DevConsole.cek_test_instructions }}</strong>：<a href="/DevConsole/Guides/Deploy_Extension.md#RequestExtensionSubmission" target="_blank">Extensionの審査</a>プロセスでClova事務局がExtensionを確認する際、必要とされる参考情報です。{{ book.DevConsole.ManageExtensions }}には表示されません。案内に従って作成します。</li>
   <li>**{{ book.DevConsole.cek_save }}** ボタンをクリックして、入力した内容を保存します。**{{ book.DevConsole.cek_next }}** をクリックすると、{{ book.DevConsole.cek_review_step_submit}}画面に遷移します。</li>
 </ol>
 

@@ -1,6 +1,6 @@
 ## 開発設定を行う {#SetDevConfiguration}
 
-Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)すると、サーバーやアカウント連携に関する設定が可能になります。
+Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/Register_Extension.md)すると、サーバーやアカウント連携に関する設定が可能になります。
 左メニューから **{{ book.DevConsole.cek_dev_configuration }}** を選択してください。
 
 ![](/DevConsole/Assets/Images/DevConsole-Dev_Config_Menu.png)

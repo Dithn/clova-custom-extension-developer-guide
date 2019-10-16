@@ -6,5 +6,5 @@
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>こうやって作成したExtensionを実際にサービスするには、<a href="/DevConsole/Guides/CEK/Deploy_Extension.md">Extensionを配布する</a>を参照してください。</p>
+  <p>こうやって作成したExtensionを実際にサービスするには、<a href="/DevConsole/Guides/Deploy_Extension.md">Extensionを配布する</a>を参照してください。</p>
 </div>

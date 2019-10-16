@@ -17,9 +17,9 @@
 ### Clova Developer Center {#ClovaDeveloperCenter}
 Clovaプラットフォームと連携するクライアントデバイス、または[Clova Extension](#ClovaExtension)を開発する開発者に次の内容を提供する<a target="_blank" href="{{ book.DeveloperConsoleURL }}">Webツール</a>です。
 * クライアントデバイスの登録およびクライアントの認証情報を提供(今後サービス予定)
-* Clova Extensionの[登録](/DevConsole/Guides/CEK/Register_Extension.md)および[配布](/DevConsole/Guides/CEK/Deploy_Extension.md)
-* [対話モデルの登録](/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel)
-* Clovaサービスに関する[統計資料の提供](/DevConsole/Guides/CEK/Use_Analytics.md)
+* Clova Extensionの[登録](/DevConsole/Guides/Register_Extension.md)および[配布](/DevConsole/Guides/Deploy_Extension.md)
+* [対話モデルの登録](/DevConsole/Guides/Register_Extension.md#RegisterInteractionModel)
+* Clovaサービスに関する[統計資料の提供](/DevConsole/Guides/Use_Analytics.md)
 
 ### Clova Extension {#ClovaExtension}
 音楽、ショッピング、金融などの外部のサービス(サードパーティサービス)、または家庭のIoTデバイスの制御など、Clovaの機能を拡張して、ユーザーに様々な経験を提供するWebアプリケーションです。通常、Extensionと呼ばれます。Clovaプラットフォームは、現在次のClova Extensionをサポートおよび提供しています。エンドユーザーには、「スキル」という表現で提供されます。

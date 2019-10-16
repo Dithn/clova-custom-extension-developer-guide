@@ -55,7 +55,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
               <li><a href="/Develop/References/Interaction_Model.md#NumberUnit">数値と単位を取得する</a>（<a href="/Develop/References/Interaction_Model.md#ClovaNumber">CLOVA.NUMBER</a>、<a href="/Develop/References/Interaction_Model.md#ClovaGenericNumber">CLOVA.GENERIC_NUMBER</a>、<a href="/Develop/References/Interaction_Model.md#ClovaMoney">CLOVA.MONEY</a> 追加）</li>
             </ul>
           </ul>
-          <li><a href="/DevConsole/Guides/CEK/Register_Extension.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/CEK/Register_Extension.md#AddBuiltinSlotType">ビルトインスロットタイプを追加する</a> 更新）</li>
+          <li><a href="/DevConsole/Guides/Register_Extension.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/Register_Extension.md#AddBuiltinSlotType">ビルトインスロットタイプを追加する</a> 更新）</li>
           <li><a href="https://clova-developers.line.biz/#/updatehistory/">アップデート履歴</a> 追加</li>
         </ul>
       </td>
@@ -74,7 +74,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
             <li><a href="/Develop/References/Interaction_Model.md#BuiltinIntent">ビルトインインテント</a> 更新（<a href="/Develop/References/Interaction_Model.md#ClovaFallbackIntent">Clova.FallbackIntent</a> 追加）</li>
             <li><a href="/Develop/References/Interaction_Model.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新（<a href="/Develop/References/Interaction_Model.md#ClovaDatetimeRecent">CLOVA.DATETIME_RECENT</a> 追加）</li>
           </ul>
-          <li><a href="/DevConsole/Guides/CEK/Register_Extension.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/CEK/Register_Extension.md#AddBuiltinIntent">ビルトインインテントを追加する</a> 更新）</li>
+          <li><a href="/DevConsole/Guides/Register_Extension.md">Extensionを登録する</a> 更新（<a href="/DevConsole/Guides/Register_Extension.md#AddBuiltinIntent">ビルトインインテントを追加する</a> 更新）</li>
         </ul>
       </td>
     </tr>
@@ -89,7 +89,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
           </ul>
           <li><a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a> 更新（<a href="/Develop/Guides/Build_Custom_Extension.md#ControlAudioPlayback">オーディオコンテンツの再生をコントロールする</a> 追加）</li>
           <li><a href="/Develop/References/Interaction_Model.md">対話モデル</a> 更新（<a href="/Develop/References/Interaction_Model.md#BuiltinIntent">ビルトインインテント</a> 更新）</li>
-          <li><a href="/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel">対話モデルをテストする</a> 更新（AudioPlayer使用時のテスト機能の動作について注記を追加）</li>
+          <li><a href="/DevConsole/Guides/Test_Extension.md#TestInteractionModel">対話モデルをテストする</a> 更新（AudioPlayer使用時のテスト機能の動作について注記を追加）</li>
         </ul>
       </td>
     </tr>
@@ -97,10 +97,10 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>2019/03/28</td>
       <td>
         <ul>
-          <li><a href="/DevConsole/Guides/CEK/Test_Extension.md">Extensionをテストする</a> 更新</li>
+          <li><a href="/DevConsole/Guides/Test_Extension.md">Extensionをテストする</a> 更新</li>
           <ul>
             <li>テスト画面のUI変更に対応</li>
-            <li>テストモードの追加（<a href="/DevConsole/Guides/CEK/Test_Extension.md#InteractionModelTestMode">対話モデルテストモード</a>、<a href="/DevConsole/Guides/CEK/Test_Extension.md#ScenarioTestMode">シナリオテストモード</a>）</li>
+            <li>テストモードの追加（<a href="/DevConsole/Guides/Test_Extension.md#InteractionModelTestMode">対話モデルテストモード</a>、<a href="/DevConsole/Guides/Test_Extension.md#ScenarioTestMode">シナリオテストモード</a>）</li>
           </ul>
           <li><a href="/Resources/Sound_Library.md">Sound Library</a> 追加</li>
         </ul>
@@ -131,7 +131,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
             <li><a href="/Develop/References/Interaction_Model.md#ClovaDatetime">CLOVA.DATETIME</a> 更新（フィールド名およびフィールドの説明を修正）</li>
             <li><a href="/Develop/References/Interaction_Model.md#ClovaDuration">CLOVA.DURATION</a> 更新（フィールド名およびフィールドの説明を修正）</li>
           </ul>
-          <li><a href="/DevConsole/Guides/CEK/Remove_Extension.md">Extensionを削除および中止する</a> 更新（<a href="/DevConsole/Guides/CEK/Remove_Extension.md#RemoveExtensionInService">サービス中のExtensionを削除する</a>際の連絡先メールアドレスを変更）</li>
+          <li><a href="/DevConsole/Guides/Remove_Extension.md">Extensionを削除および中止する</a> 更新（<a href="/DevConsole/Guides/Remove_Extension.md#RemoveExtensionInService">サービス中のExtensionを削除する</a>際の連絡先メールアドレスを変更）</li>
         </ul>
       </td>
     </tr>
@@ -157,7 +157,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>
         <ul>
           <li><a href="/Develop/Guides/Handle_ClovaSkill_EventRequest.md">ユーザーの利用開始および停止を処理する</a> 追加</li>
-          <li><a href="/DevConsole/Guides/CEK/Use_Analytics.md">Clova Analyticsを使用する</a> 追加</li>
+          <li><a href="/DevConsole/Guides/Use_Analytics.md">Clova Analyticsを使用する</a> 追加</li>
           <li><a href="/Develop/Guides/Build_Custom_Extension.md#ReturnCustomExtensionResponse">Custom Extensionレスポンスを返す</a> 更新（タイムアウト値の説明 追加）</li>
           <li><a href="/Develop/References/Custom_Extension_Message.md">APIリファレンス</a> 更新（<a href="/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage">Custom Extensionのメッセージ</a> タイムアウト値の説明 追加）</li>
         </ul>
@@ -168,10 +168,10 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>
         <ul>
           <li><a href="/Design/Design_Custom_Extension.md">デザインガイドライン</a> 更新（<a href="/Design/Design_Custom_Extension.md#CustomSlotType">カスタムスロットタイプ</a> 同義語登録数の上限の説明 追加）</li>
-          <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel">対話モデルを登録する</a> 更新</li>
+          <li><a href="/DevConsole/Guides/Register_Extension.md#RegisterInteractionModel">対話モデルを登録する</a> 更新</li>
           <ul>
-            <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#AddCustomSlotType">カスタムスロットタイプ</a> 同義語の登録数上限の説明を追加</li>
-            <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#AddCustomIntent">カスタムインテント</a> サンプル発話の登録数上限の説明を追加</li>
+            <li><a href="/DevConsole/Guides/Register_Extension.md#AddCustomSlotType">カスタムスロットタイプ</a> 同義語の登録数上限の説明を追加</li>
+            <li><a href="/DevConsole/Guides/Register_Extension.md#AddCustomIntent">カスタムインテント</a> サンプル発話の登録数上限の説明を追加</li>
           </ul>
         </ul>
       </td>
@@ -200,7 +200,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>2018/08/24</td>
       <td>
         <ul>
-          <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md">Extensionを配布する</a> 更新（<a href="/DevConsole/Guides/CEK/Deploy_Extension.md#DeployInSkillStore">スキルストアに表示される</a> 追加）</li>
+          <li><a href="/DevConsole/Guides/Deploy_Extension.md">Extensionを配布する</a> 更新（<a href="/DevConsole/Guides/Deploy_Extension.md#DeployInSkillStore">スキルストアに表示される</a> 追加）</li>
         </ul>
       </td>
     </tr>
@@ -225,7 +225,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
       <td>2018/08/02</td>
       <td>
         <ul>
-          <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo">配布情報を入力する</a> 更新（検索キーワードについての説明を追加、スキルストアの画像を更新）</li>
+          <li><a href="/DevConsole/Guides/Deploy_Extension.md#InputReviewInfo">配布情報を入力する</a> 更新（検索キーワードについての説明を追加、スキルストアの画像を更新）</li>
         </ul>
       </td>
     </tr>
@@ -235,8 +235,8 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
         <ul>
           <li><a href="/Develop/Guides/Clova_CEK_SDK.md">Clova Extensions Kitソフトウェア開発キット</a> 更新（<a href="/Develop/Guides/Clova_CEK_SDK.md#SDK_For_Kotlin">CEK SDK for Kotlin</a> 追加）</li>
           <li><a href="/Design/Design_Custom_Extension.md#InvocationNameRequirement" target="_blank">スキル名/呼び出し名の要件</a> 更新（Clovaの呼び名を「ねぇClova」に統一）</li>
-          <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo" target="_blank">Extensionの基本情報を入力する</a> 更新（「提供者について」の説明を追加）</li>
-          <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo" target="_blank">配布情報を入力する</a> 更新（「代表サンプル発話」の入力例を追加）</li>
+          <li><a href="/DevConsole/Guides/Register_Extension.md#InputSkillInfo" target="_blank">Extensionの基本情報を入力する</a> 更新（「提供者について」の説明を追加）</li>
+          <li><a href="/DevConsole/Guides/Deploy_Extension.md#InputReviewInfo" target="_blank">配布情報を入力する</a> 更新（「代表サンプル発話」の入力例を追加）</li>
         </ul>
       </td>
     </tr>
@@ -263,7 +263,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
         <ul>
           <li><a href="/Develop/Guides/Register_Collaborator.md">複数のユーザーでExtensionの編集・テストを行う</a> 追加</li>
           <li><a href="/Develop/Examples/Extension_Examples.md">サンプルのExtension</a> 追加</li>
-          <li><a href="/DevConsole/Guides/CEK/Update_Extension.md">Extensionをアップデートする</a> 追加</li>
+          <li><a href="/DevConsole/Guides/Update_Extension.md">Extensionをアップデートする</a> 追加</li>
         </ul>
       </td>
     </tr>

@@ -75,7 +75,7 @@ Extensionにアカウント連携を適用するには、ユーザーがアカ�
 * `state`パラメータをリダイレクトURL(`redirect_uri`)に引き続き送信します。
 
 
-ユーザーがアカウントを認証できるようにログインUIを提供するページのアドレスを **認証URL** と呼びます。認証URLは、Clova Developer Centerで[Extensionを登録する](/DevConsole/Guides/CEK/Register_Extension.md)ときに入力します。ユーザーがExtensionの[アカウント連携を使用するように設定](/DevConsole/Guides/CEK/Register_Extension.md#SetAccountLinking)する際、その **認証URL** が次のパラメータと一緒に呼び出されます。
+ユーザーがアカウントを認証できるようにログインUIを提供するページのアドレスを **認証URL** と呼びます。認証URLは、Clova Developer Centerで[Extensionを登録する](/DevConsole/Guides/Register_Extension.md)ときに入力します。ユーザーがExtensionの[アカウント連携を使用するように設定](/DevConsole/Guides/Register_Extension.md#SetAccountLinking)する際、その **認証URL** が次のパラメータと一緒に呼び出されます。
 
 | パラメータ名 | 説明                                |
 |:-------------|:------------------------------------|
@@ -83,7 +83,7 @@ Extensionにアカウント連携を適用するには、ユーザーがアカ�
 | `client_id`  | Clovaが外部サービスのアクセストークンを取得するために使用するID開発者は、Clova Developer Centerであらかじめ`cliend_id`を登録しておく必要があります。 |
 | `response_type` | OAuth 2.0認可グラントタイプを定義したパラメータ。`"code"`タイプを使用します。Clova Developer Centerで指定します。現在、`"code"`タイプのみサポートしています。 |
 | `scope`      | OAuthの`scope`フィールドアクセスレベルを定義できます。Clova Developer Centerであらかじめ`scope`を登録しておく必要があります。 |
-| `redirect_uri` |アカウント認証後にリダイレクトするURLです。`redirect_uri`の値は、Clova Developer CenterでExtensionを登録するときに、[アカウント連携を設定する](/DevConsole/Guides/CEK/Register_Extension.md#SetAccountLinking)から確認できます。現在、`{{ book.RedirectURLforAccountLinking }}`が使用されています。 |
+| `redirect_uri` |アカウント認証後にリダイレクトするURLです。`redirect_uri`の値は、Clova Developer CenterでExtensionを登録するときに、[アカウント連携を設定する](/DevConsole/Guides/Register_Extension.md#SetAccountLinking)から確認できます。現在、`{{ book.RedirectURLforAccountLinking }}`が使用されています。 |
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -102,7 +102,7 @@ Extensionにアカウント連携を適用するには、ユーザーがアカ�
 
 <div class="note">
 <p><strong>メモ</strong></p>
-<p><code>redirect_uri</code>は、Clova Developer Centerの<a href="/DevConsole/Guides/CEK/Register_Extension.md#RedirectURI">アカウント連携を設定</a>する画面で確認できます。</p>
+<p><code>redirect_uri</code>は、Clova Developer Centerの<a href="/DevConsole/Guides/Register_Extension.md#RedirectURI">アカウント連携を設定</a>する画面で確認できます。</p>
 </div>
 
 
@@ -190,7 +190,7 @@ Clovaがユーザーアカウントを連携するために認可コードを取
 
 
 ### アカウント連携情報を登録する {#RegisterAccountLinkingInfo}
-認可サーバーの構築とExtensionのアカウント連携が完了すると、[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)に、[認可サーバーを構築する](#BuildAuthServer)で説明されている情報を登録する必要があります。Clova Developer Centerに登録されているExtensionで、以下のような[アカウント連携情報を入力](/DevConsole/Guides/CEK/Register_Extension.md#SetAccountLinking)します。
+認可サーバーの構築とExtensionのアカウント連携が完了すると、[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)に、[認可サーバーを構築する](#BuildAuthServer)で説明されている情報を登録する必要があります。Clova Developer Centerに登録されているExtensionで、以下のような[アカウント連携情報を入力](/DevConsole/Guides/Register_Extension.md#SetAccountLinking)します。
 
 | フィールド名                   | 説明                                         |
 |:-------------------------------|:---------------------------------------------|

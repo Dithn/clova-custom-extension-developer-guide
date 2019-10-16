@@ -17,7 +17,7 @@
 ## スキルの完全性 {#SkillCompleteness}
 
 * サーバーの保守が必要であるなどやむを得ない場合を除き、ユーザーのリクエストに対して正常に応答できないもの。
-* 基本情報（[基本設定](/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo)や[サーバー設定](/DevConsole/Guides/CEK/Register_Extension.md#SetServerConnection)、[審査情報](/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo)等）に正しい情報が登録されていない、または、情報が不足しているもの。  
+* 基本情報（[基本設定](/DevConsole/Guides/Register_Extension.md#InputSkillInfo)や[サーバー設定](/DevConsole/Guides/Register_Extension.md#SetServerConnection)、[審査情報](/DevConsole/Guides/Deploy_Extension.md#InputReviewInfo)等）に正しい情報が登録されていない、または、情報が不足しているもの。  
 なお、情報は常に最新の状態になるように努める必要があります。
 * 発話がうまく認識できない、または明らかな技術上の問題があるもの。
 * サーバー連携やアカウント連携など、Clova事務局が指定するセキュリティ要件や技術要件を満たしていないもの。

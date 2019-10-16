@@ -1,6 +1,6 @@
 # チャネルを作成する
 
-Clova Developer Center βで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)するには、まずLINE Developersコンソールでチャネルを作成する必要があります。チャネルの作成は、以下の手順で行います。
+Clova Developer Center βで[Extensionを登録](/DevConsole/Guides/Register_Extension.md)するには、まずLINE Developersコンソールでチャネルを作成する必要があります。チャネルの作成は、以下の手順で行います。
 
 1. [Clova Developer Center βにログインする](#LoginClovaDevCenter)
 2. [LINE Developersコンソールでチャネルを作成する](#CreateSkillChannel)
