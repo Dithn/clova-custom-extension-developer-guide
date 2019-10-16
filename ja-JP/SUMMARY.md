@@ -119,7 +119,7 @@
       * [`CLOVA.GENERIC_NUMBER`](/Develop/References/Interaction_Model.md#ClovaGenericNumber)
       * [`CLOVA.MONEY`](/Develop/References/Interaction_Model.md#ClovaMoney)
 
-## Clova Developer Center
+## Developer Centerガイド
 
 * [Clova Developer Centerの概要](/DevConsole/ClovaDevConsole_Overview.md)
 * [チャネルを作成する](/DevConsole/Guides/Create_Channel.md)

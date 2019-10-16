@@ -1,7 +1,7 @@
 # Clovaコンテンツガイドライン
 
 開発者は、スキル（Extension）を開発した後、Clova事務局による審査を受け、適切であると判断されたスキルのみスキルストアで公開することができます。Clova事務局が以下のコンテンツガイドラインに違反する、または違反する恐れがあると判断するスキルは、審査で不適切とされ、申請が却下・配布中止となる場合があります。  
-[審査をリクエストする](/DevConsole/Guides/Deploy_Custom_Extension.md#RequestExtensionSubmission)際には、事前にこのガイドラインを確認してください。ただし、以下の項目に該当する場合でも、Clova事務局の判断により公開可能となることがあります。
+[審査をリクエストする](/DevConsole/Guides/Deploy_Extension.md#RequestExtensionSubmission)際には、事前にこのガイドラインを確認してください。ただし、以下の項目に該当する場合でも、Clova事務局の判断により公開可能となることがあります。
 
 開発したスキルが以下の項目に該当する場合は、申請が却下あるいは保留となる場合があります。
 
@@ -93,5 +93,5 @@
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>一部例外がある場合があります。判断が難しい場合は、<a href="/DevConsole/Guides/Deploy_Custom_Extension.md#RequestExtensionSubmission">審査をリクエストする</a>際にコメントを記載してください。</p>
+  <p>一部例外がある場合があります。判断が難しい場合は、<a href="/DevConsole/Guides/Deploy_Extension.md#RequestExtensionSubmission">審査をリクエストする</a>際にコメントを記載してください。</p>
 </div>
