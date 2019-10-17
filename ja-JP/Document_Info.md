@@ -44,7 +44,7 @@ Clovaの質問には`Clova`や`CEK`のタグをご利用ください。
           </ul>
           <li><a href="/Develop/Tutorials/Introduction.md">チュートリアル</a> 更新（LINE Developersの<a href="https://developers.line.biz/ja/docs/clova-extensions-kit/" target="_blank">Clova Extensions Kitチュートリアル</a>へのリンクを追加）</li>
           <li><a href="/Develop/Guides/Build_Custom_Extension.md">Custom Extensionを作成する</a> 更新（<a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a>に音源のリソースに関する注意を追加）</li>
-          <li><a href="(/Develop/References/Interaction_Model.md">APIリファレンス/a> 更新</li>
+          <li><a href="(/Develop/References/Interaction_Model.md">APIリファレンス</a> 更新</li>
           <ul>
             <li><a href="/Develop/References/Interaction_Model.md#BuiltinSlotType">ビルトインスロットタイプ</a> 更新</li>
             <ul>
