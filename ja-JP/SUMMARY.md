@@ -88,7 +88,7 @@
 * [HTTPメッセージ](/Develop/References/HTTP_Message.md)
   * [HTTPヘッダー](/Develop/References/HTTP_Message.md#HTTPHeader)
   * [HTTPボディ](/Develop/References/HTTP_Message.md#HTTPBody)
-* [Custom Extensionのメッセージ](/Develop/References/Custom_Extension_Message.md)
+* [Custom Extensionメッセージ](/Develop/References/Custom_Extension_Message.md)
   * [リクエストメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)
   * [リクエストタイプ](/Develop/References/Custom_Extension_Message.md#CustomExtRequestType)
     * [`EventRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest)
