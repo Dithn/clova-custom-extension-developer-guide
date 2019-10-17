@@ -14,9 +14,9 @@
       <td>
         <ul>
           <li><a href="/Develop/CEK_Overview.md#WhatisCEK">CEKとは?</a></li>
-          <li><a href="/Design/Design_Guideline_For_Extension.md">Extensionのデザインガイドライン</a></li>
-          <li><a href="/Design/Design_Guideline_For_Extension.md#SupportedAudioCompressionFormat">プラットフォームでサポートされるオーディオ圧縮形式</a></li>
-          <li><a href="/Design/Design_Guideline_For_Extension.md#ClovaSkillContentGuideline">Clovaコンテンツガイドライン</a></li>
+          <li><a href="/Design/Design_Custom_Extension.md">Custom Extensionのデザインガイドライン</a></li>
+          <li><a href="/Design/Supported_Audio_Format.md">プラットフォームでサポートされるオーディオ圧縮形式</a></li>
+          <li><a href="/Design/Rules_For_Content.md">Clovaコンテンツガイドライン</a></li>
         </ul>
       </td>
     </tr>
@@ -39,9 +39,9 @@
               <li><a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a></li>
             </ul>
           <li><a href="/Develop/Guides/Link_User_Account.md">ユーザーアカウントを連携する</a></li>
-          <li><a href="/DevConsole/Guides/CEK/Register_Extension.md">Extensionを登録する</a></li>
-          <li><a href="/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel">対話モデルを登録する</a></li>
-          <li><a href="/DevConsole/Guides/CEK/Deploy_Extension.md">Extensionを配布する</a></li>
+          <li><a href="/DevConsole/Guides/Register_Extension.md">Extensionを登録する</a></li>
+          <li><a href="/DevConsole/Guides/Register_Extension.md#RegisterInteractionModel">対話モデルを登録する</a></li>
+          <li><a href="/DevConsole/Guides/Deploy_Extension.md">Extensionを配布する</a></li>
         </ul>
       </td>
     </tr>
@@ -49,9 +49,9 @@
       <td>リファレンス</td>
       <td>
         <ul>
-          <li><a href="/Develop/References/CEK_API.md#HTTPMessage">HTTPメッセージ</a></li>
-          <li><a href="/Develop/References/CEK_API.md#CustomExtMessage">Custom Extensionのメッセージ</a></li>
-          <li><a href="/Develop/References/CEK_API.md#InteractionModel">対話モデル</a></li>
+          <li><a href="/Develop/References/HTTP_Message.md">HTTPメッセージ</a></li>
+          <li><a href="/Develop/References/Custom_Extension_Message.md">Custom Extensionのメッセージ</a></li>
+          <li><a href="/Develop/References/Interaction_Model.md">対話モデル</a></li>
         </ul>
       </td>
     <tr>

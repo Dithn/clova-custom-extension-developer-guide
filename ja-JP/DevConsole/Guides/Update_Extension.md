@@ -8,11 +8,11 @@ Extensionが審査を通過し、配布が承認されると、そのExtension�
 ![](/DevConsole/Assets/Images/DevConsole-Extension_List_After_Submission.png)
 
 **{{ book.DevConsole.cek_status_prd }}** バージョンのExtensionは、現在サービス中の内容を反映しているため、修正することができません。Extensionをアップデートするには、コピーされた **{{ book.DevConsole.cek_status_dev }}** バージョンを使用します。Extensionに次の項目に該当するアップデート事項がある場合、**{{ book.DevConsole.cek_status_dev }}** バージョンのExtensionに反映後、再び審査をリクエストします。
-* [基本情報](/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo)
-* [対話モデル](/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel)
-* [開発設定](/DevConsole/Guides/CEK/Register_Extension.md#SetDevConfiguration)
-* [ユーザー設定](/DevConsole/Guides/CEK/Register_Extension.md#SetUserConfiguration)
-* [審査情報](/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo)
+* [基本情報](/DevConsole/Guides/Register_Extension.md#InputSkillInfo)
+* [対話モデル](/DevConsole/Guides/Register_Extension.md#RegisterInteractionModel)
+* [開発設定](/DevConsole/Guides/Register_Extension.md#SetDevConfiguration)
+* [ユーザー設定](/DevConsole/Guides/Register_Extension.md#SetUserConfiguration)
+* [審査情報](/DevConsole/Guides/Deploy_Extension.md#InputReviewInfo)
 
 審査を通過すると、**{{ book.DevConsole.cek_status_prd }}** バージョンから、アップデートが反映された **{{ book.DevConsole.cek_status_dev }}** バージョンに置き換えられます。その後、**{{ book.DevConsole.cek_status_prd }}** バージョンのExtensionをコピーし、**{{ book.DevConsole.cek_status_dev }}** バージョンのExtensionが生成されます。
 

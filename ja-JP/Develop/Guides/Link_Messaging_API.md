@@ -56,7 +56,7 @@ Custom ExtensionとLINEの連携を実施するには、以下の条件を満た
 そのため、例えばCustom Extensionで受け取った発話を元に、LINEのボットからメッセージを送信したい場合には以下2つのAPIを利用してください。
 * **Custom Extensionのリクエスト**  
 
-  [CEK APIリファレンス > Custom Extensionメッセージ > リクエストメッセージ](/Develop/References/CEK_API.md#CustomExtRequestMessage)  
+  [CEK APIリファレンス > Custom Extensionメッセージ > リクエストメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtRequestMessage)  
   Message fieldsの`session.user.userId`​がユーザー識別子です。
 
 * **Messaging APIのPush API**  

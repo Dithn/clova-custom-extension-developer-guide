@@ -1,6 +1,6 @@
 ## ユーザー設定を行う {#SetUserConfiguration}
 
-Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/CEK/Register_Extension.md)すると、Clovaアプリの **{{ book.DevConsole.ManageExtensions }}** に表示する情報の入力が可能になります。
+Clova Developer Centerで[Extensionを登録](/DevConsole/Guides/Register_Extension.md)すると、Clovaアプリの **{{ book.DevConsole.ManageExtensions }}** に表示する情報の入力が可能になります。
 左メニューから **{{ book.DevConsole.cek_user_configuration }}** を選択してください。
 
 ![](/DevConsole/Assets/Images/DevConsole-User_Config_Menu.png)
@@ -35,7 +35,7 @@ Extensionをユーザーに説明するための情報として、Clovaアプリ
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p><strong>{{ book.DevConsole.ExtensionPage }}</strong>に表示される一部の情報には、登録されている<a href="/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo">Extensionの基本情報</a>が使用されます。</p>
+  <p><strong>{{ book.DevConsole.ExtensionPage }}</strong>に表示される一部の情報には、登録されている<a href="/DevConsole/Guides/Register_Extension.md#InputSkillInfo">Extensionの基本情報</a>が使用されます。</p>
 </div>
 
 ### 個人情報の保護および規約の設定を行う {#InputComplianceInfo}

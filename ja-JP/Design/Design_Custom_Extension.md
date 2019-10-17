@@ -9,10 +9,7 @@
 * [スキル名/呼び出し名を定義する](#DefineInvocationName)
 * [対話モデルを定義する](#DefineInteractionModel)
 * [応答タイプを決める](#DecideSoundOutputType)
-* [プラットフォームでサポートされている音声圧縮形式](#SupportedAudioCompressionFormat)
-* [Clovaスキルのコンテンツガイドライン](#ClovaSkillContentGuideline)
 * [継続的にアップデートする](#ContinuousUpdate)
-
 
 ## 目標を設定する {#SettingGoal}
 
@@ -51,7 +48,7 @@ Extensionの設計は、まず最初にExtensionの目標を設定すること�
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>こうして作成された目標は、<a href="#MakeUseCaseScenarioScript">ユーザーシナリオのスクリプトを作成</a>する時や、<a href="#DefineInteractionModel">対話モデル</a>を定義する際の基盤情報となります。また、<a href="/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo">Extensionを配布</a>する際にその情報を登録する必要があります。その情報に基づいて、Extensionが正しく動作するか<a href="/DevConsole/Guides/CEK/Deploy_Extension.md#RequestExtensionSubmission">審査</a>を受けることになります。</p>
+  <p>こうして作成された目標は、<a href="#MakeUseCaseScenarioScript">ユーザーシナリオのスクリプトを作成</a>する時や、<a href="#DefineInteractionModel">対話モデル</a>を定義する際の基盤情報となります。また、<a href="/DevConsole/Guides/Deploy_Extension.md#InputReviewInfo">Extensionを配布</a>する際にその情報を登録する必要があります。その情報に基づいて、Extensionが正しく動作するか<a href="/DevConsole/Guides/Deploy_Extension.md#RequestExtensionSubmission">審査</a>を受けることになります。</p>
 </div>
 
 ## ユーザーシナリオスクリプトを作成する {#MakeUseCaseScenarioScript}
@@ -98,7 +95,7 @@ Extensionの設計は、まず最初にExtensionの目標を設定すること�
 4. [他スキルと同一または類似する名称でないこと](#OtherSkills)
 5. [誤解を招く表現が含まれないこと](#Misunderstanding)
 6. [利用規約に違反していないこと](#TermsOfUse)
-7. [その他の留意事項](#OtherNotices)
+7. [その他の留意事項](#OtherPrecautions)
 
 #### 1. 単語1語でないこと {#WordInGeneral}
 
@@ -148,7 +145,7 @@ Clovaの機能に影響があるフレーズを含めることはできません
 
 [Clova Extensions Kit利用規約](https://clova-developers.line.biz/cek/#/terms)を遵守しなければなりません。第三者の権利の侵害したり、わいせつな表現を用いたりした呼び出し名であってはなりません。
 
-#### 7. その他の留意事項 {#OtherNotices}
+#### 7. その他の留意事項 {#OtherPrecautions}
 * 原則として、Extensionのスキル名と呼び出し名は、日本のユーザーを対象としてください。例外として、独自のブランド名や知的財産、名前や場所等の固有名詞等は使用可能です。
 * 呼び出し名はユーザーが正確に発話しやすく、他の言葉と聞き間違えにくいものである必要があります。
 * 一般的に読み方がわかりづらい呼び出し名は使用しないでください。スキル名に読み方がわかるように括弧書きで記載するなど、ユーザーがわかるように補足することをお勧めします。
@@ -182,16 +179,16 @@ Clovaの機能に影響があるフレーズを含めることはできません
 
 #### 音声認識結果を確認する {#CheckUserUtterance}
 
-呼び出し名（サブ）を定義する際は、対話モデルのテストの[発話履歴](/DevConsole/Guides/CEK/Test_Extension.md#DeviceTest)機能を利用して、次のようなパターンでClovaデバイスに呼びかけた場合の音声認識結果を確認します。
+呼び出し名（サブ）を定義する際は、対話モデルのテストの[発話履歴](/DevConsole/Guides/Test_Extension.md#DeviceTest)機能を利用して、次のようなパターンでClovaデバイスに呼びかけた場合の音声認識結果を確認します。
 
 * 「ねぇClova、<呼び出し名>を起動して」
 * 「ねぇClova、<呼び出し名>を開いて」
 * 「ねぇClova、<呼び出し名>につないで」
 * 「ねぇClova、<呼び出し名>」
 
-発話テストを複数回繰り返し、その中で多かった認識結果から<呼び出し名>にあたる部分の表記を抜き出して[Extensionの基本情報](/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo)の呼び出し名（サブ）に入力します。
+発話テストを複数回繰り返し、その中で多かった認識結果から<呼び出し名>にあたる部分の表記を抜き出して[Extensionの基本情報](/DevConsole/Guides/Register_Extension.md#InputSkillInfo)の呼び出し名（サブ）に入力します。
 
-Clovaデバイスの実機を使用して発話履歴（音声認識の結果）を確認する手順については、[Clovaデバイスでテストする](/DevConsole/Guides/CEK/Test_Extension.md#DeviceTest)を参照してください。
+Clovaデバイスの実機を使用して発話履歴（音声認識の結果）を確認する手順については、[Clovaデバイスでテストする](/DevConsole/Guides/Test_Extension.md#DeviceTest)を参照してください。
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -231,7 +228,7 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 * 注文のリクエスト
 * 配達状況確認のリクエスト
 
-ピザの宅配サービス(Extension)の対話モデルを定義するということは、メニュー確認インテント、注文インテント、配達状況確認インテントのようにインテントのリストを宣言して、それぞれのインテントが必要とする情報(スロット)とサンプル発話を列挙するということです。従って、**対話モデルを定義する際、一番最初に、Extensionが処理するリクエストのカテゴリーを定義し、列挙する**必要があります。これはExtensionを開発する際に、ビジネスロジックでプログラムの分岐を分ける基準にもなります。
+ピザの宅配サービス(Extension)の対話モデルを定義するということは、メニュー確認インテント、注文インテント、配達状況確認インテントのようにインテントのリストを宣言して、それぞれのインテントが必要とする情報(スロット)とサンプル発話を列挙するということです。従って、**対話モデルを定義する際、一番最初に、Extensionが処理するリクエストのカテゴリーを定義し、列挙する** 必要があります。これはExtensionを開発する際に、ビジネスロジックでプログラムの分岐を分ける基準にもなります。
 
 ![](/Design/Assets/Images/Extension_Design-Design_Interaction_Model.png)
 
@@ -269,7 +266,7 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 ビルトインスロットタイプは、Clovaであらかじめ定義されている情報のタイプです。すべてのサービス(Extension)に共通で使用できる情報の表現が定義されています。ビルトインスロットタイプは、主に時間、場所、数量などのような情報を認識する必要がある場合に使用されます。上記の発話の場合、「2枚」に該当する情報を認識するためにビルトインスロットタイプを使用することができます。Clovaは、次のようなビルトインスロットタイプを提供しています。
 
 
-##### [地域・都市名を取得する](/Develop/References/CEK_API.md#Location)
+##### [地域・都市名を取得する](/Develop/References/Interaction_Model.md#Location)
 | ビルトインスロットタイプ | 説明                            |
 | ------------------------ | ------------------------------- |
 | `CLOVA.JP_ADDRESS_KEN`   | 国内の行政地域のうち、都道府県名を提供します（例："東京都"、"京都府"、"福岡県"、"北海道"） |
@@ -278,7 +275,7 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 | `CLOVA.WORLD_COUNTRY`    | 世界の国名に相当する表現を提供します（例："カナダ"、"日本"、"大韓民国"、"フランス"） |
 | `CLOVA.WORLD_CITY`       | 世界の都市名表現を提供します（例："ワシントンD.C."、"ローマ"） |
 
-##### [日時・時間を取得する](/Develop/References/CEK_API.md#Time)
+##### [日時・時間を取得する](/Develop/References/Interaction_Model.md#Time)
 | ビルトインスロットタイプ | 説明                            |
 | ------------------------ | ------------------------------- |
 | `CLOVA.DATETIME`         | 日付や時刻表現を提供します。現在の日付またはそれより先の日時を返します。（例："1日"、"10分30秒"、"午前9時"、"1時間前"、"12時"、"正午"、"2017年8月4日"） |
@@ -288,12 +285,12 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 | `CLOVA.ORDER`            | 順序表現を提供します（例："次"、"前"） |
 | `CLOVA.RELATIVETIME`     | 相対的な時間表現を提供します（例："これから"、"後で"、"しばらく後"、"今"、"さっき"） |
 
-##### [数値を取得する](/Develop/References/CEK_API.md#Number)
+##### [数値を取得する](/Develop/References/Interaction_Model.md#Number)
 | ビルトインスロットタイプ | 説明                            |
 | ------------------------ | ------------------------------- |
 | `CLOVA.WHOLE_NUMBER`     | 0と正の整数、数字で構成された文字列の表現を提供します（例："0123 4567"） |
 
-##### [単位を取得する](/Develop/References/CEK_API.md#Unit)
+##### [単位を取得する](/Develop/References/Interaction_Model.md#Unit)
 | ビルトインスロットタイプ | 説明                            |
 | ------------------------ | ------------------------------- |
 | `CLOVA.UNIT`             | `CLOVA.UNIT_xxxx`のすべてを含む単位表現を提供します |
@@ -308,7 +305,7 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 | `CLOVA.UNIT_VOLUME`      | 体積・容積を表す単位を提供します（例："ミリリットル"） |
 | `CLOVA.UNIT_WEIGHT`      | 重量を表す単位を提供します（例："キログラム"、"ミリグラム"） |
 
-##### [数値と単位を取得する](/Develop/References/CEK_API.md#NumberUnit)
+##### [数値と単位を取得する](/Develop/References/Interaction_Model.md#NumberUnit)
 | ビルトインスロットタイプ | 説明                            |
 | ------------------------ | ------------------------------- |
 | `CLOVA.NUMBER`           | 数値 または 数値と単位の組み合わせ表現を提供します（例：1234個と発話した場合、"1234" または "1234個"） |
@@ -331,7 +328,7 @@ Clovaデバイスの実機を使用して発話履歴（音声認識の結果）
 
 上記のようにスロットタイプを定義したら、次はそれぞれのインテントで使用するスロットの名前を定義し、そのスロットがどんなスロットタイプを持つか宣言する必要があります。例えば、「OrderPizza」インテントは、ピザの種類に関する情報のために「pizzaType」、ピザの数量に関する情報のために「pizzaAmount」というスロットを宣言し、スロットごとにあらかじめ定義した「PIZZA_TYPE」のカスタムスロットタイプと、すでに提供されている「CLOVA.NUMBER」のビルトインスロットタイプを指定することができます。
 
-現在、同義語の登録数の上限は、1つのスロットタイプ毎に代表語と同義語を合わせて20万件となっています。詳細については[カスタムスロットタイプを追加する](/DevConsole/Guides/CEK/Register_Extension.md#AddCustomSlotType)を参照してください。
+現在、同義語の登録数の上限は、1つのスロットタイプ毎に代表語と同義語を合わせて20万件となっています。詳細については[カスタムスロットタイプを追加する](/DevConsole/Guides/Register_Extension.md#AddCustomSlotType)を参照してください。
 
 ### サンプル発話 {#UtteranceExample}
 インテントを定義する際、様々なサンプル発話を列挙することができます。サンプル発話は、Clovaが同じ意図を持つ様々な言い方を認識するにあたって必要な基本データであり、ユーザーの発話のうち、スロットに該当する情報を把握する際に利用されます。サンプル発話を適切に入力しておくと、ユーザーの意図を正しく認識する対話モデルを作成することができます。サンプル発話は、可能な限り次の事項に従って作成することを強くお勧めします。
@@ -400,11 +397,11 @@ BBQピザ1つ出前取ってくれる?
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p><a href="/DevConsole/Guides/CEK/Test_Extension.md#TestInteractionModel">対話モデルのテスト</a>や、統計機能の「発話」データ（<a href="https://clova-developers.line.biz/cek/#/list" target="_blank">スキル設定</a>画面で<strong>統計</strong>を選択して表示）を参照して調整することにより、完成度を高めることができます。対話モデルをテストする際には、サンプル発話の作成者ではなく、第三者がテストすることをお勧めします。そうすることで、新たな発話パターンを見つけることができます。</p>
+  <p><a href="/DevConsole/Guides/Test_Extension.md#TestInteractionModel">対話モデルのテスト</a>や、統計機能の「発話」データ（<a href="https://clova-developers.line.biz/cek/#/list" target="_blank">スキル設定</a>画面で<strong>統計</strong>を選択して表示）を参照して調整することにより、完成度を高めることができます。対話モデルをテストする際には、サンプル発話の作成者ではなく、第三者がテストすることをお勧めします。そうすることで、新たな発話パターンを見つけることができます。</p>
 </div>
 
 
-[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)で[対話モデルを登録](/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel)すると、[登録されたCustom Extension](/DevConsole/Guides/CEK/Register_Extension.md)が次のようなJSONメッセージを受信します。
+[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)で[対話モデルを登録](/DevConsole/Guides/Register_Extension.md#RegisterInteractionModel)すると、[登録されたCustom Extension](/DevConsole/Guides/Register_Extension.md)が次のようなJSONメッセージを受信します。
 
 {% raw %}
 
@@ -565,127 +562,8 @@ Extensionは、ユーザーのリクエストを処理し、その結果をClova
   <p>オーディオコンテンツ再生タイプで応答する方法については、<a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a>を参照してください。</p>
 </div>
 
-
-## プラットフォームでサポートされるオーディオ圧縮形式 {#SupportedAudioCompressionFormat}
-
-Extensionでオーディオコンテンツを提供する場合、必ずClovaでサポートされている音声圧縮形式で提供する必要があります。
-
-{% include "/Design/SupportedMediaFormat/Supported_Audio_Compression_Format.md" %}
-
-<div class="danger">
-  <p><strong>注意</strong></p>
-  <p>Clovaでサポートされていない音声圧縮形式でオーディオを提供すると、クライアントがオーディオを正常に再生できないことがあります。</p>
-</div>
-
-
-## Clovaスキルのコンテンツガイドライン {#ClovaSkillContentGuideline}
-
-開発者は、スキル（Extension）を開発した後、Clova事務局による審査を受け、適切であると判断されたスキルのみスキルストアで公開することができます。Clova事務局が以下のコンテンツガイドラインに違反する、または違反する恐れがあると判断するスキルは、審査で不適切とされ、申請が却下・配布中止となる場合があります。  
-審査をリクエストする際は、事前にこのガイドラインを確認してください。ただし、以下の項目に該当する場合でも、Clova事務局の判断により公開可能となることがあります。
-
-
-### コンテンツガイドライン {#ContentGuideline}
-開発したスキルが以下の項目に該当する場合は、申請が却下あるいは保留となる場合があります。
-
-1. [スキルの完全性](#SkillCompleteness)
-2. [スキルの安全性](#SkillSecurity)
-3. [権利、法律](#RightAndLegal)
-4. [ビジネス、広告](#BusinessAndAd)
-5. [モラル](#Morals)
-6. [プライバシー](#Privacy)
-
-* [その他の留意事項](#OtherNotices2)
-
-#### 1. スキルの完全性 {#SkillCompleteness}
-
-* サーバーの保守が必要であるなどやむを得ない場合を除き、ユーザーのリクエストに対して正常に応答できないもの。
-* 基本情報（[基本設定](/DevConsole/Guides/CEK/Register_Extension.md#InputSkillInfo)や[サーバー設定](/DevConsole/Guides/CEK/Register_Extension.md#SetServerConnection)、[審査情報](/DevConsole/Guides/CEK/Deploy_Extension.md#InputReviewInfo)等）に正しい情報が登録されていない、または、情報が不足しているもの。  
-なお、情報は常に最新の状態になるように努める必要があります。
-* 発話がうまく認識できない、または明らかな技術上の問題があるもの。
-* サーバー連携やアカウント連携など、Clova事務局が指定するセキュリティ要件や技術要件を満たしていないもの。
-
-
-#### 2. スキルの安全性 {#SkillSecurity}
-
-* 人の生命または身体の安全を害するおそれのある行為を助長し、または促進するもの。
-* 面識のない異性との出会い等を目的とするもの。
-* 青少年の家出を誘引・助長するもの。
-* 当社または第三者の機器、設備、システム等の利用もしくは運用を妨げ、またはかかる利用もしくは運用に支障を与えるもの。
-* 当社または第三者の設備に蓄積された情報を不正に書き換え、または消去する機能を有しているもの。
-* コンピュータウィルス等の有害なプログラムを含む、またはかかるプログラムを送信し、または送信する機能を含むもの。
-
-
-#### 3. 権利、法律 {#RightAndLegal}
-
-* 第三者の権利（著作権、著作者人格権、特許権、商標権、意匠権、実用新案権、営業秘密、名誉権、肖像権、プライバシー権、パブリシティー権を含みますが、これらに限りません）を侵害しているもの。
-* 権利の所在が明確でないもの。
-  * 例：二次創作など
-* 権利者からの許諾が証明できないもの。
-* 賭博その他の違法なギャンブルを行わせ、または賭博その他の違法なギャンブルへの参加を勧誘するもの。
-* その他、犯罪を構成もしくは助長し、または公序良俗もしくは法令等に違反する、またはそれらのおそれのあるもの。
-
-なお、Clova事務局は別途権利確認書類を求めることがあります。
-
-
-#### 4. ビジネス、広告 {#BusinessAndAd}
-
-* ユーザーに対して開発者その他第三者の商品、サービス等の広告を行うもの。  
-ただし、以下のような例を除きます。
-  * 開発者の製品やサービス等の販売促進を目的とするもので、当社の事前承諾があるもの。
-  * 開発者の商品、サービス等の有償プラン・アップグレードを誘導するもので、当社の事前承諾があるもの。
-  * スキルと関連する企業名やサービス名の告知をするもので、当社の事前承諾があるもの。
-    * 例：「以上、*<企業名>* がお送りしました」（とClovaデバイスに発話させる）
-    * 例：企業名やサービス名を用いたサウンドロゴ
-* ユーザーに対して開発者その他第三者の商品、サービス等の販売や購入、注文を行うもの。または会員限定のもの。  
-ただし、以下のような例を除きます。
-  * 注文・予約・購入等が発生するもので、当社の事前承諾が完了しているもの。なお、これらはアカウント連携が必須です。
-  * 無償または定額課金型の会員向けサービスで、当社の事前承諾が完了しているもの。
-
-なお、事前に承諾があった場合でも、Clova事務局が不適切と判断するものは、却下・配布中止、保留となる場合があります。
-
-
-#### 5. モラル {#Morals}
-
-* グロテスク、露骨な性描写、児童ポルノもしくは児童虐待にかかる表現、その他残虐もしくはわいせつな表現、またはこれらを連想させる表現をするもの。
-* 犯罪を助長、または奨励するもの。
-* 特定の個人や法人、国、グループなどを誹謗、中傷、攻撃する可能性のあるもの。
-* 第三者もしくは自己の個人情報を開示し、または開示する恐れのあるもの。
-* 宗教、文化、民族性、国民性を攻撃し、または特に不快感を与えるもの。
-* 宗教への勧誘や啓蒙にあたるもの、宗教的要素の強いもの。
-* ユーザーが混乱、嫌悪するように設計されているもの。
-* 賭博を助長し、または賭博に類するもの。
-* その他反社会的な内容を含み、または他者に不快感を与えるもの。
-* 当社がスキルを開発もしくは提供している、または当社と開発者が提携していると誤解を与える、またはそのおそれのあるもの。
-* 当社または第三者を不当に差別もしくは誹謗中傷し、またはそれらを助長するもの。
-
-
-#### 6. プライバシー {#Privacy}
-
-* Clova利用データ等その他の個人情報の収集を目的としたもの。
-* 以下に該当する機微情報を扱うもの。
-  * 人種、信条、社会的身分、病歴、前科、犯罪被害情報
-  * その他本人に対する不当な差別、偏見が生じないように特に配慮を要するものとして政令で定めるもの
-    * 身体障害・知的障害・精神障害等があること
-    * 健康診断その他の検査の結果
-    * 保健指導、診療・調剤情報
-    * 本人を被疑者または被告人として、逮捕、捜索等の刑事事件に関する手続が行われたこと
-    * 本人を非行少年またはその疑いのある者として、保護処分等の少年の保護事件に関する手続が行われたこと
-
-
-#### その他の留意事項 {#OtherNotices2}
-
-* 開発者やその他第三者のデバイス（例：IoT製品）との連携が発生するスキルに関しては、Clova事務局は動作テストのために、開発者に対して別途製品の提出を求めることがあります。
-* 日本以外を対象としたものは許可されない場合があります。
-* 上記に記載されていない場合でも、[Clova Extensions Kit利用規約](https://clova-developers.line.biz/cek/#/terms)に違反しているものは許可されません。
-* 本ガイドラインは随時変更される可能性があります。あらかじめご了承ください。
-
-<div class="note">
-  <p><strong>メモ</strong></p>
-  <p>一部例外がある場合がありますので、判断が難しい場合は、審査時にコメントを記載いただきますようお願いいたします。</p>
-</div>
-
 ## 継続的にアップデートする {#ContinuousUpdate}
 
 新規にExtensionを開発する際には、ユーザーがどんなフレーズを発話するか予測してシナリオを作成し、Extensionに適用します。Extensionの公開後は、実際のユーザーの使い方が予想と必ず一致するとは限らず、またユーザーのすべての使用パターンを網羅できていない可能性もあります。ユーザーは想定していない方法でExtensionを使用する可能性があるのです。UXを向上させるためには、Extensionを公開してからも、Extensionの機能や対話の流れを継続的に改善する必要があります。
 
-Extensionを登録した後、Clovaプラットフォームで提供される統計データ（[Clova Analytics](/DevConsole/Guides/CEK/Use_Analytics.md)）を分析し、随時Extensionをアップデートする必要があります。
+Extensionを登録した後、Clovaプラットフォームで提供される統計データ（[Clova Analytics](/DevConsole/Guides/Use_Analytics.md)）を分析し、随時Extensionをアップデートする必要があります。

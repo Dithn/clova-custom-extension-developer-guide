@@ -1,5 +1,5 @@
 ## Custom Extensionレスポンスを返す {#ReturnCustomExtensionResponse}
-[リクエストメッセージを処理](#HandleCustomExtensionRequest)すると、CEKに[レスポンスメッセージ](/Develop/References/CEK_API.md#CustomExtResponseMessage)を返す必要があります(HTTPレスポンス)。リクエストメッセージのタイプによって異なる内容を返すこともありますが、レスポンスメッセージの構造に大差はありません。以下は、LaunchRequestタイプのリクエスト(「ピザボットを起動して」というユーザーリクエスト)を処理した後に返したレスポンスメッセージです。
+[リクエストメッセージを処理](#HandleCustomExtensionRequest)すると、CEKに[レスポンスメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)を返す必要があります(HTTPレスポンス)。リクエストメッセージのタイプによって異なる内容を返すこともありますが、レスポンスメッセージの構造に大差はありません。以下は、LaunchRequestタイプのリクエスト(「ピザボットを起動して」というユーザーリクエスト)を処理した後に返したレスポンスメッセージです。
 
 {% raw %}
 ```json
@@ -79,7 +79,7 @@
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>単文や複文タイプの音声情報の他に、画面を持たないデバイスのような詳しい内容をGUIで表現できないクライアントデバイスのために、複合タイプ(SpeechSet)の音声情報もサポートしています。詳細については、Custom Extensionメッセージの<a href="/Develop/References/CEK_API.md#CustomExtResponseMessage">レスポンスメッセージ</a>を参照してください。</p>
+  <p>単文や複文タイプの音声情報の他に、画面を持たないデバイスのような詳しい内容をGUIで表現できないクライアントデバイスのために、複合タイプ(SpeechSet)の音声情報もサポートしています。詳細については、Custom Extensionメッセージの<a href="/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage">レスポンスメッセージ</a>を参照してください。</p>
 </div>
 
 音声出力だけでなく、クライアントデバイスの画面やクライアントアプリの画面にデータを出力する必要がある場合、次のように`response.card`フィールドにコンテンツテンプレートに合わせて表示するコンテンツを設定します。

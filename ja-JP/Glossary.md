@@ -17,9 +17,9 @@
 ### Clova Developer Center {#ClovaDeveloperCenter}
 Clovaプラットフォームと連携するクライアントデバイス、または[Clova Extension](#ClovaExtension)を開発する開発者に次の内容を提供する<a target="_blank" href="{{ book.DeveloperConsoleURL }}">Webツール</a>です。
 * クライアントデバイスの登録およびクライアントの認証情報を提供(今後サービス予定)
-* Clova Extensionの[登録](/DevConsole/Guides/CEK/Register_Extension.md)および[配布](/DevConsole/Guides/CEK/Deploy_Extension.md)
-* [対話モデルの登録](/DevConsole/Guides/CEK/Register_Extension.md#RegisterInteractionModel)
-* Clovaサービスに関する[統計資料の提供](/DevConsole/Guides/CEK/Use_Analytics.md)
+* Clova Extensionの[登録](/DevConsole/Guides/Register_Extension.md)および[配布](/DevConsole/Guides/Deploy_Extension.md)
+* [対話モデルの登録](/DevConsole/Guides/Register_Extension.md#RegisterInteractionModel)
+* Clovaサービスに関する[統計資料の提供](/DevConsole/Guides/Use_Analytics.md)
 
 ### Clova Extension {#ClovaExtension}
 音楽、ショッピング、金融などの外部のサービス(サードパーティサービス)、または家庭のIoTデバイスの制御など、Clovaの機能を拡張して、ユーザーに様々な経験を提供するWebアプリケーションです。通常、Extensionと呼ばれます。Clovaプラットフォームは、現在次のClova Extensionをサポートおよび提供しています。エンドユーザーには、「スキル」という表現で提供されます。
@@ -43,7 +43,7 @@ AIアシスタントサービスを提供するコンピュータ/モバイル�
 任意の拡張された機能を提供する[Extension](#ClovaExtension)です。Custom Extensionを利用すると、音楽、ショッピング、金融など、外部サービスの機能を提供できます。詳細については、[Custom Extensionを作成する](/Develop/Guides/Build_Custom_Extension.md)ドキュメントを参照してください。
 
 ### Custom Extensionメッセージ {#CustomExtMessage}
-[Clova Extensions Kit](#CEK)と[Custom Extension](#CustomExtension)が情報のやり取りをする際に使用するメッセージです。詳細については、[Custom Extensionメッセージ](/Develop/References/CEK_API.md#CustomExtMessage)ドキュメントを参照してください。
+[Clova Extensions Kit](#CEK)と[Custom Extension](#CustomExtension)が情報のやり取りをする際に使用するメッセージです。詳細については、[Custom Extensionメッセージ](/Develop/References/Custom_Extension_Message.md)ドキュメントを参照してください。
 
 ### Extension {#Extension}
 [Clova Extension](#ClovaExtension)の別名
@@ -70,7 +70,7 @@ HTTPのバージョンの1つです。[SPDY](https://en.wikipedia.org/wiki/SPDY)
 [Extension](#ClovaExtension)がユーザーのアカウント認証を必要とする外部サービスを提供する際に使用されます。詳細については、[ユーザーアカウントを連携する](/Develop/Guides/Link_User_Account.md)ドキュメントを参照してください。
 
 ### インテント {#Intent}
-Clova Extensionが処理するユーザーの意図を区分したカテゴリです。カスタムインテントとビルトインインテントの2種類があります。[Custom Extension](#CustomExtension)を実装する前に、まずインテントの集合である[対話モデル](#InteractionModel)を定義する必要があります。詳細については、[対話モデルを定義する](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)ドキュメントを参照してください。
+Clova Extensionが処理するユーザーの意図を区分したカテゴリです。カスタムインテントとビルトインインテントの2種類があります。[Custom Extension](#CustomExtension)を実装する前に、まずインテントの集合である[対話モデル](#InteractionModel)を定義する必要があります。詳細については、[対話モデルを定義する](/Design/Design_Custom_Extension.md#DefineInteractionModel)ドキュメントを参照してください。
 
 ### スキル {#Skill}
 Clovaが提供する拡張機能のことをいいます。スキルをユーザーに提供するには、[Clova Extension](#ClovaExtension)を開発する必要があります。
@@ -82,16 +82,16 @@ Clovaが提供する拡張機能のことをいいます。スキルをユーザ
 [スキルストア](#SkillStore)に登録されたExtensionが表示されるページです。[Clovaアプリ](#ClovaApp)の設定メニューからアクセスします。
 
 ### スロット {#Slot}
-[インテント](#Intent)に宣言されたリクエストを処理する際に必要な情報です。インテントを定義するとき、共に定義する必要があります。Clovaはユーザーのリクエストを解析して、スロットに該当する情報を抽出します。詳細については、[対話モデルを定義する](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)ドキュメントを参照してください。
+[インテント](#Intent)に宣言されたリクエストを処理する際に必要な情報です。インテントを定義するとき、共に定義する必要があります。Clovaはユーザーのリクエストを解析して、スロットに該当する情報を抽出します。詳細については、[対話モデルを定義する](/Design/Design_Custom_Extension.md#DefineInteractionModel)ドキュメントを参照してください。
 
 ### セッションID {#SessionID}
 [Extension](#ClovaExtension)がユーザーリクエストのコンテクストを区分するためのセッション識別子です。通常、1回で終わるユーザーリクエストはそのたびにセッションIDが変わりますが、特定のモードや連続的な(マルチターン)ユーザーリクエストの場合、同じセッションIDを持ちます。このセッションIDは、[Clova Extensions Kit](#CEK)がExtensionにユーザーのリクエストを渡すとき生成されます。セッションIDが維持されるのは、[LaunchRequest](#LaunchRequest)のようなリクエストを受け取ったか、またはExtensionが必要に応じて`response.shouldEndSession`フィールドを`false`に設定した場合です。詳細については、[Custom Extensionを作成する](/Develop/Guides/Build_Custom_Extension.md)ドキュメントを参照してください。
 
 ### 対話モデル {#InteractionModel}
-[Custom Extension](#CustomExtension)が音声から認識されたユーザーのリクエストをExtensionに送るために、標準化したフォーマット(JSON)に変換するルールを指定したものです。詳細については、[対話モデルを定義する](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)ドキュメントを参照してください。
+[Custom Extension](#CustomExtension)が音声から認識されたユーザーのリクエストをExtensionに送るために、標準化したフォーマット(JSON)に変換するルールを指定したものです。詳細については、[対話モデルを定義する](/Design/Design_Custom_Extension.md#DefineInteractionModel)ドキュメントを参照してください。
 
 ### ビルトインスキル {#BuiltinSkill}
 Clovaデバイスに標準で搭載されているスキルで、ミュージック、LINE送受信、LINE無料通話、天気、ニュース、アラーム・タイマーなどがあります。詳細については、[Clova > Clovaのスキル](https://clova.line.me/clova-ai/) を参照してください。
 
 ### ユーザーのサンプル発話 {#UserUtteranceExample}
-ユーザーのリクエスト発話がどのように入力されるかを例で表現したリストです。[インテント](#Intent)ごとに複数の例を定義できます。また、例には[スロット](#Slot)が表示されます。詳細については、[対話モデルを定義する](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)ドキュメントを参照してください。
+ユーザーのリクエスト発話がどのように入力されるかを例で表現したリストです。[インテント](#Intent)ごとに複数の例を定義できます。また、例には[スロット](#Slot)が表示されます。詳細については、[対話モデルを定義する](/Design/Design_Custom_Extension.md#DefineInteractionModel)ドキュメントを参照してください。

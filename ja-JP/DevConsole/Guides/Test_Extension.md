@@ -6,6 +6,6 @@
 * (Custom Extension専用)[対話モデルをテストする](#TestInteractionModel)
 * [Clovaデバイスでテストする](#DeviceTest)
 
-{% include "/DevConsole/Guides/CEK/TestExtension/Test_Interaction_Model.md" %}
+{% include "/DevConsole/Guides/TestExtension/Test_Interaction_Model.md" %}
 
-{% include "/DevConsole/Guides/CEK/TestExtension/Device_Test.md" %}
+{% include "/DevConsole/Guides/TestExtension/Device_Test.md" %}

@@ -2,7 +2,7 @@
 Clovaは、[Custom Extension](/Develop/Guides/Build_Custom_Extension.md)、または[Clova Home Extension]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI}}/Develop/Guides/Build_Clova_Home_Extension.{{ book.DocMeta.FileExtensionForExternalLink}}
 )を介して、ユーザーアカウント権限を必要とする外部サービスを提供することができます。例えば、有料コンテンツサービスの音楽ストリーミングサービスや、ショッピング、金融、ホームIoTなどのサービスをClovaと連携することができます。そのために、Clovaは外部サービスのユーザーアカウントとClovaのユーザーアカウントを連携するアカウント連携(account linking)をサポートしています。アカウント連携は[OAuth 2.0](https://tools.ietf.org/html/rfc6749)を使用して行われます。
 
-アカウント連携は、Custom Extensionがユーザーのアカウント認証を必要とする外部サービスを提供する際に使用されます。アカウント認証を必要としない外部サービスはアカウント連携なしに提供できます。ユーザーを識別できる程度の情報を必要とするサービスは、通常、[Custom Extensionメッセージ](/Develop/References/CEK_API.md#CustomExtMessage)が提供する端末識別子(`context.System.device.deviceId`)とユーザーアカウント識別子(`context.System.user.userId`または`session.user.userId`)を組み合わせた値を使用します。
+アカウント連携は、Custom Extensionがユーザーのアカウント認証を必要とする外部サービスを提供する際に使用されます。アカウント認証を必要としない外部サービスはアカウント連携なしに提供できます。ユーザーを識別できる程度の情報を必要とするサービスは、通常、[Custom Extensionメッセージ](/Develop/References/Custom_Extension_Message.md#CustomExtMessage)が提供する端末識別子(`context.System.device.deviceId`)とユーザーアカウント識別子(`context.System.user.userId`または`session.user.userId`)を組み合わせた値を使用します。
 
 
 <div class="note">
@@ -75,7 +75,7 @@ Extensionにアカウント連携を適用するには、ユーザーがアカ�
 * `state`パラメータをリダイレクトURL(`redirect_uri`)に引き続き送信します。
 
 
-ユーザーがアカウントを認証できるようにログインUIを提供するページのアドレスを **認証URL** と呼びます。認証URLは、Clova Developer Centerで[Extensionを登録する](/DevConsole/Guides/CEK/Register_Extension.md)ときに入力します。ユーザーがExtensionの[アカウント連携を使用するように設定](/DevConsole/Guides/CEK/Register_Extension.md#SetAccountLinking)する際、その **認証URL** が次のパラメータと一緒に呼び出されます。
+ユーザーがアカウントを認証できるようにログインUIを提供するページのアドレスを **認証URL** と呼びます。認証URLは、Clova Developer Centerで[Extensionを登録する](/DevConsole/Guides/Register_Extension.md)ときに入力します。ユーザーがExtensionの[アカウント連携を使用するように設定](/DevConsole/Guides/Register_Extension.md#SetAccountLinking)する際、その **認証URL** が次のパラメータと一緒に呼び出されます。
 
 | パラメータ名 | 説明                                |
 |:-------------|:------------------------------------|
@@ -83,7 +83,7 @@ Extensionにアカウント連携を適用するには、ユーザーがアカ�
 | `client_id`  | Clovaが外部サービスのアクセストークンを取得するために使用するID開発者は、Clova Developer Centerであらかじめ`cliend_id`を登録しておく必要があります。 |
 | `response_type` | OAuth 2.0認可グラントタイプを定義したパラメータ。`"code"`タイプを使用します。Clova Developer Centerで指定します。現在、`"code"`タイプのみサポートしています。 |
 | `scope`      | OAuthの`scope`フィールドアクセスレベルを定義できます。Clova Developer Centerであらかじめ`scope`を登録しておく必要があります。 |
-| `redirect_uri` |アカウント認証後にリダイレクトするURLです。`redirect_uri`の値は、Clova Developer CenterでExtensionを登録するときに、[アカウント連携を設定する](/DevConsole/Guides/CEK/Register_Extension.md#SetAccountLinking)から確認できます。現在、`{{ book.RedirectURLforAccountLinking }}`が使用されています。 |
+| `redirect_uri` |アカウント認証後にリダイレクトするURLです。`redirect_uri`の値は、Clova Developer CenterでExtensionを登録するときに、[アカウント連携を設定する](/DevConsole/Guides/Register_Extension.md#SetAccountLinking)から確認できます。現在、`{{ book.RedirectURLforAccountLinking }}`が使用されています。 |
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -102,7 +102,7 @@ Extensionにアカウント連携を適用するには、ユーザーがアカ�
 
 <div class="note">
 <p><strong>メモ</strong></p>
-<p><code>redirect_uri</code>は、Clova Developer Centerの<a href="/DevConsole/Guides/CEK/Register_Extension.md#RedirectURI">アカウント連携を設定</a>する画面で確認できます。</p>
+<p><code>redirect_uri</code>は、Clova Developer Centerの<a href="/DevConsole/Guides/Register_Extension.md#RedirectURI">アカウント連携を設定</a>する画面で確認できます。</p>
 </div>
 
 
@@ -190,7 +190,7 @@ Clovaがユーザーアカウントを連携するために認可コードを取
 
 
 ### アカウント連携情報を登録する {#RegisterAccountLinkingInfo}
-認可サーバーの構築とExtensionのアカウント連携が完了すると、[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)に、[認可サーバーを構築する](#BuildAuthServer)で説明されている情報を登録する必要があります。Clova Developer Centerに登録されているExtensionで、以下のような[アカウント連携情報を入力](/DevConsole/Guides/CEK/Register_Extension.md#SetAccountLinking)します。
+認可サーバーの構築とExtensionのアカウント連携が完了すると、[Clova Developer Center](/DevConsole/ClovaDevConsole_Overview.md)に、[認可サーバーを構築する](#BuildAuthServer)で説明されている情報を登録する必要があります。Clova Developer Centerに登録されているExtensionで、以下のような[アカウント連携情報を入力](/DevConsole/Guides/Register_Extension.md#SetAccountLinking)します。
 
 | フィールド名                   | 説明                                         |
 |:-------------------------------|:---------------------------------------------|

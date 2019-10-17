@@ -1,6 +1,6 @@
-# 対話モデル {#InteractionModel}
+# 対話モデル
 
-[対話モデル](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)は、ユーザーのリクエストをサービスの提供に必要な標準形式(JSON)に変換するルールを定義したものです。
+[対話モデル](/Design/Design_Custom_Extension.md#DefineInteractionModel)は、ユーザーのリクエストをサービスの提供に必要な標準形式(JSON)に変換するルールを定義したものです。
 
 CEKでは、あらかじめ次の情報が定義されています。
 
@@ -477,7 +477,7 @@ Extensionを開発する際は、Extensionとユーザーがどのような対�
 | ------------------------ | ----------------- | ---------------------- |------------- |
 | [`CLOVA.WHOLE_NUMBER`](#ClovaWholeNumber) | 0と正の整数、数字で構成された文字列の表現を提供します | 0123 4567<br>２３４５（全角数字）<br>五百六十七（漢数字） | 01234567<br>2345<br>567 |
 
-対話モデルの[カスタムインテントを登録する](/DevConsole/Guides/CEK/Register_Extension.md#AddCustomIntent)際にスロットを指定するときは、次の図のようにサンプル発話の **数字** の部分を選択します。  
+対話モデルの[カスタムインテントを登録する](/DevConsole/Guides/Register_Extension.md#AddCustomIntent)際にスロットを指定するときは、次の図のようにサンプル発話の **数字** の部分を選択します。  
 ![](/Develop/Assets/Images/CEK_API_Interaction_Model_Clova_Unit_1.png)
 
 ここでは次のビルトインスロットタイプの構成について説明します。  
@@ -545,7 +545,7 @@ Extensionを開発する際は、Extensionとユーザーがどのような対�
 | `CLOVA.UNIT_VOLUME` | 体積・容積を表す単位を提供します | 50ミリリットル | ミリリットル |
 | `CLOVA.UNIT_WEIGHT` | 重量を表す単位を提供します | 12キログラム | キログラム |
 
-対話モデルの[カスタムインテントを登録する](/DevConsole/Guides/CEK/Register_Extension.md#AddCustomIntent)際にスロットを指定するときは、次の図のようにサンプル発話の **単位** の部分を選択します。  
+対話モデルの[カスタムインテントを登録する](/DevConsole/Guides/Register_Extension.md#AddCustomIntent)際にスロットを指定するときは、次の図のようにサンプル発話の **単位** の部分を選択します。  
 ![](/Develop/Assets/Images/CEK_API_Interaction_Model_Clova_Unit_3.png)
 
 ここでは次のビルトインスロットタイプの構成について説明します。  
@@ -673,7 +673,7 @@ Extensionを開発する際は、Extensionとユーザーがどのような対�
 | `CLOVA.WEIGHT` | 数値 + `CLOVA.UNIT_WEIGHT` | 30mg | value="30", unit="ミリグラム" |
 | `CLOVA.TEMPERATURE` | 数値 + `CLOVA.UNIT_TEMPERATUR` | 36.5℃ | value="36.5", unit="度" |
 
-対話モデルの[カスタムインテントを登録する](/DevConsole/Guides/CEK/Register_Extension.md#AddCustomIntent)際にスロットを指定するときは、次の図のようにサンプル発話の **数字と単位** をまとめて選択します（[`CLOVA.NUMBER`](#ClovaNumber)のみ選択のやり方に例外があります）。  
+対話モデルの[カスタムインテントを登録する](/DevConsole/Guides/Register_Extension.md#AddCustomIntent)際にスロットを指定するときは、次の図のようにサンプル発話の **数字と単位** をまとめて選択します（[`CLOVA.NUMBER`](#ClovaNumber)のみ選択のやり方に例外があります）。  
 ![](/Develop/Assets/Images/CEK_API_Interaction_Model_Clova_Unit_2.png)
 
 ここでは次のビルトインスロットタイプの構成について説明します。  
@@ -687,7 +687,7 @@ Extensionを開発する際は、Extensionとユーザーがどのような対�
 
 `CLOVA.NUMBER`は、数値と単位の組み合わせによる発話を、**数値のみ**、または **数値と単位** に変換します。数値については、0および正の整数のほか、負の数値や小数を表現することができます。
 
-対話モデルの[カスタムインテントを登録する](/DevConsole/Guides/CEK/Register_Extension.md#AddCustomIntent)際に、サンプル発話のどの部分をスロットとして処理するかをドラッグして選択する必要があります。`CLOVA.NUMBER`の場合は、このときに選択する範囲によって取得する値が異なります。
+対話モデルの[カスタムインテントを登録する](/DevConsole/Guides/Register_Extension.md#AddCustomIntent)際に、サンプル発話のどの部分をスロットとして処理するかをドラッグして選択する必要があります。`CLOVA.NUMBER`の場合は、このときに選択する範囲によって取得する値が異なります。
 
 例えば、「ペパロニピザを2枚注文して」というサンプル発話について、**"2"** という数字部分のみを選択した場合は、数値だけが出力されます。  
 ![](/Develop/Assets/Images/CEK_API_Interaction_Model_Clova_Unit_1.png)

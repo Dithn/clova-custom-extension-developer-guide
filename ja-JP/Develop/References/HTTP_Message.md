@@ -1,11 +1,11 @@
-## HTTPメッセージ {#HTTPMessage}
+# HTTPメッセージ
 CEKとExtensionが通信する際、HTTP/1.1を使用して基本的なHTTPSリクエストとHTTPSレスポンスをやり取りします。CEKとExtensionが通信する際、HTTPメッセージのボディには、JSON形式のメッセージが含まれます。ここでは、CEKとExtensionがやり取りするHTTPメッセージの構成について説明します。
 
 * [HTTPヘッダー](#HTTPHeader)
   * [リクエストメッセージの検証](#RequestMessageValidation)
 * [HTTPボディ](#HTTPBody)
 
-### HTTPヘッダー {#HTTPHeader}
+## HTTPヘッダー {#HTTPHeader}
 CEKがExtensionに解析されたユーザーの発話情報を渡す際、HTTPリクエストを使用します。その際、HTTPリクエストのヘッダーは、次のように構成されます。
 
 {% raw %}
@@ -34,9 +34,9 @@ Content-Type: application/json;charset-UTF-8
 * CEKから渡されたHTTPリクエストに対するレスポンスとして、処理結果を返します。
 * ボディのデータはJSON形式で、UTF-8エンコーディングを使用します。
 
-#### リクエストメッセージの検証 {#RequestMessageValidation}
+### リクエストメッセージの検証 {#RequestMessageValidation}
 
 ExtensionがCEKからHTTPリクエストを受信するとき、そのリクエストが第三者ではなく、Clovaから送信された信頼できるリクエストかどうかを検証する必要があります。検証の方法については、[リクエストメッセージを検証する](/Develop/Guides/Build_Custom_Extension.md#RequestMessageValidation)を参照してください。
 
-### HTTPボディ {#HTTPBody}
-リクエストメッセージとレスポンスメッセージのボディはJSON形式で、解析されたユーザーの発話情報や、Extensionの処理結果が含まれています。それぞれのメッセージの構成は、使用するExtensionの種類によって異なります。メッセージ構成の詳細については、[Custom Extensionメッセージ](/Develop/References/CEK_API.md#CustomExtMessage)と[Clova Home Extensionメッセージ]({{ book.DocMeta.ClovaHomeExtensionDeveloperGuideBaseURI}}/Develop/References/CEK_API_ClovaHome.{{ book.DocMeta.FileExtensionForExternalLink}}#ClovaHomeExtMessage)を参照してください。
+## HTTPボディ {#HTTPBody}
+リクエストメッセージとレスポンスメッセージのボディはJSON形式で、解析されたユーザーの発話情報や、Extensionの処理結果が含まれています。それぞれのメッセージの構成は、使用するExtensionの種類によって異なります。メッセージ構成の詳細については、[Custom Extensionメッセージ](/Develop/References/Custom_Extension_Message.md)を参照してください。

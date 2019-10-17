@@ -15,5 +15,5 @@
 
 <div class="note">
   <p><strong>メモ</strong></p>
-  <p>Clovaデバイスでテストできるのは、公開状態が<strong>{{ book.DevConsole.cek_status_dev }}</strong>のバージョンです。また、審査申請を行って公開状態が<strong>{{ book.DevConsole.cek_status_reviewing }}</strong>となっている場合は、テスト対象は<strong>{{ book.DevConsole.cek_status_reviewing }}</strong>バージョンとなります。公開状態の違いについては、<a href="/DevConsole/Guides/CEK/Update_Extension.md" target="_blank">Extensionをアップデートする</a>を参照してください。</p>
+  <p>Clovaデバイスでテストできるのは、公開状態が<strong>{{ book.DevConsole.cek_status_dev }}</strong>のバージョンです。また、審査申請を行って公開状態が<strong>{{ book.DevConsole.cek_status_reviewing }}</strong>となっている場合は、テスト対象は<strong>{{ book.DevConsole.cek_status_reviewing }}</strong>バージョンとなります。公開状態の違いについては、<a href="/DevConsole/Guides/Update_Extension.md" target="_blank">Extensionをアップデートする</a>を参照してください。</p>
 </div>

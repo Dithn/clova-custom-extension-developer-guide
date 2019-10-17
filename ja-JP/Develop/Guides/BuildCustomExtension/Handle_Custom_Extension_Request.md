@@ -1,5 +1,5 @@
 ## Custom Extensionリクエストを処理する {#HandleCustomExtensionRequest}
-Custom ExtensionはCEKから[Custom Extensionメッセージ](/Develop/References/CEK_API.md#CustomExtMessage)形式のユーザーリクエストを受信します(HTTPSリクエスト)。Custom Extensionは通常、次のようにリクエストを処理し、レスポンスする必要があります。
+Custom ExtensionはCEKから[Custom Extensionメッセージ](/Develop/References/Custom_Extension_Message.md)形式のユーザーリクエストを受信します(HTTPSリクエスト)。Custom Extensionは通常、次のようにリクエストを処理し、レスポンスする必要があります。
 
 ![](/Develop/Assets/Images/CEK_Custom_Extension_Sequence_Diagram.png)
 
@@ -18,11 +18,11 @@ Custom ExtensionはCEKから[Custom Extensionメッセージ](/Develop/Reference
 
 <div class="note">
 <p><strong>メモ</strong></p>
-<p><a href="/Develop/References/CEK_API.md#CustomExtEventRequest"><code>EventRequest</code></a>は、ユーザーの発話の有無に関わらず、デバイスの状態が変化したときにExtensionに送信されるメッセージです。これらのイベントは、デバイスの状態を取得したり、状態変化したことを検知することに利用できます。また、Extensionが<a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a>際にも使用されます。ここでは、オーディオコンテンツ再生時の<code>EventRequest</code>については説明しません。</p>
+<p><a href="/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest"><code>EventRequest</code></a>は、ユーザーの発話の有無に関わらず、デバイスの状態が変化したときにExtensionに送信されるメッセージです。これらのイベントは、デバイスの状態を取得したり、状態変化したことを検知することに利用できます。また、Extensionが<a href="/Develop/Guides/Build_Custom_Extension.md#ProvideAudioContent">オーディオコンテンツを提供する</a>際にも使用されます。ここでは、オーディオコンテンツ再生時の<code>EventRequest</code>については説明しません。</p>
 </div>
 
 ### LaunchRequestの処理 {#HandleLaunchRequest}
-[`LaunchRequest`タイプ](/Develop/References/CEK_API.md#CustomExtLaunchRequest)のリクエストは、ユーザーが特定のExtensionを使用すると宣言したことを示す際に使用されます。例えば、ユーザーが「ピザボットを起動して」や「ピザボットを開いて」のように指示した場合、CEKはピザの宅配サービスを提供するExtensionに`LaunchRequest`タイプのリクエストを渡します。このタイプのリクエストを渡されたExtensionは、ユーザーの次のリクエストも受信できるように準備している必要があります。
+[`LaunchRequest`タイプ](/Develop/References/Custom_Extension_Message.md#CustomExtLaunchRequest)のリクエストは、ユーザーが特定のExtensionを使用すると宣言したことを示す際に使用されます。例えば、ユーザーが「ピザボットを起動して」や「ピザボットを開いて」のように指示した場合、CEKはピザの宅配サービスを提供するExtensionに`LaunchRequest`タイプのリクエストを渡します。このタイプのリクエストを渡されたExtensionは、ユーザーの次のリクエストも受信できるように準備している必要があります。
 
 LaunchRequestタイプのメッセージは、`request.type`フィールドに`"LaunchRequest"`の値を持ち、`request`フィールドにユーザーの発話の解析情報を含めていません。Extensionの開発者は、このメッセージを受信した場合、事前の準備事項を処理するか、ユーザーにサービスを提供する準備ができたという[レスポンスメッセージ](#ReturnCustomExtensionResponse)を返します。
 
@@ -82,7 +82,7 @@ LaunchRequestタイプのメッセージは、`request.type`フィールドに`"
 
 ### IntentRequestの処理 {#HandleIntentRequest}
 
-[`IntentRequest`タイプのリクエスト](/Develop/References/CEK_API.md#CustomExtIntentRequest)は、あらかじめ定義した[対話モデル](/Design/Design_Guideline_For_Extension.md#DefineInteractionModel)に従って、CEKがExtensionにユーザー発話のリクエストを送信する際に使用されます。例えば、ユーザーが「ピザボットを起動して」と発話してサービスを開始した後に、「ピザを頼んで」と指示した時に、CEKはピザの宅配サービスを提供するExtensionに`IntentRequest`タイプのリクエストを渡します。
+[`IntentRequest`タイプのリクエスト](/Develop/References/Custom_Extension_Message.md#CustomExtIntentRequest)は、あらかじめ定義した[対話モデル](/Design/Design_Custom_Extension.md#DefineInteractionModel)に従って、CEKがExtensionにユーザー発話のリクエストを送信する際に使用されます。例えば、ユーザーが「ピザボットを起動して」と発話してサービスを開始した後に、「ピザを頼んで」と指示した時に、CEKはピザの宅配サービスを提供するExtensionに`IntentRequest`タイプのリクエストを渡します。
 
 IntentRequestタイプのリクエストは、`request.type`フィールドに`"IntentRequest"`の値を持ちます。呼び出されたインテントの名前と、解析されたユーザーの発話情報は、`request.intent`フィールドから確認できます。このフィールドを分析してユーザーのリクエストを処理してから、[レスポンスメッセージ](#ReturnCustomExtensionResponse)を返します。
 
@@ -145,7 +145,7 @@ IntentRequestタイプのリクエストは、`request.type`フィールドに`"
 * `version`：使用しているCustom Extensionメッセージフォーマットのバージョンです。現在のバージョンはv1.0です。
 * `session`: **既存のセッションに続くユーザーのリクエストです**。既存セッションのIDとユーザーの情報(ID、アクセストークン)が含まれています。
 * `context`：クライアントデバイスの情報です。デバイスのIDとデフォルトユーザーの情報が含まれています。
-* `request`: `IntentRequest`タイプのリクエストです。`"OrderPizza"`という名前で登録された[インテント](/Design/Design_Guideline_For_Extension.md#Intent)を呼び出しています。該当するインテントが必要とする情報として`"pizzaType"`という[スロット](/Design/Design_Guideline_For_Extension.md#Slot)が一緒に渡されます。そのスロットは`"ペパロニ"`という値を持っています。
+* `request`: `IntentRequest`タイプのリクエストです。`"OrderPizza"`という名前で登録された[インテント](/Design/Design_Custom_Extension.md#Intent)を呼び出しています。該当するインテントが必要とする情報として`"pizzaType"`という[スロット](/Design/Design_Custom_Extension.md#Slot)が一緒に渡されます。そのスロットは`"ペパロニ"`という値を持っています。
 
 <div class="note">
   <p><strong>メモ</strong></p>
@@ -154,7 +154,7 @@ IntentRequestタイプのリクエストは、`request.type`フィールドに`"
 
 ### SessionEndedRequestの処理 {#HandleSessionEndedRequest}
 
-[`SessionEndedRequest`タイプのリクエスト](/Develop/References/CEK_API.md#CustomExtSessionEndedRequest)は、ユーザーが特定のモードやCustom Extensionの使用を中断すると宣言したことを示す際に使用されます。ユーザーが「終了して」「やめて」などのように指示した場合、クライアントはExtensionの使用を中断し、CEKは対話サービスを提供するExtensionに`SessionEndedRequest`タイプのリクエストを渡します。
+[`SessionEndedRequest`タイプのリクエスト](/Develop/References/Custom_Extension_Message.md#CustomExtSessionEndedRequest)は、ユーザーが特定のモードやCustom Extensionの使用を中断すると宣言したことを示す際に使用されます。ユーザーが「終了して」「やめて」などのように指示した場合、クライアントはExtensionの使用を中断し、CEKは対話サービスを提供するExtensionに`SessionEndedRequest`タイプのリクエストを渡します。
 
 `SessionEndedRequest`タイプのメッセージは`request.type`フィールドに`"SessionEndedRequest"`の値を持ち、`LaunchRequest`タイプと同じく`request`フィールドにユーザーの発話の解析情報は含まれません。Extensionの開発者は、サービス終了時の後処理を実施してください。
 

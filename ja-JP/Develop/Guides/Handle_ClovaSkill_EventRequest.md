@@ -4,7 +4,7 @@
 ユーザーは一度利用開始したスキルを、スキルストアから **利用停止** ボタンで無効化することができます。
 開発者は利用開始後に取得したデータを、利用停止時に削除する必要があります。
 
-スキルの利用開始や利用停止は、[`EventRequest`のリクエストタイプ](/Develop/References/CEK_API.md#CustomExtEventRequest)の`SkillEnabled`や`SkillDisabled`としてExtensionにに伝えられます。
+スキルの利用開始や利用停止は、[`EventRequest`のリクエストタイプ](/Develop/References/Custom_Extension_Message.md#CustomExtEventRequest)の`SkillEnabled`や`SkillDisabled`としてExtensionにに伝えられます。
 
 ここでは、`EventRequest`を利用してスキルの有効化/無効化を検知する方法を説明します。
 
