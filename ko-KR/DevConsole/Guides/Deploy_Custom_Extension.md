@@ -102,7 +102,7 @@ Skill 심사는 **{{ book.DevConsole.ManageCustomExtensions }}**에 반영하기
 * 동작 검증
   * Custom extension이 서비스에 적합한 용어를 사용하고 있는지 확인합니다.
   * Intent, slot 등 interaction 모델을 검증합니다.
-  * Skill [세부 목표](/Design/Design_Custom_Extension.md#SettingGoal)에 부합되는 서비스를 제공하고 있는지 확인합니다.
+  * Skill [세부 목표](/Design/Design_Custom_Extension.md#SetGoal)에 부합되는 서비스를 제공하고 있는지 확인합니다.
 * 배포 정보 검증
   * Custom extension의 설명, 카테고리, 검색 키워드와 같이 입력된 배포 정보가 Custom extension에 맞게 입력되었는지 확인합니다.
   * Skill이 개인 정보 관리 규정 등 입력된 정책에 맞게 동작하는지 확인합니다.

@@ -10,10 +10,15 @@ CEK는 Clova와 Clova extension(이하 extension) 사이의 커뮤니케이션�
 
 ![](/Develop/Assets/Images/CEK_Concept_Diagram.png)
 
-## CEK 동작 구조 {#CEKInteractionStructure}
-Clova는 사용자의 발화를 인식하며, CEK를 통해 미리 [등록된 interaction 모델](/DevConsole/Guides/Register_Interaction_Model.md)을 참조하여 사용자의 발화를 분석합니다. CEK는 분석된 사용자의 발화 정보를 extension에게 전달하며, extension은 사용자 요청에 대한 처리 결과를 응답으로 돌려줘야 합니다. 이때 미리 정의된 메시지 포맷에 맞게 메시지를 주고 받게 됩니다. CEK와 extension의 통신은 <a href="https://tools.ietf.org/html/rfc2616" target="_blank">HTTP/1.1 프로토콜</a>을 사용해야 합니다.
+## CEK 구성 및 동작 구조 {#CEKComponentsAndOperationStructure}
 
-다음은 Clova 플랫폼과 extension 사이의 동작 구조를 나타내는 다이어그램입니다.
+CEK는 [Clova developer console](/DevConsole/ClovaDevConsole_Overview.md)과 CEK 자연어 이해 엔진을 제공합니다. Clova developer console은 extension을 생성, 테스트, 배포하거나 interaction model을 등록할 수 있도록 UI를 제공하며, CEK 자연어 이해 엔진은 등록된 interaction model을 이용하여 사용자의 발화를 분석하고 그 결과를 extension에 전달합니다.
+
+Interaction model과, extension을 등록은 서비스 배포 전에 수행되어야 합니다. 배포 후 실행 시점에 Clova는 사용자의 발화를 인식하며, CEK를 통해 미리 등록된 [등록된 interaction 모델](/DevConsole/Guides/Register_Interaction_Model.md)을 참조하여 사용자의 발화를 분석합니다. Clova는 분석된 사용자의 발화 정보를 extension에게 전달하며, extension은 사용자 요청에 대한 처리 결과를 응답으로 돌려줘야 합니다. 다음은 CEK의 동작 구조를 나타낸 다이어그램입니다.
+
+![](/Develop/Assets/Images/CEK_Components_And_Operation_Structure.png)
+
+다음은 각 구성 요소 사이에 어떤 요청과 응답이 오가는지를 중점적으로 나타낸 다이어그램입니다.
 
 ![](/Develop/Assets/Images/CEK_Interaction_Structure.png)
 
