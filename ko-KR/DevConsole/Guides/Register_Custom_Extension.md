@@ -70,13 +70,14 @@ $ curl "https://example.com/pizzabot" -X POST
 
 1. Extension 정보 입력 UI에서 위쪽에 있는 **{{ book.DevConsole.cek_configuration }}** 탭을 누르십시오.
 2. Custom extension 서버 URI(endpoint) 정보를 **{{ book.DevConsole.cek_service_endpoint_url }}** 항목에 입력하십시오.
-  <div class="note">
-    <p>**Note!**</p>
-    <p>테스트 단계에서는 HTTP도 가능하나 정식 서비스를 위해서는 HTTPS여야 합니다. Custom extension 서버는 HTTP일 때 80 번 포트를 HTTPS일 때 443 번 포트를 사용해야 합니다.</p>
-  </div>
 3. ([사용자 계정 연결](#SetAccountLinking)이 필요하다면) **{{ book.DevConsole.cek_account_linking }}** 항목을 **{{ book.DevConsole.cek_yes }}**로 선택하십시오.
 4. **{{ book.DevConsole.cek_ssl_certificate }}** 항목의 라디오 버튼을 누르십시오. Custom extension을 제공하는 서버는 반드시 공인된 인증 기관의 인증서를 사용해야 합니다. (Self-signed 인증서 사용 불가)
-5. 서버 연동 설정과 관련된 내용을 입력한 후 **{{ book.DevConsole.cek_save }}** 버튼을 누르십시오.</li>
+5. 서버 연동 설정과 관련된 내용을 입력한 후 **{{ book.DevConsole.cek_save }}** 버튼을 누르십시오.
+
+<div class="note">
+  <p><strong>Note!</strong></p>
+  <p>테스트 단계에서는 HTTP도 가능하나 정식 서비스를 위해서는 HTTPS여야 합니다. Custom extension 서버는 HTTP일 때 80 번 포트를 HTTPS일 때 443 번 포트를 사용해야 합니다.</p>
+</div>
 
 ### 계정 연결 설정 {#SetAccountLinking}
 

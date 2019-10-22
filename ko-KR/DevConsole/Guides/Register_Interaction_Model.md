@@ -51,7 +51,7 @@ Custom extension을 설계하는 과정에서 [정의한 Interaction 모델](/De
 다음 절차에 따라 custom slot 타입을 추가할 수 있습니다.
 
 1. **{{ book.DevConsole.cek_builder_list_title_slottype }}** 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_builder_list_title_slottype }}** 메뉴 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누르십시오.<br />
-  버튼을 누르면 **{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.SlotType }}** 화면이 표시됩니다.
+  버튼을 누르면 <strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.SlotType }}</strong> 화면이 표시됩니다.
 2. **{{ book.DevConsole.cek_builder_new_intent }}**의 입력 필드에 추가할 custom slot 타입의 이름을 입력하고 **{{ book.DevConsole.cek_create }}** 버튼을 누르십시오.<br />
   Custom slot 타입이 생성되면 해당 custom slot 타입에 대한 상세 정보를 볼 수 있는 화면이 나타납니다.<br />
   ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_1.png)
@@ -98,7 +98,8 @@ Clova developer console은 다음과 같이 **업로드** 버튼과 **다운로�
 ## Custom intent 추가하기 {#AddCustomIntent}
 Custom extension에서 사용할 [built-in slot 타입](#AddBuiltinSlotType)과 [custom slot 타입](#AddCustomSlotType)을 추가했다면 이제 custom intent를 추가하면 됩니다. 이전 설명에 이어서 피자를 주문하는 사용자의 요청을 가정하고 다음 절차에 따라 "OrderPizza"라는 이름의 intent를 추가할 수 있습니다.
 
-1. **{{ book.DevConsole.cek_builder_list_title_intent }}** 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_builder_list_title_intent }}** 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누르십시오. 버튼을 누르면 **{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.NewIntent }}** 화면이 표시됩니다.
+1. **{{ book.DevConsole.cek_builder_list_title_intent }}** 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_builder_list_title_intent }}** 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누르십시오.<br />
+  버튼을 누르면 </strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.NewIntent }}</strong> 화면이 표시됩니다.
 2. **{{ book.DevConsole.cek_builder_new_intent }}**의 입력 필드에 추가할 custom intent의 이름을 입력하고 **{{ book.DevConsole.cek_create }}** 버튼을 누르십시오. Custom intent가 생성되면 해당 custom intent에 대한 상세 정보를 볼 수 있는 화면이 나타납니다.<br />
   ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_1.png)
 3. **{{ book.DevConsole.cek_builder_intent_slot_title }}**의 입력 필드에 추가할 slot의 이름을 입력하고 오른쪽에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 slot을 추가하십시오.<br />

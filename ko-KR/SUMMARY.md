@@ -99,7 +99,7 @@
 
 ## Developer console guides
 
-* [Clova developer console 개요](/DevConsole/ClovaDevConsole_Overview.md)
+* [Clova developer console 개요](/DevConsole/Torreta_Console_Overview.md)
 * [Custom extension 등록하기](/DevConsole/Guides/Register_Custom_Extension.md)
   * [이용 약관 및 개인 정보 수집 동의](/DevConsole/Guides/Register_Custom_Extension.md#AgreeTermsOfUse)
   * [Custom extension 기본 정보 입력](/DevConsole/Guides/Register_Custom_Extension.md#InputExtensionInfo)
