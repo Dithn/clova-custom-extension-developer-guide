@@ -29,7 +29,7 @@ Custom extension을 배포하려면 [interaction 모델이 등록](/DevConsole/G
 1. 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_test }}** 메뉴를 누르십시오.<br />
   메뉴를 누르면 **{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.cek_test }}** 화면이 표시됩니다.<br />
   ![](/DevConsole/Assets/Images/DevConsole-Test_Menu.png)
-2.**{{ book.DevConsole.cek_builder_test_expression_title }}** 필드에 테스트할 발화문을 입력하고 **{{ book.DevConsole.cek_builder_test_request_test }}** 버튼을 누르십시오.</li>
+2. **{{ book.DevConsole.cek_builder_test_expression_title }}** 필드에 테스트할 발화문을 입력하고 **{{ book.DevConsole.cek_builder_test_request_test }}** 버튼을 누르십시오.</li>
   ![](/DevConsole/Assets/Images/DevConsole-Test_Utterance_Example.png)
 
 테스트를 완료하면 다음과 같은 결과를 확인할 수 있습니다. 아래 결과를 토대로 다음과 같은 항목을 확인해야 합니다.
