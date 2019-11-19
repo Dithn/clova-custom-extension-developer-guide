@@ -35,7 +35,7 @@ Extension을 만드는 전체적인 과정은 다음과 같습니다.
 4. **{{ book.DevConsole.cek_builder_test_expression_title }}**에 주사위를 여러 개 던져달라는 문장을 입력하십시오. 예를 들어, "주사위 두 개 던져볼래"라고 입력합니다.
 5. 엔터키 또는 **{{ book.DevConsole.cek_builder_test_request_test }}** 버튼을 누르십시오.
 6. **{{ book.DevConsole.cek_builder_test_result_title }}**의 **{{ book.DevConsole.cek_builder_test_intent_result }}** 항목에 `ThrowDiceIntent`, **{{ book.DevConsole.cek_builder_test_slot_result }}** 항목에 `diceCount`가 나타나고, **{{ book.DevConsole.cek_builder_test_slot_data}}**에 입력한 주사위 개수가 나타나는지 확인하십시오.<br />
-	![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slot_Test.png)
+	![CEK_Tutorial_Builtin_Type_Slot_Test](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slot_Test.png)
   <div class="note">
   	<p><strong>Note!</strong></p>
   	<p>외부에서 접근할 수 있는 extension 서버 URI를 등록하지 않았다면, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>은 "{{ book.DevConsole.cek_builder_test_no_response }}"라고 나타납니다.</p>
@@ -87,7 +87,7 @@ Clova는 사용자의 음성 입력을 분석한 결과를 extension 서버에 �
 2. **{{ book.DevConsole.cek_builder_list_title_intent }}** 오른쪽에 있는 <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> 버튼을 누르십시오.
 3. **{{ book.DevConsole.cek_builder_new_intent }}** 아래 입력창에 "ThrowDiceIntent"라는 이름을 입력하십시오.
 4. 엔터키 또는 입력창 오른쪽의 **{{ book.DevConsole.cek_builder_new_intent_create }}** 버튼을 누르십시오.<br />
-  ![](/Develop/Assets/Images/CEK_Tutorial_NewIntent.png)
+  ![CEK_Tutorial_NewIntent](/Develop/Assets/Images/CEK_Tutorial_NewIntent.png)
 	<div class="note">
 	  <p><strong>Note!</strong></p>
 		<p>Intent 이름의 대소문자에 유의해야 합니다.</p>
@@ -99,7 +99,7 @@ Clova는 사용자의 음성 입력을 분석한 결과를 extension 서버에 �
 1. **{{ book.DevConsole.cek_builder_intent_expression_title }}**에서 "주사위 던져줘"라고 입력하십시오.
 2. 엔터키 또는 <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> 버튼을 누르십시오.
 3. 모든 발화 예시를 입력하면 **{{ book.DevConsole.cek_save }}** 버튼을 누르십시오.<br />
-  ![](/Develop/Assets/Images/CEK_Tutorial_SpeechExample.png)
+  ![CEK_Tutorial_SpeechExample](/Develop/Assets/Images/CEK_Tutorial_SpeechExample.png)
 
 ### 빌드 및 테스트하기
 Interaction 모델이 입력한대로 동작하는지 확인하기 위해 interaction 모델을 빌드하여 테스트 합니다.
@@ -113,7 +113,7 @@ Interaction 모델이 입력한대로 동작하는지 확인하기 위해 intera
 3. **{{ book.DevConsole.cek_builder_test_expression_title }}**에 테스트하고자 하는 문장을 입력합니다. 예를 들어, "주사위 던져줄래"라고 입력하십시오.
 4. 엔터키 또는 **{{ book.DevConsole.cek_builder_test_request_test }}** 버튼을 누르십시오.
 5. **{{ book.DevConsole.cek_builder_test_result_title }}**의 **{{ book.DevConsole.cek_builder_test_intent_result }}** 항목에 "ThrowDiceIntent"라고 나타나는지 확인하십시오.<br />
-  ![](/Develop/Assets/Images/CEK_Tutorial_Test.png)
+  ![CEK_Tutorial_Test](/Develop/Assets/Images/CEK_Tutorial_Test.png)
 	<div class="note">
   	<p><strong>Note!</strong></p>
   	<p>2 단계에서 외부에서 접근할 수 있는 extension 서버 URI를 등록하지 않았다면, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>은 "{{ book.DevConsole.cek_builder_test_no_response }}"라고 나타납니다.</p>

@@ -35,7 +35,7 @@ Clova는 모든 extension이 범용적으로 사용할 수 있도록 일반적�
 1. 샘플 주사위의 **{{ book.DevConsole.cek_interaction_model }}** 항목 내 **{{ book.DevConsole.cek_edit }}** 버튼을 누르십시오.
 2. **{{ book.DevConsole.cek_builder_list_title_slottype }}** 오른쪽에 있는 <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> 버튼을 누르십시오.
 3. **{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}** 아래의 테이블에서 `CLOVA.NUMBER`의 체크박스를 선택합니다.<br />
-  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Register_Slot_Type.png)
+  ![CEK_Tutorial_Builtin_Type_Slots_Register_Slot_Type](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Register_Slot_Type.png)
 4. **{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}** 오른쪽의 **{{ book.DevConsole.cek_save }}** 버튼을 누르십시오.
 
 ### Intent에 slot 등록하기
@@ -47,7 +47,7 @@ Clova는 모든 extension이 범용적으로 사용할 수 있도록 일반적�
 3. 엔터키 또는 오른쪽에 있는 <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> 버튼을 누르십시오.
 4. 등록한 "diceCount" 오른쪽 **{{ book.DevConsole.cek_builder_utterance_select_slot }}** 콤보박스를 누르십시오.
 5. 나타난 목록 중에서 앞서 등록한 **{{ book.DevConsole.cek_builder_select_slottype_builtin }}**의 `CLOVA.NUMBER`를 선택하십시오.<br />
-  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Add_Slot.png)
+  ![CEK_Tutorial_Builtin_Type_Slots_Add_Slot](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Add_Slot.png)
 6. 화면 오른쪽 상단의 **{{ book.DevConsole.cek_save }}** 버튼을 누르십시오.
 
 ### 발화 예시 입력하기
@@ -56,11 +56,11 @@ Clova는 모든 extension이 범용적으로 사용할 수 있도록 일반적�
 앞서 slot을 등록했던 화면에서 다음과 같이 발화 예시 문장을 입력합니다.
 
 1. **{{ book.DevConsole.cek_builder_intent_expression_title }}** 아래의 입력란에 "주사위 두 개 굴려"라고 입력하십시오.<br />
-  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Sample_Utterance.png)
+  ![CEK_Tutorial_Builtin_Type_Slots_Sample_Utterance](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Sample_Utterance.png)
 2. 엔터키 또는 <img class="inlineImage" src="/Develop/Assets/Images/DevConsole_Plus_Button.png" /> 버튼을 누르십시오.
 3. 등록된 문장에서 "두 개"라는 단어를 마우스로 드래그하여 선택하십시오.
 4. **{{ book.DevConsole.cek_builder_slot_layer_select_slot }}** 밑에 있는 "diceCount"를 선택하십시오.<br />
-  ![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Set_Slot.png)
+  ![CEK_Tutorial_Builtin_Type_Slots_Set_Slot](/Develop/Assets/Images/CEK_Tutorial_Builtin_Type_Slots_Set_Slot.png)
 5. "하나 던져봐", "다섯 개의 주사위 굴려"라는 문장으로 1-4 단계를 반복하십시오.
 
 ## 2 단계. Slot 처리 구현 {#Step2}

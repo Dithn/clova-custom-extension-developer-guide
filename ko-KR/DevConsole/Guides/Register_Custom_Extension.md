@@ -3,7 +3,7 @@
 # Custom extension 등록하기
 [Custom extension](/Develop/Guides/Build_Custom_Extension.md)을 개발 중이거나 개발하고 있다면 이를 [Clova developer console](/DevConsole/ClovaDevConsole_Overview.md)에 등록해야 합니다. CEK 메뉴 페이지에서 페이지 하단에 있는 **{{ book.DevConsole.cek_new_skill }}** 버튼을 누르면 신규 custom extension을 등록할 수 있습니다.
 
-![](/DevConsole/Assets/Images/DevConsole-First_Look_of_Extension_List.png)
+![DevConsole-First_Look_of_Extension_List](/DevConsole/Assets/Images/DevConsole-First_Look_of_Extension_List.png)
 
 Custom extension을 등록할 때 일반적으로 다음 항목을 순차적으로 수행해야 합니다.
 
@@ -18,7 +18,7 @@ Custom extension을 등록할 때 일반적으로 다음 항목을 순차적으�
 
 Custom extension을 등록하기 전에 우선 CEK API 서비스 이용 약관과 개인 정보 수집에 동의해야 합니다. 이용 약관 및 개인 정보 수집에 대한 내용은 **최초 한 번만 표시**되며 동의한 이후에는 나타나지 않습니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Agree_Terms_of_Use_and_Collecting_Personal_Info.png)
+![DevConsole-Agree_Terms_of_Use_and_Collecting_Personal_Info](/DevConsole/Assets/Images/DevConsole-Agree_Terms_of_Use_and_Collecting_Personal_Info.png)
 
 <!-- End of the shared content -->
 
@@ -28,7 +28,7 @@ Custom extension을 등록하는 과정에서 가장 먼저 할 일은 등록할
 
 다음 절차에 따라 custom extension을 등록합니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Create_New_Custom_Extension.png)
+![DevConsole-Create_New_Custom_Extension](/DevConsole/Assets/Images/DevConsole-Create_New_Custom_Extension.png)
 
 1. **{{ book.DevConsole.cek_type }}** 항목에서 등록할 custom extension의 타입을 선택하십시오.<br />
   Custom extension 타입을 선택하면 그에 해당하는 입력 필드가 추가로 나타납니다.
@@ -50,7 +50,7 @@ Custom extension을 등록하는 과정에서 가장 먼저 할 일은 등록할
 
 Custom extension의 기본 정보 입력이 끝나면 생성된 Custom extension의 정보를 수정하는 화면으로 전환됩니다. 이때부터 페이지 하단에 있는 **{{ book.DevConsole.cek_save }}** 버튼을 클릭하여 중간 내용을 언제든지 저장할 수 있으며, 다음과 같이 CEK 메뉴에서 등록된 Custom extension 목록을 확인할 수 있습니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Custom_Extension_List_After_Creation.png)
+![DevConsole-Custom_Extension_List_After_Creation](/DevConsole/Assets/Images/DevConsole-Custom_Extension_List_After_Creation.png)
 
 ## 서버 연동 설정 {#SetServerConnection}
 
@@ -66,7 +66,7 @@ $ curl "https://example.com/pizzabot" -X POST
 
 다음 절차에 따라 서버 연동 설정을 수행합니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Custom_Extension_Server_Settings.png)
+![DevConsole-Custom_Extension_Server_Settings](/DevConsole/Assets/Images/DevConsole-Custom_Extension_Server_Settings.png)
 
 1. Extension 정보 입력 UI에서 위쪽에 있는 **{{ book.DevConsole.cek_configuration }}** 탭을 누르십시오.
 2. Custom extension 서버 URI(endpoint) 정보를 **{{ book.DevConsole.cek_service_endpoint_url }}** 항목에 입력하십시오.

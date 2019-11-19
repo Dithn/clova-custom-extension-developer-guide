@@ -24,7 +24,7 @@ Clova는 [custom extension](/Develop/Guides/Build_Custom_Extension.md)이나 [Cl
 ### 계정 연결 설정 {#SetupAccountLinking}
 사용자가 계정 인증이 필요한 custom extension이나 Clova Home extension을 활성화하면 다음과 같이 계정 연결 설정을 시도합니다.
 
-![](/Develop/Assets/Images/CEK_Account_Linking_Setup_Sequence_Diagram.svg)
+![CEK_Account_Linking_Setup_Sequence_Diagram](/Develop/Assets/Images/CEK_Account_Linking_Setup_Sequence_Diagram.svg)
 
 1. 사용자가 특정 custom extension이나 Clova Home extension을 활성화합니다.
 

@@ -8,7 +8,7 @@
 ## CEK란? {#WhatisCEK}
 CEK는 Clova와 Clova extension(이하 extension) 사이의 커뮤니케이션을 지원하는 플랫폼으로 extension을 개발 및 배포할 때 필요한 도구와 인터페이스를 제공합니다. Extension은 음악, 쇼핑, 금융 등과 같은 외부 서비스(3rd party service)나 집안의 IoT 기기 제어 등 사용자가 Clova를 통해 다양한 경험을 제공받을 수 있도록 Clova에게 확장된 기능을 제공하는 웹 애플리케이션입니다.
 
-![](/Develop/Assets/Images/CEK_Concept_Diagram.png)
+![CEK_Concept_Diagram](/Develop/Assets/Images/CEK_Concept_Diagram.png)
 
 ## CEK 구성 및 동작 구조 {#CEKComponentsAndOperationStructure}
 
@@ -16,11 +16,11 @@ CEK는 [Clova developer console](/DevConsole/ClovaDevConsole_Overview.md)과 CEK
 
 Interaction model과, extension을 등록은 서비스 배포 전에 수행되어야 합니다. 배포 후 실행 시점에 Clova는 사용자의 발화를 인식하며, CEK를 통해 미리 등록된 [등록된 interaction 모델](/DevConsole/Guides/Register_Interaction_Model.md)을 참조하여 사용자의 발화를 분석합니다. Clova는 분석된 사용자의 발화 정보를 extension에게 전달하며, extension은 사용자 요청에 대한 처리 결과를 응답으로 돌려줘야 합니다. 다음은 CEK의 동작 구조를 나타낸 다이어그램입니다.
 
-![](/Develop/Assets/Images/CEK_Components_And_Operation_Structure.png)
+![CEK_Components_And_Operation_Structure](/Develop/Assets/Images/CEK_Components_And_Operation_Structure.png)
 
 다음은 각 구성 요소 사이에 어떤 요청과 응답이 오가는지를 중점적으로 나타낸 다이어그램입니다.
 
-![](/Develop/Assets/Images/CEK_Interaction_Structure.png)
+![CEK_Interaction_Structure](/Develop/Assets/Images/CEK_Interaction_Structure.png)
 
 
 ## Extension 종류 {#ExtensionType}

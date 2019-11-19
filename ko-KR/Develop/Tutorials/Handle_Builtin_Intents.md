@@ -72,7 +72,7 @@ intentRequest(cekResponse) {
 5. **{{ book.DevConsole.cek_builder_test_expression_title }}**에 도움말을 요청하는 문장을 입력하십시오. 예를 들어, "사용법 알려줘"라고 입력합니다.
 6. 엔터키 또는 **{{ book.DevConsole.cek_builder_test_request_test }}** 버튼을 누르십시오.
 7. **{{ book.DevConsole.cek_builder_test_result_title }}**의 **{{ book.DevConsole.cek_builder_test_intent_result }}** 항목에 "Clova.GuideIntent"라고 나타나는지 확인하십시오.<br />
-	![](/Develop/Assets/Images/CEK_Tutorial_Builtin_Intent_Test.png)
+	![CEK_Tutorial_Builtin_Intent_Test](/Develop/Assets/Images/CEK_Tutorial_Builtin_Intent_Test.png)
   <div class="note">
   	<p><strong>Note!</strong></p>
   	<p>외부에서 접근할 수 있는 extension 서버 URI를 등록하지 않았다면, <strong>{{ book.DevConsole.cek_builder_test_service_response }}</strong>은 "{{ book.DevConsole.cek_builder_test_no_response }}"라고 나타납니다.</p>

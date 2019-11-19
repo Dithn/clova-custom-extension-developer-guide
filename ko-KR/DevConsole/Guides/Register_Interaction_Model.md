@@ -4,11 +4,11 @@ CEK가 custom extension으로 사용자의 요청 정보를 보낼 때 사용자
 
 Clova developer console에서 [custom extension을 등록](/DevConsole/Guides/Register_Custom_Extension.md)한 후 Interaction 모델을 등록할 수 있습니다. 다음과 같이 CEK 메뉴에서 interaction 모델을 등록할 custom extension의 **{{ book.DevConsole.cek_edit }}** 버튼을 누릅니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png)
+![DevConsole-Interaction_Model_Menu](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Menu.png)
 
 다음과 같은 **{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}** 화면이 표시됩니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Dashboard.png)
+![DevConsole-Interaction_Model_Dashboard](/DevConsole/Assets/Images/DevConsole-Interaction_Model_Dashboard.png)
 
 Custom extension을 설계하는 과정에서 [정의한 Interaction 모델](/Design/Design_Custom_Extension.md#DefineInteractionModel)은 다음과 같은 순서로 등록하면 됩니다.
 
@@ -29,12 +29,12 @@ Custom extension을 설계하는 과정에서 [정의한 Interaction 모델](/De
 1. **{{ book.DevConsole.cek_builder_list_title_slottype }}** 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_builder_list_title_slottype }}** 메뉴 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누르십시오.<br />
   버튼을 누르면 **{{ book.DevConsole.cek_interaction_model }}:{{ book.DevConsole.SlotType }}** 화면이 표시됩니다.
 2. **{{ book.DevConsole.cek_builder_new_slottype_builtin_title }}** 항목에서 필요한 built-in slot 타입의 체크 박스를 누르십시오.<br />
-  ![](/DevConsole/Assets/Images/DevConsole-Add_Built-in_Slot_Type.png)
+  ![DevConsole-Add_Built-in_Slot_Type](/DevConsole/Assets/Images/DevConsole-Add_Built-in_Slot_Type.png)
 3. 필요한 built-in slot 타입을 선택한 후 우측 상단에 있는 **{{ book.DevConsole.cek_save }}** 버튼을 누르십시오.
 
 위 과정을 수행하고 나면 **{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}** 화면의 **{{ book.DevConsole.cek_builder_list_title_slottype }}** 패널에 다음과 같이 built-in slot 타입이 추가된 것을 확인할 수 있습니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Added_Built-in_Slot_Type.png)
+![DevConsole-Added_Built-in_Slot_Type](/DevConsole/Assets/Images/DevConsole-Added_Built-in_Slot_Type.png)
 
 ## Custom slot 타입 추가하기 {#AddCustomSlotType}
 
@@ -54,16 +54,16 @@ Custom extension을 설계하는 과정에서 [정의한 Interaction 모델](/De
   버튼을 누르면 <strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.SlotType }}</strong> 화면이 표시됩니다.
 2. **{{ book.DevConsole.cek_builder_new_intent }}**의 입력 필드에 추가할 custom slot 타입의 이름을 입력하고 **{{ book.DevConsole.cek_create }}** 버튼을 누르십시오.<br />
   Custom slot 타입이 생성되면 해당 custom slot 타입에 대한 상세 정보를 볼 수 있는 화면이 나타납니다.<br />
-  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_1.png)
+  ![DevConsole-Add_Custom_Slot_Type_1](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_1.png)
 3. **{{ book.DevConsole.cek_builder_slottype_dictionary_title }}**에서 대표어를 입력한 후 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 대표어를 추가하십시오.<br />
-  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_2.png)
+  ![DevConsole-Add_Custom_Slot_Type_2](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_2.png)
 4. 추가한 대표어에 동의어나 유사 표현을 추가하십시오.<br />
-  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_3.png)
+  ![DevConsole-Add_Custom_Slot_Type_3](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_3.png)
 5. 마지막으로 우측 상단에 있는 **{{ book.DevConsole.cek_save }}** 버튼을 누르십시오.
 
 오른쪽의 **대시 보드** 메뉴를 통해 **{{ book.DevConsole.cek_interaction_model }} : {{ book.DevConsole.cek_builder_header_title_dashboard }}**로 이동하면 custom slot 타입이 추가된 것을 확인할 수 있습니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Added_Custom_Slot_Type.png)
+![DevConsole-Added_Custom_Slot_Type](/DevConsole/Assets/Images/DevConsole-Added_Custom_Slot_Type.png)
 
 정의하려는 custom slot 타입에 대량의 정보를 입력해야 한다면 TSV(Tab-separated values, .tsv) 형식의 파일을 업로드할 수도 있습니다. TSV 파일의 각 행의 첫 번째 값은 대표어가 되며, 그 다음부터 탭 문자로 구분된 값은 대표어에 대한 동의어나 유사 표현이 됩니다. 다음은 "PIZZA_TYPE" custom slot 타입의 정의를 TSV 형식으로 표현한 예입니다.
 
@@ -77,7 +77,7 @@ Custom extension을 설계하는 과정에서 [정의한 Interaction 모델](/De
 
 Clova developer console은 다음과 같이 **업로드** 버튼과 **다운로드** 버튼을 제공합니다. **업로드** 버튼을 누르면 미리 TSV 파일에 정의한 custom slot 타입을 업로드할 수 있고 **다운로드** 버튼을 누르면 현재 Clova developer console에 작성 중인 custom slot 타입을 TSV 파일로 다운로드 할 수 있습니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Custom_Slot_Upload_and_Download_Button.png)
+![DevConsole-Custom_Slot_Upload_and_Download_Button](/DevConsole/Assets/Images/DevConsole-Custom_Slot_Upload_and_Download_Button.png)
 
 <div class="note">
   <p><strong>Note!</strong></p>
@@ -88,7 +88,7 @@ Clova developer console은 다음과 같이 **업로드** 버튼과 **다운로�
 
 [Built-in intent](/Design/Design_Custom_Extension.md#BuiltinIntent)는 Clova 플랫폼이 일부 공통적인 사용자 요청 범주를 정하고 이를 공유하여 사용하기 위해 선언한 intent입니다. 예를 들면, 일반적으로 빈번히 발생할 수 있는 사용자의 긍정/부정 요청, 취소와 같은 요청을 intent로 미리 정의해 둔 것입니다. 현재 모든 custom extension은 Clova가 제공하는 built-in intent를 모두 처리할 수 있어야 하며, 다음과 같이 built-in intent가 기본 등록되어 있습니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Built-in_Intent_List.png)
+![DevConsole-Built-in_Intent_List](/DevConsole/Assets/Images/DevConsole-Built-in_Intent_List.png)
 
 <div class="tip">
   <p><strong>Tip!</strong></p>
@@ -103,15 +103,15 @@ Custom extension에서 사용할 [built-in slot 타입](#AddBuiltinSlotType)과 
 1. **{{ book.DevConsole.cek_builder_list_title_intent }}** 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_builder_list_title_intent }}** 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누르십시오.<br />
   버튼을 누르면 </strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.NewIntent }}</strong> 화면이 표시됩니다.
 2. **{{ book.DevConsole.cek_builder_new_intent }}**의 입력 필드에 추가할 custom intent의 이름을 입력하고 **{{ book.DevConsole.cek_create }}** 버튼을 누르십시오. Custom intent가 생성되면 해당 custom intent에 대한 상세 정보를 볼 수 있는 화면이 나타납니다.<br />
-  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_1.png)
+  ![DevConsole-Add_Custom_Intent_1](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_1.png)
 3. **{{ book.DevConsole.cek_builder_intent_slot_title }}**의 입력 필드에 추가할 slot의 이름을 입력하고 오른쪽에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 slot을 추가하십시오.<br />
-  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_2.png)
+  ![DevConsole-Add_Custom_Intent_2](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_2.png)
 4. Slot을 추가한 후 해당 slot이 어떤 slot 타입인지 지정하십시오.<br />
-  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_3.png)
+  ![DevConsole-Add_Custom_Intent_3](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_3.png)
 5. 이제 **{{ book.DevConsole.cek_builder_intent_expression_title }}**에 사용자 발화 예시를 입력하고 오른쪽에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 사용자 발화 예시를 추가하십시오.<br />
-  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_4.png)
+  ![DevConsole-Add_Custom_Intent_4](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_4.png)
 6. 추가한 발화 예시에서 slot으로 처리할 부분을 드래그하여 slot을 지정해주십시오.<br />
-  ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_5.png)
+  ![DevConsole-Add_Custom_Intent_5](/DevConsole/Assets/Images/DevConsole-Add_Custom_Intent_5.png)
 7. 5 번과 6 번 단계를 반복하여 intent에 발화 예시를 필요한 만큼 추가하십시오.
 8. 마지막으로 우측 상단에 있는 **{{ book.DevConsole.cek_save }}** 버튼을 누르십시오.
 
@@ -144,7 +144,7 @@ pizzaAmount	CLOVA.NUMBER
 
 Clova developer console은 다음과 같이 **업로드** 버튼과 **다운로드** 버튼을 제공합니다. **업로드** 버튼을 누르면 미리 TSV 파일에 정의한 custom intent를 업로드할 수 있고 **다운로드** 버튼을 누르면 현재 Clova developer console에 작성 중인 custom intent를 TSV 파일로 다운로드 할 수 있습니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Utterance_Example_Upload_and_Download_Button.png)
+![DevConsole-Utterance_Example_Upload_and_Download_Button](/DevConsole/Assets/Images/DevConsole-Utterance_Example_Upload_and_Download_Button.png)
 
 <div class="note">
   <p><strong>Note!</strong></p>
@@ -158,4 +158,4 @@ Clova developer console은 다음과 같이 **업로드** 버튼과 **다운로�
 
 여기까지 하나의 intent를 interaction 모델에 추가하는 방법을 설명했습니다. 앞에서 설명했던 방법을 반복하여 custom extension에 intent를 필요한 만큼 추가하면 다음과 같이 interaction 모델을 완성할 수 있습니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Added_Interaction_Model.png)
+![DevConsole-Added_Interaction_Model](/DevConsole/Assets/Images/DevConsole-Added_Interaction_Model.png)

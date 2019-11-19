@@ -1,11 +1,11 @@
 ## Custom extension 요청 처리하기 {#HandleCustomExtensionRequest}
 Custom extension은 CEK로부터 [custom extension 메시지](/Develop/References/Custom_Extension_Message.md) 형태의 사용자 요청을 수신합니다(HTTP Request). Custom extension은 일반적으로 다음과 같이 요청을 처리하고 응답해야 합니다.
 
-![](/Develop/Assets/Images/CEK_Custom_Extension_Sequence_Diagram.svg)
+![CEK_Custom_Extension_Sequence_Diagram](/Develop/Assets/Images/CEK_Custom_Extension_Sequence_Diagram.svg)
 
 이런 사용자의 요청은 단번에 끝나는 요청일 수도 있지만 다음과 같이 계속 맥락이 유지되어야 하는 multi-turn 대화일 수도 있습니다.
 
-![](/Develop/Assets/Images/CEK_Custom_Extension_Multi-turn_Sequence_Diagram.svg)
+![CEK_Custom_Extension_Multi-turn_Sequence_Diagram](/Develop/Assets/Images/CEK_Custom_Extension_Multi-turn_Sequence_Diagram.svg)
 
 이를 위해 사용자의 요청을 세 가지 타입의 요청으로 구분하고 있습니다. Custom extension 개발자는 각 메시지에 따라 그에 상응하는 작업을 처리해야 합니다.
 세 가지 요청 타입과 각 요청 타입의 사용자 발화 패턴은 다음과 같습니다.
