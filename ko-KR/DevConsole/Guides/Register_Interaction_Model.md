@@ -55,7 +55,7 @@ Custom extension을 설계하는 과정에서 [정의한 Interaction 모델](/De
 2. **{{ book.DevConsole.cek_builder_new_intent }}**의 입력 필드에 추가할 custom slot 타입의 이름을 입력하고 **{{ book.DevConsole.cek_create }}** 버튼을 누르십시오.<br />
   Custom slot 타입이 생성되면 해당 custom slot 타입에 대한 상세 정보를 볼 수 있는 화면이 나타납니다.<br />
   ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_1.png)
-3. **{{ book.DevConsole.cek_builder_slottype_dictionary_title }}**에 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 대표어를 추가하십시오.<br />
+3. **{{ book.DevConsole.cek_builder_slottype_dictionary_title }}**에서 대표어를 입력한 후 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 클릭하여 대표어를 추가하십시오.<br />
   ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_2.png)
 4. 추가한 대표어에 동의어나 유사 표현을 추가하십시오.<br />
   ![](/DevConsole/Assets/Images/DevConsole-Add_Custom_Slot_Type_3.png)
@@ -96,7 +96,9 @@ Clova developer console은 다음과 같이 **업로드** 버튼과 **다운로�
 </div>
 
 ## Custom intent 추가하기 {#AddCustomIntent}
-Custom extension에서 사용할 [built-in slot 타입](#AddBuiltinSlotType)과 [custom slot 타입](#AddCustomSlotType)을 추가했다면 이제 custom intent를 추가하면 됩니다. 이전 설명에 이어서 피자를 주문하는 사용자의 요청을 가정하고 다음 절차에 따라 "OrderPizza"라는 이름의 intent를 추가할 수 있습니다.
+Custom extension에서 사용할 [built-in slot 타입](#AddBuiltinSlotType)과 [custom slot 타입](#AddCustomSlotType)을 추가했다면 이제 custom intent를 추가하면 됩니다. 
+
+다음 절차에 따라 custom intent를 추가하십시오.
 
 1. **{{ book.DevConsole.cek_builder_list_title_intent }}** 패널의 우측 상단이나 왼쪽 사이드 메뉴 아래 **{{ book.DevConsole.cek_builder_list_title_intent }}** 영역 우측 상단에 있는 <img class="inlineImage" src="/DevConsole/Assets/Images/DevConsole-Plus_Button.png" /> 버튼을 누르십시오.<br />
   버튼을 누르면 </strong>{{ book.DevConsole.cek_interaction_model }}: {{ book.DevConsole.NewIntent }}</strong> 화면이 표시됩니다.

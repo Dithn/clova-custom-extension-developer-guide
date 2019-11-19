@@ -97,8 +97,7 @@ Extension에 계정 연결을 적용하려면 우선 사용자가 계정 인증�
                             &client_id=clova-extension
                             &scope=listen_music%20basic_profile
                             &response_type=code
-                            &redirect_uri={{ book.ServiceEnv.RedirectURIforAccountLinking }}
-</code></pre>
+                            &redirect_uri={{ book.ServiceEnv.RedirectURIforAccountLinking }}</code></pre>
 
 
 <div class="Note">
@@ -117,8 +116,7 @@ Extension에 계정 연결을 적용하려면 우선 사용자가 계정 인증�
 다음은 사용자의 계정 인증이 완료된 후 이동할 redirect URI 예입니다.
 
 <pre><code>{{ book.ServiceEnv.RedirectURIforAccountLinking }}?&state=qwer123
-                                &code=nl__eCSTdsdlkjfweyuxXvnl
-</code></pre>
+                                &code=nl__eCSTdsdlkjfweyuxXvnl</code></pre>
 
 
 Clova가 사용자 계정 연결을 위해 Authorization code를 획득하면 Clova는 다시 extension 개발자가 Clova developer console에 미리 등록해 둔 [Access Token URI](#RegisterAccountLinkingInfo)로 access token을 요청하게 됩니다. 이때, Clova는 획득한 authorization code를 파라미터로 전송하게 되며, 인증 서버는 외부 서비스의 계정 권한이 부여된 access token과 access token을 갱신할 수 있는 refresh token을 발급해야 합니다.
