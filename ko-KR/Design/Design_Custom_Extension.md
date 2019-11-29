@@ -169,7 +169,7 @@ Custom extension을 설계할 때 가장 먼저 할 일은 custom extension의 �
 
 ## Interaction 모델 정의 {#DefineInteractionModel}
 
-Interaction 모델이란, Clova가 사용자의 발화를 어떻게 인식하게 할 것인지 결정한 것으로 custom extension에 필요한 interaction 모델을 등록할 수 있습니다. 등록된 interaction 모델은 Clova의 [자연어 이해(NLU)](https://en.wikipedia.org/wiki/Natural-language_understanding) 시 이용되며, Clova는 이 interaction 모델에 의해 처리된 사용자의 요청을 정형화된 포맷(JSON)으로 바꾸어 custom extension에 전달합니다. 예를 들어, custom extension이 피자 배달 서비스를 제공한다고 가정할 때 "페퍼로니 피자 2 판 주문해줘"와 같은 발화가 사용자로부터 입력될 수 있습니다. Clova는 interaction 모델을 이용하여 아래와 같이 사용자 의도를 분석하고 custom extension이 처리할 수 있는 포맷(JSON)으로 데이터를 변경합니다.
+Interaction 모델이란, Clova가 사용자의 발화를 어떻게 인식하게 할 것인지 정의한 것으로 custom extension에 필요한 interaction 모델을 등록할 수 있습니다. 등록된 interaction 모델은 Clova의 [자연어 이해(NLU)](https://en.wikipedia.org/wiki/Natural-language_understanding) 시 이용되며, Clova는 이 interaction 모델에 의해 처리된 사용자의 요청을 정형화된 포맷(JSON)으로 바꾸어 custom extension에 전달합니다. 예를 들어, custom extension이 피자 배달 서비스를 제공한다고 가정할 때 "페퍼로니 피자 2 판 주문해줘"와 같은 발화가 사용자로부터 입력될 수 있습니다. Clova는 interaction 모델을 이용하여 아래와 같이 사용자 의도를 분석하고 custom extension이 처리할 수 있는 포맷(JSON)으로 데이터를 변경합니다.
 
 ![Extension_Design-Interaction_Model_Analysis_Diagram](/Design/Assets/Images/Extension_Design-Interaction_Model_Analysis_Diagram.png)
 
