@@ -95,7 +95,7 @@
     * [`LaunchRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtLaunchRequest)
     * [`SessionEndedRequest`](/Develop/References/Custom_Extension_Message.md#CustomExtSessionEndedRequest)
   * [응답 메시지](/Develop/References/Custom_Extension_Message.md#CustomExtResponseMessage)
-    * [SpeechInfoObject](/Develop/References/Custom_Extension_Message.html#CustomExtSpeechInfoObject)
+    * [SpeechInfoObject](/Develop/References/Custom_Extension_Message.md#CustomExtSpeechInfoObject)
 
 ## Developer console guides
 
