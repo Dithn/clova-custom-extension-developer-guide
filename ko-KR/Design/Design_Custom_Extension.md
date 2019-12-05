@@ -169,9 +169,9 @@ Custom extension을 설계할 때 가장 먼저 할 일은 custom extension의 �
 
 ## Interaction 모델 정의 {#DefineInteractionModel}
 
-Interaction 모델이란, Clova가 사용자의 발화를 어떻게 인식하게 할 것인지 결정한 것으로 custom extension에 필요한 interaction 모델을 등록할 수 있습니다. 등록된 interaction 모델은 Clova의 [자연어 이해(NLU)](https://en.wikipedia.org/wiki/Natural-language_understanding) 시 이용되며, Clova는 이 interaction 모델에 의해 처리된 사용자의 요청을 정형화된 포맷(JSON)으로 바꾸어 custom extension에 전달합니다. 예를 들어, custom extension이 피자 배달 서비스를 제공한다고 가정할 때 "페퍼로니 피자 2 판 주문해줘"와 같은 발화가 사용자로부터 입력될 수 있습니다. Clova는 interaction 모델을 이용하여 아래와 같이 사용자 의도를 분석하고 custom extension이 처리할 수 있는 포맷(JSON)으로 데이터를 변경합니다.
+Interaction 모델이란, Clova가 사용자의 발화를 어떻게 인식하게 할 것인지 정의한 것으로 custom extension에 필요한 interaction 모델을 등록할 수 있습니다. 등록된 interaction 모델은 Clova의 [자연어 이해(NLU)](https://en.wikipedia.org/wiki/Natural-language_understanding) 시 이용되며, Clova는 이 interaction 모델에 의해 처리된 사용자의 요청을 정형화된 포맷(JSON)으로 바꾸어 custom extension에 전달합니다. 예를 들어, custom extension이 피자 배달 서비스를 제공한다고 가정할 때 "페퍼로니 피자 2 판 주문해줘"와 같은 발화가 사용자로부터 입력될 수 있습니다. Clova는 interaction 모델을 이용하여 아래와 같이 사용자 의도를 분석하고 custom extension이 처리할 수 있는 포맷(JSON)으로 데이터를 변경합니다.
 
-![](/Design/Assets/Images/Extension_Design-Interaction_Model_Analysis_Diagram.png)
+![Extension_Design-Interaction_Model_Analysis_Diagram](/Design/Assets/Images/Extension_Design-Interaction_Model_Analysis_Diagram.png)
 
 Custom extension에 필요한 interaction 모델은 Clova developer console에서 정의할 수 있습니다. 그 전에 우선 interaction 모델을 이해하고 설계하는 과정이 필요합니다. 이런 과정 없이 무작정 Clova developer console에서 interaction 모델을 정의하게 되면 작업 효율이 떨어지거나 사용자 요청이 의도된 대로 인식되지 않을 수 있습니다. 사용자의 실제 의도를 잘 파악하는 interaction 모델을 만들려면 interaction 모델을 만들기 전에 다음과 같은 내용을 이해하고 interaction 모델 설계에 반영해야 합니다.
 
@@ -218,7 +218,7 @@ Custom intent는 built-in intent와 달리 제공하려는 서비스에 특화�
 
 이를 토대로 피자 배달 서비스(extension)의 interaction 모델을 정의한다는 것은 메뉴 조회 intent, 주문 intent, 배달 조회 intent와 같은 intent 목록을 선언하고 각 intent에서 어떤 정보(slot)를 취할지 어떤 발화 예시가 있는지 열거하는 것이라고 보면 됩니다. 따라서, **interaction 모델을 정의할 때 가장 먼저 해야 할 일은 custom extension이 어떤 범주의 요청을 처리해줄 것인지 정의하고 열거하는 것**입니다. 이는 custom extension을 개발할 때 비즈니스 로직, 즉 프로그램의 분기를 나누는 기준이 되기도 합니다.
 
-![](/Design/Assets/Images/Extension_Design-Design_Interaction_Model.png)
+![Extension_Design-Design_Interaction_Model](/Design/Assets/Images/Extension_Design-Design_Interaction_Model.png)
 
 **사용자 요청의 범주를 나눴다면 각 범주에 이름을 정의해야 합니다.** 이는 곧 intent의 이름이 됩니다. 피자 배달 서비스의 "주문 intent"와 같은 것은 추상적인 개념과 같은 것이고 이를 custom extension이 알 수 있는 구체적인 이름 즉 식별될 수 있는 문자열로 선언해야 합니다. 예를 들면, "주문 intent"는 "OrderPizza"와 같은 이름으로 선언할 수 있습니다.
 
@@ -274,7 +274,7 @@ Intent를 정의할 때 다양한 사용자 발화 예시를 열거할 수 있�
 
 발화 예시를 많이 입력하되 패턴이 서로 겹치지 않게 표현에 다양한 변형을 주어야 한다는 의미는 다음 그림을 참조하면 이해하기 쉽습니다.
 
-![](/Design/Assets/Images/Extension_Design-Diagram_for_Utterance_Example.png)
+![Extension_Design-Diagram_for_Utterance_Example](/Design/Assets/Images/Extension_Design-Diagram_for_Utterance_Example.png)
 
 예를 들어, 피자 배달 서비스의 주문과 관련된 intent(OrderPizza)에 다음과 같은 발화 예시를 작성했다고 가정합니다.
 

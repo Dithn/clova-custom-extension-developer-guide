@@ -8,17 +8,17 @@ Clova developer console은 Clova 플랫폼과 연동하는 기기나 서비스�
 
 클라이언트를 개발하거나 extension을 개발할 때 Clova developer console은 다음과 같은 구조로 사용됩니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Concept_Diagram.png)
+![DevConsole-Concept_Diagram](/DevConsole/Assets/Images/DevConsole-Concept_Diagram.png)
 
 위와 같이 Clova developer console을 통해 extension을 등록, 배포, 업데이트, 중지 및 삭제하는 등의 작업을 하게 됩니다. 이 작업은 extension의 lifecyle과 관련이 있으며, Clova developer console에서 extension의 lifecycle은 다음 그림과 같습니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Extension_LifeCycle.png)
+![DevConsole-Extension_LifeCycle](/DevConsole/Assets/Images/DevConsole-Extension_LifeCycle.png)
 
 <!-- End of the shared content -->
 
 Clova developer console의 CEK 메뉴를 통해 custom extension을 등록 및 관리할 수 있으며, [CEK](/Develop/CEK_Overview.md#WhatisCEK)와 연결하여 custom extension이나 interaction 모델을 테스트해볼 수 있습니다. 다음과 같이 왼쪽에 있는 **Clova Extensions Kit β** 메뉴나 중앙에 있는 바(bar) 형태의 메뉴를 누르면 CEK 메뉴로 진입합니다.
 
-![](/DevConsole/Assets/Images/DevConsole-Entering_CEK_Menu.png)
+![DevConsole-Entering_CEK_Menu](/DevConsole/Assets/Images/DevConsole-Entering_CEK_Menu.png)
 
 CEK 메뉴를 통해 다음과 같은 작업을 처리할 수 있습니다.
 
