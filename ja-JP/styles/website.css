@@ -99,6 +99,7 @@ td .note {
 .markdown-section img {
     padding: 10px;
     margin: 2px 2px 2px 2px;
+    background-color: white;
     -moz-box-shadow:    3px 3px 10px 3px #ccc;
     -webkit-box-shadow: 3px 3px 10px 3px #ccc;
     box-shadow:         3px 3px 10px 3px #ccc;
