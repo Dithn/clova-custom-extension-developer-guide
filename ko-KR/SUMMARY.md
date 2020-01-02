@@ -30,9 +30,7 @@
   * [개인 정보 보호](/Design/Rules_For_Content.md#Privacy)
   * [기타 유의 사항](/Design/Rules_For_Content.md#OtherPrecautions)
 
-## Develop
-
-### Guides
+## Develop guides
 
 * [CEK 개요](/Develop/CEK_Overview.md)
   * [CEK란?](/Develop/CEK_Overview.md#WhatisCEK)
@@ -82,7 +80,7 @@
   * [주사위 놀이(Dice drawer)](/Develop/Examples/Extension_Examples.md#DiceDrawer)
   * [코인 헬퍼(Coin helper)](/Develop/Examples/Extension_Examples.md#CoinHelper)
 
-### References
+## References
 
 * [HTTP 메시지](/Develop/References/HTTP_Message.md)
   * [HTTP 헤더](/Develop/References/HTTP_Message.md#HTTPHeader)
