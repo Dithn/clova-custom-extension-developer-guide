@@ -6,26 +6,25 @@ Custom extension을 통해 오디오 콘텐츠를 제공한다면 반드시 Clov
 
 <!-- Start of the shared content: SupportedAudioFormat -->
 
-Clova가 지원하는 오디오 압축 포맷은 다음과 같습니다.
+Clova가 지원하는 오디오 압축 포맷(codec)은 다음과 같습니다.
 
 | 오디오 압축 포맷                     | 라이선스 비용 |
 |----------------------------------|-----------|
 | MPEG-1 or MPEG-2 Audio Layer III | 무료       |
 
-Clova가 지원하는 오디오 컨테이너 포맷은 다음과 같습니다.
+Clova가 지원하는 파일 확장자와 MIME 타입은 다음과 같습니다.
 
-| 컨테이너 포맷   | MIME 타입                      | 비고                           |
+| 파일확장자  | MIME 타입                 | 비고                           |
 |-------------|-------------------------------|-------------------------------|
-| mp3         | audio/mpeg                    | <!-- -->                      |
-| m3u8        | application/vnd.apple.mpegurl | HTTP Live Streaming 사용       |
+| MP3         | audio/mpeg                    | <!-- -->                      |
+| M3U8        | application/vnd.apple.mpegurl | HTTP Live Streaming 사용       |
 
+<!-- End of the shared content -->
 
 <div class="tip">
   <p><strong>Tip!</strong></p>
   <p>Clova가 지원하는 오디오 압축 포맷은 더 늘어날 수 있습니다.</p>
 </div>
-
-<!-- End of the shared content -->
 
 <div class="warning">
   <p><strong>Warning!</strong></p>
