@@ -30,7 +30,7 @@
   * [개인 정보 보호](/Design/Rules_For_Content.md#Privacy)
   * [기타 유의 사항](/Design/Rules_For_Content.md#OtherPrecautions)
 
-## Develop guides
+## Guides
 
 * [CEK 개요](/Develop/CEK_Overview.md)
   * [CEK란?](/Develop/CEK_Overview.md#WhatisCEK)
